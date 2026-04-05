@@ -61,7 +61,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .col-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--black);margin-bottom:1rem;}
 .bullet-list{list-style:none;}
 .bullet-list li{font-size:.88rem;color:var(--mid-txt);line-height:1.75;padding:.5rem 0;border-bottom:1px solid rgba(200,169,81,.1);display:flex;align-items:flex-start;gap:.8rem;}
-.bullet-list li::before{content:"92";color:var(--gold);flex-shrink:0;font-size:.75rem;margin-top:.2rem;}
+.bullet-list li::before{content:"→";color:var(--gold);flex-shrink:0;font-size:.75rem;margin-top:.2rem;}
 
 /* HIGHLIGHT */
 .highlight-box{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:2rem 2.4rem;margin:2rem 0;}
@@ -73,7 +73,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .media-tag{background:var(--warm-white);border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:.7rem;font-weight:500;padding:.32rem .85rem;border-radius:3px;letter-spacing:.06em;}
 .press-quotes{margin-top:1.6rem;}
 .press-quote{font-size:.82rem;font-style:italic;color:var(--lt-txt);line-height:1.7;padding:.5rem 0;border-bottom:1px solid rgba(200,169,81,.1);}
-.press-quote::before{content:'C';color:var(--gold);font-size:1.1rem;}
+.press-quote::before{content:'“';color:var(--gold);font-size:1.1rem;}
 
 /* OUTCOMES */
 .outcomes-pills{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:2rem;}
@@ -91,7 +91,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 /* BACK LINK */
 .back-link{display:inline-flex;align-items:center;gap:.6rem;font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dk);text-decoration:none;margin-bottom:2rem;transition:gap .2s;}
 .back-link:hover{gap:1rem;}
-.back-link::before{content:'90';font-size:.9rem;}
+.back-link::before{content:'←';font-size:.9rem;}
 
 /* FOOTER */
 footer{background:var(--black);padding:52px 60px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden;}
@@ -139,15 +139,20 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <div style="background:var(--warm-white);padding:2rem 60px;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(200,169,81,.12);">
   <span style="font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lt-txt);white-space:nowrap;">In partnership with</span>
   <div style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap;">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/logos/caf.png" alt="CAF" style="height:44px;object-fit:contain;opacity:.85;">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/logos/Royal_Moroccan_Football_Federation_.png" alt="Royal Moroccan Football Federation" style="height:44px;object-fit:contain;opacity:.85;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/logos/caf.png" alt="Confederation of African Football (CAF)" title="Confederation of African Football (CAF)" style="height:40px;object-fit:contain;opacity:.85;"><span style="font-size:.55rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lt-txt);">Confederation of African Football</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:.4rem;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/logos/Royal_Moroccan_Football_Federation_.png" alt="Royal Moroccan Football Federation" title="Royal Moroccan Football Federation" style="height:40px;object-fit:contain;opacity:.85;"><span style="font-size:.55rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lt-txt);">Royal Moroccan Football Federation</span></div>
   </div>
 </div>
 
 <!-- METRICS -->
 <div class="metrics-strip">
-  <div class="metrics-inner" style="grid-template-columns:repeat(6,1fr);">
-    <div class="metric-block"><div class="metric-n">6.1B</div><div class="metric-l">Digital impressions</div></div>
+  <div class="metrics-inner" style="grid-template-columns:repeat(4,1fr);">
+    <div class="metric-block"><div class="metric-n">16M</div><div class="metric-l">Live stream views</div></div>
+    <div class="metric-block"><div class="metric-n">+300K</div><div class="metric-l">Subscribers in 24h</div></div>
+    <div class="metric-block"><div class="metric-n">#1</div><div class="metric-l">Most-watched live — Africa tour</div></div>
+    <div class="metric-block"><div class="metric-n">#10</div><div class="metric-l">Most-watched broadcast ever</div></div>
+  </div>
+</div>
     <div class="metric-block"><div class="metric-n">16M</div><div class="metric-l">Live stream views</div></div>
     <div class="metric-block"><div class="metric-n">97.3M</div><div class="metric-l">TV viewers (final)</div></div>
     <div class="metric-block"><div class="metric-n">+300K</div><div class="metric-l">Subscribers in 24h</div></div>
@@ -157,28 +162,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 </div>
 
 <!-- PHOTO GALLERY -->
-<section class="sec" style="background:var(--warm-white);padding-top:60px;padding-bottom:60px;">
-  <div class="sec-inner">
-    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:10px;">
-      <div style="grid-row:span 2;overflow:hidden;border-radius:14px;box-shadow:var(--sh);">
-        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8379.jpg" alt="IShowSpeed AFCON" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div style="overflow:hidden;border-radius:14px;box-shadow:var(--sh-sm);">
-        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8380.jpg" alt="AFCON 2025 Morocco" style="width:100%;height:220px;object-fit:cover;display:block;">
-      </div>
-      <div style="overflow:hidden;border-radius:14px;box-shadow:var(--sh-sm);">
-        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8381.jpg" alt="AFCON 2025 Morocco" style="width:100%;height:220px;object-fit:cover;display:block;">
-      </div>
-      <div style="overflow:hidden;border-radius:14px;box-shadow:var(--sh-sm);">
-        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8382.jpg" alt="AFCON 2025 Morocco" style="width:100%;height:220px;object-fit:cover;display:block;">
-      </div>
-      <div style="overflow:hidden;border-radius:14px;box-shadow:var(--sh-sm);">
-        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8383.jpg" alt="AFCON 2025 Morocco" style="width:100%;height:220px;object-fit:cover;display:block;">
-      </div>
-    </div>
-    <p style="font-size:.62rem;color:var(--lt-txt);letter-spacing:.1em;text-transform:uppercase;margin-top:1rem;text-align:center;">IShowSpeed &mdash; AFCON 2025 Final &mdash; Morocco</p>
-  </div>
-</section>
+<div style="height:520px;display:flex;gap:10px;overflow:hidden;background:var(--black);padding:10px;mask-image:linear-gradient(to bottom,transparent 0%,black 8%,black 92%,transparent 100%);">
+  <div style="display:flex;flex-direction:column;gap:10px;flex:1;animation:scrollUp 22s linear infinite;"><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8378.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8381.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8384.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8379.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8382.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8378.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8381.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8384.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8379.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8382.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div></div>
+  <div style="display:flex;flex-direction:column;gap:10px;flex:1;animation:scrollDown 28s linear infinite;"><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8379.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8382.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8378.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8380.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8383.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8379.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8382.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8378.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8380.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8383.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div></div>
+  <div style="display:flex;flex-direction:column;gap:10px;flex:1;animation:scrollUp 18s linear infinite;"><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8380.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8383.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8381.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8384.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8378.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8380.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8383.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8381.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8384.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div><div style="flex-shrink:0;overflow:hidden;border-radius:8px;"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8378.jpg" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div></div>
+</div>
 
 <!-- THE BRIEF -->
 <section class="sec">
@@ -191,7 +179,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <p class="body-txt">CAF and the Royal Moroccan Football Federation wanted to integrate a global creator into the AFCON 2025 Final to amplify the tournament&rsquo;s reach into Gen Z globally &mdash; and they needed a partner who could execute it at the highest level. They came to Atoure.</p>
       </div>
       <div>
-        <video autoplay muted playsinline loop style="width:100%;border-radius:16px;box-shadow:var(--sh);object-fit:cover;max-height:420px;display:block;">
+        <video autoplay muted playsinline loop style="width:100%;border-radius:16px;box-shadow:var(--sh);object-fit:cover;height:560px;display:block;">
           <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/IMG_8665.MOV" type="video/mp4">
         </video>
       </div>
@@ -234,7 +222,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <p>The stadium erupted as Speed was unveiled as Assad the lion. The moment went viral across Africa and globally, driving a record <strong>6.1 billion digital impressions</strong> and <strong>5.2 billion video views</strong> for the tournament &mdash; numbers that had never been seen before in AFCON history.</p>
       </div>
       <div>
-        <video controls muted playsinline style="width:100%;border-radius:14px;box-shadow:var(--sh);display:block;background:var(--black);">
+        <video controls muted playsinline style="width:100%;max-height:320px;border-radius:14px;box-shadow:var(--sh);display:block;background:var(--black);object-fit:contain;">
           <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Images/Ishowspeed/Morocco/copy_541C8A97-E31D-4A3E-8200-D5384E3C5648.MOV" type="video/mp4">
         </video>
         <p style="font-size:.62rem;color:var(--lt-txt);letter-spacing:.1em;text-transform:uppercase;margin-top:.6rem;text-align:center;">The mascot reveal — AFCON Final 2025</p>
