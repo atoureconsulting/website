@@ -27,11 +27,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-burger{display:none;background:none;border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:1.1rem;padding:.4rem .7rem;cursor:pointer;border-radius:3px;}
 
 /* HERO */
-.cs-hero{min-height:88vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
-.cs-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--cream);clip-path:ellipse(56% 100% at 50% 100%);}
+.cs-hero{min-height:68vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.cs-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,81,.3),transparent);}
 .hero-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 50%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
 .hero-line-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 10rem 5rem;}
+.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 6rem 5rem;}
 .cs-kicker{font-size:.62rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
 .cs-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .cs-roles{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -126,6 +126,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   .nav-burger{display:block;}
   .sec{padding:48px 1.5rem;}
   .stat-grid,.two-col-grid{grid-template-columns:1fr;}
+  .two-col-grid[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
+  /* What AToure Did 3-col → 1-col on mobile */
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;}
+  /* Video+Outcomes 2-col → 1-col on mobile */
+  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
 }
 
 
@@ -161,10 +166,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <p class="cs-tagline">Location sourcing, VIP access, and full operational support for Rotimi's UK tour — giving him and his team the media and experiences that match his global profile.</p>
   </div>
   <div class="cs-hero-right">
-    <div style="display:grid;grid-template-rows:1fr 1fr;gap:8px;height:100%;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8255.JPG" alt="Rotimi UK Tour" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" loading="eager" fetchpriority="high">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8256.JPG" alt="Rotimi AToure" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" loading="eager">
-    </div>
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8255.JPG" alt="Rotimi UK Tour" loading="eager" fetchpriority="high">
   </div>
 </div>
 
@@ -200,20 +202,21 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="sec-inner">
     <div class="sec-label">What AToure Did</div>
     <h2 class="sec-title">The network that opens <em>the right doors.</em></h2>
-    <div class="two-col-grid">
-      <div>
-        <ul class="bullet-list">
-          <li>Scouted and secured <strong>premium London shoot locations</strong> — giving Rotimi and his team exceptional media content for the UK tour</li>
-          <li>Coordinated <strong>full on-site production support</strong> across multiple London locations</li>
-          <li>Arranged <strong>VIP experiences at top-tier London hospitality venues</strong> — exclusive access that matched Rotimi's global profile</li>
-        </ul>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">01</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Location Scouting</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Scouted and secured premium London shoot locations — giving Rotimi and his team exceptional media content for the UK tour.</p>
       </div>
-      <div>
-        <ul class="bullet-list">
-          <li>Managed <strong>all ground logistics</strong> for Rotimi and his touring team throughout the UK</li>
-          <li>Leveraged AToure's London network to provide <strong>seamless, high-level access</strong> across the city</li>
-          <li>Delivered an <strong>end-to-end tour experience</strong> — from first call to final wrap</li>
-        </ul>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">02</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">VIP Access</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Arranged exclusive access to London's top hospitality venues — experiences that matched Rotimi's global profile.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">03</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Full Operations</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Managed all ground logistics — transport, accommodation, scheduling, and full production support throughout the UK tour.</p>
       </div>
     </div>
   </div>
@@ -271,37 +274,33 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="aslide-outer" id="rotimi-slider"><div class="aslide-track"><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8255.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8256.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8257.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8258.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8259.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_5029_(1).jpg" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_5030_(1).jpg" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8255.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8256.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8257.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8258.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_8259.JPG" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_5029_(1).jpg" alt="" loading="lazy"></div><div class="aslide-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/IMG_5030_(1).jpg" alt="" loading="lazy"></div></div></div>
 </section>
 
-<!-- VIDEO -->
 <section class="sec" style="background:var(--warm-white);">
   <div class="sec-inner">
-    <div class="sec-label">Campaign Film</div>
-    <h2 class="sec-title" style="margin-bottom:2rem;">Rotimi <em>× AToure</em></h2>
-    <div style="max-width:560px;margin:0 auto;">
-      <video controls playsinline style="width:100%;object-fit:cover;display:block;border-radius:14px;box-shadow:var(--sh);">
-  <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/Rotimi%20x%20Atoure" type="video/quicktime">
-  <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/Rotimi%20x%20Atoure" type="video/mp4">
-  <div style="padding:2.5rem;text-align:center;background:var(--black-soft);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;min-height:200px;">
-    <p style="color:var(--gold-lt);font-size:.9rem;">Rotimi × AToure — UK Tour</p>
-    <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/Rotimi%20x%20Atoure" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
-  </div>
-</video>
-<p style="font-size:.6rem;color:var(--lt-txt);letter-spacing:.12em;text-transform:uppercase;margin-top:.7rem;text-align:center;">Rotimi × AToure — UK Tour</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="sec-inner">
-    <div class="sec-label">Key Outcomes</div>
-    <h2 class="sec-title">The work <em>delivered.</em></h2>
-    <div class="outcomes-pills">
-      <span class="outcome-pill"><strong>Premium</strong>&nbsp;London shoot locations secured</span>
-      <span class="outcome-pill"><strong>VIP access</strong>&nbsp;at top London hospitality venues</span>
-      <span class="outcome-pill"><strong>Full team logistics</strong>&nbsp;managed end-to-end</span>
-      <span class="outcome-pill"><strong>High-quality media</strong>&nbsp;content produced across the tour</span>
-    </div>
-    <div class="highlight-box" style="margin-top:2rem;">
-      <p>AToure's London network gave Rotimi and his team access to the city at a level that matched his global profile — exceptional shoot locations, VIP experiences, and seamless logistics from start to finish.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div style="border-radius:14px;overflow:hidden;box-shadow:var(--sh);">
+        <video controls playsinline style="width:100%;display:block;max-height:480px;object-fit:cover;">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/Rotimi%20x%20Atoure" type="video/quicktime">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/Rotimi%20x%20Atoure" type="video/mp4">
+          <div style="padding:2.5rem;text-align:center;background:var(--black-soft);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;min-height:200px;">
+            <p style="color:var(--gold-lt);font-size:.9rem;">Rotimi × AToure — UK Tour</p>
+            <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Rotimi/Rotimi%20x%20Atoure" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
+          </div>
+        </video>
+        <p style="font-size:.6rem;color:var(--lt-txt);letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1rem;background:var(--cream-mid);text-align:center;">Rotimi × AToure — UK Tour</p>
+      </div>
+      <div>
+        <div class="sec-label">Key Outcomes</div>
+        <h2 class="sec-title">The work <em>delivered.</em></h2>
+        <div class="outcomes-pills" style="margin-bottom:1.5rem;">
+          <span class="outcome-pill"><strong>Premium</strong>&nbsp;London shoot locations secured</span>
+          <span class="outcome-pill"><strong>VIP access</strong>&nbsp;at top London hospitality venues</span>
+          <span class="outcome-pill"><strong>Full team logistics</strong>&nbsp;managed end-to-end</span>
+          <span class="outcome-pill"><strong>High-quality media</strong>&nbsp;content produced across the tour</span>
+        </div>
+        <div class="highlight-box">
+          <p>AToure's London network gave Rotimi and his team access to the city at a level that matched his global profile — exceptional shoot locations, VIP experiences, and seamless logistics from start to finish.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -317,6 +316,18 @@ var nav=document.getElementById("nav");
 if(nav)window.addEventListener("scroll",function(){nav.classList.toggle("scrolled",scrollY>60);});
 var burger=document.getElementById("burger"),links=document.querySelector(".nav-links");
 if(burger&&links){burger.addEventListener("click",function(){links.classList.toggle("open");burger.innerHTML=links.classList.contains("open")?"&times;":"&#9776;";});}
+// Randomise slider photo order
+(function(){
+  var track=document.querySelector('#rotimi-slider .aslide-track');
+  if(!track)return;
+  var items=Array.from(track.querySelectorAll('.aslide-item'));
+  var half=Math.floor(items.length/2);
+  var orig=items.slice(0,half);
+  for(var i=orig.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=orig[i];orig[i]=orig[j];orig[j]=t;}
+  var doubled=orig.concat(orig.map(function(el){return el.cloneNode(true);}));
+  track.innerHTML='';
+  doubled.forEach(function(el){track.appendChild(el);});
+})();
 </script>
 </body>
 </html>

@@ -18,11 +18,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-burger{display:none;background:none;border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:1.1rem;padding:.4rem .7rem;cursor:pointer;border-radius:3px;}
 
 /* HERO */
-.cs-hero{min-height:88vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
-.cs-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--cream);clip-path:ellipse(56% 100% at 50% 100%);}
+.cs-hero{min-height:68vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.cs-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,81,.3),transparent);}
 .hero-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 50%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
 .hero-line-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 10rem 5rem;}
+.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 6rem 5rem;}
 .cs-kicker{font-size:.62rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
 .cs-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .cs-roles{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -117,6 +117,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   .nav-burger{display:block;}
   .sec{padding:48px 1.5rem;}
   .stat-grid,.two-col-grid{grid-template-columns:1fr;}
+  .igallery-wrap{padding:0 1.5rem!important;}
 }
 
 
@@ -149,10 +150,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <p class="cs-tagline">The mascot reveal that broke the internet &mdash; state-level creator integration delivered end to end by Atoure.</p>
   </div>
   <div class="cs-hero-right">
-    <div style="display:grid;grid-template-rows:1fr 1fr;gap:8px;height:100%;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8378.jpg" alt="IShowSpeed at AFCON 2025 Final, Morocco" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8383.jpg" alt="IShowSpeed Morocco Tour" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
-    </div>
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8378.jpg" alt="IShowSpeed at AFCON 2025 Final, Morocco" loading="eager" fetchpriority="high">
   </div>
 </div>
 
@@ -307,14 +305,52 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   </div>
 </section>
 
-<!-- PHOTO GALLERY -->
+<!-- PHOTO GALLERY + VIDEO -->
+<section class="sec" style="background:var(--black);padding:5rem 0;">
+  <style>
+  .igallery{display:flex;align-items:stretch;gap:6px;height:420px;width:100%;overflow:hidden;}
+  .igallery-item{flex-shrink:0;flex-grow:1;width:180px;min-width:50px;border-radius:10px;overflow:hidden;height:100%;transition:width .5s ease,flex-grow .5s ease;cursor:pointer;position:relative;}
+  .igallery-item:hover{width:100%;flex-grow:10;}
+  .igallery-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s ease;}
+  .igallery-item:hover img{transform:scale(1.03);}
+  @media(max-width:640px){.igallery{height:260px;}.igallery-item{width:80px;min-width:40px;}}
+  </style>
+  <div style="max-width:1400px;margin:0 auto;padding:0 60px 2.5rem;">
+    <div class="sec-label" style="color:var(--gold);margin-bottom:.5rem;">Photography</div>
+    <h2 class="sec-title" style="color:var(--warm-white);">On the ground <em>in Morocco.</em></h2>
+  </div>
+  <div class="igallery-wrap" style="padding:0 60px;">
+    <div class="igallery">
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8378.jpg" alt="IShowSpeed Morocco 1" loading="lazy"></div>
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8379.jpg" alt="IShowSpeed Morocco 2" loading="lazy"></div>
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8380.jpg" alt="IShowSpeed Morocco 3" loading="lazy"></div>
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8381.jpg" alt="IShowSpeed Morocco 4" loading="lazy"></div>
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8382.jpg" alt="IShowSpeed Morocco 5" loading="lazy"></div>
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8383.jpg" alt="IShowSpeed Morocco 6" loading="lazy"></div>
+      <div class="igallery-item"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8384.jpg" alt="IShowSpeed Morocco 7" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- AFCON VIDEO -->
 <section class="sec" style="background:var(--cream-mid);">
   <div class="sec-inner">
-    <div class="sec-label">Photography</div>
-    <h2 class="sec-title" style="margin-bottom:2rem;">On the ground <em>in Morocco.</em></h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8383.jpg" alt="IShowSpeed Morocco" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8378.jpg" alt="IShowSpeed AFCON Final" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <div class="sec-label">Campaign Film</div>
+        <h2 class="sec-title">IShowSpeed <em>at AFCON.</em></h2>
+        <p class="body-txt">Behind the scenes and on the ground — IShowSpeed at the Africa Cup of Nations Final, Morocco 2025. A creator moment that bridged football and digital culture on Africa’s biggest stage.</p>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:var(--sh);">
+        <video controls playsinline style="width:100%;display:block;max-height:500px;object-fit:cover;">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8671.MOV" type="video/quicktime">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8671.MOV" type="video/mp4">
+          <div style="padding:2.5rem;text-align:center;background:var(--black-soft);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;min-height:200px;">
+            <p style="color:var(--gold-lt);font-size:.9rem;">IShowSpeed at AFCON — Morocco 2025</p>
+            <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8671.MOV" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
+          </div>
+        </video>
+      </div>
     </div>
   </div>
 </section>
