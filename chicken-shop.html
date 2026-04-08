@@ -141,6 +141,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .stat-row{font-size:.88rem;color:var(--mid-txt);line-height:1.75;padding:.65rem 0;border-bottom:1px solid rgba(200,169,81,.1);display:flex;align-items:flex-start;gap:.8rem;}
 .stat-row::before{content:"→";color:var(--gold);flex-shrink:0;font-size:.75rem;margin-top:.22rem;}
 .stat-row strong{color:var(--black);font-weight:600;}
+.btn{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:.04em;padding:13px 28px;border-radius:3px;border:none;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s;display:inline-block;text-decoration:none;text-align:center;line-height:1;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(13,12,10,.18);}
+.btn-gold{background:var(--gold);color:var(--black)!important;font-weight:600;}
+.btn-gold:hover{background:var(--gold-lt);}
+.btn-outline-gold{background:transparent;color:var(--gold-lt)!important;border:1px solid rgba(200,169,81,.5);}
+.btn-outline-gold:hover{border-color:var(--gold);background:rgba(200,169,81,.08);}
 </style>
 
 </head>
@@ -243,7 +249,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
 </section>
-<div class="cta-band" style="background:var(--black);padding:6rem 60px;text-align:center;position:relative;overflow:hidden;">
+<div class="cta-band" style="background:var(--black);padding:4rem 60px;text-align:center;position:relative;overflow:hidden;">
   <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:600;color:var(--warm-white);margin-bottom:1rem;line-height:1.1;">Ready to build something?<em style="font-style:italic;color:var(--gold-lt);display:block;">Let&rsquo;s talk.</em></h2>
   <p style="color:rgba(254,252,248,.45);margin-bottom:2rem;">Tell us about the campaign. We&rsquo;ll tell you how to land it.</p>
