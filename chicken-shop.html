@@ -27,11 +27,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-burger{display:none;background:none;border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:1.1rem;padding:.4rem .7rem;cursor:pointer;border-radius:3px;}
 
 /* HERO */
-.cs-hero{min-height:88vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
-.cs-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--cream);clip-path:ellipse(56% 100% at 50% 100%);}
+.cs-hero{min-height:68vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.cs-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,81,.3),transparent);}
 .hero-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 50%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
 .hero-line-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 10rem 5rem;}
+.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 6rem 5rem;}
 .cs-kicker{font-size:.62rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
 .cs-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .cs-roles{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -49,13 +49,13 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 /* METRICS */
 .metrics-strip{background:var(--black-mid);padding:0;border-bottom:1px solid rgba(200,169,81,.15);}
 .metrics-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);}
-.metric-block{padding:2.2rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
+.metric-block{padding:1.6rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
 .metric-block:last-child{border-right:none;}
 .metric-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
 .metric-l{font-size:.57rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(254,252,248,.4);}
 
 /* SECTIONS */
-.sec{padding:88px 60px;border-bottom:1px solid rgba(200,169,81,.1);}
+.sec{padding:60px 60px;border-bottom:1px solid rgba(200,169,81,.1);}
 .sec-inner{max-width:1280px;margin:0 auto;}
 .sec-label{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:.6rem;}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.2vw,3rem);font-weight:600;color:var(--black);line-height:1.08;margin-bottom:1.4rem;}
@@ -161,18 +161,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <p class="cs-tagline">A brand collaboration managed end-to-end — talent placement, production logistics, and full delivery for Chicken Shop.</p>
   </div>
   <div class="cs-hero-right">
-    <div style="display:grid;grid-template-rows:1fr 1fr;gap:8px;height:100%;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Manlikeisaac%20Chicken%20Shop/PHOTO-2024-01-03-11-21-55.jpg" alt="Chicken Shop x AToure" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" loading="eager" fetchpriority="high">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Manlikeisaac%20Chicken%20Shop/PHOTO-2024-01-15-23-46-26.jpg" alt="Manlikeisaac Chicken Shop" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" loading="eager">
-    </div>
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Manlikeisaac%20Chicken%20Shop/PHOTO-2024-01-03-11-21-55.jpg" alt="Chicken Shop x AToure" loading="eager" fetchpriority="high">
   </div>
 </div>
 
 <div class="metrics-strip">
-  <div class="metrics-inner" style="grid-template-columns:repeat(3,1fr);">
-    <div class="metric-block"><div class="metric-n">Brand</div><div class="metric-l">Collaboration delivered</div></div>
-    <div class="metric-block"><div class="metric-n">UK</div><div class="metric-l">Market execution</div></div>
-    <div class="metric-block"><div class="metric-n">E2E</div><div class="metric-l">Full management</div></div>
+  <div class="metrics-inner" style="grid-template-columns:repeat(4,1fr);">
+    <div class="metric-block"><div class="metric-n">1M</div><div class="metric-l">Instagram followers</div></div>
+    <div class="metric-block"><div class="metric-n">1.2M</div><div class="metric-l">TikTok followers</div></div>
+    <div class="metric-block"><div class="metric-n">200K</div><div class="metric-l">YouTube subscribers</div></div>
+    <div class="metric-block"><div class="metric-n">2.4M</div><div class="metric-l">Total campaign views</div></div>
   </div>
 </div>
 
@@ -182,15 +180,17 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
       <div>
         <div class="sec-label">The Brief</div>
-        <h2 class="sec-title">A brand collaboration.<em>Done properly.</em></h2>
-        <p class="body-txt">AToure managed a brand collaboration between Manlikeisaac and Chicken Shop — handling all talent logistics, production coordination, and delivery to ensure a clean, professional outcome for both brand and creator.</p>
+        <h2 class="sec-title">A brand collab.<em>Done properly.</em></h2>
+        <p class="body-txt">Chicken Shop teamed up with AToure to promote their “Seriously Good” Chicken and the launch of their new Honey Soy Wings. The goal: engage a Gen Z audience and make Chicken Shop trend across Instagram and TikTok through Manlikeisaac — integrating the brand into his short-form content and 4M subscriber YouTube activation.</p>
+        <p class="body-txt" style="margin-top:1rem;">Isaac’s video reached nearly <strong>double the industry-standard engagement rate</strong>, sparking huge awareness around the Honey Soy Wings launch. The campaign reached <strong>2.4M people</strong> with over <strong>30K total engagements</strong>.</p>
       </div>
       <div style="background:var(--cream-mid);border-radius:16px;padding:2.2rem;border:1px solid rgba(200,169,81,.15);">
-        <div class="sec-label" style="margin-bottom:1rem;">Delivered by AToure</div>
-        <div class="stat-row"><strong>Talent management</strong>&nbsp; and full briefing</div>
-        <div class="stat-row"><strong>Production coordination</strong>&nbsp; with Chicken Shop team</div>
-        <div class="stat-row"><strong>Brand compliance</strong>&nbsp; and creative oversight</div>
-        <div class="stat-row"><strong>Day-of logistics</strong>&nbsp; and on-site support</div>
+        <div class="sec-label" style="margin-bottom:1rem;">Campaign Stats</div>
+        <div class="stat-row"><strong>1M</strong>&nbsp; Instagram followers reached</div>
+        <div class="stat-row"><strong>1.2M</strong>&nbsp; TikTok community</div>
+        <div class="stat-row"><strong>200K</strong>&nbsp; YouTube subscribers activated</div>
+        <div class="stat-row"><strong>2.4M</strong>&nbsp; total campaign views</div>
+        <div class="stat-row"><strong>30K+</strong>&nbsp; total engagements across platforms</div>
       </div>
     </div>
   </div>
@@ -199,34 +199,23 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <section class="sec sec-dark">
   <div class="sec-inner">
     <div class="sec-label">What AToure Did</div>
-    <h2 class="sec-title">Talent. Brand. <em>Delivered.</em></h2>
-    <div class="two-col-grid">
-      <div>
-        <ul class="bullet-list">
-          <li>Full <strong>talent management</strong> for Manlikeisaac throughout the collaboration</li>
-          <li>Liaised directly with <strong>Chicken Shop's production and brand team</strong></li>
-          <li>Prepared full <strong>talent briefing and brand alignment</strong> pre-shoot</li>
-        </ul>
+    <h2 class="sec-title">Two demographics. <em>One campaign.</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">01</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Talent Placement</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Placed Manlikeisaac with Chicken Shop to hit two key demographics: the halal audience and London’s Gen Z youth — both communities at the core of his following.</p>
       </div>
-      <div>
-        <ul class="bullet-list">
-          <li>Managed all <strong>day-of logistics and on-site support</strong></li>
-          <li>Ensured <strong>brand compliance</strong> across all content deliverables</li>
-          <li>Delivered the collaboration <strong>on time and on brief</strong></li>
-        </ul>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">02</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Abdu Rozik Collab</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Brokered a significant collaboration with Abdu Rozik — a major talent based in Dubai with a massive following across the Middle East — amplifying the campaign’s global reach.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="sec" style="background:var(--cream-mid);">
-  <div class="sec-inner">
-    <div class="sec-label">Photography</div>
-    <h2 class="sec-title" style="margin-bottom:2rem;">From the shoot.</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Manlikeisaac%20Chicken%20Shop/PHOTO-2024-01-03-11-21-55.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Manlikeisaac%20Chicken%20Shop/PHOTO-2024-01-15-23-46-26.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">03</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Full Delivery</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Managed the full campaign — production coordination, brand briefing, content compliance, and delivery — achieving engagement nearly double the industry standard.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -234,14 +223,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <section class="sec">
   <div class="sec-inner">
     <div class="sec-label">Key Outcomes</div>
-    <h2 class="sec-title">The work <em>delivered.</em></h2>
-    <div class="outcomes-pills">
-      <span class="outcome-pill"><strong>Brand collaboration</strong>&nbsp;managed end-to-end</span>
-      <span class="outcome-pill"><strong>Talent</strong>&nbsp;fully briefed and prepared</span>
-      <span class="outcome-pill"><strong>On-brand</strong>&nbsp;content delivered on time</span>
+    <h2 class="sec-title">The campaign <em>delivered.</em></h2>
+    <div class="outcomes-pills" style="margin-bottom:1.5rem;">
+      <span class="outcome-pill"><strong>2.4M</strong>&nbsp;total campaign views</span>
+      <span class="outcome-pill"><strong>2× industry standard</strong>&nbsp;engagement rate</span>
+      <span class="outcome-pill"><strong>Abdu Rozik</strong>&nbsp;collaboration closed</span>
+      <span class="outcome-pill"><strong>Halal &amp; Gen Z</strong>&nbsp;demographics hit</span>
+      <span class="outcome-pill"><strong>Honey Soy Wings</strong>&nbsp;product launch amplified</span>
     </div>
-    <div class="highlight-box" style="margin-top:2rem;">
-      <p>AToure's talent management and production coordination ensured the Chicken Shop collaboration ran smoothly — from initial brief to final delivery, with zero friction for either party.</p>
+    <div class="highlight-box">
+      <p>By pairing Manlikeisaac with Chicken Shop and bringing in Abdu Rozik from the Middle East, AToure created a campaign that resonated authentically across two distinct audiences — delivering real reach for the brand and a genuine moment for the creator.</p>
     </div>
   </div>
 </section>

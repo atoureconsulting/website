@@ -27,11 +27,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-burger{display:none;background:none;border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:1.1rem;padding:.4rem .7rem;cursor:pointer;border-radius:3px;}
 
 /* HERO */
-.cs-hero{min-height:88vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
-.cs-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--cream);clip-path:ellipse(56% 100% at 50% 100%);}
+.cs-hero{min-height:68vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.cs-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,81,.3),transparent);}
 .hero-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 50%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
 .hero-line-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 10rem 5rem;}
+.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 6rem 5rem;}
 .cs-kicker{font-size:.62rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
 .cs-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .cs-roles{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -49,13 +49,13 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 /* METRICS */
 .metrics-strip{background:var(--black-mid);padding:0;border-bottom:1px solid rgba(200,169,81,.15);}
 .metrics-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);}
-.metric-block{padding:2.2rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
+.metric-block{padding:1.6rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
 .metric-block:last-child{border-right:none;}
 .metric-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
 .metric-l{font-size:.57rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(254,252,248,.4);}
 
 /* SECTIONS */
-.sec{padding:88px 60px;border-bottom:1px solid rgba(200,169,81,.1);}
+.sec{padding:60px 60px;border-bottom:1px solid rgba(200,169,81,.1);}
 .sec-inner{max-width:1280px;margin:0 auto;}
 .sec-label{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:.6rem;}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.2vw,3rem);font-weight:600;color:var(--black);line-height:1.08;margin-bottom:1.4rem;}
@@ -167,9 +167,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
 <div class="metrics-strip">
   <div class="metrics-inner" style="grid-template-columns:repeat(3,1fr);">
-    <div class="metric-block"><div class="metric-n">Brand</div><div class="metric-l">Partnerships secured</div></div>
-    <div class="metric-block"><div class="metric-n">E2E</div><div class="metric-l">Campaign management</div></div>
-    <div class="metric-block"><div class="metric-n">Strategic</div><div class="metric-l">Creator matchmaking</div></div>
+    <div class="metric-block"><div class="metric-n">London</div><div class="metric-l">Full logistics managed</div></div>
+    <div class="metric-block"><div class="metric-n">1</div><div class="metric-l">Hospitality brand deal closed</div></div>
+    <div class="metric-block"><div class="metric-n">E2E</div><div class="metric-l">From brief to delivery</div></div>
   </div>
 </div>
 
@@ -179,15 +179,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
       <div>
         <div class="sec-label">The Brief</div>
-        <h2 class="sec-title">The right creator.<em>The right brands.</em></h2>
-        <p class="body-txt">Ashton Hall came to AToure for strategic brand partnership management — identifying brands that genuinely matched his audience and personal brand, structuring the commercial terms, and delivering campaigns without compromise.</p>
+        <h2 class="sec-title">London on his terms.<em>Sorted end to end.</em></h2>
+        <p class="body-txt">Ashton Hall’s team came to AToure to handle everything during his London stint — logistics, scheduling, and brand opportunities. We moved fast, sorted the ground work, and used our network to close a deal with a premium hospitality group while he was in town.</p>
       </div>
       <div style="background:var(--cream-mid);border-radius:16px;padding:2.2rem;border:1px solid rgba(200,169,81,.15);">
-        <div class="sec-label" style="margin-bottom:1rem;">Delivered by AToure</div>
-        <div class="stat-row"><strong>Brand identification</strong>&nbsp; and strategic matchmaking</div>
-        <div class="stat-row"><strong>Commercial deal structuring</strong>&nbsp; and negotiation</div>
-        <div class="stat-row"><strong>Campaign management</strong>&nbsp; brief through to delivery</div>
-        <div class="stat-row"><strong>Brand compliance</strong>&nbsp; and content oversight</div>
+        <div class="sec-label" style="margin-bottom:1rem;">What AToure Delivered</div>
+        <div class="stat-row"><strong>Full logistics management</strong>&nbsp; during Ashton Hall’s London visit</div>
+        <div class="stat-row"><strong>Scheduling &amp; coordination</strong>&nbsp; for the full duration</div>
+        <div class="stat-row"><strong>Hospitality brand deal</strong>&nbsp; sourced, negotiated, and closed</div>
+        <div class="stat-row"><strong>On-the-ground support</strong>&nbsp; from arrival to departure</div>
       </div>
     </div>
   </div>
@@ -196,65 +196,52 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <section class="sec sec-dark">
   <div class="sec-inner">
     <div class="sec-label">What AToure Did</div>
-    <h2 class="sec-title">Relationships that <em>deliver results.</em></h2>
-    <div class="two-col-grid">
-      <div>
-        <ul class="bullet-list">
-          <li>Identified and approached brands aligned with <strong>Ashton Hall's audience and aesthetic</strong></li>
-          <li>Structured and negotiated <strong>commercial partnership terms</strong></li>
-          <li>Managed full <strong>campaign delivery from brief to final content</strong></li>
-        </ul>
+    <h2 class="sec-title">The network that <em>gets things done.</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">01</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">London Logistics</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Managed all ground logistics during Ashton Hall’s London visit — transport, scheduling, and day-to-day coordination for him and his team.</p>
       </div>
-      <div>
-        <ul class="bullet-list">
-          <li>Oversaw <strong>brand compliance and creative direction</strong> throughout</li>
-          <li>Leveraged AToure's brand relationships to access <strong>deals others couldn't reach</strong></li>
-          <li>Delivered every partnership <strong>on brief, on time, on brand</strong></li>
-        </ul>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">02</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Brand Deal</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Leveraged AToure’s hospitality network to identify, approach and close a brand partnership with a premium London hospitality group.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">03</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Full Coverage</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">End-to-end delivery — from the first call to final wrap, AToure handled every moving part so Ashton could focus on the content.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PHOTO -->
-<section class="sec" style="background:var(--cream-mid);">
-  <div class="sec-inner">
-    <div class="sec-label">Photography</div>
-    <h2 class="sec-title" style="margin-bottom:2rem;">From the campaign.</h2>
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/IMG_8061.jpg" alt="Ashton Hall" loading="lazy" style="width:100%;max-height:560px;object-fit:cover;border-radius:14px;">
-  </div>
-</section>
-
-<!-- VIDEO -->
 <section class="sec" style="background:var(--warm-white);">
   <div class="sec-inner">
-    <div class="sec-label">Campaign Film</div>
-    <h2 class="sec-title" style="margin-bottom:2rem;">AToure <em>× Ashton Hall</em></h2>
-    <div style="max-width:700px;margin:0 auto;">
-      <video controls playsinline style="width:100%;object-fit:cover;display:block;border-radius:14px;box-shadow:var(--sh);">
-  <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/Atoure%20x%20ASHTON%20HALL.MOV" type="video/quicktime">
-  <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/Atoure%20x%20ASHTON%20HALL.MOV" type="video/mp4">
-  <div style="padding:2.5rem;text-align:center;background:var(--black-soft);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;min-height:180px;">
-    <p style="color:var(--gold-lt);font-size:.9rem;">AToure × Ashton Hall</p>
-    <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/Atoure%20x%20ASHTON%20HALL.MOV" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
-  </div>
-</video>
-<p style="font-size:.6rem;color:var(--lt-txt);letter-spacing:.12em;text-transform:uppercase;margin-top:.7rem;text-align:center;">AToure × Ashton Hall</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="sec-inner">
-    <div class="sec-label">Key Outcomes</div>
-    <h2 class="sec-title">The work <em>delivered.</em></h2>
-    <div class="outcomes-pills">
-      <span class="outcome-pill"><strong>Multiple</strong>&nbsp;brand partnerships secured</span>
-      <span class="outcome-pill"><strong>Full</strong>&nbsp;campaign management delivered</span>
-      <span class="outcome-pill"><strong>Strategic</strong>&nbsp;brand-creator matchmaking</span>
-    </div>
-    <div class="highlight-box" style="margin-top:2rem;">
-      <p>AToure's strategic approach delivered the right brand partnerships for Ashton Hall — built on relationships, not just reach, and executed without compromise from start to finish.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div style="border-radius:14px;overflow:hidden;box-shadow:var(--sh);">
+        <video controls playsinline style="width:100%;display:block;object-fit:cover;">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/Atoure%20x%20ASHTON%20HALL.MOV" type="video/quicktime">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/Atoure%20x%20ASHTON%20HALL.MOV" type="video/mp4">
+          <div style="padding:2rem;text-align:center;background:var(--black-soft);display:flex;flex-direction:column;align-items:center;gap:1rem;min-height:180px;justify-content:center;">
+            <p style="color:var(--gold-lt);font-size:.9rem;">AToure × Ashton Hall</p>
+            <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall/Atoure%20x%20ASHTON%20HALL.MOV" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
+          </div>
+        </video>
+      </div>
+      <div>
+        <div class="sec-label">Key Outcomes</div>
+        <h2 class="sec-title">The work <em>delivered.</em></h2>
+        <div class="outcomes-pills" style="margin-bottom:1.5rem;">
+          <span class="outcome-pill"><strong>Full logistics</strong>&nbsp;managed across the London visit</span>
+          <span class="outcome-pill"><strong>Hospitality brand deal</strong>&nbsp;closed during the visit</span>
+          <span class="outcome-pill"><strong>End-to-end</strong>&nbsp;delivery with zero friction</span>
+        </div>
+        <div class="highlight-box">
+          <p>AToure moved fast and used its London network to give Ashton Hall a seamless visit — handling every operational detail and closing a hospitality brand deal while he was in the city.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

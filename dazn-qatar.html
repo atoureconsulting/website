@@ -27,11 +27,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-burger{display:none;background:none;border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:1.1rem;padding:.4rem .7rem;cursor:pointer;border-radius:3px;}
 
 /* HERO */
-.cs-hero{min-height:88vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
-.cs-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--cream);clip-path:ellipse(56% 100% at 50% 100%);}
+.cs-hero{min-height:65vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.cs-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,81,.3),transparent);}
 .hero-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 50%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
 .hero-line-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 10rem 5rem;}
+.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:4rem 4rem 5rem 5rem;}
 .cs-kicker{font-size:.62rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
 .cs-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .cs-roles{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -49,13 +49,13 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 /* METRICS */
 .metrics-strip{background:var(--black-mid);padding:0;border-bottom:1px solid rgba(200,169,81,.15);}
 .metrics-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);}
-.metric-block{padding:2.2rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
+.metric-block{padding:1.6rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
 .metric-block:last-child{border-right:none;}
 .metric-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
 .metric-l{font-size:.57rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(254,252,248,.4);}
 
 /* SECTIONS */
-.sec{padding:88px 60px;border-bottom:1px solid rgba(200,169,81,.1);}
+.sec{padding:60px 60px;border-bottom:1px solid rgba(200,169,81,.1);}
 .sec-inner{max-width:1280px;margin:0 auto;}
 .sec-label{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:.6rem;}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.2vw,3rem);font-weight:600;color:var(--black);line-height:1.08;margin-bottom:1.4rem;}
@@ -162,7 +162,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <p class="cs-tagline">Creator integration and in-country operational delivery for DAZN's Qatar football coverage.</p>
   </div>
   <div class="cs-hero-right">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/View%20recent%20photos.jpeg.png" alt="DAZN Qatar" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" loading="eager" fetchpriority="high">
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/View%20recent%20photos.jpeg.png" alt="DAZN Qatar" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:12px;" loading="eager" fetchpriority="high">
   </div>
 </div>
 
@@ -180,15 +180,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
       <div>
         <div class="sec-label">The Brief</div>
-        <h2 class="sec-title">Global sports media.<em>Local execution.</em></h2>
-        <p class="body-txt">DAZN required a trusted operational partner to manage creator integration and in-country logistics for their Qatar football coverage. AToure provided the full delivery layer — talent coordination, on-the-ground logistics, and seamless execution in a complex market.</p>
+        <h2 class="sec-title">DAZN. Qatar.<em>Delivered.</em></h2>
+        <p class="body-txt">DAZN engaged AToure to place a creator in Qatar as the exclusive live broadcaster of SLIM vs GIB — Thursday 28th November. The objective: drive live stream viewership and PPV sales through authentic creator content across Instagram, Snapchat, and TikTok, with full DAZN brand messaging throughout.</p>
       </div>
       <div style="background:var(--cream-mid);border-radius:16px;padding:2.2rem;border:1px solid rgba(200,169,81,.15);">
-        <div class="sec-label" style="margin-bottom:1rem;">Delivered by AToure</div>
-        <div class="stat-row"><strong>Creator integration</strong>&nbsp; within DAZN's Qatar production</div>
-        <div class="stat-row"><strong>Full in-country logistics</strong>&nbsp; and coordination</div>
-        <div class="stat-row"><strong>Local vendor management</strong>&nbsp; and hospitality</div>
-        <div class="stat-row"><strong>Brand compliance</strong>&nbsp; across all content deliverables</div>
+        <div class="sec-label" style="margin-bottom:1rem;">Content Deliverables</div>
+        <div class="stat-row"><strong>Pre-event content</strong>&nbsp; — stories, polls, Q&amp;As, countdowns</div>
+        <div class="stat-row"><strong>Fight Night posts</strong>&nbsp; — IG, Snapchat, feed posts</div>
+        <div class="stat-row"><strong>Live stream</strong>&nbsp; from the arena — ringside access, behind the scenes</div>
+        <div class="stat-row"><strong>Dressing room access</strong>&nbsp; &amp; exclusive fighter interviews</div>
+        <div class="stat-row"><strong>Tracked links</strong>&nbsp; directing audience to Dazn.com for PPV</div>
       </div>
     </div>
   </div>
@@ -197,56 +198,53 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <section class="sec sec-dark">
   <div class="sec-inner">
     <div class="sec-label">What AToure Did</div>
-    <h2 class="sec-title">The operational layer <em>that made it work.</em></h2>
-    <div class="two-col-grid">
-      <div>
-        <ul class="bullet-list">
-          <li>Managed <strong>full talent logistics and in-country coordination</strong> for DAZN's Qatar campaign</li>
-          <li>Facilitated <strong>creator content integration</strong> directly with DAZN's Qatar production workflow</li>
-          <li>Handled <strong>local vendor relationships</strong> and hospitality management throughout</li>
-        </ul>
+    <h2 class="sec-title">Creator. Brand. <em>In-country.</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">01</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Talent Placement</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Identified and placed the right creator for DAZN’s Qatar fight night — matching audience, brand tone, and platform strategy for maximum impact.</p>
       </div>
-      <div>
-        <ul class="bullet-list">
-          <li>Ensured <strong>brand compliance</strong> across all creator-produced content</li>
-          <li>Provided <strong>seamless on-the-ground operational support</strong> in a complex market</li>
-          <li>Delivered the campaign <strong>without friction</strong> for DAZN's production team</li>
-        </ul>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">02</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">In-Country Ops</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Managed all logistics in Qatar — transport, accommodation, access credentials, ringside positioning, and dressing room coordination.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:2rem;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:.8rem;">03</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-white);margin-bottom:.7rem;">Brand Compliance</div>
+        <p style="font-size:.87rem;color:rgba(254,252,248,.5);line-height:1.75;">Ensured all content carried DAZN messaging, tracked links, and correct tags throughout — delivered on brief across every platform.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VIDEO — placed lower, well contextualised -->
 <section class="sec" style="background:var(--warm-white);">
   <div class="sec-inner">
-    <div class="sec-label">The Work</div>
-    <h2 class="sec-title" style="margin-bottom:2rem;">DAZN <em>× AToure</em></h2>
-    <div style="max-width:700px;margin:0 auto;">
-      <video controls playsinline style="width:100%;object-fit:cover;display:block;border-radius:14px;box-shadow:var(--sh);">
-  <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/DAZN%20x%20ATOURE" type="video/quicktime">
-  <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/DAZN%20x%20ATOURE" type="video/mp4">
-  <div style="padding:2.5rem;text-align:center;background:var(--black-soft);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;min-height:180px;">
-    <p style="color:var(--gold-lt);font-size:.9rem;">DAZN × AToure — Qatar</p>
-    <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/DAZN%20x%20ATOURE" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
-  </div>
-</video>
-<p style="font-size:.6rem;color:var(--lt-txt);letter-spacing:.12em;text-transform:uppercase;margin-top:.7rem;text-align:center;">DAZN × AToure — Qatar</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="sec-inner">
-    <div class="sec-label">Key Outcomes</div>
-    <h2 class="sec-title">Clean execution. <em>Every time.</em></h2>
-    <div class="outcomes-pills">
-      <span class="outcome-pill"><strong>DAZN Qatar</strong>&nbsp;partnership executed end-to-end</span>
-      <span class="outcome-pill"><strong>Full in-country logistics</strong>&nbsp;delivered</span>
-      <span class="outcome-pill"><strong>Creator integration</strong>&nbsp;managed within broadcast workflow</span>
-    </div>
-    <div class="highlight-box" style="margin-top:2rem;">
-      <p>AToure delivered a professional, frictionless operational layer for DAZN's Qatar campaign — proof that the same rigour AToure brings to major activations applies at every level of work.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <div class="sec-label">Key Outcomes</div>
+        <h2 class="sec-title">Clean execution. <em>Every time.</em></h2>
+        <div class="outcomes-pills" style="margin-bottom:1.5rem;">
+          <span class="outcome-pill"><strong>DAZN Qatar</strong>&nbsp;delivered end-to-end</span>
+          <span class="outcome-pill"><strong>Live ringside</strong>&nbsp;content produced fight night</span>
+          <span class="outcome-pill"><strong>Full creator</strong>&nbsp;integration within DAZN’s broadcast</span>
+          <span class="outcome-pill"><strong>PPV-tracked</strong>&nbsp;links across all content</span>
+        </div>
+        <div class="highlight-box">
+          <p>AToure handled every operational detail for DAZN’s Qatar fight night — from talent placement to in-country logistics — delivering content on brief, on brand, and on time.</p>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:var(--sh);">
+        <video controls playsinline style="width:100%;display:block;object-fit:cover;">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/DAZN%20x%20ATOURE" type="video/quicktime">
+          <source src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/DAZN%20x%20ATOURE" type="video/mp4">
+          <div style="padding:2rem;text-align:center;background:var(--black-soft);display:flex;flex-direction:column;align-items:center;gap:1rem;min-height:160px;justify-content:center;">
+            <p style="color:var(--gold-lt);font-size:.9rem;">DAZN × AToure — Qatar</p>
+            <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/DAZN%20QATAR/DAZN%20x%20ATOURE" download class="btn btn-outline-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
+          </div>
+        </video>
+      </div>
     </div>
   </div>
 </section>
