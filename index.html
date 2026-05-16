@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="google-site-verification" content="y2zXhGwkbmf-0G_brMrMvYdTGFmUJ_jpFIoaYYWUCc8" /><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AToure &mdash; Brand &times; Creator Partnerships</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+<meta name="google-site-verification" content="y2zXhGwkbmf-0G_brMrMvYdTGFmUJ_jpFIoaYYWUCc8" /><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AToure &mdash; Brand &times; Creator Partnerships</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"></noscript><style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --black:#0D0C0A;--black-soft:#1A1814;--black-mid:#2C2820;
@@ -348,6 +348,14 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeM();cl
 </script><script>
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   formspree('initForm', { formElement: '#enquiry-form', formId: 'mwvwjveo' });
+  document.addEventListener('DOMContentLoaded', function() {
+    var enquiryForm = document.getElementById('enquiry-form');
+    if (enquiryForm) {
+      enquiryForm.addEventListener('formspree:success', function() {
+        gtag('event', 'generate_lead', {'event_category': 'Contact', 'event_label': 'Form Submit'});
+      });
+    }
+  });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body></html>
