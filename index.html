@@ -608,4 +608,19 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeM();cl
   tick();
 })();
 </script>
+<script>
+(function(){
+  var el = document.querySelector('[data-fs-success]');
+  if (!el) return;
+  new MutationObserver(function(mutations){
+    mutations.forEach(function(m){
+      if (m.attributeName === 'style' && el.style.display !== 'none') {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'enquiry_form' });
+        }
+      }
+    });
+  }).observe(el, { attributes: true, attributeFilter: ['style'] });
+})();
+</script>
 </body></html>

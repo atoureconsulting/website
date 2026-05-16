@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /talent.html
+
+Sitemap: https://atoureconsulting.com/sitemap.xml
