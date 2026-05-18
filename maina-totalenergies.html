@@ -48,6 +48,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-links a{font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mid-txt);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--gold-dk);}
 .nav-cta{background:var(--black)!important;color:var(--gold-lt)!important;padding:.55rem 1.5rem;border-radius:3px;letter-spacing:.06em!important;}
+.nav-burger{display:none;background:none;border:1px solid rgba(200,169,81,.35);color:var(--mid-txt);font-size:1.2rem;padding:.3rem .6rem;cursor:pointer;border-radius:3px;line-height:1;}
 
 /* HERO */
 .cs-hero{min-height:58vh;background:linear-gradient(160deg,var(--black) 0%,#0D1A10 40%,#0A2010 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
@@ -213,16 +214,16 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
 .account-stat-label .plat-icon{width:13px;height:13px;opacity:.6;}
 
 /* PHOTO STRIP */
-.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;overflow:hidden;}
-.photo-strip-wrap{overflow:hidden;height:440px;}
-.photo-strip-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.72);transition:filter .45s,transform .55s;display:block;}
-.photo-strip-wrap:hover img{filter:brightness(.92);transform:scale(1.04);}
+.photo-divider{position:relative;height:420px;overflow:hidden;}
+.photo-divider img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(.55);display:block;}
+.photo-divider-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,7,6,.5) 0%,transparent 30%,transparent 70%,rgba(8,7,6,.5) 100%);}
+@media(max-width:600px){.photo-divider{height:260px;}}
 
 /* PHOTO IN SECTION */
 .section-photo{width:100%;border-radius:12px;overflow:hidden;margin-top:2rem;}
 .section-photo img{width:100%;height:340px;object-fit:cover;object-position:center top;filter:brightness(.82);display:block;}
 
-/* RESPONSIVE */
+/* RESPONSIVE — tablet */
 @media(max-width:900px){
   nav{padding:0 24px;}
   .lang-toggle-bar{padding:.55rem 24px;}
@@ -235,6 +236,31 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
   .two-col-grid,.three-col-grid,.niche-grid,.lang-strip,.demo-grid,.acts-grid,.accounts-grid,.track-grid{grid-template-columns:1fr 1fr;}
   .track-hero::before{display:none;}
   .cta-sec{padding:56px 24px;}
+}
+/* RESPONSIVE — mobile */
+@media(max-width:600px){
+  .lang-toggle-bar{padding:.5rem 16px;gap:.5rem;}
+  .pdf-btn{font-size:.55rem;padding:.3rem .65rem;margin-left:0;}
+  nav{padding:0 16px;height:64px;}
+  .nav-logo{height:110px;}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:rgba(250,246,238,.98);flex-direction:column;align-items:stretch;border-bottom:2px solid rgba(200,169,81,.2);box-shadow:0 8px 24px rgba(0,0,0,.08);z-index:199;}
+  .nav-links.open{display:flex;}
+  .nav-links li{border-bottom:1px solid rgba(200,169,81,.1);}
+  .nav-links li a{display:block;padding:.9rem 1.5rem;font-size:.7rem;color:var(--mid-txt);}
+  .nav-links li a.nav-cta{background:var(--black)!important;color:var(--gold-lt)!important;margin:.5rem 1rem;border-radius:3px;text-align:center;}
+  .nav-burger{display:block;}
+  .cs-hero-left{padding:2.5rem 1.5rem 3rem;}
+  .cs-h1{font-size:clamp(2.2rem,10vw,3.5rem);}
+  .metrics-inner{grid-template-columns:repeat(2,1fr);}
+  .metric-block:nth-child(3){border-top:1px solid rgba(200,169,81,.1);}
+  .metric-block:nth-child(odd){border-right:1px solid rgba(200,169,81,.1);}
+  .sec{padding:44px 16px;}
+  .track-hero{padding:56px 16px;}
+  .cta-sec{padding:48px 16px;}
+  .two-col-grid,.three-col-grid,.niche-grid,.lang-strip,.demo-grid,.acts-grid,.accounts-grid,.track-grid{grid-template-columns:1fr;}
+  .section-photo img{height:240px;}
+  .cta-buttons{flex-direction:column;align-items:stretch;}
+  .cta-buttons .btn{text-align:center;}
 }
 
 /* PRINT / PDF */
@@ -277,15 +303,16 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
   <span class="fr">Confidentiel — Proposition Créateur · Pour Examen Client Uniquement</span>
 </div>
 
-<nav>
+<nav id="nav">
   <a href="index.html"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/AToure%20Management%20%26%20Consuting%20Logo/2.png" alt="AToure" class="nav-logo"></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a></li>
     <li><a href="about.html"><span class="en">About</span><span class="fr">À Propos</span></a></li>
     <li><a href="services.html"><span class="en">Services</span><span class="fr">Services</span></a></li>
     <li><a href="our-work.html"><span class="en">Our Work</span><span class="fr">Projets</span></a></li>
     <li><a href="index.html#contact" class="nav-cta"><span class="en">Let's Talk</span><span class="fr">Contactez-Nous</span></a></li>
   </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu" onclick="document.getElementById('nav-links').classList.toggle('open')">&#9776;</button>
 </nav>
 
 <!-- HERO -->
@@ -308,7 +335,7 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
     </p>
   </div>
   <div class="cs-hero-right">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00261.JPG" alt="Abdullahi Maina" onerror="this.src='https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/itsyaboymaina.jpg'">
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/itsyaboymaina.jpg" alt="Abdullahi Maina">
     <div class="hero-badge">
       <div class="hero-badge-num">15.5M</div>
       <div class="hero-badge-lbl">
@@ -372,7 +399,7 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <span class="fr">À 22 ans, Maina est titulaire d'un Master en Commerce International avec une spécialisation en Économie et Commerce — apportant à la fois authenticité culturelle et intelligence commerciale à chaque partenariat. Sa page @mainavsfood est entièrement consacrée à l'exploration food — restaurants, street food, cuisine — avec des playlists dédiées à la cuisine africaine. Ses origines nigérianes le placent à l'intérieur de l'histoire que le documentaire veut raconter, pas en observateur extérieur.</span>
         </p>
         <div class="section-photo">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00262.JPG" alt="Abdullahi Maina" onerror="this.parentNode.style.display='none'">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/itsyaboymaina.jpg" alt="Abdullahi Maina">
         </div>
       </div>
       <div>
@@ -778,17 +805,10 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
   </div>
 </section>
 
-<!-- PHOTO STRIP -->
-<div class="photo-strip">
-  <div class="photo-strip-wrap">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00255.JPG" alt="Abdullahi Maina">
-  </div>
-  <div class="photo-strip-wrap">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00261.JPG" alt="Abdullahi Maina">
-  </div>
-  <div class="photo-strip-wrap">
-    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00262.JPG" alt="Abdullahi Maina">
-  </div>
+<!-- PHOTO DIVIDER -->
+<div class="photo-divider">
+  <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/itsyaboymaina.jpg" alt="Abdullahi Maina">
+  <div class="photo-divider-overlay"></div>
 </div>
 
 <!-- AUDIENCE -->
