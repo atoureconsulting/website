@@ -108,6 +108,22 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .lang-desc{font-size:.82rem;color:rgba(254,252,248,.5);line-height:1.7;}
 .lang-why{font-size:.78rem;color:rgba(200,169,81,.8);margin-top:.8rem;font-style:italic;}
 
+/* TRACK RECORD */
+.track-hero{background:var(--black);padding:88px 60px;position:relative;overflow:hidden;}
+.track-hero::before{content:'50+';position:absolute;right:-2rem;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:28vw;font-weight:600;color:rgba(200,169,81,.04);line-height:1;pointer-events:none;user-select:none;}
+.track-stat-row{display:flex;align-items:flex-end;gap:2rem;margin-bottom:3rem;}
+.track-big-num{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,12vw,10rem);font-weight:600;color:var(--gold-lt);line-height:.9;}
+.track-big-label{padding-bottom:1.2rem;}
+.track-big-label .tbl-top{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+.track-big-label .tbl-main{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.2rem);color:var(--warm-white);line-height:1.1;}
+.track-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(200,169,81,.1);border-radius:12px;overflow:hidden;}
+.track-cell{background:var(--black-soft);padding:2rem 1.6rem;transition:background .2s;}
+.track-cell:hover{background:#1f1c17;}
+.track-cell-icon{font-size:1.6rem;margin-bottom:.8rem;display:block;}
+.track-cell-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--gold-lt);margin-bottom:.4rem;}
+.track-cell-desc{font-size:.78rem;color:rgba(254,252,248,.4);line-height:1.65;}
+.track-quote{margin-top:3rem;border-left:3px solid var(--gold);padding-left:1.6rem;}
+.track-quote p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;color:rgba(254,252,248,.7);line-height:1.55;}
 /* AUDIENCE DEMO */
 .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
 .demo-card{background:var(--warm-white);border:1px solid var(--cream-dk);border-radius:12px;padding:1.8rem;}
@@ -175,7 +191,8 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
   .metrics-inner{grid-template-columns:repeat(3,1fr);}
   .metric-block:nth-child(4),.metric-block:nth-child(5){border-top:1px solid rgba(200,169,81,.1);}
   .sec{padding:56px 24px;}
-  .two-col-grid,.three-col-grid,.niche-grid,.lang-strip,.demo-grid,.acts-grid,.accounts-grid{grid-template-columns:1fr;}
+  .two-col-grid,.three-col-grid,.niche-grid,.lang-strip,.demo-grid,.acts-grid,.accounts-grid,.track-grid{grid-template-columns:1fr 1fr;}
+  .track-hero::before{display:none;}
   .cta-sec{padding:56px 24px;}
 }
 </style>
@@ -380,6 +397,45 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="account-stat-row"><span class="account-stat-label">Role in campaign</span><span class="account-stat-val">Content credibility &amp; niche reach</span></div>
         <span class="account-badge">Food credibility anchor</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK RECORD -->
+<section class="track-hero">
+  <div class="sec-inner" style="max-width:1280px;margin:0 auto;position:relative;z-index:1;">
+    <div class="sec-label" style="color:var(--gold);">Brand Track Record</div>
+    <div class="track-stat-row">
+      <div class="track-big-num">50<span style="color:var(--gold);font-size:.55em;">+</span></div>
+      <div class="track-big-label">
+        <div class="tbl-top">Verified partnerships</div>
+        <div class="tbl-main">Restaurant &amp; food brand<br>collaborations</div>
+      </div>
+    </div>
+    <div class="track-grid">
+      <div class="track-cell">
+        <span class="track-cell-icon">🍽️</span>
+        <div class="track-cell-title">Casual &amp; Fast Dining</div>
+        <p class="track-cell-desc">Worked with high-street restaurants and fast-casual chains — producing authentic, high-engagement review content that drives footfall and brand awareness.</p>
+      </div>
+      <div class="track-cell">
+        <span class="track-cell-icon">🌍</span>
+        <div class="track-cell-title">African &amp; World Cuisine</div>
+        <p class="track-cell-desc">Deep affinity with African food establishments — a natural advocate for the continent's food culture, from Jollof kitchens to West African street food vendors.</p>
+      </div>
+      <div class="track-cell">
+        <span class="track-cell-icon">📍</span>
+        <div class="track-cell-title">Street Food &amp; Pop-Ups</div>
+        <p class="track-cell-desc">A regular presence at street food markets and pop-up events — his content captures the energy of live food culture in a way scripted ads simply cannot replicate.</p>
+      </div>
+      <div class="track-cell">
+        <span class="track-cell-icon">🎥</span>
+        <div class="track-cell-title">Content &amp; Collabs</div>
+        <p class="track-cell-desc">50+ partnerships have given Maina a refined, efficient workflow for brand-integrated food content — on brief, on time, and always on-brand for his audience.</p>
+      </div>
+    </div>
+    <div class="track-quote">
+      <p>"A creator who has built commercial trust with 50+ food brands is not a risk. He is the safest, most credible choice to carry a documentary about food, cooking, and the people behind both."</p>
     </div>
   </div>
 </section>
