@@ -202,6 +202,26 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
 .brand-tile-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.4rem;}
 .brand-tile-cat{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(254,252,248,.3);}
 
+/* PLATFORM ICONS */
+.plat-icon{width:13px;height:13px;display:inline-block;vertical-align:middle;flex-shrink:0;}
+.plat-tt{color:#69C9D0;}
+.plat-ig{color:#E1306C;}
+.plat-yt{color:#FF0000;}
+.metric-l{display:flex!important;align-items:center;justify-content:center;gap:.35rem;}
+.metric-l .plat-icon{width:12px;height:12px;opacity:.7;}
+.account-stat-label{display:flex;align-items:center;gap:.35rem;}
+.account-stat-label .plat-icon{width:13px;height:13px;opacity:.6;}
+
+/* PHOTO STRIP */
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;overflow:hidden;}
+.photo-strip-wrap{overflow:hidden;height:440px;}
+.photo-strip-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.72);transition:filter .45s,transform .55s;display:block;}
+.photo-strip-wrap:hover img{filter:brightness(.92);transform:scale(1.04);}
+
+/* PHOTO IN SECTION */
+.section-photo{width:100%;border-radius:12px;overflow:hidden;margin-top:2rem;}
+.section-photo img{width:100%;height:340px;object-fit:cover;object-position:center top;filter:brightness(.82);display:block;}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:0 24px;}
@@ -304,43 +324,28 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
   <div class="metrics-inner">
     <div class="metric-block">
       <div class="metric-n">14.3M</div>
-      <div class="metric-l">TikTok</div>
+      <div class="metric-l"><svg class="plat-icon plat-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.93a8.17 8.17 0 0 0 4.78 1.53V7.04a4.85 4.85 0 0 1-1.01-.35z"/></svg>TikTok</div>
       <div class="metric-sub">@itsyaboymaina</div>
     </div>
     <div class="metric-block">
       <div class="metric-n">1M</div>
-      <div class="metric-l">
-        <span class="en">TikTok Food</span>
-        <span class="fr">TikTok Food</span>
-      </div>
+      <div class="metric-l"><svg class="plat-icon plat-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.93a8.17 8.17 0 0 0 4.78 1.53V7.04a4.85 4.85 0 0 1-1.01-.35z"/></svg><span class="en">TikTok Food</span><span class="fr">TikTok Food</span></div>
       <div class="metric-sub">@mainavsfood</div>
     </div>
     <div class="metric-block">
       <div class="metric-n">943K</div>
-      <div class="metric-l">Instagram</div>
+      <div class="metric-l"><svg class="plat-icon plat-ig" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</div>
       <div class="metric-sub">@itsyaboymaina</div>
     </div>
     <div class="metric-block">
       <div class="metric-n">25.8M</div>
-      <div class="metric-l">
-        <span class="en">TikTok Likes</span>
-        <span class="fr">Likes TikTok</span>
-      </div>
-      <div class="metric-sub">
-        <span class="en">Total engagement</span>
-        <span class="fr">Engagement total</span>
-      </div>
+      <div class="metric-l"><svg class="plat-icon plat-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.93a8.17 8.17 0 0 0 4.78 1.53V7.04a4.85 4.85 0 0 1-1.01-.35z"/></svg><span class="en">TikTok Likes</span><span class="fr">Likes TikTok</span></div>
+      <div class="metric-sub"><span class="en">Total engagement</span><span class="fr">Engagement total</span></div>
     </div>
     <div class="metric-block">
       <div class="metric-n">7.5%</div>
-      <div class="metric-l">
-        <span class="en">Eng. Rate</span>
-        <span class="fr">Taux Eng.</span>
-      </div>
-      <div class="metric-sub">
-        <span class="en">TikTok avg</span>
-        <span class="fr">Moy. TikTok</span>
-      </div>
+      <div class="metric-l"><svg class="plat-icon plat-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.93a8.17 8.17 0 0 0 4.78 1.53V7.04a4.85 4.85 0 0 1-1.01-.35z"/></svg><span class="en">Eng. Rate</span><span class="fr">Taux Eng.</span></div>
+      <div class="metric-sub"><span class="en">TikTok avg</span><span class="fr">Moy. TikTok</span></div>
     </div>
   </div>
 </div>
@@ -366,6 +371,9 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <span class="en">At 22 years old, Maina holds a Master's in International Business with a background in Economics &amp; Trade — bringing both cultural authenticity and commercial intelligence to every partnership. His @mainavsfood page is built entirely around food exploration — restaurants, street food, cooking — with playlists dedicated to African food. His Nigerian origin puts him inside the story the documentary wants to tell, not outside it as an observer.</span>
           <span class="fr">À 22 ans, Maina est titulaire d'un Master en Commerce International avec une spécialisation en Économie et Commerce — apportant à la fois authenticité culturelle et intelligence commerciale à chaque partenariat. Sa page @mainavsfood est entièrement consacrée à l'exploration food — restaurants, street food, cuisine — avec des playlists dédiées à la cuisine africaine. Ses origines nigérianes le placent à l'intérieur de l'histoire que le documentaire veut raconter, pas en observateur extérieur.</span>
         </p>
+        <div class="section-photo">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00262.JPG" alt="Abdullahi Maina" onerror="this.parentNode.style.display='none'">
+        </div>
       </div>
       <div>
         <div class="highlight-box">
@@ -589,9 +597,9 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <span class="en">Main Channel</span>
           <span class="fr">Chaîne Principale</span>
         </div>
-        <div class="account-stat-row"><span class="account-stat-label">TikTok</span><span class="account-stat-val">14.3M</span></div>
-        <div class="account-stat-row"><span class="account-stat-label">Instagram</span><span class="account-stat-val">943K</span></div>
-        <div class="account-stat-row"><span class="account-stat-label">YouTube</span><span class="account-stat-val">40.6K</span></div>
+        <div class="account-stat-row"><span class="account-stat-label"><svg class="plat-icon plat-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.93a8.17 8.17 0 0 0 4.78 1.53V7.04a4.85 4.85 0 0 1-1.01-.35z"/></svg>TikTok</span><span class="account-stat-val">14.3M</span></div>
+        <div class="account-stat-row"><span class="account-stat-label"><svg class="plat-icon plat-ig" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</span><span class="account-stat-val">943K</span></div>
+        <div class="account-stat-row"><span class="account-stat-label"><svg class="plat-icon plat-yt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</span><span class="account-stat-val">40.6K</span></div>
         <div class="account-stat-row">
           <span class="account-stat-label"><span class="en">Content</span><span class="fr">Contenu</span></span>
           <span class="account-stat-val"><span class="en">Lifestyle · Entertainment</span><span class="fr">Lifestyle · Divertissement</span></span>
@@ -609,7 +617,7 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <span class="fr">Chaîne Food</span>
         </div>
         <div class="account-stat-row"><span class="account-stat-label">TikTok</span><span class="account-stat-val">1M</span></div>
-        <div class="account-stat-row"><span class="account-stat-label">TikTok Likes</span><span class="account-stat-val">25.8M</span></div>
+        <div class="account-stat-row"><span class="account-stat-label"><svg class="plat-icon plat-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.93a8.17 8.17 0 0 0 4.78 1.53V7.04a4.85 4.85 0 0 1-1.01-.35z"/></svg>TikTok Likes</span><span class="account-stat-val">25.8M</span></div>
         <div class="account-stat-row">
           <span class="account-stat-label"><span class="en">Content</span><span class="fr">Contenu</span></span>
           <span class="account-stat-val"><span class="en">Food reviews · Cooking</span><span class="fr">Critiques food · Cuisine</span></span>
@@ -769,6 +777,19 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
     </div>
   </div>
 </section>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="photo-strip-wrap">
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00255.JPG" alt="Abdullahi Maina">
+  </div>
+  <div class="photo-strip-wrap">
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00261.JPG" alt="Abdullahi Maina">
+  </div>
+  <div class="photo-strip-wrap">
+    <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/creator%20photos/maina/DSC00262.JPG" alt="Abdullahi Maina">
+  </div>
+</div>
 
 <!-- AUDIENCE -->
 <section class="sec">
