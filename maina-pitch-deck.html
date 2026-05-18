@@ -385,6 +385,18 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
 .s-cta-btn.secondary:hover{background:rgba(200,169,81,.07);border-color:var(--gold);}
 .s-cta-atoure{margin-top:4rem;font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,169,81,.25);}
 
+/* ─── SLIDE 7 · BRANDS ─── */
+.s-brands{background:var(--black);padding:5rem 6rem;display:flex;flex-direction:column;justify-content:center;}
+.s-brands-inner{position:relative;z-index:1;}
+.s-brands-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.s-brands-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:600;color:var(--warm-white);line-height:1;margin-bottom:3rem;}
+.s-brands-title em{font-style:italic;color:var(--gold-lt);}
+.s-brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,169,81,.08);border-radius:12px;overflow:hidden;max-width:900px;}
+.s-brand-tile{background:#0d0c0a;padding:2.2rem 2rem;transition:background .2s;cursor:default;}
+.s-brand-tile:hover{background:#161410;}
+.s-brand-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
+.s-brand-cat{font-size:.55rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(254,252,248,.25);}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   html{scroll-snap-type:none;}
@@ -399,7 +411,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
 </head>
 <body>
 
-<div id="counter">SLIDE <span id="cnum">1</span> / 12</div>
+<div id="counter">SLIDE <span id="cnum">1</span> / 13</div>
 
 <!-- ─── SLIDE 1 · COVER ─── -->
 <section class="slide s-cover" data-slide="1">
@@ -413,7 +425,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
     <div class="s-cover-right">
       <div class="s-cover-stat-grid">
         <div class="s-cover-stat">
-          <div class="s-cover-stat-n">16.4M</div>
+          <div class="s-cover-stat-n">15.5M</div>
           <div class="s-cover-stat-l">Combined Reach</div>
         </div>
         <div class="s-cover-stat">
@@ -421,8 +433,8 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
           <div class="s-cover-stat-l">Food Collabs</div>
         </div>
         <div class="s-cover-stat">
-          <div class="s-cover-stat-n">2</div>
-          <div class="s-cover-stat-l">Languages</div>
+          <div class="s-cover-stat-n">7.5%</div>
+          <div class="s-cover-stat-l">Eng. Rate</div>
         </div>
         <div class="s-cover-stat">
           <div class="s-cover-stat-n">2</div>
@@ -466,7 +478,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
       <div>
         <div class="s-three-word">Reach</div>
         <div class="s-three-word-fr">Puissance de diffusion</div>
-        <p class="s-three-proof"><strong>14.3M TikTok</strong> on his main channel. <strong>1.1M</strong> on his food channel. <strong>943K Instagram.</strong> Two distinct audiences — mainstream and food — activated in one campaign.</p>
+        <p class="s-three-proof"><strong>14.3M TikTok</strong> on his main channel. <strong>1M</strong> on his food channel (@mainavsfood). <strong>943K Instagram.</strong> Two distinct audiences — mainstream and food — activated in one campaign.</p>
       </div>
       <div class="s-three-cell-num">03</div>
     </div>
@@ -524,7 +536,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
     </div>
     <div class="s-fil-block">
       <div class="s-fil-block-title">Universel</div>
-      <div class="s-fil-block-desc">16.4M people across Africa, the UK, the US and the diaspora — all connected through food on his channels.</div>
+      <div class="s-fil-block-desc">15.5M people across Africa, the UK, the US and the diaspora — all connected through food on his channels.</div>
     </div>
     <div class="s-fil-block">
       <div class="s-fil-block-title">Engagé</div>
@@ -557,8 +569,54 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
   </div>
 </section>
 
-<!-- ─── SLIDE 7 · AUDIENCE ─── -->
-<section class="slide s-aud" data-slide="7">
+<!-- ─── SLIDE 7 · BRANDS ─── -->
+<section class="slide s-brands" data-slide="7">
+  <div class="s-brands-inner">
+    <div class="s-brands-label">Brand Collaborations</div>
+    <h2 class="s-brands-title">Trusted by <em>the world's biggest names.</em></h2>
+    <div class="s-brands-grid">
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Netflix</div>
+        <div class="s-brand-cat">Streaming</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Warner Bros</div>
+        <div class="s-brand-cat">Entertainment</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">BBC</div>
+        <div class="s-brand-cat">Broadcasting</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Wingstop</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Jollibee</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Afrikana</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Chicken Shop</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">RIDGE</div>
+        <div class="s-brand-cat">Lifestyle</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Gauthmath</div>
+        <div class="s-brand-cat">Tech &amp; Education</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 8 · AUDIENCE ─── -->
+<section class="slide s-aud" data-slide="8">
   <div class="s-aud-left">
     <div class="s-aud-label">Audience Intelligence</div>
     <h2 class="s-aud-title">Jeune,<br>africain,<br><em>global.</em></h2>
@@ -584,7 +642,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
 </section>
 
 <!-- ─── SLIDE 8 · 3 ACTS ─── -->
-<section class="slide s-acts" data-slide="8">
+<section class="slide s-acts" data-slide="9">
   <div class="s-acts-label">Structure narrative du documentaire — et le rôle de Maina dans chaque acte</div>
   <div class="s-acts-grid">
     <div class="s-act">
@@ -612,7 +670,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
 </section>
 
 <!-- ─── SLIDE 9 · BILINGUAL ─── -->
-<section class="slide s-bi" data-slide="9">
+<section class="slide s-bi" data-slide="10">
   <div class="s-bi-half">
     <div class="s-bi-label">Langue de diffusion principale</div>
     <div class="s-bi-flag">🇬🇧</div>
@@ -630,7 +688,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
 </section>
 
 <!-- ─── SLIDE 10 · DELIVERABLES ─── -->
-<section class="slide s-del" data-slide="10">
+<section class="slide s-del" data-slide="11">
   <div class="s-del-label">Ce que le partenariat produit</div>
   <h2 class="s-del-title">Un dispositif <em>complet.</em></h2>
   <div class="s-del-grid">
@@ -662,7 +720,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
 </section>
 
 <!-- ─── SLIDE 11 · SORTIR DU DISCOURS ─── -->
-<section class="slide s-sortir" data-slide="11">
+<section class="slide s-sortir" data-slide="12">
   <div class="s-sortir-label">L'enjeu de communication du brief</div>
   <h2 class="s-sortir-title">Sortir du<br><em>discours corporate.</em></h2>
   <div class="s-sortir-compare">
@@ -678,13 +736,13 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
       <div class="s-sortir-item good"><strong>50+ food collabs</strong> — crédibilité organique, pas achetée</div>
       <div class="s-sortir-item good"><strong>Origines nigérianes</strong> — il vient de là, il connaît ces cuisines</div>
       <div class="s-sortir-item good"><strong>Bilingue</strong> — le récit coule naturellement entre FR et EN</div>
-      <div class="s-sortir-item good"><strong>16.4M reach</strong> — la puissance de diffusion sans le discours</div>
+      <div class="s-sortir-item good"><strong>15.5M reach</strong> — la puissance de diffusion sans le discours</div>
     </div>
   </div>
 </section>
 
 <!-- ─── SLIDE 12 · CTA ─── -->
-<section class="slide s-cta" data-slide="12">
+<section class="slide s-cta" data-slide="13">
   <div class="s-cta-content">
     <div class="s-cta-label">Presented by AToure Management &amp; Consulting</div>
     <h2 class="s-cta-title">Passons à<br><em>l'étape suivante.</em></h2>
