@@ -198,10 +198,13 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
 
 /* BRAND GRID */
 .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,169,81,.1);border-radius:12px;overflow:hidden;margin-top:2.5rem;}
-.brand-tile{background:#111;padding:2rem 1.5rem;text-align:center;transition:background .2s;}
+.brand-tile{background:#111;padding:1.5rem 1rem;text-align:center;transition:background .2s;display:flex;align-items:center;justify-content:center;min-height:90px;}
 .brand-tile:hover{background:#1a1714;}
 .brand-tile-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.4rem;}
 .brand-tile-cat{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(254,252,248,.3);}
+.brand-logo-img{max-height:40px;max-width:110px;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.75;transition:opacity .2s;}
+.brand-tile:hover .brand-logo-img{opacity:1;}
+.brand-logo-img.color-logo{filter:none;opacity:.85;}
 
 /* PLATFORM ICONS */
 .plat-icon{width:13px;height:13px;display:inline-block;vertical-align:middle;flex-shrink:0;}
@@ -678,55 +681,38 @@ footer{background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px s
     </h2>
     <div class="brand-grid">
       <div class="brand-tile">
-        <div class="brand-tile-name">Netflix</div>
-        <div class="brand-tile-cat">Streaming</div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/netflix-3.svg" alt="Netflix" class="brand-logo-img" loading="lazy">
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">Warner Bros</div>
-        <div class="brand-tile-cat">Entertainment</div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/warner-bros.svg" alt="Warner Bros" class="brand-logo-img" loading="lazy">
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">BBC</div>
-        <div class="brand-tile-cat">Broadcasting</div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/bbc-2.svg" alt="BBC" class="brand-logo-img" loading="lazy">
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">Wingstop</div>
-        <div class="brand-tile-cat">
-          <span class="en">Food &amp; Beverage</span>
-          <span class="fr">Food &amp; Boissons</span>
-        </div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/Wingstop_logo.svg" alt="Wingstop" class="brand-logo-img" loading="lazy">
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">Jollibee</div>
-        <div class="brand-tile-cat">
-          <span class="en">Food &amp; Beverage</span>
-          <span class="fr">Food &amp; Boissons</span>
-        </div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/jollibee.svg" alt="Jollibee" class="brand-logo-img" loading="lazy">
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">Afrikana</div>
-        <div class="brand-tile-cat">
-          <span class="en">Food &amp; Beverage</span>
-          <span class="fr">Food &amp; Boissons</span>
-        </div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/afrikana.png" alt="Afrikana" class="brand-logo-img color-logo" loading="lazy">
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">Chicken Shop</div>
-        <div class="brand-tile-cat">
-          <span class="en">Food &amp; Beverage</span>
-          <span class="fr">Food &amp; Boissons</span>
-        </div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/chicken%20shop.webp" alt="Chicken Shop" class="brand-logo-img color-logo" loading="lazy">
       </div>
       <div class="brand-tile">
         <div class="brand-tile-name">RIDGE</div>
         <div class="brand-tile-cat">Lifestyle</div>
       </div>
       <div class="brand-tile">
-        <div class="brand-tile-name">Gauthmath</div>
-        <div class="brand-tile-cat">
-          <span class="en">Tech &amp; Education</span>
-          <span class="fr">Tech &amp; Éducation</span>
-        </div>
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/gauthmath.svg" alt="Gauthmath" class="brand-logo-img" loading="lazy">
+      </div>
+      <div class="brand-tile">
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/temi.webp" alt="Temu" class="brand-logo-img color-logo" loading="lazy">
+      </div>
+      <div class="brand-tile">
+        <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/logos/boohooman.webp" alt="boohooman" class="brand-logo-img color-logo" loading="lazy">
       </div>
     </div>
   </div>
