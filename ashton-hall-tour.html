@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashton Hall — Africa Tour 2026 | Atouré</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #e8c96d;
+      --gold-dark: #8B6914;
+      --black: #080808;
+      --dark: #111111;
+      --card: #181818;
+      --border: #2a2a2a;
+      --white: #ffffff;
+      --grey: #a0a0a0;
+      --light-grey: #e0e0e0;
+      --green: #2ECC71;
+      --amber: #F39C12;
+      --red: #E74C3C;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(8,8,8,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo { font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--grey); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 40px 80px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 40%, #1a1200 0%, #080808 70%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px),
+      repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px);
+    }
+
+    .hero-content { position: relative; max-width: 900px; }
+    .hero-label { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(48px, 8vw, 96px); font-weight: 800; line-height: 1; margin-bottom: 8px; letter-spacing: -2px; }
+    .hero h1 span { color: var(--gold); }
+    .hero-subtitle { font-size: 20px; color: var(--grey); margin: 24px 0 48px; font-weight: 300; }
+    .hero-stats { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+    .hero-stat-num { font-size: 36px; font-weight: 800; color: var(--gold); display: block; line-height: 1; }
+    .hero-stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-top: 6px; display: block; }
+
+    section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
+    .section-intro { font-size: 18px; color: var(--grey); max-width: 700px; line-height: 1.7; margin-bottom: 60px; }
+
+    .track-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; }
+    .track-card { background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 40px; border-radius: 2px; }
+    .track-card-title { font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .track-card-sub { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .track-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+    .track-metric-num { font-size: 28px; font-weight: 800; color: var(--gold); display: block; line-height: 1; }
+    .track-metric-label { font-size: 11px; color: var(--grey); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; display: block; }
+    .track-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 4px 12px; border: 1px solid var(--border); border-radius: 20px; font-size: 11px; color: var(--grey); }
+
+    .rec-bg { background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .rec-headline { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .reasons { display: flex; flex-direction: column; margin-top: 60px; }
+    .reason { display: grid; grid-template-columns: 80px 1fr; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--border); align-items: start; }
+    .reason:last-child { border-bottom: none; }
+    .reason-num { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--border); line-height: 1; }
+    .reason-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .reason-title .gold { color: var(--gold); }
+    .reason-body { color: var(--grey); line-height: 1.8; font-size: 15px; }
+
+    .wc-box { background: linear-gradient(135deg, #0d0d00, #1a1400); border: 1px solid var(--gold-dark); border-radius: 4px; padding: 60px; margin-top: 60px; }
+    .wc-dates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+    .wc-date-card { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); padding: 28px; border-radius: 4px; text-align: center; }
+    .wc-date-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 8px; }
+    .wc-date-val { font-size: 22px; font-weight: 800; display: block; }
+    .wc-date-sub { font-size: 12px; color: var(--grey); display: block; margin-top: 4px; }
+    .wc-countries { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+    .wc-country { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); padding: 10px 18px; border-radius: 4px; font-weight: 600; font-size: 14px; }
+
+    .countries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 60px; }
+    .country-card { background: var(--card); border: 1px solid var(--border); padding: 32px 24px; border-radius: 2px; position: relative; overflow: hidden; }
+    .country-card.pending { opacity: 0.7; border-style: dashed; }
+    .country-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+    .country-card.pending::after { background: var(--amber); }
+    .country-flag { font-size: 36px; margin-bottom: 16px; display: block; }
+    .country-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .country-coverage { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+    .country-coverage.direct { color: var(--green); }
+    .country-coverage.partner { color: var(--amber); }
+    .status-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .status-badge.ready { background: rgba(46,204,113,0.15); color: var(--green); border: 1px solid rgba(46,204,113,0.3); }
+    .status-badge.pending { background: rgba(243,156,18,0.15); color: var(--amber); border: 1px solid rgba(243,156,18,0.3); }
+
+    .itinerary-table-wrap { overflow-x: auto; margin-top: 60px; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { background: var(--card); padding: 16px 20px; text-align: left; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border-bottom: 2px solid var(--gold); white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:hover { background: rgba(255,255,255,0.02); }
+    tbody td { padding: 18px 20px; font-size: 14px; vertical-align: middle; }
+    tbody td:first-child { font-weight: 700; color: var(--white); }
+    .td-grey { color: var(--grey); }
+    .td-gold { color: var(--gold); font-weight: 600; }
+    .highlight-row td { background: rgba(201,168,76,0.05); }
+    .world-cup-badge { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold); padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+    .pending-badge { display: inline-block; background: rgba(243,156,18,0.1); border: 1px solid rgba(243,156,18,0.3); color: var(--amber); padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .ok-badge { display: inline-block; background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); color: var(--green); padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .warn-badge { display: inline-block; background: rgba(231,76,60,0.1); border: 1px solid rgba(231,76,60,0.3); color: var(--red); padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+
+    .visa-tabs { display: flex; margin-bottom: 32px; border-bottom: 2px solid var(--border); }
+    .visa-tab { padding: 14px 32px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--grey); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+    .visa-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .visa-panel { display: none; }
+    .visa-panel.active { display: block; }
+    .visa-note { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2); border-left: 3px solid var(--gold); padding: 16px 20px; border-radius: 2px; font-size: 13px; color: var(--light-grey); margin-top: 20px; line-height: 1.7; }
+    .alert-note { background: rgba(231,76,60,0.06); border: 1px solid rgba(231,76,60,0.2); border-left: 3px solid var(--red); padding: 16px 20px; border-radius: 2px; font-size: 13px; color: var(--light-grey); margin-top: 16px; line-height: 1.7; }
+    .alert-note strong, .visa-note strong { color: var(--white); }
+
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+    .team-card { border: 1px solid var(--border); padding: 40px 32px; border-radius: 2px; text-align: center; }
+    .team-card.ideal { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+    .team-card.max { border-color: var(--amber); }
+    .team-card.avoid { border-color: var(--red); opacity: 0.7; }
+    .team-num { font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 800; line-height: 1; margin-bottom: 12px; }
+    .team-card.ideal .team-num { color: var(--gold); }
+    .team-card.max .team-num { color: var(--amber); }
+    .team-card.avoid .team-num { color: var(--red); }
+    .team-verdict { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+    .team-card.ideal .team-verdict { color: var(--gold); }
+    .team-card.max .team-verdict { color: var(--amber); }
+    .team-card.avoid .team-verdict { color: var(--red); }
+    .team-reasons { list-style: none; text-align: left; margin-top: 20px; }
+    .team-reasons li { font-size: 13px; color: var(--grey); padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 8px; }
+    .team-reasons li::before { content: '—'; color: var(--border); flex-shrink: 0; }
+
+    .budget-overview { background: linear-gradient(135deg, #0a0800, #151000); border: 1px solid var(--gold-dark); border-radius: 4px; padding: 60px; margin-top: 60px; text-align: center; }
+    .budget-figure { font-family: 'Playfair Display', serif; font-size: clamp(48px, 8vw, 80px); font-weight: 800; color: var(--gold); display: block; margin: 16px 0; }
+    .budget-label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); }
+    .budget-caveat { font-size: 15px; color: var(--grey); max-width: 600px; margin: 24px auto 0; line-height: 1.8; }
+    .budget-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+    .budget-item { background: var(--card); border: 1px solid var(--border); padding: 24px; border-radius: 2px; text-align: left; }
+    .budget-item-icon { font-size: 24px; margin-bottom: 12px; display: block; }
+    .budget-item-label { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .budget-item-detail { font-size: 12px; color: var(--grey); line-height: 1.6; }
+    .budget-ask { background: rgba(231,76,60,0.06); border: 1px solid rgba(231,76,60,0.25); border-radius: 4px; padding: 40px; margin-top: 40px; text-align: center; }
+    .budget-ask h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+    .budget-ask p { color: var(--grey); font-size: 15px; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+
+    .stream-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; align-items: start; }
+    .stream-time-box { background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 48px; text-align: center; }
+    .stream-time { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--gold); display: block; line-height: 1; }
+    .stream-duration { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); margin: 12px 0 32px; display: block; }
+    .stream-audience-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .stream-audience-row:last-child { border-bottom: none; }
+    .stream-tz { color: var(--grey); }
+    .stream-window { font-weight: 600; color: var(--white); }
+
+    .payment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+    .payment-card { background: var(--card); border: 1px solid var(--border); padding: 36px; border-radius: 2px; }
+    .payment-card.featured { border-color: var(--gold); background: rgba(201,168,76,0.04); }
+    .payment-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+    .payment-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .payment-desc { font-size: 13px; color: var(--grey); line-height: 1.7; }
+    .payment-tag { display: inline-block; margin-top: 16px; padding: 4px 12px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-radius: 20px; }
+
+    .needs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
+    .needs-col-title { font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+    .needs-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .needs-item:last-child { border-bottom: none; }
+    .needs-priority { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+    .needs-priority.urgent { background: var(--red); }
+    .needs-priority.high { background: var(--amber); }
+    .needs-priority.normal { background: var(--green); }
+    .needs-item-text { font-size: 14px; font-weight: 500; }
+    .needs-item-sub { font-size: 12px; color: var(--grey); margin-top: 3px; }
+
+    footer { background: var(--dark); border-top: 1px solid var(--border); padding: 60px 40px; text-align: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--gold); margin-bottom: 12px; }
+    .footer-sub { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); margin-bottom: 32px; }
+    .footer-contact { font-size: 15px; color: var(--grey); }
+    .footer-contact a { color: var(--gold); text-decoration: none; }
+    .footer-date { margin-top: 40px; font-size: 11px; color: var(--border); letter-spacing: 2px; text-transform: uppercase; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      section { padding: 60px 20px; }
+      .track-cards, .team-grid, .budget-grid, .payment-grid, .needs-grid, .stream-grid { grid-template-columns: 1fr; }
+      .countries-grid { grid-template-columns: 1fr 1fr; }
+      .wc-dates { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Atouré</span>
+  <ul class="nav-links">
+    <li><a href="#track-record">Track Record</a></li>
+    <li><a href="#recommendation">Recommendation</a></li>
+    <li><a href="#itinerary">Itinerary</a></li>
+    <li><a href="#visas">Visas</a></li>
+    <li><a href="#budget">Budget</a></li>
+    <li><a href="#next-steps">Next Steps</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <span class="hero-label">Atouré Management & Consulting — Official Proposal</span>
+    <h1>Ashton Hall<br /><span>Africa Tour</span></h1>
+    <p class="hero-subtitle">Prepared exclusively for Ashton Hall & Team — May 2026</p>
+    <div class="hero-stats">
+      <div><span class="hero-stat-num">55.8M</span><span class="hero-stat-label">Instagram Views — IShowSpeed</span></div>
+      <div><span class="hero-stat-num">6.1B</span><span class="hero-stat-label">AFCON Digital Impressions</span></div>
+      <div><span class="hero-stat-num">16M</span><span class="hero-stat-label">Live Stream Views — AFCON Final</span></div>
+      <div><span class="hero-stat-num">600+</span><span class="hero-stat-label">Security Personnel Mobilised</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="track-record">
+  <span class="section-label">Who We Are</span>
+  <h2 class="section-title">We Have Done This Before</h2>
+  <p class="section-intro">Atouré is a London-based agency with offices in Ivory Coast. We don't just source opportunities — we execute from A to Z. State visas, security mobilisation, cultural concepts, commercial partnerships, and the moments that go viral.</p>
+  <div class="track-cards">
+    <div class="track-card">
+      <div class="track-card-title">Case Study 01</div>
+      <div class="track-card-sub">IShowSpeed — Ivory Coast 2024</div>
+      <div class="track-metrics">
+        <div><span class="track-metric-num">55.8M</span><span class="track-metric-label">Instagram Views</span></div>
+        <div><span class="track-metric-num">10M</span><span class="track-metric-label">YouTube Views</span></div>
+        <div><span class="track-metric-num">15</span><span class="track-metric-label">State Visas Secured</span></div>
+        <div><span class="track-metric-num">600+</span><span class="track-metric-label">Security Personnel</span></div>
+      </div>
+      <div class="track-tags">
+        <span class="tag">3 sponsors from zero</span>
+        <span class="tag">MTN / Solibra / Snedai</span>
+        <span class="tag">Ministerial endorsement</span>
+        <span class="tag">Zaouli viral concept</span>
+        <span class="tag">Presidential recognition</span>
+      </div>
+    </div>
+    <div class="track-card">
+      <div class="track-card-title">Case Study 02</div>
+      <div class="track-card-sub">IShowSpeed x AFCON Final — Morocco 2025</div>
+      <div class="track-metrics">
+        <div><span class="track-metric-num">16M</span><span class="track-metric-label">Live Stream Views</span></div>
+        <div><span class="track-metric-num">6.1B</span><span class="track-metric-label">Digital Impressions</span></div>
+        <div><span class="track-metric-num">#1</span><span class="track-metric-label">Trending Morocco & Senegal</span></div>
+        <div><span class="track-metric-num">300K</span><span class="track-metric-label">Subscribers in 24h</span></div>
+      </div>
+      <div class="track-tags">
+        <span class="tag">Assad mascot — our concept</span>
+        <span class="tag">State-level access</span>
+        <span class="tag">Private jet clearances</span>
+        <span class="tag">All filming & drone permits</span>
+        <span class="tag">AFCON record</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rec-bg">
+<section id="recommendation">
+  <span class="section-label">Our Professional Opinion</span>
+  <h2 class="section-title rec-headline">We Recommend Pushing<br />the Start Date to July 12</h2>
+  <p class="section-intro">We want to be direct with you. The original June 10 start is not in the best interest of the tour, Ashton's brand, or Atouré's. Here are five compounding reasons why.</p>
+  <div class="reasons">
+    <div class="reason"><div class="reason-num">01</div><div><div class="reason-title">Lead Time Is <span class="gold">Not Enough</span></div><div class="reason-body">Twelve days is not enough time to build what this tour deserves. Atouré's value is in the infrastructure engineered before the team lands — state permits, government relationships, security choreography, cultural moments conceived and prepared. IShowSpeed's results happened because every element was in place before he stepped off the plane. With 12 days we build blind. We can execute a functional tour. We cannot execute an exceptional one. An exceptional one is the only kind worth Ashton's name or ours.</div></div></div>
+    <div class="reason"><div class="reason-num">02</div><div><div class="reason-title"><span class="gold">Yellow Fever</span> — The Team Cannot Travel on June 10</div><div class="reason-body">Entry into Ivory Coast, Benin, Ghana, and Senegal requires a valid International Certificate of Yellow Fever Vaccination. This is a mandatory legal requirement — without it, members of the delegation will be refused entry at the border. The vaccine takes <strong>10 days to reach effectiveness</strong> after administration. For the team to be cleared for June 10, every member would need to have been vaccinated by May 31 — two days from now. A July 12 start gives the full team adequate time to vaccinate and receive their yellow cards.</div></div></div>
+    <div class="reason"><div class="reason-num">03</div><div><div class="reason-title">Peak <span class="gold">Monsoon Season</span> Across West Africa</div><div class="reason-body">June is the heaviest rainfall month across Ghana, Ivory Coast, Benin, and Senegal. This directly impacts helicopter operations, outdoor filming locations, road and convoy conditions, and the visual quality of every piece of content. The tour is designed to show Africa at its most compelling. The monsoon begins easing from late July. By August, conditions across the region are significantly improved.</div></div></div>
+    <div class="reason"><div class="reason-num">04</div><div><div class="reason-title">The <span class="gold">World Cup</span> Has Absorbed the Market</div><div class="reason-body">The FIFA World Cup 2026 runs until July 19. Every country on this tour has a national team in the tournament. Beyond audience attention, the deeper issue is operational: the brands, agencies, security firms, production companies, local fixers, and venues that Atouré relies on have invested heavily — both financially and in manpower — into World Cup activations across these markets. The best resources are currently deployed elsewhere. Starting June 10 means building a world-class tour on a depleted market.</div></div></div>
+    <div class="reason"><div class="reason-num">05</div><div><div class="reason-title">This Reflects on <span class="gold">Atouré</span></div><div class="reason-body">We built our reputation on executing at the highest level. We would rather be honest now and deliver something world-class than rush and produce something average. The IShowSpeed numbers happened because the groundwork was right. We want those numbers for Ashton — and we believe this tour can exceed them. But only if we do it properly.</div></div></div>
+  </div>
+</section>
+</div>
+
+<section>
+  <span class="section-label">The Opportunity</span>
+  <h2 class="section-title">Don't Compete With the World Cup.<br /><span class="gold">Be Part of It.</span></h2>
+  <p class="section-intro">By starting the tour on July 12 — two days before the semi-finals — Ashton walks into a continent at peak emotional intensity. Every country on this tour has a national team in the tournament.</p>
+  <div class="wc-box">
+    <div class="wc-dates">
+      <div class="wc-date-card"><span class="wc-date-label">Semi-Finals</span><span class="wc-date-val">July 14 & 15</span><span class="wc-date-sub">Arlington & Atlanta, USA</span></div>
+      <div class="wc-date-card"><span class="wc-date-label">Third Place</span><span class="wc-date-val">July 18</span><span class="wc-date-sub">Miami, USA</span></div>
+      <div class="wc-date-card"><span class="wc-date-label">World Cup Final</span><span class="wc-date-val">July 19</span><span class="wc-date-sub">MetLife Stadium, New Jersey</span></div>
+    </div>
+    <p style="color:var(--grey); font-size:15px; line-height:1.8; margin-bottom:24px;">Ashton arrives in Morocco on July 12. He streams from a Casablanca fanzone with the country watching their national team in the semi-finals. He experiences the World Cup Final in Dakar. He moves through Ivory Coast, Benin, and Ghana while post-World Cup energy is still alive. This is not a workaround — it is a superior content strategy.</p>
+    <div style="margin-bottom:16px; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold);">African Nations in the Tournament</div>
+    <div class="wc-countries">
+      <div class="wc-country">🇲🇦 Morocco</div>
+      <div class="wc-country">🇸🇳 Senegal</div>
+      <div class="wc-country">🇨🇮 Ivory Coast</div>
+      <div class="wc-country">🇬🇭 Ghana</div>
+      <div class="wc-country">🇹🇳 Tunisia</div>
+      <div class="wc-country">🇩🇿 Algeria</div>
+      <div class="wc-country">🇪🇬 Egypt</div>
+      <div class="wc-country">🇨🇩 DR Congo</div>
+      <div class="wc-country">🇿🇦 South Africa</div>
+      <div class="wc-country">🇨🇻 Cape Verde</div>
+    </div>
+  </div>
+</section>
+
+<div class="rec-bg">
+<section>
+  <span class="section-label">Coverage</span>
+  <h2 class="section-title">Countries & Coverage</h2>
+  <p class="section-intro">Atouré operates directly or through a vetted partner network. The operational standard does not change regardless of the model.</p>
+  <div class="countries-grid">
+    <div class="country-card"><span class="country-flag">🇲🇦</span><div class="country-name">Morocco</div><div class="country-coverage direct">Direct</div><span class="status-badge ready">Ready</span></div>
+    <div class="country-card"><span class="country-flag">🇸🇳</span><div class="country-name">Senegal</div><div class="country-coverage partner">Partner Network</div><span class="status-badge ready">Confirmed</span></div>
+    <div class="country-card"><span class="country-flag">🇨🇮</span><div class="country-name">Ivory Coast</div><div class="country-coverage direct">Direct</div><span class="status-badge ready">Ready</span></div>
+    <div class="country-card"><span class="country-flag">🇧🇯</span><div class="country-name">Benin</div><div class="country-coverage direct">Direct</div><span class="status-badge ready">Ready</span></div>
+    <div class="country-card"><span class="country-flag">🇬🇭</span><div class="country-name">Ghana</div><div class="country-coverage direct">Direct</div><span class="status-badge ready">VOA In Progress</span></div>
+    <div class="country-card pending"><span class="country-flag">🇷🇼</span><div class="country-name">Rwanda</div><div class="country-coverage partner">Partner Network</div><span class="status-badge pending">Pending</span></div>
+    <div class="country-card pending"><span class="country-flag">🇪🇹</span><div class="country-name">Ethiopia</div><div class="country-coverage partner">Partner Network</div><span class="status-badge pending">Pending</span></div>
+    <div class="country-card pending"><span class="country-flag">🇨🇩</span><div class="country-name">RDC</div><div class="country-coverage partner">Partner Network</div><span class="status-badge pending">Available</span></div>
+  </div>
+</section>
+</div>
+
+<section id="itinerary">
+  <span class="section-label">Proposed Schedule</span>
+  <h2 class="section-title">Itinerary — July 12 to July 31</h2>
+  <p class="section-intro">A 19-day sweep anchored by the World Cup semi-finals and final. Rwanda and Ethiopia can be added or removed based on budget confirmation.</p>
+  <div class="itinerary-table-wrap">
+    <table>
+      <thead><tr><th>Country</th><th>Dates</th><th>Nights</th><th>Key Moment</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr class="highlight-row"><td>🇲🇦 Morocco</td><td class="td-grey">July 12–15</td><td class="td-gold">3</td><td><span class="world-cup-badge">⚽ World Cup Semi-Final — July 14</span></td><td><span class="ok-badge">Confirmed</span></td></tr>
+        <tr class="highlight-row"><td>🇸🇳 Senegal</td><td class="td-grey">July 15–19</td><td class="td-gold">4</td><td><span class="world-cup-badge">⚽ World Cup Final — July 19</span></td><td><span class="ok-badge">Confirmed</span></td></tr>
+        <tr><td>🇨🇮 Ivory Coast</td><td class="td-grey">July 19–22</td><td class="td-gold">3</td><td class="td-grey">Post-Final energy — Atouré original activation</td><td><span class="ok-badge">Confirmed</span></td></tr>
+        <tr><td>🇧🇯 Benin</td><td class="td-grey">July 22–24</td><td class="td-gold">2</td><td class="td-grey">Ouidah — Door of No Return</td><td><span class="ok-badge">Confirmed</span></td></tr>
+        <tr><td>🇬🇭 Ghana</td><td class="td-grey">July 24–27</td><td class="td-gold">3</td><td class="td-grey">Wildlife run — African Ashton Hall reveal</td><td><span class="ok-badge">VOA In Progress</span></td></tr>
+        <tr><td>🇷🇼 Rwanda</td><td class="td-grey">July 27–29</td><td class="td-gold">2</td><td class="td-grey">Gorilla trekking — Volcanoes National Park</td><td><span class="pending-badge">Pending</span></td></tr>
+        <tr><td>🇪🇹 Ethiopia</td><td class="td-grey">July 29–31</td><td class="td-gold">2</td><td class="td-grey">Addis Ababa — Simien Mountains potential</td><td><span class="pending-badge">Pending</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="visa-note" style="margin-top:24px;"><strong>Inter-country travel:</strong> Private charter recommended for West Africa legs (Senegal through Ghana). Morocco to Senegal via Royal Air Maroc or Air Senegal. Rwanda–Ethiopia via RwandAir or Ethiopian Airlines if both confirmed.</div>
+</section>
+
+<div class="rec-bg">
+<section id="visas">
+  <span class="section-label">Entry Requirements</span>
+  <h2 class="section-title">Visa & Entry Information</h2>
+  <p class="section-intro">Visa processing begins the moment we receive full passport copies for every delegation member. Nothing moves without this.</p>
+  <div class="visa-tabs">
+    <div class="visa-tab active" onclick="showTab('us', event)">🇺🇸 US Passport — Delegation</div>
+    <div class="visa-tab" onclick="showTab('african', event)">🌍 African Passport — African Ashton Hall</div>
+  </div>
+  <div id="tab-us" class="visa-panel active">
+    <div class="itinerary-table-wrap">
+      <table>
+        <thead><tr><th>Country</th><th>Requirement</th><th>Method</th><th>Processing Time</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>🇲🇦 Morocco</td><td class="td-gold">None</td><td class="td-grey">Visa-free — 90 days</td><td class="td-grey">Immediate</td><td><span class="ok-badge">✓ Clear</span></td></tr>
+          <tr><td>🇸🇳 Senegal</td><td class="td-grey">eVisa</td><td class="td-grey">Online application</td><td class="td-grey">48–72 hours</td><td><span class="ok-badge">✓ Fast</span></td></tr>
+          <tr><td>🇨🇮 Ivory Coast</td><td class="td-grey">eVisa</td><td class="td-grey">Online application</td><td class="td-grey">2–3 days (rush)</td><td><span class="ok-badge">✓ Fast</span></td></tr>
+          <tr><td>🇧🇯 Benin</td><td class="td-grey">eVisa</td><td class="td-grey">Online — evisa.bj</td><td class="td-grey">48hrs–3 days</td><td><span class="ok-badge">✓ Fast</span></td></tr>
+          <tr><td>🇬🇭 Ghana</td><td class="td-grey">Group Visa on Arrival</td><td class="td-grey">Passports + flight + letter of invitation</td><td class="td-grey">In progress</td><td><span class="pending-badge">In Progress</span></td></tr>
+          <tr><td>🇷🇼 Rwanda</td><td class="td-grey">eVisa</td><td class="td-grey">Online — irembo.gov.rw</td><td class="td-grey">24–72 hours</td><td><span class="ok-badge">✓ Fast</span></td></tr>
+          <tr><td>🇪🇹 Ethiopia</td><td class="td-grey">eVisa</td><td class="td-grey">Online — evisa.gov.et</td><td class="td-grey">24–72 hours</td><td><span class="ok-badge">✓ Fast</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert-note"><strong>Yellow Fever — Mandatory:</strong> Required for Ivory Coast, Benin, Ghana, and Senegal. Vaccine takes <strong>10 days to become effective</strong>. For July 12 departure, vaccination must be completed no later than <strong>July 2, 2026</strong>. A valid yellow card must be presented at each border. Refused entry without it.</div>
+  </div>
+  <div id="tab-african" class="visa-panel">
+    <div class="itinerary-table-wrap">
+      <table>
+        <thead><tr><th>Country</th><th>Nigerian Passport</th><th>Method</th><th>Processing / Notes</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>🇲🇦 Morocco</td><td style="color:var(--amber)">Visa Required</td><td class="td-grey">eVisa only if valid US/UK/Schengen visa held. Otherwise: Moroccan Embassy in person — Abuja, Nigeria</td><td class="td-grey">eVisa: 24–72hrs. Embassy: variable — physical trip to Abuja required</td><td><span class="warn-badge">⚠ Complex</span></td></tr>
+          <tr><td>🇸🇳 Senegal</td><td class="td-gold">Visa-Free</td><td class="td-grey">ECOWAS free movement</td><td class="td-grey">No application needed</td><td><span class="ok-badge">✓ Free</span></td></tr>
+          <tr><td>🇨🇮 Ivory Coast</td><td class="td-gold">Visa-Free</td><td class="td-grey">ECOWAS free movement</td><td class="td-grey">No application needed</td><td><span class="ok-badge">✓ Free</span></td></tr>
+          <tr><td>🇧🇯 Benin</td><td class="td-gold">Visa-Free</td><td class="td-grey">ECOWAS free movement</td><td class="td-grey">No application needed</td><td><span class="ok-badge">✓ Free</span></td></tr>
+          <tr><td>🇬🇭 Ghana</td><td class="td-gold">Visa-Free</td><td class="td-grey">ECOWAS free movement</td><td class="td-grey">No application needed</td><td><span class="ok-badge">✓ Free</span></td></tr>
+          <tr><td>🇷🇼 Rwanda</td><td class="td-gold">Visa on Arrival — Free</td><td class="td-grey">On arrival, no prior application. 30 days.</td><td class="td-grey">Immediate on landing</td><td><span class="ok-badge">✓ On Arrival</span></td></tr>
+          <tr><td>🇪🇹 Ethiopia</td><td style="color:var(--amber)">eVisa Required</td><td class="td-grey">Online — evisa.gov.et</td><td class="td-grey">$52 USD — 3 business days</td><td><span class="ok-badge">✓ eVisa</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="visa-note"><strong>ECOWAS Advantage:</strong> Nigerian passport = visa-free across Senegal, Ivory Coast, Benin, and Ghana. Four of six confirmed tour countries. Zero applications required.</div>
+    <div class="alert-note" style="margin-top:16px;"><strong>Morocco — Key Complexity:</strong> Not an ECOWAS member. Nigerian passport requires a visa. Without a valid US/UK/Schengen visa, the candidate must physically visit the Moroccan Embassy in Abuja. This must be actioned immediately once the candidate is confirmed.</div>
+    <div class="visa-note" style="margin-top:16px;"><strong>Passport not yet confirmed:</strong> Analysis above assumes Nigerian passport. Reassess all requirements once candidate identity is confirmed.</div>
+  </div>
+</section>
+</div>
+
+<section>
+  <span class="section-label">Operational Recommendation</span>
+  <h2 class="section-title">Team Size Matters</h2>
+  <p class="section-intro">Group size is one of the most important cost and quality levers on this tour given the late stage of planning.</p>
+  <div class="team-grid">
+    <div class="team-card ideal">
+      <div class="team-num">10</div>
+      <div class="team-verdict">Ideal</div>
+      <p style="font-size:13px; color:var(--grey); line-height:1.7;">The sweet spot. Streamlined, fast-moving, cost-efficient without sacrificing production quality.</p>
+      <ul class="team-reasons">
+        <li>Hotel bookings at this stage — flexible</li>
+        <li>Single vehicle convoys per movement</li>
+        <li>Lower per-head visa and permit cost</li>
+        <li>Faster airport and border clearance</li>
+        <li>More authentic content — smaller crew</li>
+        <li>Lower security footprint needed</li>
+      </ul>
+    </div>
+    <div class="team-card max">
+      <div class="team-num">15</div>
+      <div class="team-verdict">Maximum</div>
+      <p style="font-size:13px; color:var(--grey); line-height:1.7;">Manageable but requires tighter coordination. Do not exceed this at this stage of planning.</p>
+      <ul class="team-reasons">
+        <li>Two vehicle convoys minimum</li>
+        <li>Hotel room block required — limited availability late</li>
+        <li>Higher security requirement per country</li>
+        <li>More complex visa management</li>
+        <li>Increased per-country operational cost</li>
+      </ul>
+    </div>
+    <div class="team-card avoid">
+      <div class="team-num">20+</div>
+      <div class="team-verdict">Avoid</div>
+      <p style="font-size:13px; color:var(--grey); line-height:1.7;">At this late stage, 20+ creates serious operational, financial, and content problems.</p>
+      <ul class="team-reasons">
+        <li>Hotel availability — critical risk at this stage</li>
+        <li>Charter flight cost spikes substantially</li>
+        <li>Security complexity spikes</li>
+        <li>Clunky on the ground — slows every movement</li>
+        <li>Content suffers — too much logistics noise</li>
+        <li>Budget blowout across every category</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="rec-bg">
+<section id="budget">
+  <span class="section-label">Financial Framework</span>
+  <h2 class="section-title">Budget — The Critical Conversation</h2>
+  <p class="section-intro">Everything in this proposal has been built without a confirmed budget. Before any country, experience, or team size can be finalised, we need to understand what we are working with.</p>
+  <div class="budget-overview">
+    <span class="budget-label">Atouré Assessment — Estimated Range</span>
+    <span class="budget-figure">Low Six Figures</span>
+    <span class="budget-label">~$100,000 – $150,000 USD</span>
+    <p class="budget-caveat">Based on our experience executing the IShowSpeed tours, a tour of this scope — 5 to 7 countries, 10 to 15 people, 16 to 19 days, private charter, security, production infrastructure, and cultural activations — is a low six-figure operation. This includes Atouré's agency fee. It does not include Ashton's personal expenses, existing brand deals, or production equipment the team brings.</p>
+  </div>
+  <div class="budget-grid" style="margin-top:40px;">
+    <div class="budget-item"><span class="budget-item-icon">✈️</span><div class="budget-item-label">Inter-Country Travel</div><div class="budget-item-detail">Private charter flights across West Africa legs. Commercial where viable. Largest single cost category.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🏨</span><div class="budget-item-label">Accommodation</div><div class="budget-item-detail">Hotels for full delegation across all nights. Late booking premiums apply — actioned immediately once team size confirmed.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🚗</span><div class="budget-item-label">Ground Transport</div><div class="budget-item-detail">Private 4x4 convoy with trusted drivers. Airport transfers, inter-city movements, daily logistics.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🛡️</span><div class="budget-item-label">Security</div><div class="budget-item-detail">Private and state security per country. Scale depends on team size and public exposure. IShowSpeed: 600+ personnel in Ivory Coast alone.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">📋</span><div class="budget-item-label">Visas & Permits</div><div class="budget-item-detail">All delegation visas, filming permits, location authorisations, drone clearances, equipment import permits — per country.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🎬</span><div class="budget-item-label">Production Infrastructure</div><div class="budget-item-detail">Drone operators per country, media clipping team, local filming equipment, production liaisons.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🎭</span><div class="budget-item-label">Cultural Activations</div><div class="budget-item-detail">Atouré-conceived moments per country. Venue sourcing, talent mobilisation, event production.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🚁</span><div class="budget-item-label">Experiences</div><div class="budget-item-detail">Helicopter bookings, gorilla trekking permits, wildlife experiences, restricted location access.</div></div>
+    <div class="budget-item"><span class="budget-item-icon">🏥</span><div class="budget-item-label">Medical & Emergency</div><div class="budget-item-detail">On-ground medical personnel, health briefings, emergency evacuation protocols per location.</div></div>
+  </div>
+  <div class="budget-ask">
+    <h3>We Need a Budget Bracket to Proceed</h3>
+    <p>Without a confirmed budget, we cannot finalise the number of countries, the experiences per country, team size, or confirm that Atouré's agency fee sits appropriately within the overall number. A range is sufficient. We will build the right tour around the budget — not the other way around.</p>
+  </div>
+</section>
+</div>
+
+<section>
+  <span class="section-label">Content Infrastructure</span>
+  <h2 class="section-title">Streaming Schedule</h2>
+  <p class="section-intro">Six-hour streams per country, timed to maximise simultaneous reach across West Africa, the UK, and the US.</p>
+  <div class="stream-grid">
+    <div class="stream-time-box">
+      <span class="stream-time">3PM – 9PM</span>
+      <span class="stream-duration">Local Time — 6 Hours — Per Country</span>
+      <div class="stream-audience-row"><span class="stream-tz">West Africa (GMT+0/+1)</span><span class="stream-window">3:00pm – 9:00pm</span></div>
+      <div class="stream-audience-row"><span class="stream-tz">United Kingdom (BST)</span><span class="stream-window">3:00pm – 9:00pm</span></div>
+      <div class="stream-audience-row"><span class="stream-tz">US East Coast (EST)</span><span class="stream-window">11:00am – 5:00pm</span></div>
+      <div class="stream-audience-row"><span class="stream-tz">US West Coast (PST)</span><span class="stream-window">8:00am – 2:00pm</span></div>
+    </div>
+    <div>
+      <table>
+        <thead><tr><th>Format</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Livestream</td><td class="td-grey">6-hour streams — primary content format per country</td></tr>
+          <tr><td>YouTube Vlog</td><td class="td-grey">Dedicated cameraman running simultaneously</td></tr>
+          <tr><td>Vertical / Shorts</td><td class="td-grey">Shot simultaneously — TikTok and YouTube Shorts</td></tr>
+          <tr><td>Media Clipping Team</td><td class="td-grey">Real-time clip distribution. India benchmark: 3,000 clips per day.</td></tr>
+          <tr><td>Drone Aerial</td><td class="td-grey">Sourced locally per country based on specs provided by Ashton's team</td></tr>
+        </tbody>
+      </table>
+      <div class="visa-note" style="margin-top:20px;"><strong>World Cup Final Exception (July 19 — Senegal):</strong> Stream follows match kickoff — 8pm UK / 3pm EST. Senegal's 4-night stay allows two full streams.</div>
+      <div class="visa-note" style="margin-top:12px;"><strong>Equipment:</strong> Ashton's team provides the full equipment list and drone specs. Atouré sources local operators per country based on those specifications.</div>
+    </div>
+  </div>
+</section>
+
+<div class="rec-bg">
+<section>
+  <span class="section-label">Financial Operations</span>
+  <h2 class="section-title">Payments on the Ground</h2>
+  <p class="section-intro">A multi-rail payment infrastructure built for seamless operations across all markets.</p>
+  <div class="payment-grid">
+    <div class="payment-card featured">
+      <span class="payment-icon">💎</span>
+      <div class="payment-name">Joonapay</div>
+      <div class="payment-desc">We have activated our local fintech partner Joonapay — a platform built specifically to facilitate cross-border payments across Africa. Joonapay supports stablecoin payments, aligning directly with the team's preferred approach. This removes the friction of multi-currency wire transfers across six or seven countries and provides a single, transparent payment rail for the entire operation.</div>
+      <span class="payment-tag">Stablecoin Compatible</span>
+      <span class="payment-tag" style="margin-left:4px;">Pan-Africa</span>
+    </div>
+    <div class="payment-card">
+      <span class="payment-icon">📱</span>
+      <div class="payment-name">MTN Mobile Money (MoMo)</div>
+      <div class="payment-desc">Day-to-day operational payments on the ground across all West African markets. Used for fixers, local transport, market access, ground suppliers. Instant, widely accepted, and frictionless across the region.</div>
+      <span class="payment-tag">West Africa</span>
+    </div>
+    <div class="payment-card">
+      <span class="payment-icon">🏦</span>
+      <div class="payment-name">Wire Transfer</div>
+      <div class="payment-desc">Major invoice payments — accommodation, charter flights, large vendor contracts, security firms. All expenditure receipted and reported in full.</div>
+      <span class="payment-tag">Large Invoices</span>
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="next-steps">
+  <span class="section-label">Moving Forward</span>
+  <h2 class="section-title">What Happens Next</h2>
+  <p class="section-intro">Two parallel tracks — what Atouré is doing now, and what we need from Ashton's team immediately.</p>
+  <div class="needs-grid">
+    <div>
+      <div class="needs-col-title">What We Need From You — Immediately</div>
+      <div class="needs-item"><div class="needs-priority urgent"></div><div><div class="needs-item-text">Budget bracket confirmation</div><div class="needs-item-sub">Unlocks everything — country selection, experience scope, agency fee alignment</div></div></div>
+      <div class="needs-item"><div class="needs-priority urgent"></div><div><div class="needs-item-text">Confirmation of revised dates — July 12 start</div><div class="needs-item-sub">All planning is contingent on date agreement</div></div></div>
+      <div class="needs-item"><div class="needs-priority urgent"></div><div><div class="needs-item-text">Full passport copies — every delegation member</div><div class="needs-item-sub">Name, nationality, passport number, expiry — required to begin all visa applications</div></div></div>
+      <div class="needs-item"><div class="needs-priority high"></div><div><div class="needs-item-text">Flight details — departure city and airline</div><div class="needs-item-sub">Required for Ghana group visa on arrival letter</div></div></div>
+      <div class="needs-item"><div class="needs-priority high"></div><div><div class="needs-item-text">Equipment list and drone specifications</div><div class="needs-item-sub">Required to source local operators and process import permits per country</div></div></div>
+      <div class="needs-item"><div class="needs-priority high"></div><div><div class="needs-item-text">African Ashton Hall — any candidates identified?</div><div class="needs-item-sub">Passport nationality determines Morocco visa complexity and timeline</div></div></div>
+      <div class="needs-item"><div class="needs-priority normal"></div><div><div class="needs-item-text">Rwanda & Ethiopia — confirm or drop</div><div class="needs-item-sub">Rwanda gorilla trekking permits are strictly limited and time-sensitive</div></div></div>
+    </div>
+    <div>
+      <div class="needs-col-title">What Atouré Is Doing Now</div>
+      <div class="needs-item"><div class="needs-priority urgent"></div><div><div class="needs-item-text">Partnership agreement — issued within 48 hours</div><div class="needs-item-sub">Formalising Atouré as official Africa tour partner</div></div></div>
+      <div class="needs-item"><div class="needs-priority urgent"></div><div><div class="needs-item-text">Ghana letter of invitation — in progress today</div><div class="needs-item-sub">Pursuing formal Akwaaba welcome from a recognised Ghanaian governing body</div></div></div>
+      <div class="needs-item"><div class="needs-priority high"></div><div><div class="needs-item-text">All eVisa applications — ready to submit</div><div class="needs-item-sub">Senegal, Ivory Coast, Benin, Rwanda, Ethiopia — awaiting passport copies</div></div></div>
+      <div class="needs-item"><div class="needs-priority high"></div><div><div class="needs-item-text">Partner briefings activated</div><div class="needs-item-sub">Senegal, Rwanda, Ethiopia, RDC partners alerted and on standby</div></div></div>
+      <div class="needs-item"><div class="needs-priority high"></div><div><div class="needs-item-text">Rwanda gorilla permit inquiry initiated</div><div class="needs-item-sub">Pending Rwanda confirmation</div></div></div>
+      <div class="needs-item"><div class="needs-priority normal"></div><div><div class="needs-item-text">Joonapay payment infrastructure — confirmed</div><div class="needs-item-sub">Stablecoin-compatible, pan-Africa, ready to activate</div></div></div>
+      <div class="needs-item"><div class="needs-priority normal"></div><div><div class="needs-item-text">Media clipping team — structure being defined</div><div class="needs-item-sub">Capacity and workflow based on 3,000-clip-per-day benchmark</div></div></div>
+    </div>
+  </div>
+  <div style="margin-top:40px; background:var(--card); border:1px solid var(--border); border-top:3px solid var(--gold); padding:40px; text-align:center;">
+    <div style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Priority Legend</div>
+    <div style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:8px; font-size:13px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--red);"></div> Urgent — blocks everything</div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:13px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--amber);"></div> High — needed this week</div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:13px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--green);"></div> Normal — in progress</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Atouré</div>
+  <div class="footer-sub">Management & Consulting — London & Abidjan</div>
+  <div class="footer-contact"><a href="mailto:atoureconsulting@gmail.com">atoureconsulting@gmail.com</a></div>
+  <div class="footer-date">Prepared May 29, 2026 — Confidential</div>
+</footer>
+
+<script>
+  function showTab(tab, event) {
+    document.querySelectorAll('.visa-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.visa-panel').forEach(function(p) { p.classList.remove('active'); });
+    event.currentTarget.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
