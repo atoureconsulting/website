@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Abdullahi Maina — Pitch Deck · TotalEnergies × Le Média Positif Afrique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --black:#080706;
+  --gold:#C8A951;--gold-lt:#E0C47A;--gold-dk:#9A7D30;--gold-pale:#F5EDD6;
+  --cream:#FAF6EE;--warm-white:#FEFCF8;
+  --mid:#5C5040;--muted:#9A8870;
+  --tt:#69C9D0;--ig:#E1306C;
+}
+html{scroll-snap-type:y mandatory;overflow-y:scroll;scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-white);}
+
+/* SLIDE BASE */
+.slide{
+  min-height:100vh;
+  scroll-snap-align:start;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* SLIDE COUNTER */
+#counter{
+  position:fixed;bottom:2rem;right:2.5rem;z-index:999;
+  font-size:.6rem;font-weight:600;letter-spacing:.2em;
+  color:rgba(200,169,81,.5);
+  display:flex;align-items:center;gap:.5rem;
+}
+#counter span{color:var(--gold);}
+
+/* SCROLL CUE */
+.scroll-cue{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  opacity:.35;animation:bob 2s ease-in-out infinite;
+}
+.scroll-cue span{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+.scroll-cue::after{content:'';width:1px;height:32px;background:var(--gold);}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
+
+/* ─── SLIDE 1 · COVER ─── */
+.s-cover{
+  background:var(--black);
+  padding:0;
+}
+.s-cover-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 50%, rgba(200,169,81,.08) 0%, transparent 60%),
+             radial-gradient(ellipse at 20% 80%, rgba(105,201,208,.05) 0%, transparent 50%);
+}
+.s-cover-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.s-cover-inner{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:100vh;
+}
+.s-cover-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:5rem 4rem 5rem 6rem;
+  border-right:1px solid rgba(200,169,81,.1);
+}
+.s-cover-kicker{
+  font-size:.58rem;font-weight:600;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:2rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.s-cover-kicker::before{content:'';width:28px;height:1px;background:var(--gold);}
+.s-cover-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(4.5rem,9vw,9rem);
+  font-weight:600;line-height:.88;
+  color:var(--warm-white);
+  margin-bottom:2rem;
+}
+.s-cover-name em{
+  display:block;font-style:italic;
+  color:var(--gold-lt);
+}
+.s-cover-sub{
+  font-size:.88rem;font-weight:300;
+  color:rgba(254,252,248,.4);
+  line-height:1.9;max-width:380px;
+  border-left:2px solid rgba(200,169,81,.3);
+  padding-left:1.2rem;
+}
+.s-cover-right{
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:4rem;
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#0d1a0d 0%,#0a0c0a 100%);
+}
+.s-cover-photo{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  opacity:.35;filter:grayscale(.3);
+}
+.s-cover-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,var(--black) 0%,rgba(8,7,6,.4) 50%,transparent 100%);
+}
+.s-cover-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(200,169,81,.08);}
+.s-cover-stat{background:var(--black);padding:2rem 1.6rem;}
+.s-cover-stat-n{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
+.s-cover-stat-l{font-size:.55rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(254,252,248,.3);}
+.s-cover-atoure{position:absolute;top:2rem;right:2.5rem;font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,169,81,.4);}
+
+/* ─── SLIDE 2 · THE QUESTION ─── */
+.s-question{
+  background:var(--cream);
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+  padding:6rem 4rem;
+}
+.s-q-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:2.5rem;}
+.s-q-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,4.5vw,4rem);
+  font-weight:400;font-style:italic;
+  color:var(--black);line-height:1.25;
+  max-width:880px;
+}
+.s-q-text strong{font-weight:600;font-style:normal;color:var(--gold-dk);}
+.s-q-source{margin-top:2.5rem;font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+
+/* ─── SLIDE 3 · THREE WORDS ─── */
+.s-three{
+  background:var(--black);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.s-three-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:3rem;}
+.s-three-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  flex:1;max-height:60vh;
+}
+.s-three-cell{
+  padding:3rem 2.5rem;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border:1px solid rgba(200,169,81,.08);
+  background:rgba(255,255,255,.015);
+  transition:background .3s;
+  cursor:default;
+}
+.s-three-cell:hover{background:rgba(200,169,81,.05);}
+.s-three-cell-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:rgba(200,169,81,.15);line-height:1;align-self:flex-end;}
+.s-three-word{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4vw,3.8rem);
+  font-weight:600;line-height:1;
+  color:var(--gold-lt);
+}
+.s-three-word-fr{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.4rem,2.5vw,2.2rem);
+  font-weight:300;font-style:italic;
+  color:rgba(200,169,81,.5);
+  margin-top:.4rem;
+}
+.s-three-proof{font-size:.8rem;color:rgba(254,252,248,.4);line-height:1.7;margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(200,169,81,.1);}
+.s-three-proof strong{color:var(--gold);font-weight:600;}
+
+/* ─── SLIDE 4 · INCARNATION ─── */
+.s-incarn{
+  background:linear-gradient(160deg,#0a1a0a 0%,#0d0c0a 50%,#0a0c10 100%);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.s-incarn-kicker{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.s-incarn-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,6vw,6rem);
+  font-weight:600;line-height:.95;
+  color:var(--warm-white);
+  max-width:780px;
+  margin-bottom:3rem;
+}
+.s-incarn-heading em{font-style:italic;color:var(--gold-lt);}
+.s-incarn-points{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;max-width:900px;
+}
+.s-incarn-pt{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.4rem;
+  border:1px solid rgba(200,169,81,.12);
+  border-radius:6px;
+  background:rgba(255,255,255,.02);
+}
+.s-incarn-pt-icon{font-size:1.4rem;flex-shrink:0;margin-top:.1rem;}
+.s-incarn-pt-text{font-size:.82rem;color:rgba(254,252,248,.55);line-height:1.7;}
+.s-incarn-pt-text strong{color:var(--warm-white);font-weight:600;display:block;margin-bottom:.2rem;}
+
+/* ─── SLIDE 5 · FIL CONDUCTEUR ─── */
+.s-fil{
+  background:var(--cream);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.s-fil-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:1.5rem;}
+.s-fil-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,4vw,3.5rem);
+  font-weight:300;font-style:italic;
+  color:var(--black);line-height:1.2;
+  max-width:860px;
+  margin-bottom:3rem;
+}
+.s-fil-quote strong{font-style:normal;font-weight:600;color:var(--gold-dk);}
+.s-fil-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
+  max-width:1000px;
+}
+.s-fil-block{padding:1.4rem;border-left:2px solid var(--gold-dk);}
+.s-fil-block-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--black);margin-bottom:.4rem;}
+.s-fil-block-desc{font-size:.75rem;color:var(--mid);line-height:1.65;}
+
+/* ─── SLIDE 6 · TRACK RECORD ─── */
+.s-track{
+  background:var(--black);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.s-track-bg{
+  position:absolute;right:-3rem;top:50%;transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:40vw;font-weight:600;
+  color:rgba(200,169,81,.025);line-height:1;
+  pointer-events:none;user-select:none;
+}
+.s-track-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.s-track-num-row{display:flex;align-items:flex-end;gap:1.5rem;margin-bottom:3rem;}
+.s-track-num{font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,14vw,12rem);font-weight:600;color:var(--gold-lt);line-height:.85;}
+.s-track-num-sup{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,5rem);color:var(--gold);padding-bottom:1.2rem;}
+.s-track-num-label{padding-bottom:1.4rem;}
+.s-track-num-label-top{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(254,252,248,.3);margin-bottom:.4rem;}
+.s-track-num-label-main{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--warm-white);}
+.s-track-cats{display:flex;flex-wrap:wrap;gap:.6rem;}
+.s-track-cat{font-size:.68rem;font-weight:500;letter-spacing:.08em;padding:.35rem 1rem;border-radius:3px;background:rgba(200,169,81,.1);color:var(--gold-lt);border:1px solid rgba(200,169,81,.2);}
+
+/* ─── SLIDE 7 · AUDIENCE ─── */
+.s-aud{
+  background:#0f0f0d;
+  padding:5rem 6rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+  align-items:center;
+}
+.s-aud-left .s-aud-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.s-aud-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:600;line-height:.95;color:var(--warm-white);margin-bottom:1rem;}
+.s-aud-title em{font-style:italic;color:var(--gold-lt);}
+.s-aud-note{font-size:.8rem;color:rgba(254,252,248,.35);line-height:1.7;margin-top:1.2rem;}
+.s-aud-note strong{color:rgba(254,252,248,.6);font-weight:600;}
+.s-aud-right{display:flex;flex-direction:column;gap:1.5rem;}
+.s-aud-panel{background:rgba(255,255,255,.03);border:1px solid rgba(200,169,81,.1);border-radius:8px;padding:1.4rem 1.6rem;}
+.s-aud-panel-title{font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.s-aud-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;}
+.s-aud-row:last-child{margin-bottom:0;}
+.s-aud-country{font-size:.78rem;color:rgba(254,252,248,.5);flex:1;}
+.s-aud-bar-wrap{flex:0 0 80px;height:3px;background:rgba(255,255,255,.07);border-radius:2px;}
+.s-aud-bar-fill{height:100%;border-radius:2px;background:var(--gold);}
+.s-aud-bar-fill.age{background:var(--tt);}
+.s-aud-pct{font-size:.78rem;font-weight:600;color:var(--warm-white);min-width:36px;text-align:right;}
+
+/* ─── SLIDE 8 · 3 ACTS ─── */
+.s-acts{
+  background:var(--cream);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.s-acts-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:3rem;}
+.s-acts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.s-act{
+  padding:2.5rem 2rem;
+  background:var(--warm-white);
+  position:relative;
+  border-top:3px solid transparent;
+  transition:transform .2s;
+}
+.s-act:hover{transform:translateY(-4px);}
+.s-act:nth-child(1){border-top-color:var(--gold);}
+.s-act:nth-child(2){border-top-color:var(--tt);}
+.s-act:nth-child(3){border-top-color:#7ec97e;}
+.s-act-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:600;color:rgba(92,80,64,.08);line-height:1;position:absolute;top:1rem;right:1.5rem;}
+.s-act-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--black);margin-bottom:.4rem;}
+.s-act-subtitle{font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;}
+.s-act-brief{font-size:.8rem;color:var(--mid);line-height:1.7;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(200,169,81,.15);}
+.s-act-maina{font-size:.8rem;font-style:italic;color:var(--gold-dk);line-height:1.65;}
+.s-act-maina::before{content:'Maina — ';font-style:normal;font-weight:600;}
+
+/* ─── SLIDE 9 · BILINGUAL ─── */
+.s-bi{
+  background:var(--black);
+  padding:5rem 6rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;
+}
+.s-bi-half{padding:4rem;display:flex;flex-direction:column;justify-content:center;}
+.s-bi-half:first-child{border-right:1px solid rgba(200,169,81,.1);}
+.s-bi-flag{font-size:3rem;margin-bottom:1.5rem;}
+.s-bi-lang{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:1.2rem;}
+.s-bi-desc{font-size:.85rem;color:rgba(254,252,248,.45);line-height:1.8;max-width:420px;}
+.s-bi-why{font-size:.78rem;color:rgba(200,169,81,.7);margin-top:1.2rem;font-style:italic;padding-top:1rem;border-top:1px solid rgba(200,169,81,.12);}
+.s-bi-label{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;}
+
+/* ─── SLIDE 10 · DELIVERABLES ─── */
+.s-del{
+  background:linear-gradient(160deg,#0a0c0a 0%,#0d0c0a 100%);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.s-del-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.s-del-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:600;color:var(--warm-white);margin-bottom:3rem;}
+.s-del-title em{font-style:italic;color:var(--gold-lt);}
+.s-del-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.s-del-card{
+  padding:2rem 1.6rem;
+  border:1px solid rgba(200,169,81,.1);
+  border-radius:8px;
+  background:rgba(255,255,255,.02);
+  transition:border-color .2s,background .2s;
+}
+.s-del-card:hover{border-color:rgba(200,169,81,.3);background:rgba(200,169,81,.04);}
+.s-del-icon{font-size:1.6rem;margin-bottom:1rem;display:block;}
+.s-del-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-lt);margin-bottom:.5rem;}
+.s-del-card-desc{font-size:.75rem;color:rgba(254,252,248,.4);line-height:1.65;}
+.s-del-card-tag{display:inline-block;margin-top:.8rem;font-size:.55rem;font-weight:600;letter-spacing:.1em;padding:.25rem .7rem;border-radius:3px;background:rgba(200,169,81,.12);color:var(--gold);border:1px solid rgba(200,169,81,.2);}
+
+/* ─── SLIDE 11 · SORTIR DU DISCOURS ─── */
+.s-sortir{
+  background:var(--cream);
+  padding:5rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+  align-items:flex-start;
+}
+.s-sortir-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:2rem;}
+.s-sortir-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,5.5vw,5rem);
+  font-weight:600;line-height:1;
+  color:var(--black);max-width:800px;
+  margin-bottom:3rem;
+}
+.s-sortir-title em{font-style:italic;color:var(--gold-dk);}
+.s-sortir-compare{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:860px;}
+.s-sortir-col{padding:2rem;}
+.s-sortir-col:first-child{background:rgba(92,80,64,.06);border-radius:8px;border:1px solid rgba(200,169,81,.1);}
+.s-sortir-col:last-child{background:rgba(13,12,10,.04);border-radius:8px;border:1px solid rgba(200,169,81,.2);}
+.s-sortir-col-label{font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.2rem;}
+.s-sortir-col:first-child .s-sortir-col-label{color:var(--muted);}
+.s-sortir-col:last-child .s-sortir-col-label{color:var(--gold-dk);}
+.s-sortir-item{font-size:.82rem;color:var(--mid);line-height:1.7;padding:.4rem 0;border-bottom:1px solid rgba(200,169,81,.08);}
+.s-sortir-item:last-child{border-bottom:none;}
+.s-sortir-item.good{color:var(--black);font-weight:500;}
+.s-sortir-item strong{color:var(--gold-dk);}
+
+/* ─── SLIDE 12 · CTA ─── */
+.s-cta{
+  background:var(--black);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:6rem 4rem;
+  position:relative;overflow:hidden;
+}
+.s-cta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 50%,rgba(200,169,81,.07) 0%,transparent 65%);
+}
+.s-cta-content{position:relative;z-index:1;}
+.s-cta-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem;}
+.s-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,7rem);font-weight:600;line-height:.92;color:var(--warm-white);margin-bottom:2.5rem;}
+.s-cta-title em{display:block;font-style:italic;color:var(--gold-lt);}
+.s-cta-sub{font-size:.9rem;font-weight:300;color:rgba(254,252,248,.4);max-width:420px;margin:0 auto 3rem;line-height:1.9;}
+.s-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.s-cta-btn{
+  font-family:'Jost',sans-serif;font-size:.8rem;font-weight:500;
+  letter-spacing:.08em;padding:14px 32px;border-radius:3px;
+  text-decoration:none;display:inline-block;transition:all .2s;
+}
+.s-cta-btn:hover{transform:translateY(-2px);}
+.s-cta-btn.primary{background:var(--gold);color:var(--black);}
+.s-cta-btn.primary:hover{background:var(--gold-lt);}
+.s-cta-btn.secondary{border:1px solid rgba(200,169,81,.35);color:var(--gold-lt);}
+.s-cta-btn.secondary:hover{background:rgba(200,169,81,.07);border-color:var(--gold);}
+.s-cta-atoure{margin-top:4rem;font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,169,81,.25);}
+
+/* ─── SLIDE 7 · BRANDS ─── */
+.s-brands{background:var(--black);padding:5rem 6rem;display:flex;flex-direction:column;justify-content:center;}
+.s-brands-inner{position:relative;z-index:1;}
+.s-brands-label{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.s-brands-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:600;color:var(--warm-white);line-height:1;margin-bottom:3rem;}
+.s-brands-title em{font-style:italic;color:var(--gold-lt);}
+.s-brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,169,81,.08);border-radius:12px;overflow:hidden;max-width:900px;}
+.s-brand-tile{background:#0d0c0a;padding:2.2rem 2rem;transition:background .2s;cursor:default;}
+.s-brand-tile:hover{background:#161410;}
+.s-brand-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
+.s-brand-cat{font-size:.55rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(254,252,248,.25);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  html{scroll-snap-type:none;}
+  .slide{min-height:auto;padding:4rem 2rem!important;}
+  .s-cover-inner,.s-bi,.s-aud{grid-template-columns:1fr!important;}
+  .s-cover-right,.s-bi-half:first-child{display:none;}
+  .s-three-row,.s-acts-grid,.s-del-grid,.s-incarn-points,.s-fil-grid,.s-sortir-compare{grid-template-columns:1fr!important;}
+  .s-aud{display:flex!important;flex-direction:column!important;gap:2rem!important;}
+  #counter{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div id="counter">SLIDE <span id="cnum">1</span> / 13</div>
+
+<!-- ─── SLIDE 1 · COVER ─── -->
+<section class="slide s-cover" data-slide="1">
+  <div class="s-cover-atoure">AToure Management &amp; Consulting</div>
+  <div class="s-cover-inner">
+    <div class="s-cover-left">
+      <div class="s-cover-kicker">Creator Proposition · TotalEnergies × Le Média Positif Afrique</div>
+      <h1 class="s-cover-name">Abdullahi<em>Maina</em></h1>
+      <p class="s-cover-sub">Authenticité. Curiosité. Puissance de diffusion. — Le créateur qui incarne concrètement le récit du clean cooking en Afrique.</p>
+    </div>
+    <div class="s-cover-right">
+      <img class="s-cover-photo" src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/maina%20photos/DSC00255.JPG" alt="Abdullahi Maina">
+      <div class="s-cover-photo-overlay"></div>
+      <div class="s-cover-stat-grid" style="position:relative;z-index:1;">
+        <div class="s-cover-stat">
+          <div class="s-cover-stat-n">15.5M</div>
+          <div class="s-cover-stat-l">Combined Reach</div>
+        </div>
+        <div class="s-cover-stat">
+          <div class="s-cover-stat-n">50+</div>
+          <div class="s-cover-stat-l">Food Collabs</div>
+        </div>
+        <div class="s-cover-stat">
+          <div class="s-cover-stat-n">7.5%</div>
+          <div class="s-cover-stat-l">Eng. Rate</div>
+        </div>
+        <div class="s-cover-stat">
+          <div class="s-cover-stat-n">2</div>
+          <div class="s-cover-stat-l">TikTok Channels</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s-cover-line"></div>
+  <div class="scroll-cue"><span>Scroll</span></div>
+</section>
+
+<!-- ─── SLIDE 2 · THE QUESTION ─── -->
+<section class="slide s-question" data-slide="2">
+  <div class="s-q-label">La question centrale du brief</div>
+  <p class="s-q-text">"Comment l'accès à une <strong>énergie de cuisson propre</strong> transforme concrètement <strong>la vie des foyers africains</strong> ?"</p>
+  <p class="s-q-source">TotalEnergies × Le Média Positif Afrique · Brief documentaire 2025</p>
+</section>
+
+<!-- ─── SLIDE 3 · THREE WORDS ─── -->
+<section class="slide s-three" data-slide="3">
+  <div class="s-three-label">Le brief demande trois choses. Maina les incarne toutes.</div>
+  <div class="s-three-row">
+    <div class="s-three-cell">
+      <div>
+        <div class="s-three-word">Authenticity</div>
+        <div class="s-three-word-fr">Authenticité</div>
+        <p class="s-three-proof">Nigerian origin. Real food content. <strong>50+ restaurant partnerships</strong> built on genuine recommendation — not scripted promotion. His audience trusts him because he has never faked it.</p>
+      </div>
+      <div class="s-three-cell-num">01</div>
+    </div>
+    <div class="s-three-cell">
+      <div>
+        <div class="s-three-word">Curiosity</div>
+        <div class="s-three-word-fr">Curiosité</div>
+        <p class="s-three-proof">A creator who travels, tastes, and asks <em>why</em>. His @mainavsfood page is built on curiosity — exploring African food, street kitchens, and cooking culture with <strong>genuine, unscripted wonder</strong>.</p>
+      </div>
+      <div class="s-three-cell-num">02</div>
+    </div>
+    <div class="s-three-cell">
+      <div>
+        <div class="s-three-word">Reach</div>
+        <div class="s-three-word-fr">Puissance de diffusion</div>
+        <p class="s-three-proof"><strong>14.3M TikTok</strong> on his main channel. <strong>1M</strong> on his food channel (@mainavsfood). <strong>943K Instagram.</strong> Two distinct audiences — mainstream and food — activated in one campaign.</p>
+      </div>
+      <div class="s-three-cell-num">03</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 4 · INCARNATION ─── -->
+<section class="slide s-incarn" data-slide="4">
+  <div class="s-incarn-kicker">Incarnation</div>
+  <h2 class="s-incarn-heading">Il ne joue pas le rôle.<br><em>Il est le rôle.</em></h2>
+  <div class="s-incarn-points">
+    <div class="s-incarn-pt">
+      <span class="s-incarn-pt-icon">🌍</span>
+      <div class="s-incarn-pt-text">
+        <strong>Origines nigérianes</strong>
+        Sub-Saharan Africa n'est pas un décor pour lui. C'est d'où il vient. Les familles qu'il rencontre le reconnaissent comme l'un des leurs.
+      </div>
+    </div>
+    <div class="s-incarn-pt">
+      <span class="s-incarn-pt-icon">🍳</span>
+      <div class="s-incarn-pt-text">
+        <strong>Créateur food, pas ambassadeur</strong>
+        @mainavsfood existe indépendamment de cette activation. Sa crédibilité dans le domaine culinaire est réelle — pas fabriquée pour le brief.
+      </div>
+    </div>
+    <div class="s-incarn-pt">
+      <span class="s-incarn-pt-icon">🎙️</span>
+      <div class="s-incarn-pt-text">
+        <strong>Récit de terrain naturel</strong>
+        Il cuisine avec les familles, échange avec les entrepreneures locales, questionne les experts — exactement le format du documentaire, exactement son style habituel.
+      </div>
+    </div>
+    <div class="s-incarn-pt">
+      <span class="s-incarn-pt-icon">🌐</span>
+      <div class="s-incarn-pt-text">
+        <strong>Bilingue FR / EN</strong>
+        Franchit la frontière linguistique entre l'Afrique francophone et anglophone — sans traducteur, sans rupture de ton, sans perdre l'intimité du terrain.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 5 · FIL CONDUCTEUR ─── -->
+<section class="slide s-fil" data-slide="5">
+  <div class="s-fil-label">L'angle narratif du brief</div>
+  <p class="s-fil-quote">"La cuisine comme <strong>fil conducteur humain, sensoriel et universel</strong> — une porte d'entrée vers les enjeux santé, climat, économie et émancipation des femmes."</p>
+  <div class="s-fil-grid">
+    <div class="s-fil-block">
+      <div class="s-fil-block-title">Humain</div>
+      <div class="s-fil-block-desc">Maina's entire content identity is built around people — the families, chefs and vendors behind the food.</div>
+    </div>
+    <div class="s-fil-block">
+      <div class="s-fil-block-title">Sensoriel</div>
+      <div class="s-fil-block-desc">His food content captures smell, sound and texture through the camera. He makes his audience feel the kitchen.</div>
+    </div>
+    <div class="s-fil-block">
+      <div class="s-fil-block-title">Universel</div>
+      <div class="s-fil-block-desc">15.5M people across Africa, the UK, the US and the diaspora — all connected through food on his channels.</div>
+    </div>
+    <div class="s-fil-block">
+      <div class="s-fil-block-title">Engagé</div>
+      <div class="s-fil-block-desc">Not an observer. A participant. He cooks, he questions, he takes a position — exactly the brief's tone.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 6 · TRACK RECORD ─── -->
+<section class="slide s-track" data-slide="6">
+  <div class="s-track-bg">50</div>
+  <div style="position:relative;z-index:1;">
+    <div class="s-track-label">Crédibilité commerciale dans le domaine food</div>
+    <div class="s-track-num-row">
+      <div class="s-track-num">50</div>
+      <div class="s-track-num-sup">+</div>
+      <div class="s-track-num-label">
+        <div class="s-track-num-label-top">Verified brand partnerships</div>
+        <div class="s-track-num-label-main">Restaurant &amp; food brand collaborations</div>
+      </div>
+    </div>
+    <div class="s-track-cats">
+      <span class="s-track-cat">🍖 African &amp; World Cuisine</span>
+      <span class="s-track-cat">🍽️ Casual &amp; Fast Dining</span>
+      <span class="s-track-cat">📍 Street Food &amp; Pop-Ups</span>
+      <span class="s-track-cat">🍳 Cooking Collaborations</span>
+      <span class="s-track-cat">🎥 @mainavsfood · 1.1M followers</span>
+      <span class="s-track-cat">💛 25.8M TikTok Likes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 7 · BRANDS ─── -->
+<section class="slide s-brands" data-slide="7">
+  <div class="s-brands-inner">
+    <div class="s-brands-label">Brand Collaborations</div>
+    <h2 class="s-brands-title">Trusted by <em>the world's biggest names.</em></h2>
+    <div class="s-brands-grid">
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Netflix</div>
+        <div class="s-brand-cat">Streaming</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Warner Bros</div>
+        <div class="s-brand-cat">Entertainment</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">BBC</div>
+        <div class="s-brand-cat">Broadcasting</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Wingstop</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Jollibee</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Afrikana</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Chicken Shop</div>
+        <div class="s-brand-cat">Food &amp; Beverage</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">RIDGE</div>
+        <div class="s-brand-cat">Lifestyle</div>
+      </div>
+      <div class="s-brand-tile">
+        <div class="s-brand-name">Gauthmath</div>
+        <div class="s-brand-cat">Tech &amp; Education</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 8 · AUDIENCE ─── -->
+<section class="slide s-aud" data-slide="8">
+  <div class="s-aud-left">
+    <div class="s-aud-label">Audience Intelligence</div>
+    <h2 class="s-aud-title">Jeune,<br>africain,<br><em>global.</em></h2>
+    <p class="s-aud-note">His audience mirrors Le Média Positif Afrique's target viewer — <strong>75% aged 18–40</strong>, African diaspora and continent-based, with Nigeria &amp; Kenya as top markets alongside the UK.</p>
+    <p class="s-aud-note" style="margin-top:.8rem;"><strong>55% Male · 45% Female.</strong> Top locations: <strong>US 28% · UK 27%.</strong></p>
+  </div>
+  <div class="s-aud-right">
+    <div class="s-aud-panel">
+      <div class="s-aud-panel-title">Overall Audience · Top Countries</div>
+      <div class="s-aud-row"><span class="s-aud-country">United Kingdom</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill" style="width:100%"></div></div><span class="s-aud-pct">16.1%</span></div>
+      <div class="s-aud-row"><span class="s-aud-country">Nigeria</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill" style="width:99%"></div></div><span class="s-aud-pct">16.0%</span></div>
+      <div class="s-aud-row"><span class="s-aud-country">United States</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill" style="width:61%"></div></div><span class="s-aud-pct">9.9%</span></div>
+      <div class="s-aud-row"><span class="s-aud-country">Kenya</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill" style="width:52%"></div></div><span class="s-aud-pct">8.3%</span></div>
+    </div>
+    <div class="s-aud-panel">
+      <div class="s-aud-panel-title">Age Ranges</div>
+      <div class="s-aud-row"><span class="s-aud-country">25–34</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill age" style="width:100%"></div></div><span class="s-aud-pct">40.1%</span></div>
+      <div class="s-aud-row"><span class="s-aud-country">18–24</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill age" style="width:79%"></div></div><span class="s-aud-pct">31.8%</span></div>
+      <div class="s-aud-row"><span class="s-aud-country">13–17</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill age" style="width:33%"></div></div><span class="s-aud-pct">13.3%</span></div>
+      <div class="s-aud-row"><span class="s-aud-country">35–44</span><div class="s-aud-bar-wrap"><div class="s-aud-bar-fill age" style="width:26%"></div></div><span class="s-aud-pct">10.4%</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 8 · 3 ACTS ─── -->
+<section class="slide s-acts" data-slide="9">
+  <div class="s-acts-label">Structure narrative du documentaire — et le rôle de Maina dans chaque acte</div>
+  <div class="s-acts-grid">
+    <div class="s-act">
+      <div class="s-act-num">01</div>
+      <div class="s-act-title">Le Constat</div>
+      <div class="s-act-subtitle">Reality · The Problem</div>
+      <p class="s-act-brief">La réalité de la cuisson au charbon et au bois — pollution intérieure, temps passé à collecter le combustible, impact sur la santé et la vie des femmes.</p>
+      <p class="s-act-maina">visite les familles, cuisine à leurs côtés sur les foyers traditionnels. Son origine nigériane rend les échanges naturels et sans filtre.</p>
+    </div>
+    <div class="s-act">
+      <div class="s-act-num">02</div>
+      <div class="s-act-title">Les Solutions</div>
+      <div class="s-act-subtitle">Discovery · The Shift</div>
+      <p class="s-act-brief">GPL, stations TotalEnergies, pay-as-you-cook, formation d'entrepreneures locales — la transition énergétique vue du terrain.</p>
+      <p class="s-act-maina">explore avec une curiosité authentique. En tant que créateur food, sa question — "comment ça change ta façon de cuisiner ?" — est naturelle, pas scripted.</p>
+    </div>
+    <div class="s-act">
+      <div class="s-act-num">03</div>
+      <div class="s-act-title">L'Impact</div>
+      <div class="s-act-subtitle">Transformation · 2030</div>
+      <p class="s-act-brief">Témoignages, success stories, portraits d'acteurs locaux — mise en perspective de l'ambition 2030 : 100 millions de bénéficiaires.</p>
+      <p class="s-act-maina">referme le récit avec son regard food — cuisiner le même plat, avant et après. Sensoriel, émotionnel, universel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 9 · BILINGUAL ─── -->
+<section class="slide s-bi" data-slide="10">
+  <div class="s-bi-half">
+    <div class="s-bi-label">Langue de diffusion principale</div>
+    <div class="s-bi-flag">🇬🇧</div>
+    <div class="s-bi-lang">English</div>
+    <p class="s-bi-desc">His primary content language — natural, unscripted, and authentic. His UK-based audience represents 26.4% of TikTok followers and 41.9% of viewers.</p>
+    <p class="s-bi-why">Handles all field narration, family conversations and expert interviews in English-speaking Sub-Saharan African markets.</p>
+  </div>
+  <div class="s-bi-half">
+    <div class="s-bi-label">Accès au marché francophone</div>
+    <div class="s-bi-flag">🇫🇷</div>
+    <div class="s-bi-lang">Français</div>
+    <p class="s-bi-desc">French capability unlocks Francophone Africa — the core geography of this brief. Côte d'Ivoire, Sénégal, DRC, Cameroun — accessible without a translator on screen.</p>
+    <p class="s-bi-why">Converses directly with families and local entrepreneurs in Francophone markets. No language cut, no loss of intimacy in the field.</p>
+  </div>
+</section>
+
+<!-- ─── SLIDE 10 · DELIVERABLES ─── -->
+<section class="slide s-del" data-slide="11">
+  <div class="s-del-label">Ce que le partenariat produit</div>
+  <h2 class="s-del-title">Un dispositif <em>complet.</em></h2>
+  <div class="s-del-grid">
+    <div class="s-del-card">
+      <span class="s-del-icon">🎬</span>
+      <div class="s-del-card-title">YouTube Documentary</div>
+      <p class="s-del-card-desc">~30 minutes. Maina hosts all 3 acts — Le Constat, Les Solutions, L'Impact. Distributed to Le Média Positif Afrique's audience.</p>
+      <span class="s-del-card-tag">Long-form · YouTube</span>
+    </div>
+    <div class="s-del-card">
+      <span class="s-del-icon">🍽️</span>
+      <div class="s-del-card-title">@mainavsfood Cuts</div>
+      <p class="s-del-card-desc">Short-form food-focused clips for his 1.1M dedicated food audience. High engagement, credible niche reach.</p>
+      <span class="s-del-card-tag">TikTok · Food Audience</span>
+    </div>
+    <div class="s-del-card">
+      <span class="s-del-icon">⚡</span>
+      <div class="s-del-card-title">@itsyaboymaina Cuts</div>
+      <p class="s-del-card-desc">Amplification cuts to his 14.3M TikTok and 943K Instagram — mainstream reach for maximum campaign impact.</p>
+      <span class="s-del-card-tag">TikTok · Mainstream · 14.3M</span>
+    </div>
+    <div class="s-del-card">
+      <span class="s-del-icon">🎙️</span>
+      <div class="s-del-card-title">Field &amp; Behind-the-scenes</div>
+      <p class="s-del-card-desc">Raw, authentic field content from Sub-Saharan Africa — the human faces behind the energy transition.</p>
+      <span class="s-del-card-tag">Social · Organic · Bilingual</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 11 · SORTIR DU DISCOURS ─── -->
+<section class="slide s-sortir" data-slide="12">
+  <div class="s-sortir-label">L'enjeu de communication du brief</div>
+  <h2 class="s-sortir-title">Sortir du<br><em>discours corporate.</em></h2>
+  <div class="s-sortir-compare">
+    <div class="s-sortir-col">
+      <div class="s-sortir-col-label">Un porte-parole classique</div>
+      <div class="s-sortir-item">Script visible, ton institutionnel</div>
+      <div class="s-sortir-item">Lien artificiel avec le sujet food &amp; Africa</div>
+      <div class="s-sortir-item">Audience acquise pour lui, pas pour le sujet</div>
+      <div class="s-sortir-item">Risque de renforcer le discours corporate</div>
+    </div>
+    <div class="s-sortir-col">
+      <div class="s-sortir-col-label">Abdullahi Maina</div>
+      <div class="s-sortir-item good"><strong>50+ food collabs</strong> — crédibilité organique, pas achetée</div>
+      <div class="s-sortir-item good"><strong>Origines nigérianes</strong> — il vient de là, il connaît ces cuisines</div>
+      <div class="s-sortir-item good"><strong>Bilingue</strong> — le récit coule naturellement entre FR et EN</div>
+      <div class="s-sortir-item good"><strong>15.5M reach</strong> — la puissance de diffusion sans le discours</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SLIDE 12 · CTA ─── -->
+<section class="slide s-cta" data-slide="13">
+  <div class="s-cta-content">
+    <div class="s-cta-label">Presented by AToure Management &amp; Consulting</div>
+    <h2 class="s-cta-title">Passons à<br><em>l'étape suivante.</em></h2>
+    <p class="s-cta-sub">Pour discuter de la disponibilité d'Abdullahi Maina pour cette activation ou approfondir la proposition.</p>
+    <div class="s-cta-btns">
+      <a href="mailto:general@atoureconsulting.com?subject=Maina × TotalEnergies" class="s-cta-btn primary">Contacter AToure</a>
+      <a href="maina-totalenergies.html" class="s-cta-btn secondary">Full Proposition →</a>
+    </div>
+    <div class="s-cta-atoure">© 2025 AToure Management &amp; Consulting · Confidentiel</div>
+  </div>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const cnum = document.getElementById('cnum');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) cnum.textContent = e.target.dataset.slide;
+  });
+},{threshold:.5});
+slides.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
