@@ -325,6 +325,28 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   .acct-row{flex-direction:column;gap:.1rem;}
 }
 
+
+/* ===== CONTENTS RAIL ===== */
+.toc{margin-top:1.7rem;position:static;display:block;height:auto;padding:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none;border:none;box-shadow:none;align-items:initial;justify-content:initial;}
+.toc-lab{font-size:.5rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.65rem;}
+.toc-i{display:flex;align-items:center;gap:.62rem;text-decoration:none;padding:.29rem 0;color:rgba(254,252,248,.46);font-size:.71rem;font-weight:500;letter-spacing:.05em;transition:color .22s;line-height:1.25;}
+.toc-d{width:13px;height:1px;background:rgba(254,252,248,.28);flex-shrink:0;transition:width .28s,background .28s;}
+.toc-i:hover{color:var(--gold-lt);}
+.toc-i:hover .toc-d{background:var(--gold);}
+.toc-i.on{color:var(--gold-lt);font-weight:600;}
+.toc-i.on .toc-d{width:26px;background:var(--gold);}
+/* pinned: floats in the left gutter once the hero scrolls away */
+.toc.pinned{position:fixed!important;display:block;height:auto;top:50%;left:14px;transform:translateY(-50%);margin:0;z-index:150;
+  background:rgba(13,12,10,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(200,169,81,.22);border-radius:12px;padding:.85rem .9rem;
+  box-shadow:0 10px 36px rgba(0,0,0,.42);animation:tocIn .3s ease;}
+@keyframes tocIn{from{opacity:0;transform:translateY(-50%) translateX(-8px);}to{opacity:1;transform:translateY(-50%) translateX(0);}}
+.toc.pinned .toc-i{font-size:.63rem;padding:.25rem 0;}
+.toc.pinned .toc-lab{font-size:.45rem;margin-bottom:.5rem;}
+#analytics,#mission,.ctry-sec{scroll-margin-top:96px;}
+@media(max-width:1180px){.toc.pinned{display:none;}}
+@media(max-width:900px){.toc{display:none;}}
+
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -356,12 +378,23 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <span class="cs-role cr-ops">Full Ground Operations</span>
     </div>
     <p class="cs-tagline">AToure's largest single creator mandate to date. Five African countries, built and run country by country.</p>
+    <nav class="toc" id="toc" aria-label="Page contents">
+      <div class="toc-lab">Contents</div>
+      <a class="toc-i" href="#analytics" data-t="analytics"><span class="toc-d"></span><span>Tour Analytics</span></a>
+      <a class="toc-i" href="#mission" data-t="mission"><span class="toc-d"></span><span>The Mission</span></a>
+      <a class="toc-i" href="#ghana" data-t="ghana"><span class="toc-d"></span><span>Ghana</span></a>
+      <a class="toc-i" href="#cameroon" data-t="cameroon"><span class="toc-d"></span><span>Cameroon</span></a>
+      <a class="toc-i" href="#nigeria" data-t="nigeria"><span class="toc-d"></span><span>Nigeria</span></a>
+      <a class="toc-i" href="#benin" data-t="benin"><span class="toc-d"></span><span>Benin</span></a>
+      <a class="toc-i" href="#rwanda" data-t="rwanda"><span class="toc-d"></span><span>Rwanda</span></a>
+    </nav>
+    <div id="toc-space" aria-hidden="true"></div>
   </div>
   <div class="cs-hero-right"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall on the Africa Tour"></div>
 </div>
 
 <!-- FULL TOUR ANALYTICS -->
-<section class="sec tour-an">
+<section class="sec tour-an" id="analytics">
   <div class="sec-inner">
     <div class="sec-label" style="color:var(--gold);text-align:center;">Tour Analytics</div>
     <div class="tour-hero">
@@ -383,7 +416,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   </div>
 </section>
 
-<section class="sec">
+<section class="sec" id="mission">
   <div class="sec-inner">
     <div class="sec-label">The Mission</div>
     <h2 class="sec-title">Global attention on Africa, and a <em>real bond</em> with the people there.</h2>
@@ -737,6 +770,40 @@ if(burger&&links){burger.addEventListener("click",function(){links.classList.tog
     },{threshold:0.25});
     vids.forEach(function(v){io.observe(v);});
   }
+})();
+</script>
+<script>
+/* Contents rail: pins to the gutter past the hero, tracks the section in view. */
+(function(){
+  var toc=document.getElementById('toc'); if(!toc)return;
+  var links=[].slice.call(toc.querySelectorAll('.toc-i'));
+  var ids=links.map(function(a){return a.getAttribute('data-t');});
+  var secs=ids.map(function(id){return document.getElementById(id);});
+  var hero=document.querySelector('.cs-hero');
+  var space=document.getElementById('toc-space');
+
+  function setActive(id){
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-t')===id);});
+  }
+  function onScroll(){
+    if(hero){
+      var pin=window.scrollY>(hero.offsetTop+hero.offsetHeight-90);
+      if(pin!==toc.classList.contains('pinned')){
+        /* hold the rail's footprint open, or the hero collapses and the
+           page jumps by the height of the list at the pin threshold */
+        if(pin&&space)space.style.height=toc.offsetHeight+'px';
+        toc.classList.toggle('pinned',pin);
+        if(!pin&&space)space.style.height='0px';
+      }
+    }
+    /* active = last section whose top has passed the reading line */
+    var line=window.scrollY+window.innerHeight*0.35,cur=null;
+    secs.forEach(function(s,i){ if(s&&s.offsetTop<=line)cur=ids[i]; });
+    setActive(cur); /* null clears every item when above the first section */
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
 })();
 </script>
 </body>
