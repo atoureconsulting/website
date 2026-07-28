@@ -40,11 +40,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 .nav-burger{display:none;background:none;border:1px solid var(--cream-dk);color:var(--mid-txt);font-size:1.1rem;padding:.4rem .7rem;cursor:pointer;border-radius:3px;}
 
 /* HERO */
-.cs-hero{min-height:54vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.cs-hero{min-height:38vh;background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#2A0E06 65%,var(--black) 100%);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
 .cs-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,81,.3),transparent);}
 .hero-glow{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 50%,rgba(200,169,81,.12) 0%,transparent 60%);pointer-events:none;}
 .hero-line-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:3.5rem 4rem 4.5rem 5rem;}
+.cs-hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-start;padding:2.4rem 4rem 2.6rem 5rem;}
 .cs-kicker{font-size:.62rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;}
 .cs-kicker::before{content:'';width:22px;height:1px;background:var(--gold);}
 .cs-roles{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -360,11 +360,28 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="cs-hero-right"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall on the Africa Tour"></div>
 </div>
 
-<div class="metrics-strip"><div class="metrics-inner" style="grid-template-columns:repeat(3,1fr);">
-  <div class="metric-block"><div class="metric-n">1.57B</div><div class="metric-l">Total Tour Views</div></div>
-  <div class="metric-block"><div class="metric-n">5</div><div class="metric-l">Countries</div></div>
-  <div class="metric-block"><div class="metric-n">2026</div><div class="metric-l">Delivered</div></div>
-</div></div>
+<!-- FULL TOUR ANALYTICS -->
+<section class="sec tour-an">
+  <div class="sec-inner">
+    <div class="sec-label" style="color:var(--gold);text-align:center;">Tour Analytics</div>
+    <div class="tour-hero">
+      <div class="th-n">1.57B</div>
+      <div class="th-l">Total tour views across five countries</div>
+    </div>
+    <div class="tour-kpis">
+      <div class="tk"><div class="tk-n">171M</div><div class="tk-l">Biggest Single Post</div></div>
+      <div class="tk"><div class="tk-n">5</div><div class="tk-l">Countries</div></div>
+      <div class="tk"><div class="tk-n">3</div><div class="tk-l">Creator Accounts</div></div>
+      <div class="tk"><div class="tk-n">1.33B</div><div class="tk-l">Across 3 Creator Accounts</div></div>
+      <div class="tk"><div class="tk-n">633K</div><div class="tk-l">Peak Sends, One Post</div></div>
+    </div>
+    <div class="acct-grid">
+      <div class="acct"><div class="acct-h">@ashtonhall</div><div class="acct-n">500.3M</div><div class="acct-nl">Total Tour Views</div><div class="acct-row"><span>Highest single post</span><strong>171M views</strong></div><div class="acct-row"><span>Rwanda cluster, 3 posts</span><strong>262.8M views</strong></div><div class="acct-row"><span>Top engagement post</span><strong>7.5M likes</strong></div><div class="acct-row"><span>Peak sends on one post</span><strong>633K</strong></div></div>
+      <div class="acct"><div class="acct-h">@ashton_small01</div><div class="acct-n">581M</div><div class="acct-nl">Total Tour Views</div><div class="acct-row"><span>Top post</span><strong>180M views</strong></div><div class="acct-row"><span>Ghana collab with Ashton Hall</span><strong>50.1M views</strong></div><div class="acct-row"><span>Rwanda G-Wagon post</span><strong>5.5M likes</strong></div><div class="acct-row"><span>Sends on that post</span><strong>718K</strong></div></div>
+      <div class="acct"><div class="acct-h">@indian_ashtonhall</div><div class="acct-n">251.2M</div><div class="acct-nl">Total Tour Views</div><div class="acct-row"><span>&ldquo;Let&rsquo;s go to Africa&rdquo; intro</span><strong>3M likes</strong></div><div class="acct-row"><span>Benin arrival collab</span><strong>2.5M likes</strong></div><div class="acct-row"><span>Rwanda pool collab</span><strong>2.1M likes</strong></div><div class="acct-row"><span>Peak sends on one post</span><strong>182K</strong></div></div>
+    </div>
+  </div>
+</section>
 
 <section class="sec">
   <div class="sec-inner">
@@ -447,9 +464,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
             <div class="hs-tag">@ashtonhall</div>
           </div>
           <h3 class="feat-title">Dance in the Motherland</h3>
-          <p class="feat-copy">The moment Ashton Hall stepped into Cameroonian culture. The green-shirt dance travelled across the continent and well beyond it, and @indian_ashtonhall joined the tour here for a second wave of reach.</p>
+          <p class="feat-copy">The moment Ashton Hall stepped into Cameroonian culture. The green-shirt dance travelled across the continent and well beyond it, and became one of the most shared clips of the whole tour.</p>
           <div class="post-stats"><div class="ps-item"><div class="ps-n">1.5M</div><div class="ps-l">Likes</div></div><div class="ps-item"><div class="ps-n">23K</div><div class="ps-l">Comments</div></div><div class="ps-item"><div class="ps-n">27.6K</div><div class="ps-l">Shares</div></div><div class="ps-item"><div class="ps-n">47.7K</div><div class="ps-l">Sends</div></div></div>
-          <div class="collab"><div class="collab-lab">@indian_ashtonhall</div><div class="collab-row"><span>Arrival collab</span><strong>1.6M likes</strong></div></div><div class="collab"><div class="collab-lab">@ashton_small01</div><div class="collab-row"><span>Flying to Cameroon</span><strong>459K likes</strong></div><div class="collab-row"><span>Work day in Cameroon</span><strong>481K likes</strong></div></div>
+          <div class="collab"><div class="collab-lab">@ashton_small01</div><div class="collab-row"><span>Flying to Cameroon</span><strong>459K likes</strong></div><div class="collab-row"><span>Work day in Cameroon</span><strong>481K likes</strong></div></div>
         </div>
         <div>
           <div class="vid-wrap">
@@ -488,9 +505,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
             <div class="hs-tag">@ashtonhall</div>
           </div>
           <h3 class="feat-title">The Stadium Run &mdash; Lagos</h3>
-          <p class="feat-copy">A morning run through a Lagos stadium that turned into a crowd event. The clip carried the tour into Nigerian sports media and pulled the strongest local-creator response of the whole trip.</p>
+          <p class="feat-copy">A morning run through a Lagos stadium that turned into a crowd event. The clip carried the tour into Nigerian sports media, and @indian_ashtonhall joined the tour here for a second wave of reach.</p>
           <div class="post-stats"><div class="ps-item"><div class="ps-n">548K</div><div class="ps-l">Likes</div></div><div class="ps-item"><div class="ps-n">8,492</div><div class="ps-l">Comments</div></div><div class="ps-item"><div class="ps-n">11.4K</div><div class="ps-l">Shares</div></div><div class="ps-item"><div class="ps-n">10.1K</div><div class="ps-l">Sends</div></div></div>
-          <div class="collab"><div class="collab-lab">@ashton_small01</div><div class="collab-row"><span>200K milestone night run</span><strong>455K likes</strong></div><div class="collab-row"><span>&ldquo;Nigeria WE ARE HERE&rdquo;</span><strong>93.6K likes</strong></div><div class="collab-row"><span>&ldquo;Proudly seeing my brother&rdquo;</span><strong>637K likes</strong></div></div>
+          <div class="collab"><div class="collab-lab">@indian_ashtonhall</div><div class="collab-row"><span>Nigeria arrival collab</span><strong>1.6M likes</strong></div></div><div class="collab"><div class="collab-lab">@ashton_small01</div><div class="collab-row"><span>200K milestone night run</span><strong>455K likes</strong></div><div class="collab-row"><span>&ldquo;Nigeria WE ARE HERE&rdquo;</span><strong>93.6K likes</strong></div><div class="collab-row"><span>&ldquo;Proudly seeing my brother&rdquo;</span><strong>637K likes</strong></div></div>
         </div>
         <div>
           <div class="vid-wrap">
@@ -611,29 +628,6 @@ if(burger&&links){burger.addEventListener("click",function(){links.classList.tog
   doubled.forEach(function(el){track.appendChild(el);});
 })();
 </script>
-<!-- FULL TOUR ANALYTICS -->
-<section class="sec tour-an">
-  <div class="sec-inner">
-    <div class="sec-label" style="color:var(--gold);text-align:center;">Tour Analytics</div>
-    <div class="tour-hero">
-      <div class="th-n">1.57B</div>
-      <div class="th-l">Total tour views across five countries</div>
-    </div>
-    <div class="tour-kpis">
-      <div class="tk"><div class="tk-n">171M</div><div class="tk-l">Biggest Single Post</div></div>
-      <div class="tk"><div class="tk-n">5</div><div class="tk-l">Countries</div></div>
-      <div class="tk"><div class="tk-n">3</div><div class="tk-l">Creator Accounts</div></div>
-      <div class="tk"><div class="tk-n">1.33B</div><div class="tk-l">Across 3 Creator Accounts</div></div>
-      <div class="tk"><div class="tk-n">633K</div><div class="tk-l">Peak Sends, One Post</div></div>
-    </div>
-    <div class="acct-grid">
-      <div class="acct"><div class="acct-h">@ashtonhall</div><div class="acct-n">500.3M</div><div class="acct-nl">Total Tour Views</div><div class="acct-row"><span>Highest single post</span><strong>171M views</strong></div><div class="acct-row"><span>Rwanda cluster, 3 posts</span><strong>262.8M views</strong></div><div class="acct-row"><span>Top engagement post</span><strong>7.5M likes</strong></div><div class="acct-row"><span>Peak sends on one post</span><strong>633K</strong></div></div>
-      <div class="acct"><div class="acct-h">@ashton_small01</div><div class="acct-n">581M</div><div class="acct-nl">Total Tour Views</div><div class="acct-row"><span>Top post</span><strong>180M views</strong></div><div class="acct-row"><span>Ghana collab with Ashton Hall</span><strong>50.1M views</strong></div><div class="acct-row"><span>Rwanda G-Wagon post</span><strong>5.5M likes</strong></div><div class="acct-row"><span>Sends on that post</span><strong>718K</strong></div></div>
-      <div class="acct"><div class="acct-h">@indian_ashtonhall</div><div class="acct-n">251.2M</div><div class="acct-nl">Total Tour Views</div><div class="acct-row"><span>&ldquo;Let&rsquo;s go to Africa&rdquo; intro</span><strong>3M likes</strong></div><div class="acct-row"><span>Benin arrival collab</span><strong>2.5M likes</strong></div><div class="acct-row"><span>Rwanda pool collab</span><strong>2.1M likes</strong></div><div class="acct-row"><span>Peak sends on one post</span><strong>182K</strong></div></div>
-    </div>
-  </div>
-</section>
-
 <section style="background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(200,169,81,0.15)"><h3 style="color:#c8a951;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem">Related Work</h3><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap"><a href="ishowspeed-afcon.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">IShowSpeed AFCON</a><a href="ashton-hall.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">Ashton Hall</a></div></section>
 <script>
 (function(){
