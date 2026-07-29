@@ -61,7 +61,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,246,238,.97);backdrop-
 
 /* METRICS */
 .metrics-strip{background:var(--black-mid);padding:0;border-bottom:1px solid rgba(200,169,81,.15);}
-.metrics-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);}
+.metrics-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
 .metric-block{padding:1.6rem 1.8rem;text-align:center;border-right:1px solid rgba(200,169,81,.1);}
 .metric-block:last-child{border-right:none;}
 .metric-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:.3rem;}
@@ -133,7 +133,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 }
 @media(max-width:640px){
   .metrics-inner{grid-template-columns:repeat(2,1fr)!important;}
-  .metric-block:nth-child(5){grid-column:span 2;border-right:none;}
+  .metric-block:nth-child(2n){border-right:none;}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;align-items:stretch;z-index:199;border-top:2px solid var(--gold);box-shadow:0 8px 32px rgba(0,0,0,.6);}
   .nav-links.open{display:flex;}.nav-links li{border-bottom:1px solid rgba(255,255,255,.06);}.nav-links li a{display:block;padding:1rem 2rem;color:var(--warm-white)!important;font-size:.75rem;letter-spacing:.18em;text-align:center;}.nav-links li a:hover{color:var(--gold)!important;background:rgba(255,255,255,.04);}
   .nav-burger{display:block;}
@@ -197,6 +197,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .rw-guest.lead .rw-guest-n{font-size:1.7rem;color:var(--gold-lt);}
 .rw-guest.lead .rw-guest-r{font-size:.85rem;color:rgba(254,252,248,.62);}
 
+/* PHOTO BAND (two-up) */
+.rw-band{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.rw-band figure{position:relative;overflow:hidden;border-radius:14px;box-shadow:var(--sh-sm);margin:0;}
+.rw-band img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;transition:transform .5s ease;}
+.rw-band figure:hover img{transform:scale(1.04);}
+.rw-band figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(254,252,248,.9);background:linear-gradient(to top,rgba(13,12,10,.85),transparent);}
+@media(max-width:640px){.rw-band{grid-template-columns:1fr;}}
+
 /* SPLIT IMAGE + TEXT */
 .rw-split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2.5rem;}
 .rw-split img{width:100%;border-radius:14px;box-shadow:var(--sh);display:block;object-fit:cover;}
@@ -253,7 +261,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="cs-roles">
       <span class="cs-role cr-brand">Format: Live F1 Viewing</span>
       <span class="cs-role cr-creator">Guest: Omar Jahidi</span>
-      <span class="cs-role cr-ops">Market: C&ocirc;te d&rsquo;Ivoire</span>
+      <span class="cs-role cr-ops">Location: Abidjan, C&ocirc;te d&rsquo;Ivoire</span>
     </div>
     <h1 class="cs-h1">Race Weekend<em>Abidjan 2026</em></h1>
     <p class="cs-tagline">Two days built around a live giant-screen projection of the Monaco Grand Prix &mdash; one of the first premium Formula&nbsp;1 experiences staged in C&ocirc;te d&rsquo;Ivoire.</p>
@@ -269,7 +277,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="metric-block"><div class="metric-n">300</div><div class="metric-l">Guests per day</div></div>
     <div class="metric-block"><div class="metric-n">Monaco</div><div class="metric-l">Grand Prix live on giant screen</div></div>
     <div class="metric-block"><div class="metric-n">Abidjan</div><div class="metric-l">Espace Superkart</div></div>
-    <div class="metric-block"><div class="metric-n">F4</div><div class="metric-l">Guest driver Omar Jahidi</div></div>
   </div>
 </div>
 
@@ -338,18 +345,19 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
 <section class="sec">
   <div class="sec-inner">
+    <div class="rw-band" style="margin-bottom:3.5rem;">
+      <figure><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/karting-01.webp" alt="Kart on track at Espace Superkart during Race Weekend" loading="lazy"><figcaption>On the Superkart circuit</figcaption></figure>
+      <figure><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/vip-lounge.webp" alt="Guests in the upstairs VIP lounge overlooking the track" loading="lazy"><figcaption>VIP lounge, above the track</figcaption></figure>
+    </div>
+
     <div class="sec-label">On The Ground</div>
     <h2 class="sec-title">What the weekend <em>looked like.</em></h2>
     <div class="rw-gallery">
       <div class="rw-shot tall"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/helmet-portrait.webp" alt="Guest in racing overalls wearing a Race Weekend branded helmet" loading="lazy"><div class="rw-cap">Race Weekend livery</div></div>
       <div class="rw-shot wide"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/host-interview.webp" alt="Host interviewing a guest in front of the Monaco Grand Prix results screen" loading="lazy"><div class="rw-cap">Live from the screen &mdash; Monaco results</div></div>
-      <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/race-weekend-cap.webp" alt="Race Weekend Abidjan 2026 branded cap" loading="lazy"><div class="rw-cap">Branded merchandise</div></div>
-      <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/karting-01.webp" alt="Kart on track at Espace Superkart during Race Weekend" loading="lazy"><div class="rw-cap">On the Superkart circuit</div></div>
-      <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/vip-lounge.webp" alt="Guests in the upstairs VIP lounge overlooking the track" loading="lazy"><div class="rw-cap">VIP lounge</div></div>
       <div class="rw-shot tall"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/huracan.webp" alt="Lamborghini Hurac&aacute;n Spyder in the Race Weekend supercar paddock" loading="lazy"><div class="rw-cap">Supercar paddock</div></div>
+      <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/race-weekend-cap.webp" alt="Race Weekend Abidjan 2026 branded cap" loading="lazy"><div class="rw-cap">Branded merchandise</div></div>
       <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/paddock-merch.webp" alt="Motorsport jackets and merchandise on display at Race Weekend" loading="lazy"><div class="rw-cap">Retail &amp; display</div></div>
-      <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/driver-suit.webp" alt="Guest in a bespoke Race Weekend racing suit beside a Lamborghini Urus" loading="lazy"><div class="rw-cap">Bespoke race suits</div></div>
-      <div class="rw-shot sq"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/commissioned-artwork.webp" alt="Commissioned motorsport painting displayed on an easel at the venue" loading="lazy"><div class="rw-cap">Commissioned artwork</div></div>
     </div>
   </div>
 </section>
@@ -450,6 +458,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
 <section class="sec">
   <div class="sec-inner">
+    <div class="rw-band" style="margin-bottom:3.5rem;">
+      <figure><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/driver-suit.webp" alt="Guest in a bespoke Race Weekend racing suit beside a Lamborghini Urus" loading="lazy"><figcaption>Bespoke race suits</figcaption></figure>
+      <figure><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/commissioned-artwork.webp" alt="Commissioned motorsport painting displayed on an easel at the venue" loading="lazy"><figcaption>Commissioned artwork</figcaption></figure>
+    </div>
+
     <div class="sec-label">Partners</div>
     <h2 class="sec-title">Who backed <em>the weekend.</em></h2>
     <p class="body-txt">Race Weekend was delivered with a partner group spanning broadcast, hospitality, retail, energy and diplomatic representation &mdash; brands that gave the event both its production backbone and its premium positioning.</p>
@@ -489,27 +502,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   </div>
 </section>
 
-<section class="sec sec-dark">
-  <div class="sec-inner">
-    <div class="sec-label">The Team</div>
-    <h2 class="sec-title">Who ran <em>the weekend.</em></h2>
-    <div class="rw-guests" style="margin-top:2rem;">
-      <div class="rw-guest">
-        <div class="rw-guest-n">Aziz Bictogo</div>
-        <div class="rw-guest-r">Commissaire g&eacute;n&eacute;ral</div>
-      </div>
-      <div class="rw-guest">
-        <div class="rw-guest-n">Habib Timit&eacute;</div>
-        <div class="rw-guest-r">Coordination</div>
-      </div>
-      <div class="rw-guest">
-        <div class="rw-guest-n">Alexandra Kambou</div>
-        <div class="rw-guest-r">Coordination</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="sec">
   <div class="sec-inner">
     <div class="sec-label">Key Outcomes</div>
@@ -527,6 +519,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   </div>
 </section>
 
+<section style="background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(200,169,81,0.15)"><h3 style="color:#c8a951;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem">Related Work</h3><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap"><a href="ivory-coast.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">Ivory Coast</a><a href="dazn-qatar.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">DAZN Qatar</a><a href="ishowspeed-afcon.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">IShowSpeed AFCON</a></div></section>
+
 <div class="cta-band" style="background:var(--black);padding:4rem 60px;text-align:center;position:relative;overflow:hidden;">
   <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:600;color:var(--warm-white);margin-bottom:1rem;line-height:1.1;">Want to partner on the next one?<em style="font-style:italic;color:var(--gold-lt);display:block;">Let&rsquo;s talk.</em></h2>
@@ -540,5 +534,5 @@ if(nav)window.addEventListener("scroll",function(){nav.classList.toggle("scrolle
 var burger=document.getElementById("burger"),links=document.querySelector(".nav-links");
 if(burger&&links){burger.addEventListener("click",function(){links.classList.toggle("open");burger.innerHTML=links.classList.contains("open")?"&times;":"&#9776;";});}
 </script>
-<section style="background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(200,169,81,0.15)"><h3 style="color:#c8a951;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem">Related Work</h3><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap"><a href="ivory-coast.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">Ivory Coast</a><a href="dazn-qatar.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">DAZN Qatar</a><a href="ishowspeed-afcon.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">IShowSpeed AFCON</a></div></section></body>
+</body>
 </html>
