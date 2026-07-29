@@ -204,6 +204,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 /* VIDEO */
 .rw-video{width:100%;border-radius:14px;box-shadow:var(--sh);display:block;background:var(--black);}
 
+/* PARTNERS */
+.rw-partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem;}
+.rw-partner{background:var(--warm-white);border:1px solid var(--cream-dk);border-radius:12px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:112px;transition:border-color .2s,transform .2s,box-shadow .2s;}
+.rw-partner:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:var(--sh-gold);}
+.rw-partner-n{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--black);line-height:1.15;}
+.rw-partner-r{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dk);margin-top:.5rem;}
+@media(max-width:900px){.rw-partner-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.rw-partner-grid{grid-template-columns:1fr;}}
+
 @media(max-width:1100px){
   .rw-gallery{grid-template-columns:repeat(2,1fr);}
   .rw-days{grid-template-columns:1fr;}
@@ -257,9 +266,9 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <div class="metrics-strip">
   <div class="metrics-inner">
     <div class="metric-block"><div class="metric-n">2 Days</div><div class="metric-l">6 &amp; 7 June 2026</div></div>
+    <div class="metric-block"><div class="metric-n">300</div><div class="metric-l">Guests per day</div></div>
     <div class="metric-block"><div class="metric-n">Monaco</div><div class="metric-l">Grand Prix live on giant screen</div></div>
     <div class="metric-block"><div class="metric-n">Abidjan</div><div class="metric-l">Espace Superkart</div></div>
-    <div class="metric-block"><div class="metric-n">First</div><div class="metric-l">Premium F1 activation in C&ocirc;te d&rsquo;Ivoire</div></div>
     <div class="metric-block"><div class="metric-n">F4</div><div class="metric-l">Guest driver Omar Jahidi</div></div>
   </div>
 </div>
@@ -272,7 +281,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <div class="sec-label">The Concept</div>
         <h2 class="sec-title">Formula 1, <em>brought to Abidjan.</em></h2>
         <p class="body-txt">Formula&nbsp;1 has a real and growing audience in C&ocirc;te d&rsquo;Ivoire &mdash; but until Race Weekend there was no premium space in which to experience it. The passion existed; the venue did not.</p>
-        <p class="body-txt" style="margin-top:1.1rem;">AToure built one. Race Weekend took over Espace Superkart in Abidjan across 6 and 7 June 2026 and turned the Monaco Grand Prix into a two-day destination &mdash; live projection on a giant screen, a karting circuit running alongside it, a supercar paddock, a VIP lounge overlooking the track, and a guest list built from the city&rsquo;s young professional and motorsport communities.</p>
+        <p class="body-txt" style="margin-top:1.1rem;">AToure built one. Race Weekend took over Espace Superkart in Abidjan across 6 and 7 June 2026 and turned the Monaco Grand Prix into a two-day destination &mdash; live projection on a giant screen, a karting circuit running alongside it, a supercar paddock, a VIP lounge overlooking the track, and 300 guests a day drawn from the city&rsquo;s young professional and motorsport communities.</p>
         <p class="body-txt" style="margin-top:1.1rem;">The result was less a screening than a weekend: sport, lifestyle, networking and content, designed as a single experience.</p>
       </div>
       <div>
@@ -281,6 +290,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
           <li><strong>Dates</strong>&nbsp;&mdash;&nbsp;6 &amp; 7 June 2026, across two full days</li>
           <li><strong>Venue</strong>&nbsp;&mdash;&nbsp;Espace Superkart, Abidjan</li>
           <li><strong>Centrepiece</strong>&nbsp;&mdash;&nbsp;Live giant-screen projection of the Monaco Grand Prix</li>
+          <li><strong>Attendance</strong>&nbsp;&mdash;&nbsp;300 guests per day across both days</li>
           <li><strong>Audience</strong>&nbsp;&mdash;&nbsp;Young urban professionals, motorsport enthusiasts, expatriates and entrepreneurs</li>
           <li><strong>On track</strong>&nbsp;&mdash;&nbsp;Karting sessions on the Superkart circuit</li>
           <li><strong>On site</strong>&nbsp;&mdash;&nbsp;Supercar paddock, sponsor wall, VIP lounge, DJ set</li>
@@ -440,6 +450,25 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
 <section class="sec">
   <div class="sec-inner">
+    <div class="sec-label">Partners</div>
+    <h2 class="sec-title">Who backed <em>the weekend.</em></h2>
+    <p class="body-txt">Race Weekend was delivered with a partner group spanning broadcast, hospitality, retail, energy and diplomatic representation &mdash; brands that gave the event both its production backbone and its premium positioning.</p>
+    <div class="rw-partner-grid">
+      <div class="rw-partner"><div class="rw-partner-n">Canal+</div><div class="rw-partner-r">Broadcast</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">Nespresso</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">Koton</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">Consulat de la Principaut&eacute; de Monaco</div><div class="rw-partner-r">En C&ocirc;te d&rsquo;Ivoire</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">Zino Cigares</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">Core Fitness</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">Gas&oacute;leo</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">LXOIL</div></div>
+      <div class="rw-partner"><div class="rw-partner-n">&eacute;binto</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-inner">
     <div class="rw-split">
       <div>
         <div class="sec-label">Media &amp; Coverage</div>
@@ -486,9 +515,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="sec-label">Key Outcomes</div>
     <h2 class="sec-title">A format <em>worth repeating.</em></h2>
     <div class="outcomes-pills">
+      <div class="outcome-pill">300 guests per day across both days</div>
       <div class="outcome-pill">First premium F1 activation in C&ocirc;te d&rsquo;Ivoire</div>
       <div class="outcome-pill">Two-day format delivered end to end</div>
       <div class="outcome-pill">Motorsport federation &amp; champions on site</div>
+      <div class="outcome-pill">Nine partner brands on board</div>
       <div class="outcome-pill">Branded sponsor lounges &amp; photo wall</div>
       <div class="outcome-pill">Full photo and video production</div>
     </div>
