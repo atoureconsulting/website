@@ -343,9 +343,23 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 @keyframes tocIn{from{opacity:0;transform:translateY(-50%) translateX(-8px);}to{opacity:1;transform:translateY(-50%) translateX(0);}}
 .toc.pinned .toc-i{font-size:.63rem;padding:.25rem 0;}
 .toc.pinned .toc-lab{font-size:.45rem;margin-bottom:.5rem;}
-#analytics,#mission,.ctry-sec{scroll-margin-top:96px;}
+#analytics,#mission,#press,.ctry-sec{scroll-margin-top:96px;}
 @media(max-width:1180px){.toc.pinned{display:none;}}
 @media(max-width:900px){.toc{display:none;}}
+
+
+/* ===== PRESS ===== */
+.press-strip{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.3rem 0 2.1rem;}
+.press-stat{background:rgba(200,169,81,.09);border:1px solid rgba(200,169,81,.3);border-radius:100px;padding:.4rem 1rem;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dk);}
+.press-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.5rem 1.8rem;margin-top:.4rem;}
+.pc-head{display:flex;align-items:center;gap:.5rem;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--black);padding-bottom:.55rem;margin-bottom:.7rem;border-bottom:1px solid rgba(200,169,81,.32);}
+.pc-flag{font-size:.95rem;line-height:1;}
+.press-item{display:block;text-decoration:none;padding:.5rem .65rem;margin:0 -.65rem .18rem;border-radius:7px;border:1px solid transparent;transition:background .18s,border-color .18s,transform .18s;}
+.press-item:hover{background:rgba(200,169,81,.08);border-color:rgba(200,169,81,.3);transform:translateX(2px);}
+.pi-outlet{display:block;font-size:.68rem;font-weight:700;letter-spacing:.09em;color:var(--gold-dk);margin-bottom:.16rem;}
+.pi-title{display:block;font-size:.73rem;color:var(--mid-txt);line-height:1.42;}
+.press-item:hover .pi-title{color:var(--black);}
+.press-note{margin-top:2rem;font-size:.73rem;color:var(--lt-txt);line-height:1.65;border-left:2px solid rgba(200,169,81,.4);padding-left:.95rem;max-width:64ch;}
 
 </style>
 
@@ -387,6 +401,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <a class="toc-i" href="#nigeria" data-t="nigeria"><span class="toc-d"></span><span>Nigeria</span></a>
       <a class="toc-i" href="#benin" data-t="benin"><span class="toc-d"></span><span>Benin</span></a>
       <a class="toc-i" href="#rwanda" data-t="rwanda"><span class="toc-d"></span><span>Rwanda</span></a>
+      <a class="toc-i" href="#press" data-t="press"><span class="toc-d"></span><span>Press</span></a>
     </nav>
     <div id="toc-space" aria-hidden="true"></div>
   </div>
@@ -636,6 +651,55 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
 </section>
+<section class="sec" id="press">
+  <div class="sec-inner">
+    <div class="sec-label">Press</div>
+    <h2 class="sec-title">The tour <em>made the news</em> in every market.</h2>
+    <p class="body-txt">National press picked up the tour in all five countries, in English, French and Kinyarwanda, with the Rwanda leg alone drawing coverage from six outlets and syndication onto MSN.</p>
+    <div class="press-strip">
+      <span class="press-stat">14 Articles</span>
+      <span class="press-stat">5 Countries</span>
+      <span class="press-stat">3 Languages</span>
+      <span class="press-stat">International Syndication</span>
+    </div>
+    <div class="press-grid">
+        <div>
+          <div class="pc-head"><span class="pc-flag">🇬🇭</span>Ghana</div>
+          <a class="press-item" href="https://www.modernghana.com/entertainment/83861/us-fitness-star-ashton-hall-touches-down-in-accra.html" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">ModernGhana</span><span class="pi-title">US Fitness Star Ashton Hall Touches Down in Accra to Begin Africa Tour with Colourful Kete Welcome</span></a>
+          <a class="press-item" href="https://www.ghanaweb.com/GhanaHomePage/entertainment/American-fitness-influencer-Ashton-Hall-touches-down-in-Ghana-as-part-of-two-week-Africa-tour-2040956" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">GhanaWeb</span><span class="pi-title">American fitness influencer Ashton Hall touches down in Ghana as part of two-week Africa tour</span></a>
+          <a class="press-item" href="https://nkomode.com/post.php?id=471" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Nkomode</span><span class="pi-title">Ashton Hall Launches African Tour in Ghana with Warm Welcome</span></a>
+        </div>
+        <div>
+          <div class="pc-head"><span class="pc-flag">🇨🇲</span>Cameroon</div>
+          <a class="press-item" href="https://madeincameroonmagazine.com/ashton-hall-est-peut-etre-tombe-sous-le-charme-du-cameroun-voici-10-raisons-qui-pourraient-le-faire-revenir/" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Made In Cameroon</span><span class="pi-title">Ashton Hall est peut-&ecirc;tre tomb&eacute; sous le charme du Cameroun</span></a>
+        </div>
+        <div>
+          <div class="pc-head"><span class="pc-flag">🇳🇬</span>Nigeria</div>
+          <a class="press-item" href="https://punchng.com/ashton-hall-names-nigeria-favourite-african-destination-calls-lagos-african-miami/" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Punch</span><span class="pi-title">Ashton Hall names Nigeria favourite African destination, calls Lagos &lsquo;African Miami&rsquo;</span></a>
+          <a class="press-item" href="https://www.zikoko.com/pop/ashton-hall-in-nigeria/" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Zikoko</span><span class="pi-title">Ashton Hall in Nigeria: Everything He&rsquo;s Been Up To So Far</span></a>
+        </div>
+        <div>
+          <div class="pc-head"><span class="pc-flag">🇧🇯</span>Benin</div>
+          <a class="press-item" href="https://www.rosyneclub.com/en/blogs/news/ashton-hall-rosyne-club-benin" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Rosyne Club</span><span class="pi-title">Ashton Hall discovers Rosyne Club during his tour in Africa &mdash; March&eacute; Ganhi, Cotonou</span></a>
+        </div>
+        <div>
+          <div class="pc-head"><span class="pc-flag">🇷🇼</span>Rwanda</div>
+          <a class="press-item" href="https://www.newtimes.co.rw/article/37284/entertainment/showbiz/ashton-hall-lands-in-rwanda-after-viral-african-tour-with-kagarara" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">The New Times</span><span class="pi-title">Ashton Hall lands in Rwanda after viral African tour with Kagarara</span></a>
+          <a class="press-item" href="https://www.ktpress.rw/2026/07/a-viral-friendship-brings-fitness-star-ashton-hall-to-rwanda/" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">KT Press</span><span class="pi-title">A Viral Friendship Brings Fitness Star Ashton Hall to Rwanda</span></a>
+          <a class="press-item" href="https://www.kigalitimes.rw/2026/07/10/ashton-hall-arrives-in-rwanda-inspires-youth-to-dream-big/" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Kigali Times</span><span class="pi-title">Ashton Hall Arrives in Rwanda, Inspires Youth to Dream Big</span></a>
+          <a class="press-item" href="https://agaciropress.com/ashton-hall-vows-to-return-to-kigali-after-unforgettable-rwanda-visit/" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">Agaciro Press</span><span class="pi-title">Ashton Hall Vows to Return to Kigali After Unforgettable Rwanda Visit</span></a>
+          <a class="press-item" href="https://en.igihe.com/entertainment/article/fitness-sensation-ashton-hall-to-visit-rwanda-in-african-tour" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">IGIHE</span><span class="pi-title">Fitness sensation Ashton Hall to visit Rwanda on African tour</span></a>
+          <a class="press-item" href="https://en.igihe.com/entertainment/article/the-ben-hosts-ashton-hall-at-his-home-during-memorable-rwanda-visit" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">IGIHE</span><span class="pi-title">The Ben hosts Ashton Hall at his home during memorable Rwanda visit</span></a>
+        </div>
+        <div>
+          <div class="pc-head"><span class="pc-flag">🌍</span>International</div>
+          <a class="press-item" href="https://www.msn.com/en-xl/africa/top-stories/ashton-hall-lands-in-rwanda-after-viral-african-tour-with-kagarara/ar-AA27DPxH" target="_blank" rel="noopener noreferrer"><span class="pi-outlet">MSN</span><span class="pi-title">Ashton Hall lands in Rwanda after viral African tour with Kagarara &mdash; syndicated</span></a>
+        </div>
+    </div>
+    <p class="press-note">Coverage listed is national and trade press only. It excludes the far larger volume of social and creator-led coverage across Instagram, TikTok, Facebook and X in each market.</p>
+  </div>
+</section>
+
 <section style="background:#0a0a0a;padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(200,169,81,0.15)"><h3 style="color:#c8a951;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem">Related Work</h3><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap"><a href="ishowspeed-afcon.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">IShowSpeed AFCON</a><a href="ashton-hall.html" style="color:#fff;background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.3);padding:.6rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.9rem">Ashton Hall</a></div></section>
 
 <div class="cta-band" style="background:var(--black);padding:4rem 60px;text-align:center;position:relative;overflow:hidden;">
