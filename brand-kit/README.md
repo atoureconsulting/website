@@ -30,17 +30,44 @@ brand-kit/
 
 ### AToure
 
+There are **two different lockups**. Pick deliberately — they are not
+interchangeable.
+
+**A. Nav lockup (sans-serif)** — the version used in the website header. Gold
+monogram, "ATOURE" in bold, "MANAGEMENT & CONSULTING" in gold, all in Jost with
+wide letterspacing. This is the cleanest option for garments and the one to use
+unless there's a reason not to.
+
+| File | Use |
+|---|---|
+| `atoure-nav-lockup-on-dark.svg` / `.png` | **Preferred for dark garments.** White + light gold. |
+| `atoure-nav-lockup-on-light.svg` / `.png` | **Preferred for light garments.** Black + dark gold. |
+| `atoure-wordmark-on-dark.svg` / `.png` | Text only, no monogram — for sleeves, hems, back necks. |
+| `atoure-wordmark-on-light.svg` / `.png` | Text only, light-garment colourway. |
+
+These are true vector, rebuilt from the live site's own CSS using the supplied
+Jost outlines, so the letterspacing and weights are exact rather than traced. The
+PNGs are 4000 px wide with transparent backgrounds.
+
+**B. Serif lockup** — the older logo-file version, with the wordmark set in a
+serif face.
+
+| File | Use |
+|---|---|
+| `atoure-lockup-horizontal-gold.png` | Serif lockup, full colour. |
+| `atoure-lockup-horizontal-black.png` / `-white.png` | Single-colour serif lockup. |
+
+**C. Monogram alone**
+
 | File | Use |
 |---|---|
 | `atoure-monogram.svg` | **Preferred for garments.** Vector, scales to any size. |
 | `atoure-monogram-tight-crop.png` | Highest-resolution raster monogram (306×420). |
 | `atoure-monogram-black.png` / `-white.png` | Single-colour, for screen print and embroidery. |
-| `atoure-lockup-horizontal-gold.png` | Full lockup — monogram plus wordmark. |
-| `atoure-lockup-horizontal-black.png` / `-white.png` | Single-colour lockup. |
 | `atoure-icon-on-black.png` | Gold monogram on a black tile — for labels and badges. |
 
-The monogram is the primary mark. It works best on chest, cap fronts, sleeves and
-anywhere the lockup would be too wide to read.
+The monogram works best on chest, cap fronts, sleeves and anywhere a lockup would
+be too wide to read.
 
 ### Race Weekend
 
@@ -111,11 +138,11 @@ silently:
    files. It is clean and scales, but if the original Illustrator or EPS file can
    be recovered from whoever designed the identity, use that instead.
 
-2. **There is no usable vector for the horizontal lockup.** The
+2. **There is no usable vector for the *serif* horizontal lockup (B).** Its
    "MANAGEMENT & CONSULTING" line is hairline-thin, and at the source resolution
-   it does not trace cleanly. For large-format work, either obtain the original
-   file, or re-set that line in Cormorant Garamond — the face is supplied here and
-   is a very close match to the original wordmark.
+   it does not trace cleanly, so only PNGs are supplied. For large-format work,
+   either obtain the original file, or use the nav lockup (A) instead — that one
+   is true vector and scales to any size.
 
 3. **The gold is not consistent across the supplied files.** Three different
    values are in circulation:
