@@ -1,0 +1,45 @@
+ATOURE MANAGEMENT & CONSULTING - COLOUR SPECIFICATION
+========================================================================
+
+NAME                     HEX       RGB               CMYK (approx)
+------------------------------------------------------------------------
+AToure Gold              #C8A951   200,169,81        0/16/60/22
+AToure Gold Light        #E0C47A   224,196,122       0/12/46/12
+AToure Gold Dark         #A08830   160,136,48        0/15/70/37
+AToure Gold Pale         #F5EDD6   245,237,214       0/3/13/4
+AToure Black             #0D0C0A   13,12,10          0/8/23/95
+AToure Black Soft        #1A1814   26,24,20          0/8/23/90
+AToure Black Mid         #2C2820   44,40,32          0/9/27/83
+AToure Cream             #FAF6EE   250,246,238       0/2/5/2
+AToure Cream Mid         #F0E8D4   240,232,212       0/3/12/6
+AToure Cream Dark        #E5D9BE   229,217,190       0/5/17/10
+AToure Warm White        #FEFCF8   254,252,248       0/1/2/0
+AToure Text Mid          #5C5040   92,80,64          0/13/30/64
+AToure Text Light        #9A8870   154,136,112       0/12/27/40
+Race Weekend Red         #D30F1F   211,15,31         0/93/85/17
+Race Weekend Gold        #D1A262   209,162,98        0/22/53/18
+Race Weekend Black       #0D0C0A   13,12,10          0/8/23/95
+
+
+NOTES
+------------------------------------------------------------------------
+AToure Gold              Primary brand gold. Use for the monogram and all gold detailing.
+AToure Gold Light        Highlight gold. Use on black garments where the primary reads too dark.
+AToure Gold Dark         Shadow gold. Small type and fine rules only.
+AToure Gold Pale         Tint. Backgrounds and large soft fills.
+AToure Black             Primary black. Warm, not pure black.
+AToure Black Soft        Secondary black for panels.
+AToure Black Mid         Tertiary warm charcoal.
+AToure Cream             Primary light garment colour.
+AToure Cream Mid         Secondary cream.
+AToure Cream Dark        Cream shadow / edge.
+AToure Warm White        Lightest tone. Near-white with warmth.
+AToure Text Mid          Body text brown-grey.
+AToure Text Light        Muted caption tone.
+Race Weekend Red         Race Weekend primary red.
+Race Weekend Gold        Race Weekend wordmark gold.
+Race Weekend Black       Race Weekend primary black.
+
+CMYK values are a straight conversion and are NOT press-ready.
+Ask your printer to match to the HEX/RGB values above, or agree a Pantone
+equivalent for the gold before production.
