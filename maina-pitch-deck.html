@@ -417,6 +417,9 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--warm-whit
   .s-aud{display:flex!important;flex-direction:column!important;gap:2rem!important;}
   #counter{display:none;}
 }
+
+/* Lining figures: Cormorant Garamond defaults to oldstyle numerals, which render '1' at x-height and drop 3/5/7/9 below the baseline. */
+body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></head>
 <body>
