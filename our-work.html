@@ -281,11 +281,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .lbg-x{position:absolute;top:2rem;right:2rem;background:rgba(250,246,238,.1);border:1px solid rgba(250,246,238,.2);color:var(--cream);width:44px;height:44px;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:3px;}
 
 @media(max-width:1100px){nav{padding:0 2rem;height:72px;}.nav-logo{height:140px;}.sec{padding:64px 2rem;}.founder-layout,.contact-wrap{grid-template-columns:1fr;gap:2.5rem;}.cases-grid{grid-template-columns:1fr;}.hiw-grid{grid-template-columns:1fr 1fr;}.svc-grid{grid-template-columns:1fr;}.proof-inner{grid-template-columns:1fr 1fr;}.f-milestones{grid-template-columns:1fr 1fr;}footer{padding:40px 2rem;flex-direction:column;gap:1.5rem;text-align:center;}.cta-band{padding:5rem 2rem;}}
-@media(max-width:820px){.page-hero{padding:8rem 1.5rem 7rem;}.page-tagline{display:block!important;overflow:visible!important;padding-bottom:2rem;}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;align-items:stretch;z-index:199;border-top:2px solid var(--gold);box-shadow:0 8px 32px rgba(0,0,0,.6);}.nav-links.open{display:flex;}.nav-links li{border-bottom:1px solid rgba(255,255,255,.06);}.nav-links li a{display:block;padding:1rem 2rem;color:var(--warm-white)!important;font-size:.75rem;letter-spacing:.18em;text-align:center;}.nav-links li a:hover{color:var(--gold)!important;background:rgba(255,255,255,.04);}.nav-burger{display:block;}.hero{flex-direction:column;}.hero-left{width:100%;padding:7rem 2rem 3rem;}.hero-right{position:relative;width:100%;height:320px;}.case-sm{flex-direction:column;}.case-sm-visual{width:100%;height:120px;}.hiw-grid{grid-template-columns:1fr;}.f-milestones{grid-template-columns:1fr;}}
-.lc-overflow{overflow:hidden;position:relative;}.lc-overflow::before,.lc-overflow::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;}.lc-overflow::before{left:0;background:linear-gradient(to right,var(--black),transparent);}.lc-overflow::after{right:0;background:linear-gradient(to left,var(--black),transparent);}.lc-track{display:inline-flex;align-items:center;animation:ticker 30s linear infinite;}.lc-track:hover{animation-play-state:paused;}.lc-item{padding:0 2.8rem;display:inline-flex;align-items:center;justify-content:center;height:52px;}.nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;}.nav-mark{height:60px;width:auto;object-fit:contain;display:block;flex:0 0 auto;}.nav-word{font-family:'Jost',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;line-height:1;white-space:nowrap;color:var(--black);}.nav-word em{font-style:normal;font-weight:600;color:var(--gold-dk);}@media(max-width:820px){.nav-word{font-size:.62rem;letter-spacing:.1em;white-space:normal;max-width:150px;}.nav-mark{height:44px;}}@media(max-width:520px){.nav-word{display:none;}}</style>
+@media(max-width:820px){.page-hero{padding:8rem 1.5rem 10.5rem;}.page-tagline{display:block!important;overflow:visible!important;padding-bottom:2rem;}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;align-items:stretch;z-index:199;border-top:2px solid var(--gold);box-shadow:0 8px 32px rgba(0,0,0,.6);}.nav-links.open{display:flex;}.nav-links li{border-bottom:1px solid rgba(255,255,255,.06);}.nav-links li a{display:block;padding:1rem 2rem;color:var(--warm-white)!important;font-size:.75rem;letter-spacing:.18em;text-align:center;}.nav-links li a:hover{color:var(--gold)!important;background:rgba(255,255,255,.04);}.nav-burger{display:block;}.hero{flex-direction:column;}.hero-left{width:100%;padding:7rem 2rem 3rem;}.hero-right{position:relative;width:100%;height:320px;}.case-sm{flex-direction:column;}.case-sm-visual{width:100%;height:120px;}.hiw-grid{grid-template-columns:1fr;}.f-milestones{grid-template-columns:1fr;}}
+.lc-overflow{overflow:hidden;position:relative;}.lc-overflow::before,.lc-overflow::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;}.lc-overflow::before{left:0;background:linear-gradient(to right,var(--black),transparent);}.lc-overflow::after{right:0;background:linear-gradient(to left,var(--black),transparent);}.lc-track{display:inline-flex;align-items:center;animation:ticker 30s linear infinite;}.lc-track:hover{animation-play-state:paused;}.lc-item{padding:0 2.8rem;display:inline-flex;align-items:center;justify-content:center;height:52px;}.nav-brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;}.nav-mark{height:60px;width:auto;object-fit:contain;display:block;flex:0 0 auto;}.nav-word{font-family:'Jost',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.18em;line-height:1;white-space:nowrap;color:var(--black);}.nav-word em{font-style:normal;font-weight:600;color:var(--gold-dk);}@media(max-width:820px){.nav-word{font-size:.62rem;letter-spacing:.1em;white-space:normal;max-width:150px;}.nav-mark{height:44px;}}@media(max-width:520px){.nav-word{display:none;}}
+/* Lining figures: Cormorant Garamond defaults to oldstyle numerals, which render '1' at x-height and drop 3/5/7/9 below the baseline. */
+body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
+</style>
 <style>
 /* OUR WORK PAGE SPECIFIC */
-.page-hero{background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#1A0C06 100%);padding:11rem 60px 8rem;position:relative;overflow:hidden;}
+.page-hero{background:linear-gradient(160deg,var(--black) 0%,#1C100A 40%,#1A0C06 100%);padding:11rem 60px 10.5rem;position:relative;overflow:hidden;}
 .page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
 .page-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--cream);clip-path:ellipse(56% 100% at 50% 100%);}
 .page-hero-inner{max-width:860px;}
@@ -338,7 +341,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .reveal.visible{opacity:1;transform:none;}
 
 @media(max-width:1100px){
-  .page-hero{padding:9rem 2rem 5rem;}
+  .page-hero{padding:9rem 2rem 10.5rem;}
   .work-sm-grid{grid-template-columns:1fr 1fr;}
   .cta-band{padding:5rem 2rem;}
 }
@@ -347,7 +350,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   .work-card-gallery{height:300px;}
   .work-sm-grid{grid-template-columns:1fr 1fr;}
   .work-sm-img{height:180px;}
-  .page-hero{padding:7rem 1.5rem 4rem;}
+  .page-hero{padding:7rem 1.5rem 10.5rem;}
 }
 @media(max-width:500px){
   .work-sm-grid{grid-template-columns:1fr;}
@@ -363,7 +366,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 </script>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></head>
 <body>
-<nav id="nav"><a href="index.html" class="nav-brand"><img src="/logo-mark.png" class="nav-mark" alt="AToure Management &amp; Consulting"><span class="nav-word">ATOURE <em>MANAGEMENT &amp; CONSULTING</em></span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="our-work.html" class="active">Our Work</a></li><li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li></ul><button class="nav-burger" id="burger">&#9776;</button></nav>
+<nav id="nav"><a href="index.html" class="nav-brand"><img src="/logo-mark.png" class="nav-mark" alt="AToure Management &amp; Consulting"><span class="nav-word">ATOURE <em>MANAGEMENT &amp; CONSULTING</em></span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="our-work.html" class="active">Our Work</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="index.html#contact" class="nav-cta">Let's Talk</a></li></ul><button class="nav-burger" id="burger">&#9776;</button></nav>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -405,7 +408,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
           <div class="work-arrow">&#8599;</div>
           <div class="work-card-overlay">
             <div class="work-card-title">Race <em>Weekend</em></div>
-            <p class="work-card-desc">A two-day premium Formula 1 experience at Espace Superkart, Abidjan, built around a live giant-screen projection of the Monaco Grand Prix. Concept to execution.</p>
+            <p class="work-card-desc">A premium Formula 1 experience across two days at Espace Superkart, Abidjan, built around a live giant screen projection of the Monaco Grand Prix. Concept to execution.</p>
           </div>
         </div>
       </a>
@@ -519,5 +522,5 @@ if(burger&&navLinks){burger.addEventListener("click",function(){navLinks.classLi
 var reveals=document.querySelectorAll(".reveal");
 if("IntersectionObserver" in window){var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target);}})},{threshold:.12});reveals.forEach(function(r){io.observe(r);});}else{reveals.forEach(function(r){r.classList.add("visible");});}
 </script>
-</body>
+<script src="/lang.js" defer></script></body>
 </html>
