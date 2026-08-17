@@ -47,6 +47,9 @@
   .hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold-soft);border-radius:30px;padding:8px 18px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);background:rgba(255,255,255,.5);margin-bottom:34px}
   .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .hero-grid{display:grid;grid-template-columns:1fr 350px;gap:70px;align-items:center}
+  .portrait img{width:100%;border-radius:175px 175px 18px 18px;border:1px solid var(--gold-soft);box-shadow:0 30px 60px rgba(160,136,48,.20);display:block;background:var(--sand)}
+  .portrait .cap{text-align:center;margin-top:14px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
   h1{font-size:clamp(44px,7vw,88px);margin:0 0 10px}
   h1 .accent{font-style:italic;font-weight:500;color:var(--gold-deep)}
   .hero-sub{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);font-style:italic;color:var(--ink-soft);max-width:720px;margin:18px 0 40px}
@@ -88,6 +91,15 @@
   .pillar .num{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.1em}
   .pillar h3{font-size:23px;margin:12px 0 10px}
   .pillar p{font-size:15px;color:var(--ink-soft)}
+  .compare{display:grid;grid-template-columns:400px 1fr;gap:48px;align-items:center;background:#fff;border:1px solid var(--parch);border-radius:18px;padding:40px;margin-top:22px}
+  .compare img{width:100%;border-radius:12px;display:block;background:var(--sand)}
+  .compare h3{font-size:clamp(26px,3vw,34px);margin:8px 0 12px}
+  .compare h3 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
+  .compare p{font-size:16px;color:var(--ink-soft)}
+  .photorow{display:flex;gap:10px;margin-top:18px}
+  .photorow img{width:calc(50% - 5px);border-radius:10px;object-fit:cover;aspect-ratio:4/3;background:var(--sand)}
+  .dayimg{width:100%;border-radius:12px;display:block;background:var(--sand);margin-bottom:20px}
+  .imgph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sand),var(--parch));color:var(--taupe);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:24px;border-radius:12px;min-height:150px}
 
   /* network */
   .nettabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
@@ -198,6 +210,9 @@
 
   @media(max-width:980px){
     .loop,.daypanel.on,.engage{grid-template-columns:1fr}
+    .hero-grid{grid-template-columns:1fr}
+    .portrait{max-width:300px;margin:40px auto 0}
+    .compare{grid-template-columns:1fr;gap:26px}
     .pillars{grid-template-columns:repeat(2,1fr)}
     .netgrid{grid-template-columns:repeat(2,1fr)}
     .case{grid-template-columns:1fr;gap:26px}
@@ -232,16 +247,22 @@
 </nav>
 
 <header id="top">
-  <div class="wrap">
-    <div class="hero-tag"><span class="dot"></span>Confidential Proposal · Prepared for Rolling Stone Africa · August 2026</div>
-    <h1>Janet Jackson<br><span class="accent">in Côte d'Ivoire</span></h1>
-    <p class="hero-sub">Back to the Roots. Legacy, women and Africa. A seven day cultural journey, delivered on the ground by the only partner with proven institutional reach across Côte d'Ivoire.</p>
-    <div class="hero-chips">
-      <span class="chip"><b>Krindjabo</b>Roots</span>
-      <span class="chip"><b>Abidjan</b>Impact</span>
-      <span class="chip"><b>Yamoussoukro</b>Legacy</span>
-      <span class="chip"><b>Assinie</b>Aspiration</span>
-      <span class="chip"><b>San Pédro</b>Discovery</span>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-tag"><span class="dot"></span>Confidential Proposal · Prepared for Rolling Stone Africa · August 2026</div>
+      <h1>Janet Jackson<br><span class="accent">in Côte d'Ivoire</span></h1>
+      <p class="hero-sub">Back to the Roots. Legacy, women and Africa. A seven day cultural journey, delivered on the ground by the only partner with proven institutional reach across Côte d'Ivoire.</p>
+      <div class="hero-chips">
+        <span class="chip"><b>Krindjabo</b>Roots</span>
+        <span class="chip"><b>Abidjan</b>Impact</span>
+        <span class="chip"><b>Yamoussoukro</b>Legacy</span>
+        <span class="chip"><b>Assinie</b>Aspiration</span>
+        <span class="chip"><b>San Pédro</b>Discovery</span>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/janet-portrait.jpg" alt="Janet Jackson" data-ph="Janet Jackson portrait">
+      <div class="cap">Ms. Janet Jackson</div>
     </div>
   </div>
 </header>
@@ -259,6 +280,10 @@
           <div class="yr">1992</div>
           <h3>Michael comes to Krindjabo</h3>
           <p>Michael Jackson is received by the Royal House of Sanwi in Krindjabo, integrated into the royal lineage and given the name Amalaman Anoh. In 1995 he receives King Nana Amon Ndoufou IV in Los Angeles. After his passing in 2009, the Kingdom holds a two day royal funeral ceremony in his honour.</p>
+          <div class="photorow">
+            <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg" alt="Michael Jackson received at Krindjabo in 1992" loading="lazy" data-ph="Krindjabo 1992">
+            <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-royal-robe-1992.jpg" alt="Michael Jackson receiving the royal robe at Krindjabo" loading="lazy" data-ph="The royal robe 1992">
+          </div>
         </div>
         <div class="yearblock">
           <div class="yr">2026</div>
@@ -301,6 +326,15 @@
         <div class="num">04</div>
         <h3>Receipts, not promises</h3>
         <p>1.57 billion views on the Ashton Hall Africa Tour. An AFCON record 6.1 billion digital impressions in Morocco. Presidential recognition in Ivory Coast. Every figure verified, every project delivered end to end.</p>
+      </div>
+    </div>
+    <div class="compare rv">
+      <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/speed-mj-royal-comparison.jpg" alt="IShowSpeed received in royal tradition beside Michael Jackson in 1992" loading="lazy" data-ph="IShowSpeed and Michael Jackson, side by side">
+      <div>
+        <div class="eyebrow">Proof, side by side</div>
+        <h3>We have staged this moment <em>before.</em></h3>
+        <p>On the left, IShowSpeed received in royal tradition during the visit AToure built from scratch. On the right, Michael Jackson at Krindjabo in 1992. The same honours, the same country, a generation apart. One of these moments is history. The other one is our work.</p>
+        <p>That is the standard we bring to Janet's return: not describing iconic moments, producing them.</p>
       </div>
     </div>
   </div>
@@ -608,13 +642,15 @@ const DAYS=[
  {d:"Day 2",p:"Krindjabo",k:"Krindjabo · Kingdom of Sanwi",t:"Back to the Roots.",
   body:["The emotional centerpiece of the journey. Janet travels to Krindjabo, capital of the Kingdom of Sanwi, reconnecting with the place where Michael Jackson was ceremonially received and given the name Prince Amalaman Anoh in 1992.","The programme can include a royal welcome, traditional procession, meeting with the King and royal court, historical storytelling, traditional dance and the presentation of royal regalia."],
   m:["Royal welcome &amp; traditional procession","Meeting with the King and royal court","Historical storytelling &amp; traditional dance"],
+  img:{src:"https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg",alt:"Michael Jackson received at Krindjabo in 1992",ph:"Krindjabo 1992"},
   note:"A ceremonial recognition of Janet by the Kingdom may become the defining image of the trip, subject entirely to the sovereign and traditional authorities. The title and ritual should only be communicated publicly once formally approved."},
  {d:"Day 3",p:"Assinie",k:"Assinie · Coast",t:"Ivory Coast, slowly.",
   body:["A refined coastal day designed as the lifestyle chapter of the journey: lagoon arrival by boat, waterfront brunch, local cuisine, beach time, traditional fishing or lagoon discovery, editorial content and a sunset dinner.","The day also provides necessary breathing room after the ceremonial intensity of Krindjabo."],
   m:["Lagoon arrival by boat","Waterfront brunch &amp; local cuisine","Editorial content &amp; sunset dinner"]},
  {d:"Day 4",p:"Yamoussoukro",k:"Yamoussoukro · Capital",t:"In Michael's footsteps.",
   body:["A documentary style day retracing Michael Jackson's 1992 passage through Yamoussoukro. The experience can combine archival storytelling with visits to emblematic sites, including the Basilica of Our Lady of Peace, testimony from people connected to the period, and discovery of the political and architectural heritage of the capital.","The narrative is simple and powerful: Michael came to reconnect with Africa. Janet returns to understand, honour and carry that story forward."],
-  m:["Basilica of Our Lady of Peace","Archival storytelling &amp; testimony","Political &amp; architectural heritage"]},
+  m:["Basilica of Our Lady of Peace","Archival storytelling &amp; testimony","Political &amp; architectural heritage"],
+  img:{src:"https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-basilica-yamoussoukro.jpg",alt:"Michael Jackson at the Basilica of Our Lady of Peace in Yamoussoukro",ph:"The Basilica, Yamoussoukro"}},
  {d:"Day 5",p:"Abidjan",k:"Abidjan · Women, Power &amp; Investment",t:"Her voice. Her power.",
   body:["Daytime: a closed door high level forum built around women's leadership, entrepreneurship, culture, creative industries and investment. The format should feel like an investment salon: established women leaders, young founders, artists, executives, philanthropists and investors in one room, with founder presentations, mentoring and possible announcement of a grant, fund or support programme for women led initiatives.","Evening: the major public cultural event of the week. An elegant spectacle celebrating Ivorian and African women, ideally in the presence of the First Lady and the Children of Africa Foundation, subject to official acceptance. Janet's role can be that of Guest of Honour, speaking on women, creativity, legacy and impact, with a possible appearance in the finale rather than a full concert."],
   m:["Closed door women &amp; investment forum","The Night of Women public event","Recognition of ten remarkable Ivorian women","Philanthropy for girls &amp; children"]},
@@ -639,7 +675,7 @@ DAYS.forEach((day,i)=>{
       <button onclick="showDay(${(i+DAYS.length-1)%DAYS.length})">← Previous day</button>
       <button onclick="showDay(${(i+1)%DAYS.length})">Next day →</button>
     </div></div>
-    <div class="moments"><div class="t">Key moments</div><ul>${day.m.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+    <div><div class="moments">${day.img?`<img class="dayimg" src="${day.img.src}" alt="${day.img.alt}" loading="lazy" data-ph="${day.img.ph}">`:''}<div class="t">Key moments</div><ul>${day.m.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`;
   panelsEl.appendChild(p);
 });
 function showDay(i){
@@ -673,6 +709,13 @@ document.querySelectorAll('.btoggle button').forEach(b=>b.onclick=()=>{
   renderBudget(b.dataset.cur);
 });
 renderBudget('fcfa');
+
+// graceful placeholder while a photo is not yet uploaded
+document.querySelectorAll('img[data-ph]').forEach(img=>img.addEventListener('error',()=>{
+  const d=document.createElement('div');d.className='imgph';d.textContent=img.dataset.ph;
+  if(img.className)d.classList.add(...img.className.split(' '));
+  img.replaceWith(d);
+}));
 
 // reveal on scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
