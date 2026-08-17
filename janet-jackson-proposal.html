@@ -17,8 +17,10 @@
     --serif:'Cormorant Garamond',serif; --sans:'Jost',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;font-size:17px}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;font-size:17px;overflow-x:hidden}
+  section{scroll-margin-top:96px}
+  img{max-width:100%}
   ::selection{background:var(--gold-soft);color:var(--ink)}
 
   .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
@@ -27,13 +29,20 @@
 
   #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-deep));width:0%;z-index:200;transition:width .1s linear}
 
-  nav{position:fixed;top:0;left:0;right:0;background:rgba(254,252,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--parch);z-index:150}
+  nav{position:fixed;top:0;left:0;right:0;background:rgba(254,252,248,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--parch);z-index:150}
   .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:20px}
   .navbrand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none;white-space:nowrap}
   .navbrand img{height:34px;width:auto}
   .navbrand .b1{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--ink)}
   .navbrand .b2{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--gold-deep)}
-  @media(max-width:860px){.navbrand .b2{display:none}}
+  @media(max-width:860px){
+    .navbrand .b2{display:none}
+    .navin{flex-wrap:wrap;padding:10px 16px;gap:8px}
+    .navbrand img{height:28px}
+    .langtoggle{margin-left:auto}
+    .navlinks{order:3;width:100%;margin-left:0}
+    section{scroll-margin-top:112px}
+  }
   .navlinks{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
   .navlinks::-webkit-scrollbar{display:none}
   .navlinks a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;white-space:nowrap;transition:all .25s}
@@ -68,8 +77,14 @@
   .sechead h2 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
   .sechead p{font-size:18.5px;color:var(--ink-soft)}
 
-  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-  .rv.in{opacity:1;transform:none}
+  /* Content is visible by default. The scroll animation is enhancement only,
+     switched on by the anim class once the reveal system is confirmed working. */
+  .anim .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .anim .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .anim .rv{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
 
   .loop{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   .loop-years{display:flex;flex-direction:column;gap:0}
@@ -228,21 +243,46 @@
 
   @media(max-width:980px){
     .loop,.daypanel.on,.engage{grid-template-columns:1fr}
-    .hero-grid{grid-template-columns:1fr}
-    .portrait{max-width:300px;margin:40px auto 0}
+    .hero-grid{grid-template-columns:1fr;gap:0}
+    .portrait{max-width:280px;margin:44px auto 0}
     .compare{grid-template-columns:1fr;gap:26px}
-    .gala{grid-template-columns:1fr;padding:40px 28px}
+    .gala{grid-template-columns:1fr;padding:40px 28px;gap:32px}
     .pillars{grid-template-columns:repeat(2,1fr)}
     .netgrid{grid-template-columns:repeat(2,1fr)}
     .case{grid-template-columns:1fr;gap:26px}
     .opsgrid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:620px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    header{padding:140px 0 60px}
+    section{padding:64px 0}
+    .sechead{margin-bottom:38px}
     .pillars,.netgrid,.opsgrid{grid-template-columns:1fr}
-    .case .statgrid{grid-template-columns:repeat(3,1fr)}
-    section{padding:70px 0}
-    .daypanel{padding:30px 22px}
-    .cta{padding:50px 26px}
+    .pillar,.op,.netcard,.eng{padding:26px 22px}
+    .case{padding:26px 20px;gap:22px}
+    .case .statgrid{grid-template-columns:repeat(3,1fr);gap:8px}
+    .stat{padding:14px 8px}
+    .stat .l{font-size:10px;letter-spacing:.06em}
+    .strip img{height:112px}
+    .daypanel{padding:28px 20px}
+    .daybtn{flex:1 1 calc(33.333% - 6px);min-width:0;padding:10px 6px}
+    .compare,.gala{padding:28px 20px}
+    .cta{padding:44px 22px}
+    .envelope{padding:28px 22px;gap:18px}
+    th{padding:13px 14px;font-size:11px}
+    td{padding:13px 14px;font-size:14.5px}
+    td .calc{font-size:11.5px}
+    summary{padding:16px 18px;font-size:12.5px}
+    details .inner{padding:0 18px 18px}
+    .photorow{flex-wrap:wrap}
+    .storyquote{padding:38px 26px 32px}
+    .storyquote::before{font-size:96px;top:-2px;left:18px}
+    #lb .pv,#lb .nx{width:46px;height:46px;font-size:27px}
+    #lb .pv{left:8px}
+    #lb .nx{right:8px}
+    #lb .x{top:12px;right:12px;width:44px;height:44px;font-size:22px}
+    #lb img{max-width:94vw}
   }
 </style>
 </head>
@@ -696,6 +736,59 @@
 </footer>
 
 <script>
+// ============ reveal + counters ============
+// Content is visible by default in CSS. This adds the anim class and drives the
+// fade in from element positions, so it degrades safely in any viewer: if this
+// block throws, the class is removed and everything simply shows.
+(function(){
+  function animateCount(el){
+    if(el.dataset.done)return;el.dataset.done='1';
+    var target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',
+        dec=(''+el.dataset.count).indexOf('.')>-1?1:0,t0=null;
+    if(!window.requestAnimationFrame){el.textContent=target.toFixed(dec)+suf;return}
+    requestAnimationFrame(function tick(t){
+      if(t0===null)t0=t;
+      var p=Math.min((t-t0)/1200,1),e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec)+suf;
+      if(p<1)requestAnimationFrame(tick);
+    });
+  }
+  var timer=null;
+  try{
+    document.documentElement.classList.add('anim');
+    var sweep=function(){
+      var vh=window.innerHeight||document.documentElement.clientHeight||800;
+      document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+        var r=el.getBoundingClientRect();
+        if(r.top<vh*0.94&&r.bottom>-40)el.classList.add('in');
+      });
+      document.querySelectorAll('[data-count]').forEach(function(el){
+        if(el.dataset.done)return;
+        var r=el.getBoundingClientRect();
+        if(r.top<vh*0.9&&r.bottom>0)animateCount(el);
+      });
+      if(!document.querySelector('.rv:not(.in)')&&!document.querySelector('[data-count]:not([data-done])')&&timer){
+        clearInterval(timer);timer=null;
+      }
+    };
+    timer=setInterval(sweep,250);
+    ['scroll','resize','orientationchange','load'].forEach(function(ev){
+      addEventListener(ev,sweep,{passive:true});
+    });
+    document.addEventListener('scroll',sweep,{passive:true,capture:true});
+    sweep();
+    setTimeout(function(){
+      document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});
+      document.querySelectorAll('[data-count]').forEach(animateCount);
+      if(timer){clearInterval(timer);timer=null}
+    },15000);
+  }catch(err){
+    if(timer)clearInterval(timer);
+    document.documentElement.classList.remove('anim');
+    try{document.querySelectorAll('[data-count]').forEach(animateCount)}catch(e2){}
+  }
+})();
+
 // ============ bilingual day data ============
 const DAYS=[
  {p:"Abidjan",
@@ -944,12 +1037,14 @@ function setLang(lang){
 document.querySelectorAll('.langtoggle button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
 
 // ============ network filter + expand ============
-document.querySelectorAll('.nettab').forEach(t=>t.onclick=()=>{
-  document.querySelectorAll('.nettab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
-  const f=t.dataset.f;
-  document.querySelectorAll('.netcard').forEach(c=>{c.style.display=(f==='all'||c.dataset.c===f)?'':'none'});
-});
-document.querySelectorAll('.netcard').forEach(c=>c.onclick=()=>c.classList.toggle('open'));
+try{
+  document.querySelectorAll('.nettab').forEach(t=>t.onclick=()=>{
+    document.querySelectorAll('.nettab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
+    const f=t.dataset.f;
+    document.querySelectorAll('.netcard').forEach(c=>{c.style.display=(f==='all'||c.dataset.c===f)?'':'none'});
+  });
+  document.querySelectorAll('.netcard').forEach(c=>c.onclick=()=>c.classList.toggle('open'));
+}catch(e){}
 
 // ============ budget (indicative rate from the source document: 567 FCFA to 1 USD) ============
 const RATE=567;
@@ -973,6 +1068,7 @@ document.querySelectorAll('.btoggle button').forEach(b=>b.onclick=()=>{
 renderBudget('fcfa');
 
 // ============ lightbox ============
+try{
 const lb=document.createElement('div');lb.id='lb';
 lb.innerHTML='<button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><button class="x" aria-label="Close">×</button><div class="ct"></div>';
 document.body.appendChild(lb);
@@ -1005,38 +1101,30 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft')lbShow(lbIdx-1);
   if(e.key==='ArrowRight')lbShow(lbIdx+1);
 });
+}catch(e){}
 
 // ============ graceful placeholder while a photo is not yet uploaded ============
-document.querySelectorAll('img[data-ph]').forEach(img=>img.addEventListener('error',()=>{
-  const d=document.createElement('div');d.className='imgph';d.textContent=img.dataset.ph;
-  if(img.className)d.classList.add(...img.className.split(' '));
-  img.replaceWith(d);
-}));
-
-// ============ reveal on scroll ============
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-// ============ animated counters ============
-const cio=new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting)return;cio.unobserve(e.target);
-  const el=e.target,target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',dec=(''+el.dataset.count).includes('.')?1:0;
-  const t0=performance.now();
-  (function tick(t){const p=Math.min((t-t0)/1200,1),ease=1-Math.pow(1-p,3);
-    el.textContent=(target*ease).toFixed(dec)+suf;
-    if(p<1)requestAnimationFrame(tick);})(t0);
-}),{threshold:.6});
-document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+try{
+  document.querySelectorAll('img[data-ph]').forEach(img=>img.addEventListener('error',()=>{
+    const d=document.createElement('div');d.className='imgph';d.textContent=img.dataset.ph;
+    const cls=(img.className||'').split(' ').filter(Boolean);
+    if(cls.length)d.classList.add(...cls);
+    img.replaceWith(d);
+  }));
+}catch(e){}
 
 // ============ progress + scrollspy ============
-const links=[...document.querySelectorAll('#navlinks a')];
-const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
-addEventListener('scroll',()=>{
-  const h=document.documentElement;
-  document.getElementById('progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
-  let cur=0;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<150)cur=i});
-  links.forEach((a,i)=>a.classList.toggle('on',i===cur));
-},{passive:true});
+try{
+  const links=[...document.querySelectorAll('#navlinks a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  addEventListener('scroll',()=>{
+    const h=document.documentElement;
+    const denom=h.scrollHeight-h.clientHeight;
+    document.getElementById('progress').style.width=(denom>0?h.scrollTop/denom*100:0)+'%';
+    let cur=0;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<150)cur=i});
+    links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+  },{passive:true});
+}catch(e){}
 </script>
 </body>
 </html>
