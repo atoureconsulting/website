@@ -1063,7 +1063,8 @@
     var css = document.createElement("style");
     css.textContent =
       "#lang-toggle{display:inline-flex;align-items:center;gap:2px;border:1px solid rgba(200,169,81,.45);" +
-      "border-radius:3px;overflow:hidden;margin-left:.4rem;flex:0 0 auto;}" +
+      "border-radius:3px;overflow:hidden;margin-left:.4rem;flex:0 0 auto;" +
+      "background:rgba(13,12,10,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}" +
       "#lang-toggle button{font-family:inherit;font-size:.62rem;font-weight:600;letter-spacing:.1em;" +
       "text-transform:uppercase;padding:.34rem .6rem;background:transparent;color:inherit;border:0;" +
       "cursor:pointer;line-height:1;transition:background .2s,color .2s;opacity:.72;}" +
