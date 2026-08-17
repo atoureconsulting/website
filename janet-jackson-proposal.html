@@ -10,10 +10,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Palette taken from brand-kit/03-colours/colours.txt */
   :root{
-    --ivory:#FEFCF8; --cream:#FAF6EE; --sand:#F5EDD6; --parch:#F0E8D4;
-    --gold:#C8A951; --gold-deep:#A08830; --gold-soft:#E0C47A;
-    --ink:#221C12; --ink-soft:#4A4132; --taupe:#9A8870;
+    --ivory:#FEFCF8;      /* AToure Warm White */
+    --cream:#FAF6EE;      /* AToure Cream */
+    --sand:#F5EDD6;       /* AToure Gold Pale */
+    --parch:#F0E8D4;      /* AToure Cream Mid */
+    --gold:#C8A951;       /* AToure Gold */
+    --gold-deep:#A08830;  /* AToure Gold Dark */
+    --gold-soft:#E0C47A;  /* AToure Gold Light */
+    --ink:#0D0C0A;        /* AToure Black */
+    --panel:#1A1814;      /* AToure Black Soft, for panels */
+    --ink-soft:#5C5040;   /* AToure Text Mid */
+    --taupe:#9A8870;      /* AToure Text Light */
     --serif:'Cormorant Garamond',serif; --sans:'Jost',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -30,26 +39,24 @@
   #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-deep));width:0%;z-index:200;transition:width .1s linear}
 
   nav{position:fixed;top:0;left:0;right:0;background:rgba(254,252,248,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--parch);z-index:150}
-  .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:20px}
-  .navbrand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none;white-space:nowrap}
-  .navbrand img{height:34px;width:auto}
-  .navbrand .b1{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--ink)}
-  .navbrand .b2{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--gold-deep)}
+  .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:14px}
+  .navbrand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}
+  .navbrand img{width:182px;height:auto;display:block}
   @media(max-width:860px){
-    .navbrand .b2{display:none}
     .navin{flex-wrap:wrap;padding:10px 16px;gap:8px}
-    .navbrand img{height:28px}
+    .navbrand img{width:184px}
     .langtoggle{margin-left:auto}
     .navlinks{order:3;width:100%;margin-left:0}
     section{scroll-margin-top:112px}
   }
+  @media(max-width:400px){.navbrand img{width:158px}}
   .navlinks{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
   .navlinks::-webkit-scrollbar{display:none}
-  .navlinks a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;white-space:nowrap;transition:all .25s}
+  .navlinks a{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:6px 9px;border-radius:18px;white-space:nowrap;transition:all .25s}
   .navlinks a:hover{color:var(--ink);background:var(--cream)}
   .navlinks a.on{background:var(--ink);color:var(--ivory)}
   .langtoggle{display:flex;flex:0 0 auto;border:1px solid var(--parch);border-radius:20px;overflow:hidden}
-  .langtoggle button{border:0;background:#fff;color:var(--ink-soft);font-family:var(--sans);font-size:11.5px;letter-spacing:.12em;padding:7px 13px;cursor:pointer;transition:all .25s}
+  .langtoggle button{border:0;background:#fff;color:var(--ink-soft);font-family:var(--sans);font-size:11px;letter-spacing:.1em;padding:6px 11px;cursor:pointer;transition:all .25s}
   .langtoggle button.on{background:var(--gold);color:var(--ink);font-weight:600}
 
   header{padding:170px 0 90px;background:
@@ -93,7 +100,7 @@
   .yearblock .yr{font-family:var(--serif);font-size:46px;font-weight:700;color:var(--gold-deep);line-height:1}
   .yearblock h3{font-size:25px;margin:8px 0 8px}
   .yearblock p{color:var(--ink-soft);font-size:16px}
-  .storyquote{background:var(--ink);color:var(--ivory);border-radius:18px;padding:48px 44px;position:relative}
+  .storyquote{background:var(--panel);color:var(--ivory);border-radius:18px;padding:48px 44px;position:relative}
   .storyquote::before{content:'“';font-family:var(--serif);font-size:130px;color:var(--gold);position:absolute;top:-8px;left:26px;line-height:1;opacity:.85}
   .storyquote p{font-family:var(--serif);font-size:clamp(22px,2.4vw,29px);font-style:italic;line-height:1.4;position:relative;z-index:1}
   .storyquote .who{margin-top:22px;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft)}
@@ -114,7 +121,7 @@
   .photorow{display:flex;gap:10px;margin-top:18px}
   .photorow img{width:calc(50% - 5px);border-radius:10px;object-fit:cover;aspect-ratio:4/3;background:var(--sand)}
   .photorow img:only-child{width:100%;aspect-ratio:3/2}
-  .gala{margin-top:60px;background:var(--ink);color:var(--ivory);border-radius:22px;padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;position:relative;overflow:hidden}
+  .gala{margin-top:60px;background:var(--panel);color:var(--ivory);border-radius:22px;padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;position:relative;overflow:hidden}
   .gala::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 320px at 15% -20%,rgba(200,169,81,.22),transparent 70%)}
   .gala>div{position:relative}
   .gala h3{font-family:var(--serif);font-size:clamp(28px,3.6vw,42px);margin:12px 0 16px}
@@ -158,7 +165,7 @@
   .strip img{height:130px;border-radius:10px;flex:0 0 auto;object-fit:cover;transition:transform .3s;cursor:zoom-in}
   .strip img:hover{transform:scale(1.04)}
   .photorow img,.compare>img,.dayimg{cursor:zoom-in}
-  #lb{position:fixed;inset:0;background:rgba(22,17,10,.95);z-index:300;display:none;align-items:center;justify-content:center}
+  #lb{position:fixed;inset:0;background:rgba(13,12,10,.96);z-index:300;display:none;align-items:center;justify-content:center}
   #lb.on{display:flex}
   #lb img{max-width:92vw;max-height:84vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
   #lb button{background:rgba(254,252,248,.07);border:1px solid rgba(224,196,122,.35);color:#F5EDD6;cursor:pointer;font-family:var(--sans);transition:all .25s}
@@ -206,14 +213,14 @@
   .btoggle button{border:0;background:transparent;border-radius:24px;padding:9px 26px;font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;color:var(--ink-soft);transition:all .3s}
   .btoggle button.on{background:var(--ink);color:var(--ivory)}
   table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--parch)}
-  th{background:var(--ink);color:var(--ivory);text-align:left;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:16px 22px}
+  th{background:var(--panel);color:var(--ivory);text-align:left;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:16px 22px}
   th:last-child,td:last-child{text-align:right}
   td{padding:15px 22px;border-bottom:1px solid var(--cream);font-size:15.5px}
   td .calc{display:block;font-size:12.5px;color:var(--taupe)}
   tr:hover td{background:var(--ivory)}
   tr.total td{background:var(--sand);font-weight:600;font-size:17px;border-bottom:0}
   tr.total td:first-child{font-family:var(--serif);font-size:20px}
-  .envelope{margin-top:26px;background:var(--ink);color:var(--ivory);border-radius:16px;padding:38px 42px;display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between}
+  .envelope{margin-top:26px;background:var(--panel);color:var(--ivory);border-radius:16px;padding:38px 42px;display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between}
   .envelope .t{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft)}
   .envelope .v{font-family:var(--serif);font-size:clamp(28px,3.6vw,42px);font-weight:700;margin-top:6px}
   .envelope p{font-size:14px;color:#CFC5AF;max-width:420px}
@@ -230,7 +237,7 @@
   .eng h3{font-size:24px;margin:10px 0 10px}
   .eng p{font-size:15px;color:var(--ink-soft)}
 
-  .cta{background:var(--ink);color:var(--ivory);border-radius:22px;padding:70px 60px;text-align:center;position:relative;overflow:hidden}
+  .cta{background:var(--panel);color:var(--ivory);border-radius:22px;padding:70px 60px;text-align:center;position:relative;overflow:hidden}
   .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 50% -20%,rgba(200,169,81,.25),transparent 70%)}
   .cta h2{font-size:clamp(32px,4.4vw,52px);position:relative}
   .cta h2 em{font-style:italic;font-weight:500;color:var(--gold-soft)}
@@ -240,6 +247,7 @@
 
   footer{padding:50px 0 60px;text-align:center;color:var(--taupe);font-size:13px}
   footer .conf{letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--gold-deep);margin-bottom:10px}
+  footer .flogo{width:230px;max-width:70%;height:auto;margin:0 auto 26px;display:block}
 
   @media(max-width:980px){
     .loop,.daypanel.on,.engage{grid-template-columns:1fr}
@@ -291,7 +299,7 @@
 
 <nav>
   <div class="navin">
-    <a class="navbrand" href="#top"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/logo-mark.png" alt="AToure logo"><span class="b1">AToure&nbsp;</span><span class="b2">Management &amp; Consulting</span></a>
+    <a class="navbrand" href="#top"><img src="/brand-kit/01-logos/atoure/atoure-nav-lockup-on-light.svg" alt="AToure Management and Consulting"></a>
     <div class="navlinks" id="navlinks">
       <a href="#story">The Story</a>
       <a href="#why">Why AToure</a>
@@ -321,7 +329,7 @@
       </div>
     </div>
     <div class="portrait">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/janet-portrait.jpg" alt="Janet Jackson" data-ph="Janet Jackson portrait">
+      <img src="/Media/janet-jackson/janet-portrait.jpg" alt="Janet Jackson" data-ph="Janet Jackson portrait">
       <div class="cap" data-t="portraitcap">Ms. Janet Jackson</div>
     </div>
   </div>
@@ -341,8 +349,8 @@
           <h3 data-t="y1h">Michael comes to Krindjabo</h3>
           <p data-t="y1p">Michael Jackson is received by the Royal House of Sanwi in Krindjabo, integrated into the royal lineage and given the name Amalaman Anoh. In 1995 he receives King Nana Amon Ndoufou IV in Los Angeles. After his passing in 2009, the Kingdom holds a two day royal funeral ceremony in his honour.</p>
           <div class="photorow">
-            <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg" alt="Michael Jackson received at Krindjabo in 1992" loading="lazy" data-ph="Krindjabo 1992">
-            <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-royal-robe-1992.jpg" alt="Michael Jackson receiving the royal robe at Krindjabo" loading="lazy" data-ph="The royal robe 1992">
+            <img src="/Media/janet-jackson/mj-krindjabo-1992.jpg" alt="Michael Jackson received at Krindjabo in 1992" loading="lazy" data-ph="Krindjabo 1992">
+            <img src="/Media/janet-jackson/mj-royal-robe-1992.jpg" alt="Michael Jackson receiving the royal robe at Krindjabo" loading="lazy" data-ph="The royal robe 1992">
           </div>
         </div>
         <div class="yearblock">
@@ -350,7 +358,7 @@
           <h3 data-t="y2h">Janet returns</h3>
           <p data-t="y2p">More than three decades later, Janet Jackson can walk the same ground. A Culture on Culture documentary episode and a Rolling Stone Africa LEGEND cover, shot in Côte d'Ivoire, turn a family memory into a global cultural moment.</p>
           <div class="photorow">
-            <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-janet-grammys.jpg" alt="Janet and Michael Jackson together at the Grammy Awards" loading="lazy" data-ph="Janet and Michael">
+            <img src="/Media/janet-jackson/mj-janet-grammys.jpg" alt="Janet and Michael Jackson together at the Grammy Awards" loading="lazy" data-ph="Janet and Michael">
           </div>
         </div>
       </div>
@@ -392,7 +400,7 @@
       </div>
     </div>
     <div class="compare rv">
-      <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/speed-mj-royal-comparison.jpg" alt="IShowSpeed received in royal tradition beside Michael Jackson in 1992" loading="lazy" data-ph="IShowSpeed and Michael Jackson, side by side">
+      <img src="/Media/janet-jackson/speed-mj-royal-comparison.jpg" alt="IShowSpeed received in royal tradition beside Michael Jackson in 1992" loading="lazy" data-ph="IShowSpeed and Michael Jackson, side by side">
       <div>
         <div class="eyebrow" data-t="cmpeb">Proof, side by side</div>
         <h3 data-t="cmph3">We have staged this moment <em>before.</em></h3>
@@ -537,17 +545,17 @@
           <div class="stat"><div class="v" data-count="600" data-suffix="+">0</div><div class="l" data-t="c1s3">Security personnel</div></div>
         </div>
         <div class="strip">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/feac0d21-9f5a-47b7-a37a-2cbcc76df2a5%20(1).webp" alt="IShowSpeed in Ivory Coast" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/000da086-6071-48ee-8b52-496f14a117bb.webp" alt="IShowSpeed activation in Abidjan" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/093eac2a-f8a0-4759-8521-35bfe285020e.webp" alt="Crowd moment in Ivory Coast" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/31d55235-9fd5-46d5-9625-b3ccbd97e62a.webp" alt="Cultural activation in Ivory Coast" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/4ecf158c-f425-4e20-998c-c22ae15d8a59.webp" alt="On the ground in Ivory Coast" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/55220b10-a449-4197-a4b4-a6fdae4325fc.webp" alt="IShowSpeed with the crowd in Abidjan" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/63285a4c-1137-4edc-8f74-985dc397e228.webp" alt="Cultural moment in Ivory Coast" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/6e686f2c-d1ce-4784-ab1d-78f40a26c560.webp" alt="IShowSpeed activation moment" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/7f68bebc-1d16-4416-929f-3c551ab7a49e.webp" alt="Street scene during the Ivory Coast tour" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/88fb0a6d-97b1-4001-9fbf-801f1999f722.webp" alt="Security operation around the visit" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/a3c2e804-7db9-4a1f-a945-d98a7fc49e55.webp" alt="The Zaouli activation" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/feac0d21-9f5a-47b7-a37a-2cbcc76df2a5%20(1).webp" alt="IShowSpeed in Ivory Coast" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/000da086-6071-48ee-8b52-496f14a117bb.webp" alt="IShowSpeed activation in Abidjan" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/093eac2a-f8a0-4759-8521-35bfe285020e.webp" alt="Crowd moment in Ivory Coast" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/31d55235-9fd5-46d5-9625-b3ccbd97e62a.webp" alt="Cultural activation in Ivory Coast" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/4ecf158c-f425-4e20-998c-c22ae15d8a59.webp" alt="On the ground in Ivory Coast" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/55220b10-a449-4197-a4b4-a6fdae4325fc.webp" alt="IShowSpeed with the crowd in Abidjan" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/63285a4c-1137-4edc-8f74-985dc397e228.webp" alt="Cultural moment in Ivory Coast" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/6e686f2c-d1ce-4784-ab1d-78f40a26c560.webp" alt="IShowSpeed activation moment" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/7f68bebc-1d16-4416-929f-3c551ab7a49e.webp" alt="Street scene during the Ivory Coast tour" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/88fb0a6d-97b1-4001-9fbf-801f1999f722.webp" alt="Security operation around the visit" loading="lazy">
+          <img src="/Media/Ishowspeed/Ivory%20Coast/a3c2e804-7db9-4a1f-a945-d98a7fc49e55.webp" alt="The Zaouli activation" loading="lazy">
         </div>
       </div>
     </div>
@@ -566,9 +574,9 @@
           <div class="stat"><div class="v" data-count="97.3" data-suffix="M">0</div><div class="l" data-t="c2s3">Final TV audience</div></div>
         </div>
         <div class="strip">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8378.webp" alt="IShowSpeed at the AFCON Final in Morocco" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8379.webp" alt="AFCON Final activation" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8380.webp" alt="Mascot reveal moment" loading="lazy">
+          <img src="/Media/Ishowspeed/Morocco/IMG_8378.webp" alt="IShowSpeed at the AFCON Final in Morocco" loading="lazy">
+          <img src="/Media/Ishowspeed/Morocco/IMG_8379.webp" alt="AFCON Final activation" loading="lazy">
+          <img src="/Media/Ishowspeed/Morocco/IMG_8380.webp" alt="Mascot reveal moment" loading="lazy">
         </div>
       </div>
     </div>
@@ -587,18 +595,18 @@
           <div class="stat"><div class="v" data-count="171" data-suffix="M">0</div><div class="l" data-t="c3s3">Biggest single post</div></div>
         </div>
         <div class="strip">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/AHLIG-121.webp" alt="Ashton Hall welcomed in Ghana" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/DSC01662.webp" alt="Ashton Hall in Accra" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall in Lagos" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/DSC02121.webp" alt="Crowd moment on the Africa Tour" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Photos/DSC04111.webp" alt="Ashton Hall in Douala" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Photos/DSC04193.webp" alt="Street training in Cameroon" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/5K1A9617.webp" alt="Lagos leg of the tour" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/5K1A9831.webp" alt="Crowd in Lagos" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Benin/Photos/DSC06310.webp" alt="Cotonou leg of the tour" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Benin/Photos/DSC06366.webp" alt="Market day in Benin" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Photos/DSC07874.webp" alt="Kigali leg of the tour" loading="lazy">
-          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Photos/TEE10438.webp" alt="Community moment in Rwanda" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/AHLIG-121.webp" alt="Ashton Hall welcomed in Ghana" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/DSC01662.webp" alt="Ashton Hall in Accra" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall in Lagos" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/DSC02121.webp" alt="Crowd moment on the Africa Tour" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Photos/DSC04111.webp" alt="Ashton Hall in Douala" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Photos/DSC04193.webp" alt="Street training in Cameroon" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/5K1A9617.webp" alt="Lagos leg of the tour" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/5K1A9831.webp" alt="Crowd in Lagos" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Benin/Photos/DSC06310.webp" alt="Cotonou leg of the tour" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Benin/Photos/DSC06366.webp" alt="Market day in Benin" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Photos/DSC07874.webp" alt="Kigali leg of the tour" loading="lazy">
+          <img src="/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Photos/TEE10438.webp" alt="Community moment in Rwanda" loading="lazy">
         </div>
       </div>
     </div>
@@ -729,6 +737,7 @@
 
 <footer>
   <div class="wrap">
+    <img class="flogo" src="/brand-kit/01-logos/atoure/atoure-nav-lockup-on-light.svg" alt="AToure Management and Consulting">
     <div class="conf" data-t="fconf">Confidential · Prepared for Rolling Stone Africa</div>
     <p data-t="fline">Baba Touré · Director · AToure Management &amp; Consulting · Est. 2023, London</p>
     <p>atoureconsulting.com · atoureconsulting@gmail.com</p>
@@ -807,7 +816,7 @@ const DAYS=[
     body:["Le cœur émotionnel du voyage. Janet se rend à Krindjabo, capitale du Royaume du Sanwi, pour renouer avec le lieu où Michael Jackson fut reçu en cérémonie et nommé Prince Amalaman Anoh en 1992.","Le programme peut inclure un accueil royal, une procession traditionnelle, une rencontre avec le Roi et la cour royale, des récits historiques, des danses traditionnelles et la présentation des insignes royaux."],
     m:["Accueil royal et procession traditionnelle","Rencontre avec le Roi et la cour royale","Récits historiques et danses traditionnelles"],
     note:"Une reconnaissance cérémonielle de Janet par le Royaume pourrait devenir l'image marquante du voyage, sous l'entière autorité du souverain et des autorités traditionnelles. Le titre et le rituel ne seront communiqués publiquement qu'une fois formellement approuvés."},
-  img:{src:"https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg",alt:"Michael Jackson received at Krindjabo in 1992",ph:"Krindjabo 1992"}},
+  img:{src:"/Media/janet-jackson/mj-krindjabo-1992.jpg",alt:"Michael Jackson received at Krindjabo in 1992",ph:"Krindjabo 1992"}},
  {p:"Assinie",
   en:{d:"Day 3",k:"Assinie · Coast",t:"Ivory Coast, slowly.",
     body:["A refined coastal day designed as the lifestyle chapter of the journey: lagoon arrival by boat, waterfront brunch, local cuisine, beach time, traditional fishing or lagoon discovery, editorial content and a sunset dinner.","The day also provides necessary breathing room after the ceremonial intensity of Krindjabo."],
