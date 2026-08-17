@@ -31,10 +31,11 @@
   /* nav */
   nav{position:fixed;top:0;left:0;right:0;background:rgba(254,252,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--parch);z-index:150}
   .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:24px}
-  .navbrand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;white-space:nowrap}
-  .navbrand img{height:28px;width:auto}
-  .navbrand .b1{font-weight:500;letter-spacing:.24em;font-size:14px;text-transform:uppercase;line-height:1.2}
-  .navbrand .b2{font-weight:400;letter-spacing:.18em;font-size:8.5px;text-transform:uppercase;color:var(--taupe);line-height:1.2}
+  .navbrand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .navbrand img{height:34px;width:auto}
+  .navbrand .b1{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--ink)}
+  .navbrand .b2{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--gold-deep)}
+  @media(max-width:760px){.navbrand .b2{display:none}}
   .navlinks{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
   .navlinks::-webkit-scrollbar{display:none}
   .navlinks a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;white-space:nowrap;transition:all .25s}
@@ -147,8 +148,19 @@
   .stat .v{font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);font-weight:700;color:var(--ink);line-height:1}
   .stat .l{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe);margin-top:7px}
   .strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
-  .strip img{height:130px;border-radius:10px;flex:0 0 auto;object-fit:cover;transition:transform .3s}
+  .strip img{height:130px;border-radius:10px;flex:0 0 auto;object-fit:cover;transition:transform .3s;cursor:zoom-in}
   .strip img:hover{transform:scale(1.04)}
+  .photorow img,.compare>img,.dayimg{cursor:zoom-in}
+  #lb{position:fixed;inset:0;background:rgba(22,17,10,.95);z-index:300;display:none;align-items:center;justify-content:center}
+  #lb.on{display:flex}
+  #lb img{max-width:92vw;max-height:84vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+  #lb button{background:rgba(254,252,248,.07);border:1px solid rgba(224,196,122,.35);color:#F5EDD6;cursor:pointer;font-family:var(--sans);transition:all .25s}
+  #lb button:hover{background:rgba(224,196,122,.25)}
+  #lb .x{position:absolute;top:20px;right:24px;font-size:26px;width:52px;height:52px;border-radius:50%}
+  #lb .pv,#lb .nx{position:absolute;top:50%;transform:translateY(-50%);font-size:34px;width:56px;height:56px;border-radius:50%}
+  #lb .pv{left:20px}
+  #lb .nx{right:20px}
+  #lb .ct{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#CFC5AF;font-size:13px;letter-spacing:.24em}
 
   /* journey */
   .days{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
@@ -250,7 +262,7 @@
 
 <nav>
   <div class="navin">
-    <a class="navbrand" href="#top"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/logo-mark.png" alt="AToure logo"><span><span class="b1">AToure</span><br><span class="b2">Management &amp; Consulting</span></span></a>
+    <a class="navbrand" href="#top"><img src="https://raw.githubusercontent.com/atoureconsulting/website/main/logo-mark.png" alt="AToure logo"><span class="b1">AToure&nbsp;</span><span class="b2">Management &amp; Consulting</span></a>
     <div class="navlinks" id="navlinks">
       <a href="#story">The Story</a>
       <a href="#why">Why AToure</a>
@@ -500,6 +512,12 @@
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/093eac2a-f8a0-4759-8521-35bfe285020e.webp" alt="Crowd moment in Ivory Coast" loading="lazy">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/31d55235-9fd5-46d5-9625-b3ccbd97e62a.webp" alt="Cultural activation in Ivory Coast" loading="lazy">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/4ecf158c-f425-4e20-998c-c22ae15d8a59.webp" alt="On the ground in Ivory Coast" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/55220b10-a449-4197-a4b4-a6fdae4325fc.webp" alt="IShowSpeed with the crowd in Abidjan" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/63285a4c-1137-4edc-8f74-985dc397e228.webp" alt="Cultural moment in Ivory Coast" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/6e686f2c-d1ce-4784-ab1d-78f40a26c560.webp" alt="IShowSpeed activation moment" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/7f68bebc-1d16-4416-929f-3c551ab7a49e.webp" alt="Street scene during the Ivory Coast tour" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/88fb0a6d-97b1-4001-9fbf-801f1999f722.webp" alt="Security operation around the visit" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/a3c2e804-7db9-4a1f-a945-d98a7fc49e55.webp" alt="The Zaouli activation" loading="lazy">
         </div>
       </div>
     </div>
@@ -543,6 +561,14 @@
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/DSC01662.webp" alt="Ashton Hall in Accra" loading="lazy">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall in Lagos" loading="lazy">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/DSC02121.webp" alt="Crowd moment on the Africa Tour" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Photos/DSC04111.webp" alt="Ashton Hall in Douala" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Photos/DSC04193.webp" alt="Street training in Cameroon" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/5K1A9617.webp" alt="Lagos leg of the tour" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/5K1A9831.webp" alt="Crowd in Lagos" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Benin/Photos/DSC06310.webp" alt="Cotonou leg of the tour" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Benin/Photos/DSC06366.webp" alt="Market day in Benin" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Photos/DSC07874.webp" alt="Kigali leg of the tour" loading="lazy">
+          <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Photos/TEE10438.webp" alt="Community moment in Rwanda" loading="lazy">
         </div>
       </div>
     </div>
@@ -754,6 +780,39 @@ document.querySelectorAll('.btoggle button').forEach(b=>b.onclick=()=>{
   renderBudget(b.dataset.cur);
 });
 renderBudget('fcfa');
+
+// lightbox
+const lb=document.createElement('div');lb.id='lb';
+lb.innerHTML='<button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><button class="x" aria-label="Close">×</button><div class="ct"></div>';
+document.body.appendChild(lb);
+let lbGroup=[],lbIdx=0;
+function lbShow(i){
+  lbIdx=(i+lbGroup.length)%lbGroup.length;
+  const s=lbGroup[lbIdx];
+  lb.querySelector('img').src=s.src;lb.querySelector('img').alt=s.alt||'';
+  lb.querySelector('.ct').textContent=lbGroup.length>1?`${lbIdx+1} of ${lbGroup.length}`:'';
+  const nav=lbGroup.length>1?'':'none';
+  lb.querySelector('.pv').style.display=nav;lb.querySelector('.nx').style.display=nav;
+}
+function lbOpen(group,i){lbGroup=group;lb.classList.add('on');document.body.style.overflow='hidden';lbShow(i)}
+function lbClose(){lb.classList.remove('on');document.body.style.overflow=''}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('.strip img, .photorow img, .compare>img, img.dayimg');
+  if(!t)return;
+  const strip=t.closest('.strip');
+  const group=strip?[...strip.querySelectorAll('img')]:[t];
+  lbOpen(group,group.indexOf(t));
+});
+lb.querySelector('.x').onclick=lbClose;
+lb.querySelector('.pv').onclick=()=>lbShow(lbIdx-1);
+lb.querySelector('.nx').onclick=()=>lbShow(lbIdx+1);
+lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')lbClose();
+  if(e.key==='ArrowLeft')lbShow(lbIdx-1);
+  if(e.key==='ArrowRight')lbShow(lbIdx+1);
+});
 
 // graceful placeholder while a photo is not yet uploaded
 document.querySelectorAll('img[data-ph]').forEach(img=>img.addEventListener('error',()=>{
