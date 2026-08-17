@@ -98,6 +98,18 @@
   .compare p{font-size:16px;color:var(--ink-soft)}
   .photorow{display:flex;gap:10px;margin-top:18px}
   .photorow img{width:calc(50% - 5px);border-radius:10px;object-fit:cover;aspect-ratio:4/3;background:var(--sand)}
+  .photorow img:only-child{width:100%;aspect-ratio:3/2}
+  .gala{margin-top:60px;background:var(--ink);color:var(--ivory);border-radius:22px;padding:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;position:relative;overflow:hidden}
+  .gala::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 320px at 15% -20%,rgba(200,169,81,.22),transparent 70%)}
+  .gala>div{position:relative}
+  .gala h3{font-family:var(--serif);font-size:clamp(28px,3.6vw,42px);margin:12px 0 16px}
+  .gala h3 em{font-style:italic;font-weight:500;color:var(--gold-soft)}
+  .gala p{font-size:15.5px;color:#CFC5AF;margin-bottom:14px}
+  .gala .invite{border-left:3px solid var(--gold);padding-left:18px;color:var(--ivory);font-family:var(--serif);font-size:19px;font-style:italic}
+  .galafacts{display:grid;gap:14px;align-content:start}
+  .gfact{background:rgba(254,252,248,.06);border:1px solid rgba(224,196,122,.28);border-radius:12px;padding:18px 20px}
+  .gfact .v{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-soft)}
+  .gfact .l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#B7AC93;margin-top:4px}
   .dayimg{width:100%;border-radius:12px;display:block;background:var(--sand);margin-bottom:20px}
   .imgph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sand),var(--parch));color:var(--taupe);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:24px;border-radius:12px;min-height:150px}
 
@@ -119,7 +131,10 @@
   .disclaimer{margin-top:30px;font-size:13.5px;color:var(--taupe);border-left:3px solid var(--gold-soft);padding-left:16px;max-width:760px}
 
   /* case studies */
-  .case{display:grid;grid-template-columns:390px 1fr;gap:44px;background:#fff;border:1px solid var(--parch);border-radius:18px;padding:40px;margin-bottom:26px;transition:box-shadow .35s}
+  .case{display:grid;grid-template-columns:390px 1fr;gap:44px;background:#fff;border:1px solid var(--parch);border-radius:18px;padding:40px;margin-bottom:26px;transition:box-shadow .35s;overflow:hidden}
+  .case>div{min-width:0}
+  .caselink{display:inline-block;margin-top:16px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);padding-bottom:3px;transition:all .3s}
+  .caselink:hover{color:var(--ink);border-color:var(--ink)}
   .case:hover{box-shadow:0 20px 50px rgba(160,136,48,.12)}
   .case .meta .tag{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
   .case h3{font-size:clamp(26px,3vw,34px);margin:10px 0 12px}
@@ -213,6 +228,7 @@
     .hero-grid{grid-template-columns:1fr}
     .portrait{max-width:300px;margin:40px auto 0}
     .compare{grid-template-columns:1fr;gap:26px}
+    .gala{grid-template-columns:1fr;padding:40px 28px}
     .pillars{grid-template-columns:repeat(2,1fr)}
     .netgrid{grid-template-columns:repeat(2,1fr)}
     .case{grid-template-columns:1fr;gap:26px}
@@ -289,6 +305,9 @@
           <div class="yr">2026</div>
           <h3>Janet returns</h3>
           <p>More than three decades later, Janet Jackson can walk the same ground. A Culture on Culture documentary episode and a Rolling Stone Africa LEGEND cover, shot in Côte d'Ivoire, turn a family memory into a global cultural moment.</p>
+          <div class="photorow">
+            <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-janet-grammys.jpg" alt="Janet and Michael Jackson together at the Grammy Awards" loading="lazy" data-ph="Janet and Michael">
+          </div>
         </div>
       </div>
       <div class="storyquote rv">
@@ -367,7 +386,7 @@
         <div class="cat">Presidency &amp; Government</div>
         <h3>Office of the First Lady</h3>
         <div class="role">Cabinet of First Lady Dominique Ouattara</div>
-        <div class="more">Protocol, social impact and high level guest coordination. The natural institutional partner for the women and children pillars of this journey, including the Children of Africa Foundation moments, subject to official acceptance.</div>
+        <div class="more">Protocol, social impact and high level guest coordination. The natural institutional partner for the women and children pillars of this journey, including the Children of Africa Foundation moments, subject to official acceptance. This is also the door to the Children of Africa Gala, detailed in the journey section below.</div>
         <div class="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="gov">
@@ -382,6 +401,13 @@
         <h3>Ministry of Culture &amp; Francophonie</h3>
         <div class="role">Minister Françoise Remarck</div>
         <div class="more">Cultural programming, heritage, artists, institutional visibility and cultural protocol. Central to the Krindjabo and Yamoussoukro chapters and to any national cultural staging.</div>
+        <div class="hint">Tap to expand</div>
+      </div>
+      <div class="netcard rv" data-c="gov">
+        <div class="cat">Presidency &amp; Government</div>
+        <h3>The Wider Ministerial Network</h3>
+        <div class="role">Direct access across government</div>
+        <div class="more">Beyond the ministries named here, AToure maintains direct working access across the other ministries of the Ivorian government. Whatever door a given moment requires, protocol, communication, transport or beyond, we reach it directly rather than through intermediaries.</div>
         <div class="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="sec">
@@ -458,6 +484,7 @@
         <div class="tag">Ivory Coast · 2024</div>
         <h3>IShowSpeed × Ivory Coast</h3>
         <p>One of the world's biggest creators landing in West Africa with zero existing infrastructure. AToure built the entire operational and commercial machine from scratch, and delivered the Zaouli cultural moment that travelled around the world, earning personal recognition from the Ivory Coast Minister of Tourism.</p>
+        <a class="caselink" href="https://atoureconsulting.com/ivory-coast.html" target="_blank" rel="noopener">View the full case study ↗</a>
       </div>
       <div>
         <div class="statgrid">
@@ -480,6 +507,7 @@
         <div class="tag">Morocco · AFCON Final 2025</div>
         <h3>IShowSpeed × AFCON Final</h3>
         <p>AToure conceived the official mascot integration, secured sign off from CAF and the Royal Moroccan Football Federation, and delivered state level facilitation end to end: visas, private jet clearances, permits, security and the live reveal itself.</p>
+        <a class="caselink" href="https://atoureconsulting.com/ishowspeed-afcon.html" target="_blank" rel="noopener">View the full case study ↗</a>
       </div>
       <div>
         <div class="statgrid">
@@ -500,6 +528,7 @@
         <div class="tag">Five Countries · 2026</div>
         <h3>Ashton Hall Africa Tour</h3>
         <p>Ghana, Cameroon, Nigeria, Benin and Rwanda. AToure ran the full tour country by country: partnerships, sponsors, media, visas, security, transport and daily itinerary, with national press coverage in every market in three languages.</p>
+        <a class="caselink" href="https://atoureconsulting.com/ashton-hall-africa-tour.html" target="_blank" rel="noopener">View the full case study ↗</a>
       </div>
       <div>
         <div class="statgrid">
@@ -527,6 +556,21 @@
     </div>
     <div class="days rv" id="days"></div>
     <div id="daypanels"></div>
+    <div class="gala rv">
+      <div>
+        <div class="eyebrow">The Timing Opportunity</div>
+        <h3>The Children of Africa Gala.<br><em>October 9, 2026.</em></h3>
+        <p>The Children of Africa Foundation, created by First Lady Dominique Ouattara, holds its 10th Gala Dinner on Friday October 9, 2026 at the Sofitel Abidjan Hotel Ivoire, under the theme Light to Africa: Together for Youth to Shine. It is one of the most prestigious charitable evenings on the continent.</p>
+        <p>Past editions have gathered more than 900 personalities in a single room: President Alassane Ouattara, former French President Nicolas Sarkozy, Isabelle Adjani, Patrick Bruel, Youssou N'Dour and leaders from cinema, music, sport and business across Africa and beyond. Every edition funds concrete work. The 9th financed a new cardiac surgery wing at the Mother and Child Hospital in Bingerville. The 10th builds the Treichville Youth Center.</p>
+        <p class="invite">Through the Office of the First Lady, AToure can pursue an honorary guest invitation for Janet, subject to official acceptance. Aligning the journey with gala week would seat her at the most exclusive table in Africa, beside the First Lady, in front of every decision maker in the country.</p>
+      </div>
+      <div class="galafacts">
+        <div class="gfact"><div class="v">October 9, 2026</div><div class="l">10th Gala Dinner · Sofitel Abidjan Hotel Ivoire</div></div>
+        <div class="gfact"><div class="v">900 plus</div><div class="l">Personalities gathered at past editions</div></div>
+        <div class="gfact"><div class="v">Heads of state</div><div class="l">Presidents, global icons &amp; business leaders</div></div>
+        <div class="gfact"><div class="v">Honorary guest</div><div class="l">Invitation pursued via the First Lady's office</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -649,8 +693,7 @@ const DAYS=[
   m:["Lagoon arrival by boat","Waterfront brunch &amp; local cuisine","Editorial content &amp; sunset dinner"]},
  {d:"Day 4",p:"Yamoussoukro",k:"Yamoussoukro · Capital",t:"In Michael's footsteps.",
   body:["A documentary style day retracing Michael Jackson's 1992 passage through Yamoussoukro. The experience can combine archival storytelling with visits to emblematic sites, including the Basilica of Our Lady of Peace, testimony from people connected to the period, and discovery of the political and architectural heritage of the capital.","The narrative is simple and powerful: Michael came to reconnect with Africa. Janet returns to understand, honour and carry that story forward."],
-  m:["Basilica of Our Lady of Peace","Archival storytelling &amp; testimony","Political &amp; architectural heritage"],
-  img:{src:"https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-basilica-yamoussoukro.jpg",alt:"Michael Jackson at the Basilica of Our Lady of Peace in Yamoussoukro",ph:"The Basilica, Yamoussoukro"}},
+  m:["Basilica of Our Lady of Peace","Archival storytelling &amp; testimony","Political &amp; architectural heritage"]},
  {d:"Day 5",p:"Abidjan",k:"Abidjan · Women, Power &amp; Investment",t:"Her voice. Her power.",
   body:["Daytime: a closed door high level forum built around women's leadership, entrepreneurship, culture, creative industries and investment. The format should feel like an investment salon: established women leaders, young founders, artists, executives, philanthropists and investors in one room, with founder presentations, mentoring and possible announcement of a grant, fund or support programme for women led initiatives.","Evening: the major public cultural event of the week. An elegant spectacle celebrating Ivorian and African women, ideally in the presence of the First Lady and the Children of Africa Foundation, subject to official acceptance. Janet's role can be that of Guest of Honour, speaking on women, creativity, legacy and impact, with a possible appearance in the finale rather than a full concert."],
   m:["Closed door women &amp; investment forum","The Night of Women public event","Recognition of ten remarkable Ivorian women","Philanthropy for girls &amp; children"]},
