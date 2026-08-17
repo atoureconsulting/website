@@ -25,34 +25,34 @@
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 
-  /* progress bar */
   #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-deep));width:0%;z-index:200;transition:width .1s linear}
 
-  /* nav */
   nav{position:fixed;top:0;left:0;right:0;background:rgba(254,252,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--parch);z-index:150}
-  .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:24px}
+  .navin{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:20px}
   .navbrand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none;white-space:nowrap}
   .navbrand img{height:34px;width:auto}
   .navbrand .b1{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--ink)}
   .navbrand .b2{font-weight:600;letter-spacing:.18em;font-size:13px;text-transform:uppercase;color:var(--gold-deep)}
-  @media(max-width:760px){.navbrand .b2{display:none}}
+  @media(max-width:860px){.navbrand .b2{display:none}}
   .navlinks{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
   .navlinks::-webkit-scrollbar{display:none}
   .navlinks a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;white-space:nowrap;transition:all .25s}
   .navlinks a:hover{color:var(--ink);background:var(--cream)}
   .navlinks a.on{background:var(--ink);color:var(--ivory)}
+  .langtoggle{display:flex;flex:0 0 auto;border:1px solid var(--parch);border-radius:20px;overflow:hidden}
+  .langtoggle button{border:0;background:#fff;color:var(--ink-soft);font-family:var(--sans);font-size:11.5px;letter-spacing:.12em;padding:7px 13px;cursor:pointer;transition:all .25s}
+  .langtoggle button.on{background:var(--gold);color:var(--ink);font-weight:600}
 
-  /* hero */
   header{padding:170px 0 90px;background:
     radial-gradient(1200px 500px at 80% -10%, var(--sand) 0%, transparent 60%),
     radial-gradient(900px 420px at 5% 110%, var(--parch) 0%, transparent 55%),
     var(--ivory)}
-  .hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold-soft);border-radius:30px;padding:8px 18px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);background:rgba(255,255,255,.5);margin-bottom:34px}
-  .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   .hero-grid{display:grid;grid-template-columns:1fr 350px;gap:70px;align-items:center}
   .portrait img{width:100%;border-radius:175px 175px 18px 18px;border:1px solid var(--gold-soft);box-shadow:0 30px 60px rgba(160,136,48,.20);display:block;background:var(--sand)}
   .portrait .cap{text-align:center;margin-top:14px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold-soft);border-radius:30px;padding:8px 18px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);background:rgba(255,255,255,.5);margin-bottom:34px}
+  .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   h1{font-size:clamp(44px,7vw,88px);margin:0 0 10px}
   h1 .accent{font-style:italic;font-weight:500;color:var(--gold-deep)}
   .hero-sub{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);font-style:italic;color:var(--ink-soft);max-width:720px;margin:18px 0 40px}
@@ -68,11 +68,9 @@
   .sechead h2 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
   .sechead p{font-size:18.5px;color:var(--ink-soft)}
 
-  /* reveal */
   .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
   .rv.in{opacity:1;transform:none}
 
-  /* story */
   .loop{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   .loop-years{display:flex;flex-direction:column;gap:0}
   .yearblock{padding:30px 0;border-left:2px solid var(--parch);padding-left:34px;position:relative}
@@ -85,7 +83,6 @@
   .storyquote p{font-family:var(--serif);font-size:clamp(22px,2.4vw,29px);font-style:italic;line-height:1.4;position:relative;z-index:1}
   .storyquote .who{margin-top:22px;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft)}
 
-  /* value pillars */
   .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   .pillar{background:#fff;border:1px solid var(--parch);border-radius:16px;padding:34px 28px;transition:all .35s;position:relative;overflow:hidden}
   .pillar::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-deep));transition:width .4s}
@@ -113,10 +110,7 @@
   .gfact{background:rgba(254,252,248,.06);border:1px solid rgba(224,196,122,.28);border-radius:12px;padding:18px 20px}
   .gfact .v{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-soft)}
   .gfact .l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#B7AC93;margin-top:4px}
-  .dayimg{width:100%;border-radius:12px;display:block;background:var(--sand);margin-bottom:20px}
-  .imgph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sand),var(--parch));color:var(--taupe);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:24px;border-radius:12px;min-height:150px}
 
-  /* network */
   .nettabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
   .nettab{border:1px solid var(--parch);background:#fff;border-radius:26px;padding:10px 22px;font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);cursor:pointer;transition:all .3s}
   .nettab:hover{border-color:var(--gold)}
@@ -126,19 +120,17 @@
   .netcard:hover{border-color:var(--gold-soft);box-shadow:0 12px 30px rgba(160,136,48,.10)}
   .netcard .cat{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
   .netcard h3{font-size:21px;margin:8px 0 4px}
-  .netcard .role{font-size:14.5px;color:var(--taupe);font-style:italic;font-family:var(--serif);font-size:17px}
+  .netcard .role{color:var(--taupe);font-style:italic;font-family:var(--serif);font-size:17px}
   .netcard .more{max-height:0;overflow:hidden;transition:max-height .45s ease;font-size:14.5px;color:var(--ink-soft)}
-  .netcard.open .more{max-height:220px;padding-top:12px}
+  .netcard.open .more{max-height:240px;padding-top:12px}
   .netcard .hint{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin-top:14px;transition:opacity .3s}
   .netcard.open .hint{opacity:0;height:0;margin:0;overflow:hidden}
   .disclaimer{margin-top:30px;font-size:13.5px;color:var(--taupe);border-left:3px solid var(--gold-soft);padding-left:16px;max-width:760px}
 
-  /* case studies */
   .case{display:grid;grid-template-columns:390px 1fr;gap:44px;background:#fff;border:1px solid var(--parch);border-radius:18px;padding:40px;margin-bottom:26px;transition:box-shadow .35s;overflow:hidden}
   .case>div{min-width:0}
   .caselink{display:inline-block;margin-top:16px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);padding-bottom:3px;transition:all .3s}
   .caselink:hover{color:var(--ink);border-color:var(--ink)}
-  .case:hover{box-shadow:0 20px 50px rgba(160,136,48,.12)}
   .case .meta .tag{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
   .case h3{font-size:clamp(26px,3vw,34px);margin:10px 0 12px}
   .case .meta p{font-size:15.5px;color:var(--ink-soft)}
@@ -162,7 +154,6 @@
   #lb .nx{right:20px}
   #lb .ct{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#CFC5AF;font-size:13px;letter-spacing:.24em}
 
-  /* journey */
   .days{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
   .daybtn{border:1px solid var(--parch);background:#fff;border-radius:12px;padding:12px 10px;min-width:96px;text-align:center;cursor:pointer;transition:all .3s;font-family:var(--sans)}
   .daybtn .d{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
@@ -178,6 +169,8 @@
   .daypanel h3{font-size:clamp(28px,3.4vw,40px);margin:10px 0 16px}
   .daypanel .body p{color:var(--ink-soft);margin-bottom:14px;font-size:16.5px}
   .daypanel .note{background:var(--cream);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;color:var(--ink-soft);margin-top:10px}
+  .dayimg{width:100%;border-radius:12px;display:block;background:var(--sand);margin-bottom:20px}
+  .imgph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sand),var(--parch));color:var(--taupe);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:24px;border-radius:12px;min-height:150px}
   .moments{background:var(--cream);border-radius:14px;padding:28px}
   .moments .t{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;margin-bottom:14px}
   .moments li{list-style:none;padding:9px 0;border-bottom:1px solid var(--parch);font-size:15px;color:var(--ink-soft)}
@@ -187,7 +180,6 @@
   .daynav button{border:1px solid var(--parch);background:#fff;border-radius:26px;padding:10px 24px;font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;color:var(--ink-soft)}
   .daynav button:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
 
-  /* ops */
   .opsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .op{background:#fff;border:1px solid var(--parch);border-radius:14px;padding:28px;transition:all .3s}
   .op:hover{transform:translateY(-4px);border-color:var(--gold-soft)}
@@ -195,7 +187,6 @@
   .op h3{font-size:20px;margin:10px 0 8px}
   .op p{font-size:14.5px;color:var(--ink-soft)}
 
-  /* budget */
   .btoggle{display:inline-flex;border:1px solid var(--parch);border-radius:30px;background:#fff;padding:4px;margin-bottom:28px}
   .btoggle button{border:0;background:transparent;border-radius:24px;padding:9px 26px;font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;color:var(--ink-soft);transition:all .3s}
   .btoggle button.on{background:var(--ink);color:var(--ivory)}
@@ -218,14 +209,12 @@
   details .inner{padding:0 24px 22px;font-size:14.5px;color:var(--ink-soft)}
   details .inner li{margin:7px 0 7px 18px}
 
-  /* engagement */
   .engage{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   .eng{background:#fff;border:1px solid var(--parch);border-radius:16px;padding:36px}
   .eng .n{font-family:var(--serif);font-size:16px;color:var(--gold);font-weight:700;letter-spacing:.08em}
   .eng h3{font-size:24px;margin:10px 0 10px}
   .eng p{font-size:15px;color:var(--ink-soft)}
 
-  /* cta */
   .cta{background:var(--ink);color:var(--ivory);border-radius:22px;padding:70px 60px;text-align:center;position:relative;overflow:hidden}
   .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 50% -20%,rgba(200,169,81,.25),transparent 70%)}
   .cta h2{font-size:clamp(32px,4.4vw,52px);position:relative}
@@ -273,26 +262,27 @@
       <a href="#budget">Budget</a>
       <a href="#engage">Engagement</a>
     </div>
+    <div class="langtoggle"><button class="on" data-lang="en">EN</button><button data-lang="fr">FR</button></div>
   </div>
 </nav>
 
 <header id="top">
   <div class="wrap hero-grid">
     <div>
-      <div class="hero-tag"><span class="dot"></span>Confidential Proposal · Prepared for Rolling Stone Africa · August 2026</div>
-      <h1>Janet Jackson<br><span class="accent">in Côte d'Ivoire</span></h1>
-      <p class="hero-sub">Back to the Roots. Legacy, women and Africa. A seven day cultural journey, delivered on the ground by the only partner with proven institutional reach across Côte d'Ivoire.</p>
+      <div class="hero-tag" data-t="herotag"><span class="dot"></span>Confidential Proposal · Prepared for Rolling Stone Africa · August 2026</div>
+      <h1 data-t="h1">Janet Jackson<br><span class="accent">in Côte d'Ivoire</span></h1>
+      <p class="hero-sub" data-t="herosub">Back to the Roots. Legacy, women and Africa. A seven day cultural journey, delivered on the ground by the only partner with proven institutional reach across Côte d'Ivoire.</p>
       <div class="hero-chips">
-        <span class="chip"><b>Krindjabo</b>Roots</span>
-        <span class="chip"><b>Abidjan</b>Impact</span>
-        <span class="chip"><b>Yamoussoukro</b>Legacy</span>
-        <span class="chip"><b>Assinie</b>Aspiration</span>
-        <span class="chip"><b>San Pédro</b>Discovery</span>
+        <span class="chip" data-t="chip1"><b>Krindjabo</b>Roots</span>
+        <span class="chip" data-t="chip2"><b>Abidjan</b>Impact</span>
+        <span class="chip" data-t="chip3"><b>Yamoussoukro</b>Legacy</span>
+        <span class="chip" data-t="chip4"><b>Assinie</b>Aspiration</span>
+        <span class="chip" data-t="chip5"><b>San Pédro</b>Discovery</span>
       </div>
     </div>
     <div class="portrait">
       <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/janet-portrait.jpg" alt="Janet Jackson" data-ph="Janet Jackson portrait">
-      <div class="cap">Ms. Janet Jackson</div>
+      <div class="cap" data-t="portraitcap">Ms. Janet Jackson</div>
     </div>
   </div>
 </header>
@@ -300,16 +290,16 @@
 <section id="story">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">The Story</div>
-      <h2>A circle that closes.<br><em>A chapter that opens.</em></h2>
-      <p>This is not another celebrity visit. It is the return of a family whose history is already written into Ivorian soil.</p>
+      <div class="eyebrow" data-t="storyeb">The Story</div>
+      <h2 data-t="storyh2">A circle that closes.<br><em>A chapter that opens.</em></h2>
+      <p data-t="storyp">This is not another celebrity visit. It is the return of a family whose history is already written into Ivorian soil.</p>
     </div>
     <div class="loop">
       <div class="loop-years rv">
         <div class="yearblock">
           <div class="yr">1992</div>
-          <h3>Michael comes to Krindjabo</h3>
-          <p>Michael Jackson is received by the Royal House of Sanwi in Krindjabo, integrated into the royal lineage and given the name Amalaman Anoh. In 1995 he receives King Nana Amon Ndoufou IV in Los Angeles. After his passing in 2009, the Kingdom holds a two day royal funeral ceremony in his honour.</p>
+          <h3 data-t="y1h">Michael comes to Krindjabo</h3>
+          <p data-t="y1p">Michael Jackson is received by the Royal House of Sanwi in Krindjabo, integrated into the royal lineage and given the name Amalaman Anoh. In 1995 he receives King Nana Amon Ndoufou IV in Los Angeles. After his passing in 2009, the Kingdom holds a two day royal funeral ceremony in his honour.</p>
           <div class="photorow">
             <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg" alt="Michael Jackson received at Krindjabo in 1992" loading="lazy" data-ph="Krindjabo 1992">
             <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-royal-robe-1992.jpg" alt="Michael Jackson receiving the royal robe at Krindjabo" loading="lazy" data-ph="The royal robe 1992">
@@ -317,16 +307,16 @@
         </div>
         <div class="yearblock">
           <div class="yr">2026</div>
-          <h3>Janet returns</h3>
-          <p>More than three decades later, Janet Jackson can walk the same ground. A Culture on Culture documentary episode and a Rolling Stone Africa LEGEND cover, shot in Côte d'Ivoire, turn a family memory into a global cultural moment.</p>
+          <h3 data-t="y2h">Janet returns</h3>
+          <p data-t="y2p">More than three decades later, Janet Jackson can walk the same ground. A Culture on Culture documentary episode and a Rolling Stone Africa LEGEND cover, shot in Côte d'Ivoire, turn a family memory into a global cultural moment.</p>
           <div class="photorow">
             <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-janet-grammys.jpg" alt="Janet and Michael Jackson together at the Grammy Awards" loading="lazy" data-ph="Janet and Michael">
           </div>
         </div>
       </div>
       <div class="storyquote rv">
-        <p>Janet Jackson returned to the African land that embraced her brother, celebrated a new generation of African women, and carried the Jackson legacy forward.</p>
-        <div class="who">The final positioning · Back to the Roots</div>
+        <p data-t="quote">Janet Jackson returned to the African land that embraced her brother, celebrated a new generation of African women, and carried the Jackson legacy forward.</p>
+        <div class="who" data-t="quotewho">The final positioning · Back to the Roots</div>
       </div>
     </div>
   </div>
@@ -335,39 +325,39 @@
 <section id="why" class="alt">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">Why AToure</div>
-      <h2>Anyone can admire this project.<br><em>Very few can deliver it.</em></h2>
-      <p>A project of this weight is won or lost on the ground: protocol, security, permits, institutions and relationships. That is precisely where AToure operates, and where we have already delivered at the highest level in this exact market.</p>
+      <div class="eyebrow" data-t="whyeb">Why AToure</div>
+      <h2 data-t="whyh2">Anyone can admire this project.<br><em>Very few can deliver it.</em></h2>
+      <p data-t="whyp">A project of this weight is won or lost on the ground: protocol, security, permits, institutions and relationships. That is precisely where AToure operates, and where we have already delivered at the highest level in this exact market.</p>
     </div>
     <div class="pillars">
       <div class="pillar rv">
         <div class="num">01</div>
-        <h3>Direct institutional access</h3>
-        <p>Working coordination lines into the Presidency, the Office of the First Lady, the Ministry of Tourism and the Ministry of Culture. Not introductions through intermediaries. Relationships we have already activated for delivered projects.</p>
+        <h3 data-t="p1h">Direct institutional access</h3>
+        <p data-t="p1p">Working coordination lines into the Presidency, the Office of the First Lady, the Ministry of Tourism and the Ministry of Culture. Not introductions through intermediaries. Relationships we have already activated for delivered projects.</p>
       </div>
       <div class="pillar rv">
         <div class="num">02</div>
-        <h3>Security at national scale</h3>
-        <p>For IShowSpeed in Ivory Coast we mobilised over 600 security personnel citywide, with police escort, restricted zone access and privatisation of public spaces. We coordinate with the Ministry of Interior and the National Police.</p>
+        <h3 data-t="p2h">Security at national scale</h3>
+        <p data-t="p2p">For IShowSpeed in Ivory Coast we mobilised over 600 security personnel citywide, with police escort, restricted zone access and privatisation of public spaces. We coordinate with the Ministry of Interior and the National Police.</p>
       </div>
       <div class="pillar rv">
         <div class="num">03</div>
-        <h3>Sponsors closed in this market</h3>
-        <p>MTN, Solibra and Snedai closed from zero pre existing relationships for a single creator visit. We know which Ivorian brands fund cultural moments, and how to structure partnerships they say yes to.</p>
+        <h3 data-t="p3h">Sponsors closed in this market</h3>
+        <p data-t="p3p">MTN, Solibra and Snedai closed from zero pre existing relationships for a single creator visit. We know which Ivorian brands fund cultural moments, and how to structure partnerships they say yes to.</p>
       </div>
       <div class="pillar rv">
         <div class="num">04</div>
-        <h3>Receipts, not promises</h3>
-        <p>1.57 billion views on the Ashton Hall Africa Tour. An AFCON record 6.1 billion digital impressions in Morocco. Presidential recognition in Ivory Coast. Every figure verified, every project delivered end to end.</p>
+        <h3 data-t="p4h">Receipts, not promises</h3>
+        <p data-t="p4p">1.57 billion views on the Ashton Hall Africa Tour. An AFCON record 6.1 billion digital impressions in Morocco. Presidential recognition in Ivory Coast. Every figure verified, every project delivered end to end.</p>
       </div>
     </div>
     <div class="compare rv">
       <img src="https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/speed-mj-royal-comparison.jpg" alt="IShowSpeed received in royal tradition beside Michael Jackson in 1992" loading="lazy" data-ph="IShowSpeed and Michael Jackson, side by side">
       <div>
-        <div class="eyebrow">Proof, side by side</div>
-        <h3>We have staged this moment <em>before.</em></h3>
-        <p>On the left, IShowSpeed received in royal tradition during the visit AToure built from scratch. On the right, Michael Jackson at Krindjabo in 1992. The same honours, the same country, a generation apart. One of these moments is history. The other one is our work.</p>
-        <p>That is the standard we bring to Janet's return: not describing iconic moments, producing them.</p>
+        <div class="eyebrow" data-t="cmpeb">Proof, side by side</div>
+        <h3 data-t="cmph3">We have staged this moment <em>before.</em></h3>
+        <p data-t="cmpp1">On the left, IShowSpeed received in royal tradition during the visit AToure built from scratch. On the right, Michael Jackson at Krindjabo in 1992. The same honours, the same country, a generation apart. One of these moments is history. The other one is our work.</p>
+        <p data-t="cmpp2">That is the standard we bring to Janet's return: not describing iconic moments, producing them.</p>
       </div>
     </div>
   </div>
@@ -376,135 +366,135 @@
 <section id="network">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">Strategic Access Network</div>
-      <h2>Institutions, protocol,<br><em>security and municipalities.</em></h2>
-      <p>The working network AToure coordinates for official facilitation and VIP movement across Côte d'Ivoire. Tap any card to see how it serves this project.</p>
+      <div class="eyebrow" data-t="neteb">Strategic Access Network</div>
+      <h2 data-t="neth2">Institutions, protocol,<br><em>security and municipalities.</em></h2>
+      <p data-t="netp">The working network AToure coordinates for official facilitation and VIP movement across Côte d'Ivoire. Tap any card to see how it serves this project.</p>
     </div>
     <div class="nettabs rv" id="nettabs">
-      <button class="nettab on" data-f="all">All</button>
-      <button class="nettab" data-f="gov">Presidency &amp; Government</button>
-      <button class="nettab" data-f="sec">Security</button>
-      <button class="nettab" data-f="mun">Municipalities</button>
-      <button class="nettab" data-f="avi">Aviation</button>
-      <button class="nettab" data-f="com">Commercial</button>
+      <button class="nettab on" data-f="all" data-t="tab1">All</button>
+      <button class="nettab" data-f="gov" data-t="tab2">Presidency &amp; Government</button>
+      <button class="nettab" data-f="sec" data-t="tab3">Security</button>
+      <button class="nettab" data-f="mun" data-t="tab4">Municipalities</button>
+      <button class="nettab" data-f="avi" data-t="tab5">Aviation</button>
+      <button class="nettab" data-f="com" data-t="tab6">Commercial</button>
     </div>
     <div class="netgrid" id="netgrid">
       <div class="netcard rv" data-c="gov">
-        <div class="cat">Presidency &amp; Government</div>
-        <h3>Presidency of the Republic</h3>
-        <div class="role">Cabinet, protocol and institutional coordination</div>
-        <div class="more">The highest level of institutional endorsement available in the country. For a visit of this profile, presidential protocol alignment shapes everything downstream: security posture, official welcome and national media framing.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc1c">Presidency &amp; Government</div>
+        <h3 data-t="nc1h">Presidency of the Republic</h3>
+        <div class="role" data-t="nc1r">Cabinet, protocol and institutional coordination</div>
+        <div class="more" data-t="nc1m">The highest level of institutional endorsement available in the country. For a visit of this profile, presidential protocol alignment shapes everything downstream: security posture, official welcome and national media framing.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="gov">
-        <div class="cat">Presidency &amp; Government</div>
-        <h3>Office of the First Lady</h3>
-        <div class="role">Cabinet of First Lady Dominique Ouattara</div>
-        <div class="more">Protocol, social impact and high level guest coordination. The natural institutional partner for the women and children pillars of this journey, including the Children of Africa Foundation moments, subject to official acceptance. This is also the door to the Children of Africa Gala, detailed in the journey section below.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc2c">Presidency &amp; Government</div>
+        <h3 data-t="nc2h">Office of the First Lady</h3>
+        <div class="role" data-t="nc2r">Cabinet of First Lady Dominique Ouattara</div>
+        <div class="more" data-t="nc2m">Protocol, social impact and high level guest coordination. The natural institutional partner for the women and children pillars of this journey, including the Children of Africa Foundation moments, subject to official acceptance. This is also the door to the Children of Africa Gala, detailed in the journey section below.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="gov">
-        <div class="cat">Presidency &amp; Government</div>
-        <h3>Ministry of Tourism &amp; Leisure</h3>
-        <div class="role">Minister Siandou Fofana</div>
-        <div class="more">Tourism positioning, destination support, hospitality and official tourism programming. AToure's work on IShowSpeed's visit earned personal recognition from the Minister of Tourism.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc3c">Presidency &amp; Government</div>
+        <h3 data-t="nc3h">Ministry of Tourism &amp; Leisure</h3>
+        <div class="role" data-t="nc3r">Minister Siandou Fofana</div>
+        <div class="more" data-t="nc3m">Tourism positioning, destination support, hospitality and official tourism programming. AToure's work on IShowSpeed's visit earned personal recognition from the Minister of Tourism.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="gov">
-        <div class="cat">Presidency &amp; Government</div>
-        <h3>Ministry of Culture &amp; Francophonie</h3>
-        <div class="role">Minister Françoise Remarck</div>
-        <div class="more">Cultural programming, heritage, artists, institutional visibility and cultural protocol. Central to the Krindjabo and Yamoussoukro chapters and to any national cultural staging.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc4c">Presidency &amp; Government</div>
+        <h3 data-t="nc4h">Ministry of Culture &amp; Francophonie</h3>
+        <div class="role" data-t="nc4r">Minister Françoise Remarck</div>
+        <div class="more" data-t="nc4m">Cultural programming, heritage, artists, institutional visibility and cultural protocol. Central to the Krindjabo and Yamoussoukro chapters and to any national cultural staging.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="gov">
-        <div class="cat">Presidency &amp; Government</div>
-        <h3>The Wider Ministerial Network</h3>
-        <div class="role">Direct access across government</div>
-        <div class="more">Beyond the ministries named here, AToure maintains direct working access across the other ministries of the Ivorian government. Whatever door a given moment requires, protocol, communication, transport or beyond, we reach it directly rather than through intermediaries.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc5c">Presidency &amp; Government</div>
+        <h3 data-t="nc5h">The Wider Ministerial Network</h3>
+        <div class="role" data-t="nc5r">Direct access across government</div>
+        <div class="more" data-t="nc5m">Beyond the ministries named here, AToure maintains direct working access across the other ministries of the Ivorian government. Whatever door a given moment requires, protocol, communication, transport or beyond, we reach it directly rather than through intermediaries.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="sec">
-        <div class="cat">Security &amp; Official Support</div>
-        <h3>Ministry of Interior &amp; Security</h3>
-        <div class="role">Minister Gen. Vagondo Diomande</div>
-        <div class="more">Security coordination and official authorisations where required. The channel through which national security posture for the visit is agreed and approved.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc6c">Security &amp; Official Support</div>
+        <h3 data-t="nc6h">Ministry of Interior &amp; Security</h3>
+        <div class="role" data-t="nc6r">Minister Gen. Vagondo Diomande</div>
+        <div class="more" data-t="nc6m">Security coordination and official authorisations where required. The channel through which national security posture for the visit is agreed and approved.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="sec">
-        <div class="cat">Security &amp; Official Support</div>
-        <h3>National Police · DGPN</h3>
-        <div class="role">Director General Youssouf Kouyate</div>
-        <div class="more">Police support, escort and operational security coordination: motorcycle escort, route security, venue reinforcement and liaison with relevant police commands, subject to formal approval.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc7c">Security &amp; Official Support</div>
+        <h3 data-t="nc7h">National Police · DGPN</h3>
+        <div class="role" data-t="nc7r">Director General Youssouf Kouyate</div>
+        <div class="more" data-t="nc7m">Police support, escort and operational security coordination: motorcycle escort, route security, venue reinforcement and liaison with relevant police commands, subject to formal approval.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="mun">
-        <div class="cat">Greater Abidjan</div>
+        <div class="cat" data-t="nc8c">Greater Abidjan</div>
         <h3>Cocody &amp; Plateau</h3>
-        <div class="role">Priority communes for hospitality and protocol</div>
-        <div class="more">Cocody for residences, premium venues and official receptions. Plateau for the business district, institutional sites and ceremonial routing.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="role" data-t="nc8r">Priority communes for hospitality and protocol</div>
+        <div class="more" data-t="nc8m">Cocody for residences, premium venues and official receptions. Plateau for the business district, institutional sites and ceremonial routing.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="mun">
-        <div class="cat">Greater Abidjan</div>
+        <div class="cat" data-t="nc9c">Greater Abidjan</div>
         <h3>Marcory, Treichville &amp; Port Bouet</h3>
-        <div class="role">Zone 4, events and airport logistics</div>
-        <div class="more">Municipal coordination for hospitality, nightlife, event and cultural locations, plus airport access, arrivals, departures and airport area logistics through Port Bouet.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="role" data-t="nc9r">Zone 4, events and airport logistics</div>
+        <div class="more" data-t="nc9m">Municipal coordination for hospitality, nightlife, event and cultural locations, plus airport access, arrivals, departures and airport area logistics through Port Bouet.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="mun">
-        <div class="cat">Greater Abidjan</div>
+        <div class="cat" data-t="nc10c">Greater Abidjan</div>
         <h3>Yopougon, Abobo &amp; Grand Abidjan</h3>
-        <div class="role">Public engagement at scale</div>
-        <div class="more">Large scale public engagement, cultural activations and community facing programming, with Koumassi, Bingerville and the extended municipal network for venues, movements and supporting logistics.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="role" data-t="nc10r">Public engagement at scale</div>
+        <div class="more" data-t="nc10m">Large scale public engagement, cultural activations and community facing programming, with Koumassi, Bingerville and the extended municipal network for venues, movements and supporting logistics.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="avi">
-        <div class="cat">Aviation</div>
+        <div class="cat" data-t="nc11c">Aviation</div>
         <h3>Air Côte d'Ivoire &amp; Emirates</h3>
-        <div class="role">National and international airline relationships</div>
-        <div class="more">VIP travel, domestic routing to San Pédro, regional connections, premium long haul travel and possible partnership support on both airlines.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="role" data-t="nc11r">National and international airline relationships</div>
+        <div class="more" data-t="nc11m">VIP travel, domestic routing to San Pédro, regional connections, premium long haul travel and possible partnership support on both airlines.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="avi">
-        <div class="cat">Aviation</div>
+        <div class="cat" data-t="nc12c">Aviation</div>
         <h3>Jetex, Air Charter Service &amp; AERIA</h3>
-        <div class="role">Private aviation and airport ecosystem</div>
-        <div class="more">Private aviation FBO at Félix Houphouët Boigny International Airport: VIP terminal, ground handling, concierge and aircraft support, with on demand charter brokerage and airport operator coordination for protocol and access.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="role" data-t="nc12r">Private aviation and airport ecosystem</div>
+        <div class="more" data-t="nc12m">Private aviation FBO at Félix Houphouët Boigny International Airport: VIP terminal, ground handling, concierge and aircraft support, with on demand charter brokerage and airport operator coordination for protocol and access.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
       <div class="netcard rv" data-c="com">
-        <div class="cat">Commercial</div>
-        <h3>Brands &amp; Media Partners</h3>
-        <div class="role">Canal+, Solibra, Nespresso, SOCIDA and more</div>
-        <div class="more">Broadcast and media collaboration through Canal+. Beverage and premium hospitality through Solibra, Nespresso and Zino. Fleet and chauffeured mobility through SOCIDA. Consumer and lifestyle activation through CEMOI, Uniwax, Foods Co and others: partners that can fund experiences, gifting, cultural moments and media coverage.</div>
-        <div class="hint">Tap to expand</div>
+        <div class="cat" data-t="nc13c">Commercial</div>
+        <h3 data-t="nc13h">Brands &amp; Media Partners</h3>
+        <div class="role" data-t="nc13r">Canal+, Solibra, Nespresso, SOCIDA and more</div>
+        <div class="more" data-t="nc13m">Broadcast and media collaboration through Canal+. Beverage and premium hospitality through Solibra, Nespresso and Zino. Fleet and chauffeured mobility through SOCIDA. Consumer and lifestyle activation through CEMOI, Uniwax, Foods Co and others: partners that can fund experiences, gifting, cultural moments and media coverage.</div>
+        <div class="hint" data-t="hint">Tap to expand</div>
       </div>
     </div>
-    <p class="disclaimer rv">Network access and collaboration potential do not constitute confirmed commitments. Every activation remains subject to formal outreach, availability, approvals, quotations and protocol and security requirements.</p>
+    <p class="disclaimer rv" data-t="netdisc">Network access and collaboration potential do not constitute confirmed commitments. Every activation remains subject to formal outreach, availability, approvals, quotations and protocol and security requirements.</p>
   </div>
 </section>
 
 <section id="record" class="alt">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">Track Record</div>
-      <h2>We have done this before.<br><em>In this country.</em></h2>
-      <p>Three delivered mandates. Every figure verified from official broadcast and platform data.</p>
+      <div class="eyebrow" data-t="receb">Track Record</div>
+      <h2 data-t="rech2">We have done this before.<br><em>In this country.</em></h2>
+      <p data-t="recp">Three delivered mandates. Every figure verified from official broadcast and platform data.</p>
     </div>
 
     <div class="case rv">
       <div class="meta">
-        <div class="tag">Ivory Coast · 2024</div>
-        <h3>IShowSpeed × Ivory Coast</h3>
-        <p>One of the world's biggest creators landing in West Africa with zero existing infrastructure. AToure built the entire operational and commercial machine from scratch, and delivered the Zaouli cultural moment that travelled around the world, earning personal recognition from the Ivory Coast Minister of Tourism.</p>
-        <a class="caselink" href="https://atoureconsulting.com/ivory-coast.html" target="_blank" rel="noopener">View the full case study ↗</a>
+        <div class="tag" data-t="c1tag">Ivory Coast · 2024</div>
+        <h3 data-t="c1h">IShowSpeed × Ivory Coast</h3>
+        <p data-t="c1p">One of the world's biggest creators landing in West Africa with zero existing infrastructure. AToure built the entire operational and commercial machine from scratch, and delivered the Zaouli cultural moment that travelled around the world, earning personal recognition from the Ivory Coast Minister of Tourism.</p>
+        <a class="caselink" href="https://atoureconsulting.com/ivory-coast.html" target="_blank" rel="noopener" data-t="caselink">View the full case study ↗</a>
       </div>
       <div>
         <div class="statgrid">
-          <div class="stat"><div class="v" data-count="55.8" data-suffix="M">0</div><div class="l">Instagram views</div></div>
-          <div class="stat"><div class="v" data-count="15">0</div><div class="l">State visas secured</div></div>
-          <div class="stat"><div class="v" data-count="600" data-suffix="+">0</div><div class="l">Security personnel</div></div>
+          <div class="stat"><div class="v" data-count="55.8" data-suffix="M">0</div><div class="l" data-t="c1s1">Instagram views</div></div>
+          <div class="stat"><div class="v" data-count="15">0</div><div class="l" data-t="c1s2">State visas secured</div></div>
+          <div class="stat"><div class="v" data-count="600" data-suffix="+">0</div><div class="l" data-t="c1s3">Security personnel</div></div>
         </div>
         <div class="strip">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Ivory%20Coast/feac0d21-9f5a-47b7-a37a-2cbcc76df2a5%20(1).webp" alt="IShowSpeed in Ivory Coast" loading="lazy">
@@ -524,16 +514,16 @@
 
     <div class="case rv">
       <div class="meta">
-        <div class="tag">Morocco · AFCON Final 2025</div>
+        <div class="tag" data-t="c2tag">Morocco · AFCON Final 2025</div>
         <h3>IShowSpeed × Morocco</h3>
-        <p>AToure conceived the official mascot integration, secured sign off from CAF and the Royal Moroccan Football Federation, and delivered state level facilitation end to end: visas, private jet clearances, permits, security and the live reveal itself.</p>
-        <a class="caselink" href="https://atoureconsulting.com/ishowspeed-afcon.html" target="_blank" rel="noopener">View the full case study ↗</a>
+        <p data-t="c2p">AToure conceived the official mascot integration, secured sign off from CAF and the Royal Moroccan Football Federation, and delivered state level facilitation end to end: visas, private jet clearances, permits, security and the live reveal itself.</p>
+        <a class="caselink" href="https://atoureconsulting.com/ishowspeed-afcon.html" target="_blank" rel="noopener" data-t="caselink">View the full case study ↗</a>
       </div>
       <div>
         <div class="statgrid">
-          <div class="stat"><div class="v" data-count="16" data-suffix="M">0</div><div class="l">Live stream views</div></div>
-          <div class="stat"><div class="v" data-count="6.1" data-suffix="B">0</div><div class="l">Digital impressions</div></div>
-          <div class="stat"><div class="v" data-count="97.3" data-suffix="M">0</div><div class="l">Final TV audience</div></div>
+          <div class="stat"><div class="v" data-count="16" data-suffix="M">0</div><div class="l" data-t="c2s1">Live stream views</div></div>
+          <div class="stat"><div class="v" data-count="6.1" data-suffix="B">0</div><div class="l" data-t="c2s2">Digital impressions</div></div>
+          <div class="stat"><div class="v" data-count="97.3" data-suffix="M">0</div><div class="l" data-t="c2s3">Final TV audience</div></div>
         </div>
         <div class="strip">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ishowspeed/Morocco/IMG_8378.webp" alt="IShowSpeed at the AFCON Final in Morocco" loading="lazy">
@@ -545,16 +535,16 @@
 
     <div class="case rv">
       <div class="meta">
-        <div class="tag">Five Countries · 2026</div>
+        <div class="tag" data-t="c3tag">Five Countries · 2026</div>
         <h3>Ashton Hall Africa Tour</h3>
-        <p>Ghana, Cameroon, Nigeria, Benin and Rwanda. AToure ran the full tour country by country: partnerships, sponsors, media, visas, security, transport and daily itinerary, with national press coverage in every market in three languages.</p>
-        <a class="caselink" href="https://atoureconsulting.com/ashton-hall-africa-tour.html" target="_blank" rel="noopener">View the full case study ↗</a>
+        <p data-t="c3p">Ghana, Cameroon, Nigeria, Benin and Rwanda. AToure ran the full tour country by country: partnerships, sponsors, media, visas, security, transport and daily itinerary, with national press coverage in every market in three languages.</p>
+        <a class="caselink" href="https://atoureconsulting.com/ashton-hall-africa-tour.html" target="_blank" rel="noopener" data-t="caselink">View the full case study ↗</a>
       </div>
       <div>
         <div class="statgrid">
-          <div class="stat"><div class="v" data-count="1.57" data-suffix="B">0</div><div class="l">Total tour views</div></div>
-          <div class="stat"><div class="v" data-count="5">0</div><div class="l">Countries delivered</div></div>
-          <div class="stat"><div class="v" data-count="171" data-suffix="M">0</div><div class="l">Biggest single post</div></div>
+          <div class="stat"><div class="v" data-count="1.57" data-suffix="B">0</div><div class="l" data-t="c3s1">Total tour views</div></div>
+          <div class="stat"><div class="v" data-count="5">0</div><div class="l" data-t="c3s2">Countries delivered</div></div>
+          <div class="stat"><div class="v" data-count="171" data-suffix="M">0</div><div class="l" data-t="c3s3">Biggest single post</div></div>
         </div>
         <div class="strip">
           <img src="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Photos/AHLIG-121.webp" alt="Ashton Hall welcomed in Ghana" loading="lazy">
@@ -578,25 +568,25 @@
 <section id="journey">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">The Journey · Seven Days</div>
-      <h2>Back to the Roots.<br><em>Day by day.</em></h2>
-      <p>A seven day cultural story connecting heritage, remembrance, women's empowerment, philanthropy and contemporary Côte d'Ivoire. Select a day to explore it.</p>
+      <div class="eyebrow" data-t="jeb">The Journey · Seven Days</div>
+      <h2 data-t="jh2">Back to the Roots.<br><em>Day by day.</em></h2>
+      <p data-t="jp">A seven day cultural story connecting heritage, remembrance, women's empowerment, philanthropy and contemporary Côte d'Ivoire. Select a day to explore it. This is a concept itinerary: the exact programme will be organised and created together with the Rolling Stone Africa team and the tour producers.</p>
     </div>
     <div class="days rv" id="days"></div>
     <div id="daypanels"></div>
     <div class="gala rv">
       <div>
-        <div class="eyebrow">The Timing Opportunity</div>
-        <h3>The Children of Africa Gala.<br><em>October 9, 2026.</em></h3>
-        <p>The Children of Africa Foundation, created by First Lady Dominique Ouattara, holds its 10th Gala Dinner on Friday October 9, 2026 at the Sofitel Abidjan Hotel Ivoire, under the theme Light to Africa: Together for Youth to Shine. It is one of the most prestigious charitable evenings on the continent.</p>
-        <p>Past editions have gathered more than 900 personalities in a single room: President Alassane Ouattara, former French President Nicolas Sarkozy, Isabelle Adjani, Patrick Bruel, Youssou N'Dour and leaders from cinema, music, sport and business across Africa and beyond. Every edition funds concrete work. The 9th financed a new cardiac surgery wing at the Mother and Child Hospital in Bingerville. The 10th builds the Treichville Youth Center.</p>
-        <p class="invite">Through the Office of the First Lady, AToure can pursue an honorary guest invitation for Janet, subject to official acceptance. Aligning the journey with gala week would seat her at the most exclusive table in Africa, beside the First Lady, in front of every decision maker in the country.</p>
+        <div class="eyebrow" data-t="geb">The Timing Opportunity</div>
+        <h3 data-t="gh3">The Children of Africa Gala.<br><em>October 9, 2026.</em></h3>
+        <p data-t="gp1">The Children of Africa Foundation, created by First Lady Dominique Ouattara, holds its 10th Gala Dinner on Friday October 9, 2026 at the Sofitel Abidjan Hotel Ivoire, under the theme Light to Africa: Together for Youth to Shine. It is one of the most prestigious charitable evenings on the continent.</p>
+        <p data-t="gp2">Past editions have gathered more than 900 personalities in a single room: President Alassane Ouattara, former French President Nicolas Sarkozy, Isabelle Adjani, Patrick Bruel, Youssou N'Dour and leaders from cinema, music, sport and business across Africa and beyond. Every edition funds concrete work. The 9th financed a new cardiac surgery wing at the Mother and Child Hospital in Bingerville. The 10th builds the Treichville Youth Center.</p>
+        <p class="invite" data-t="ginv">Through the Office of the First Lady, AToure can pursue an honorary guest invitation for Janet, subject to official acceptance. Aligning the journey with gala week would seat her at the most exclusive table in Africa, beside the First Lady, in front of every decision maker in the country.</p>
       </div>
       <div class="galafacts">
-        <div class="gfact"><div class="v">October 9, 2026</div><div class="l">10th Gala Dinner · Sofitel Abidjan Hotel Ivoire</div></div>
-        <div class="gfact"><div class="v">900 plus</div><div class="l">Personalities gathered at past editions</div></div>
-        <div class="gfact"><div class="v">Heads of state</div><div class="l">Presidents, global icons &amp; business leaders</div></div>
-        <div class="gfact"><div class="v">Honorary guest</div><div class="l">Invitation pursued via the First Lady's office</div></div>
+        <div class="gfact"><div class="v" data-t="gf1v">October 9, 2026</div><div class="l" data-t="gf1l">10th Gala Dinner · Sofitel Abidjan Hotel Ivoire</div></div>
+        <div class="gfact"><div class="v" data-t="gf2v">900 plus</div><div class="l" data-t="gf2l">Personalities gathered at past editions</div></div>
+        <div class="gfact"><div class="v" data-t="gf3v">Heads of state</div><div class="l" data-t="gf3l">Presidents, global icons &amp; business leaders</div></div>
+        <div class="gfact"><div class="v" data-t="gf4v">Honorary guest</div><div class="l" data-t="gf4l">Invitation pursued via the First Lady's office</div></div>
       </div>
     </div>
   </div>
@@ -605,17 +595,17 @@
 <section id="ops" class="alt">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">Operations &amp; Security</div>
-      <h2>Every piece of the operation.<br><em>One accountable partner.</em></h2>
-      <p>The same operating system that delivered IShowSpeed's Ivory Coast visit, scaled to the protocol level this guest deserves.</p>
+      <div class="eyebrow" data-t="opseb">Operations &amp; Security</div>
+      <h2 data-t="opsh2">Every piece of the operation.<br><em>One accountable partner.</em></h2>
+      <p data-t="opsp">The same operating system that delivered IShowSpeed's Ivory Coast visit, scaled to the protocol level this guest deserves.</p>
     </div>
     <div class="opsgrid">
-      <div class="op rv"><div class="ic">01</div><h3>Protocol &amp; official welcome</h3><p>Airport arrival and departure facilitation, official welcome, ceremonial routing and institutional coordination at every level of government.</p></div>
-      <div class="op rv"><div class="ic">02</div><h3>Visas &amp; clearances</h3><p>State visas and border clearances for the full travelling party of 15, handled through official channels as delivered on previous mandates.</p></div>
-      <div class="op rv"><div class="ic">03</div><h3>Close protection &amp; police</h3><p>Six dedicated bodyguards, police motorcycle escort, route security, venue reinforcement and a provisional police security envelope, subject to formal approval.</p></div>
-      <div class="op rv"><div class="ic">04</div><h3>Transport &amp; aviation</h3><p>A fleet of six premium vehicles with drivers, secure routing across all communes, and private aviation options including the domestic flight to San Pédro.</p></div>
-      <div class="op rv"><div class="ic">05</div><h3>Hospitality</h3><p>Presidential Suite plus fourteen luxury rooms over seven nights, with full meal programme and premium hospitality upgrades through partner negotiations.</p></div>
-      <div class="op rv"><div class="ic">06</div><h3>Permits &amp; media</h3><p>Equipment, filming and broadcast permits across all jurisdictions, plus a dedicated media envelope covering press relations, photography, video and distribution.</p></div>
+      <div class="op rv"><div class="ic">01</div><h3 data-t="o1h">Protocol &amp; official welcome</h3><p data-t="o1p">Airport arrival and departure facilitation, official welcome, ceremonial routing and institutional coordination at every level of government.</p></div>
+      <div class="op rv"><div class="ic">02</div><h3 data-t="o2h">Visas &amp; clearances</h3><p data-t="o2p">State visas and border clearances for the full travelling party of 15, handled through official channels as delivered on previous mandates.</p></div>
+      <div class="op rv"><div class="ic">03</div><h3 data-t="o3h">Close protection &amp; police</h3><p data-t="o3p">Six dedicated bodyguards, police motorcycle escort, route security, venue reinforcement and a provisional police security envelope, subject to formal approval.</p></div>
+      <div class="op rv"><div class="ic">04</div><h3 data-t="o4h">Transport &amp; aviation</h3><p data-t="o4p">A fleet of six premium vehicles with drivers, secure routing across all communes, and private aviation options including the domestic flight to San Pédro.</p></div>
+      <div class="op rv"><div class="ic">05</div><h3 data-t="o5h">Hospitality</h3><p data-t="o5p">Presidential Suite plus fourteen luxury rooms over seven nights, with full meal programme and premium hospitality upgrades through partner negotiations.</p></div>
+      <div class="op rv"><div class="ic">06</div><h3 data-t="o6h">Permits &amp; media</h3><p data-t="o6p">Equipment, filming and broadcast permits across all jurisdictions, plus a dedicated media envelope covering press relations, photography, video and distribution.</p></div>
     </div>
   </div>
 </section>
@@ -623,9 +613,9 @@
 <section id="budget">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">Seven Day Operational Budget · 15 Persons</div>
-      <h2>Transparent numbers.<br><em>No surprises.</em></h2>
-      <p>Estimated hosting and logistics budget covering transport, hospitality, security, meals and media for the full seven day programme.</p>
+      <div class="eyebrow" data-t="beb">Seven Day Operational Budget · 15 Persons</div>
+      <h2 data-t="bh2">Transparent numbers.<br><em>No surprises.</em></h2>
+      <p data-t="bp">Estimated hosting and logistics budget covering transport, hospitality, security, meals and media for the full seven day programme.</p>
     </div>
     <div class="btoggle rv">
       <button class="on" data-cur="fcfa">FCFA</button>
@@ -633,37 +623,37 @@
     </div>
     <div class="rv" style="overflow-x:auto">
       <table id="btable">
-        <thead><tr><th>Expense</th><th>Basis</th><th>Estimated cost</th></tr></thead>
+        <thead><tr><th data-t="th1">Expense</th><th data-t="th2">Basis</th><th data-t="th3">Estimated cost</th></tr></thead>
         <tbody>
-          <tr><td>Car rental</td><td><span class="calc">6 premium vehicles × 7 days</span></td><td data-f="2382000"></td></tr>
-          <tr><td>Presidential Suite</td><td><span class="calc">7 nights</span></td><td data-f="12320000"></td></tr>
-          <tr><td>14 luxury rooms</td><td><span class="calc">14 rooms × 7 nights</span></td><td data-f="14700000"></td></tr>
-          <tr><td>6 bodyguards</td><td><span class="calc">6 × 7 days</span></td><td data-f="6300000"></td></tr>
-          <tr><td>Police motorcycle escort</td><td><span class="calc">7 days</span></td><td data-f="2800000"></td></tr>
-          <tr><td>Police security reinforcement</td><td><span class="calc">Provisional security envelope</span></td><td data-f="3500000"></td></tr>
-          <tr><td>Lunch &amp; dinner</td><td><span class="calc">15 persons × 7 days</span></td><td data-f="5955000"></td></tr>
-          <tr><td>Media coverage</td><td><span class="calc">Press, photo, video &amp; activation envelope</span></td><td data-f="10000000"></td></tr>
-          <tr class="total"><td>Base estimated total</td><td></td><td data-f="57957000"></td></tr>
+          <tr><td data-t="b1">Car rental</td><td><span class="calc" data-t="b1c">6 premium vehicles × 7 days</span></td><td data-f="2382000"></td></tr>
+          <tr><td data-t="b2">Presidential Suite</td><td><span class="calc" data-t="b2c">7 nights</span></td><td data-f="12320000"></td></tr>
+          <tr><td data-t="b3">14 luxury rooms</td><td><span class="calc" data-t="b3c">14 rooms × 7 nights</span></td><td data-f="14700000"></td></tr>
+          <tr><td data-t="b4">6 bodyguards</td><td><span class="calc" data-t="b4c">6 × 7 days</span></td><td data-f="6300000"></td></tr>
+          <tr><td data-t="b5">Police motorcycle escort</td><td><span class="calc" data-t="b5c">7 days</span></td><td data-f="2800000"></td></tr>
+          <tr><td data-t="b6">Police security reinforcement</td><td><span class="calc" data-t="b6c">Provisional security envelope</span></td><td data-f="3500000"></td></tr>
+          <tr><td data-t="b7">Lunch &amp; dinner</td><td><span class="calc" data-t="b7c">15 persons × 7 days</span></td><td data-f="5955000"></td></tr>
+          <tr><td data-t="b8">Media coverage</td><td><span class="calc" data-t="b8c">Press, photo, video &amp; activation envelope</span></td><td data-f="10000000"></td></tr>
+          <tr class="total"><td data-t="btot">Base estimated total</td><td></td><td data-f="57957000"></td></tr>
         </tbody>
       </table>
     </div>
     <div class="envelope rv">
       <div>
-        <div class="t">Recommended working envelope</div>
+        <div class="t" data-t="envt">Recommended working envelope</div>
         <div class="v" id="envval">65,000,000 to 70,000,000 FCFA</div>
       </div>
-      <p>Recommended to preserve contingency for protocol, security, hotel, transport and media adjustments.</p>
+      <p data-t="envp">Recommended to preserve contingency for protocol, security, hotel, transport and media adjustments.</p>
     </div>
     <details class="rv">
-      <summary>Assumptions &amp; notes</summary>
+      <summary data-t="assum">Assumptions &amp; notes</summary>
       <div class="inner">
-        <li>Meals calculated for 15 persons for the full seven day programme.</li>
-        <li>Hotel basis: one Presidential Suite plus 14 luxury rooms, subject to negotiated hotel quotation.</li>
-        <li>Six premium vehicles assumed for a 15 person travelling party. Fuel, premium drivers, overtime and additional security vehicles are excluded.</li>
-        <li>The police security figure is a provisional envelope, not an official police tariff.</li>
-        <li>The media envelope covers working media. Final scope should define press relations, photographers, videographers, content production, broadcast, interviews and distribution.</li>
-        <li>Not included: international flights, domestic flights to San Pédro, artist and appearance fees, venue rental, production and staging, insurance, visas, glam team and personal expenses.</li>
-        <li>Planning document, subject to supplier quotations, protocol requirements and official security approvals. USD figures are indicative conversions only.</li>
+        <li data-t="a1">Meals calculated for 15 persons for the full seven day programme.</li>
+        <li data-t="a2">Hotel basis: one Presidential Suite plus 14 luxury rooms, subject to negotiated hotel quotation.</li>
+        <li data-t="a3">Six premium vehicles assumed for a 15 person travelling party. Fuel, premium drivers, overtime and additional security vehicles are excluded.</li>
+        <li data-t="a4">The police security figure is a provisional envelope, not an official police tariff.</li>
+        <li data-t="a5">The media envelope covers working media. Final scope should define press relations, photographers, videographers, content production, broadcast, interviews and distribution.</li>
+        <li data-t="a6">Not included: international flights, domestic flights to San Pédro, artist and appearance fees, venue rental, production and staging, insurance, visas, glam team and personal expenses.</li>
+        <li data-t="a7">Planning document, subject to supplier quotations, protocol requirements and official security approvals. USD figures are indicative conversions only.</li>
       </div>
     </details>
   </div>
@@ -672,26 +662,26 @@
 <section id="engage" class="alt">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow">Engagement</div>
-      <h2>How we work<br><em>together.</em></h2>
+      <div class="eyebrow" data-t="eeb">Engagement</div>
+      <h2 data-t="eh2">How we work<br><em>together.</em></h2>
     </div>
     <div class="engage">
       <div class="eng rv">
-        <div class="n">Stream 01</div>
-        <h3>Ground operating partner</h3>
-        <p>AToure serves as the on the ground organising partner for the full seven day programme: institutional facilitation, protocol, security architecture, logistics, hospitality, permits and the local delivery of every chapter of the journey. Structured as a base organisation fee, sized against the finalised tour budget.</p>
+        <div class="n" data-t="e1n">Stream 01</div>
+        <h3 data-t="e1h">Ground operating partner</h3>
+        <p data-t="e1p">AToure serves as the on the ground organising partner for the full seven day programme: institutional facilitation, protocol, security architecture, logistics, hospitality, permits and the local delivery of every chapter of the journey. Structured as a base organisation fee, sized against the finalised tour budget.</p>
       </div>
       <div class="eng rv">
-        <div class="n">Stream 02</div>
-        <h3>Sponsorship &amp; partnerships</h3>
-        <p>AToure brings Ivorian and regional sponsors into the project, as delivered previously with MTN, Solibra and Snedai. Sponsorship revenue AToure sources carries a success commission, aligning our incentives with the commercial strength of the project.</p>
+        <div class="n" data-t="e2n">Stream 02</div>
+        <h3 data-t="e2h">Sponsorship &amp; partnerships</h3>
+        <p data-t="e2p">AToure brings Ivorian and regional sponsors into the project, as delivered previously with MTN, Solibra and Snedai. Sponsorship revenue AToure sources carries a success commission, aligning our incentives with the commercial strength of the project.</p>
       </div>
     </div>
     <div style="margin-top:60px">
       <div class="cta rv">
-        <h2>Windows with institutions are calendar driven.<br><em>Let us lock the dates.</em></h2>
-        <p>The Presidency, the Office of the First Lady and the ministries plan around official calendars. The sooner scope is confirmed, the sooner AToure can secure official dates, protocol and security approvals for the visit.</p>
-        <a class="btn" href="mailto:atoureconsulting@gmail.com?subject=Janet%20Jackson%20in%20Cote%20d%27Ivoire">Schedule the call</a>
+        <h2 data-t="ctah2">Windows with institutions are calendar driven.<br><em>Let us lock the dates.</em></h2>
+        <p data-t="ctap">The Presidency, the Office of the First Lady and the ministries plan around official calendars. The sooner scope is confirmed, the sooner AToure can secure official dates, protocol and security approvals for the visit.</p>
+        <a class="btn" href="mailto:atoureconsulting@gmail.com?subject=Janet%20Jackson%20in%20Cote%20d%27Ivoire" data-t="ctabtn">Schedule the call</a>
       </div>
     </div>
   </div>
@@ -699,63 +689,261 @@
 
 <footer>
   <div class="wrap">
-    <div class="conf">Confidential · Prepared for Rolling Stone Africa</div>
-    <p>Baba Touré · Director · AToure Management &amp; Consulting · Est. 2023, London</p>
+    <div class="conf" data-t="fconf">Confidential · Prepared for Rolling Stone Africa</div>
+    <p data-t="fline">Baba Touré · Director · AToure Management &amp; Consulting · Est. 2023, London</p>
     <p>atoureconsulting.com · atoureconsulting@gmail.com</p>
   </div>
 </footer>
 
 <script>
-// day data
+// ============ bilingual day data ============
 const DAYS=[
- {d:"Day 1",p:"Abidjan",k:"Abidjan · Arrival",t:"Akwaba. Africa welcomes Janet.",
-  body:["Private arrival in Abidjan and secure transfer to the hotel. The first evening stays intimate: a curated dinner with leading Ivorian women from culture, business, fashion, philanthropy and entertainment.","The country is introduced through its women rather than through a conventional protocol reception."],
-  m:["Private arrival &amp; secure transfer","Curated dinner with leading Ivorian women","Intimate first evening, no formal protocol"]},
- {d:"Day 2",p:"Krindjabo",k:"Krindjabo · Kingdom of Sanwi",t:"Back to the Roots.",
-  body:["The emotional centerpiece of the journey. Janet travels to Krindjabo, capital of the Kingdom of Sanwi, reconnecting with the place where Michael Jackson was ceremonially received and given the name Prince Amalaman Anoh in 1992.","The programme can include a royal welcome, traditional procession, meeting with the King and royal court, historical storytelling, traditional dance and the presentation of royal regalia."],
-  m:["Royal welcome &amp; traditional procession","Meeting with the King and royal court","Historical storytelling &amp; traditional dance"],
-  img:{src:"https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg",alt:"Michael Jackson received at Krindjabo in 1992",ph:"Krindjabo 1992"},
-  note:"A ceremonial recognition of Janet by the Kingdom may become the defining image of the trip, subject entirely to the sovereign and traditional authorities. The title and ritual should only be communicated publicly once formally approved."},
- {d:"Day 3",p:"Assinie",k:"Assinie · Coast",t:"Ivory Coast, slowly.",
-  body:["A refined coastal day designed as the lifestyle chapter of the journey: lagoon arrival by boat, waterfront brunch, local cuisine, beach time, traditional fishing or lagoon discovery, editorial content and a sunset dinner.","The day also provides necessary breathing room after the ceremonial intensity of Krindjabo."],
-  m:["Lagoon arrival by boat","Waterfront brunch &amp; local cuisine","Editorial content &amp; sunset dinner"]},
- {d:"Day 4",p:"Yamoussoukro",k:"Yamoussoukro · Capital",t:"In Michael's footsteps.",
-  body:["A documentary style day retracing Michael Jackson's 1992 passage through Yamoussoukro. The experience can combine archival storytelling with visits to emblematic sites, including the Basilica of Our Lady of Peace, testimony from people connected to the period, and discovery of the political and architectural heritage of the capital.","The narrative is simple and powerful: Michael came to reconnect with Africa. Janet returns to understand, honour and carry that story forward."],
-  m:["Basilica of Our Lady of Peace","Archival storytelling &amp; testimony","Political &amp; architectural heritage"]},
- {d:"Day 5",p:"Abidjan",k:"Abidjan · Women, Power &amp; Investment",t:"Her voice. Her power.",
-  body:["Daytime: a closed door high level forum built around women's leadership, entrepreneurship, culture, creative industries and investment. The format should feel like an investment salon: established women leaders, young founders, artists, executives, philanthropists and investors in one room, with founder presentations, mentoring and possible announcement of a grant, fund or support programme for women led initiatives.","Evening: the major public cultural event of the week. An elegant spectacle celebrating Ivorian and African women, ideally in the presence of the First Lady and the Children of Africa Foundation, subject to official acceptance. Janet's role can be that of Guest of Honour, speaking on women, creativity, legacy and impact, with a possible appearance in the finale rather than a full concert."],
-  m:["Closed door women &amp; investment forum","The Night of Women public event","Recognition of ten remarkable Ivorian women","Philanthropy for girls &amp; children"]},
- {d:"Day 6",p:"San Pédro",k:"San Pédro · South West",t:"The other Ivory Coast.",
-  body:["A private flight to San Pédro opens another chapter of Côte d'Ivoire: the western coastline, local culture, nature and an important economic region. The programme can combine cultural immersion, women led agricultural or cocoa initiatives, regional performances, a coastal experience and a sunset dinner.","This expands the story beyond Abidjan and gives the visit a national dimension: South East, Centre and South West."],
-  m:["Private flight to San Pédro","Women led cocoa &amp; agricultural initiatives","Regional performances &amp; coastal sunset"]},
- {d:"Day 7",p:"Abidjan",k:"Abidjan · Departure",t:"Legacy &amp; departure.",
-  body:["A softer final day in Abidjan: a social impact moment with Children of Africa and children, a curated fashion and culture encounter with Ivorian designers and creators, a controlled press and photo opportunity, farewell lunch and departure."],
-  m:["Children of Africa social impact moment","Ivorian designers &amp; creators encounter","Controlled press moment &amp; farewell lunch"]}
+ {p:"Abidjan",
+  en:{d:"Day 1",k:"Abidjan · Arrival",t:"Akwaba. Africa welcomes Janet.",
+    body:["Private arrival in Abidjan and secure transfer to the hotel. The first evening stays intimate: a curated dinner with leading Ivorian women from culture, business, fashion, philanthropy and entertainment.","The country is introduced through its women rather than through a conventional protocol reception."],
+    m:["Private arrival &amp; secure transfer","Curated dinner with leading Ivorian women","Intimate first evening, no formal protocol"]},
+  fr:{d:"Jour 1",k:"Abidjan · Arrivée",t:"Akwaba. L'Afrique accueille Janet.",
+    body:["Arrivée privée à Abidjan et transfert sécurisé vers l'hôtel. La première soirée reste intime: un dîner choisi avec des femmes ivoiriennes de premier plan issues de la culture, des affaires, de la mode, de la philanthropie et du divertissement.","Le pays se présente à travers ses femmes plutôt que par une réception protocolaire classique."],
+    m:["Arrivée privée et transfert sécurisé","Dîner choisi avec des femmes ivoiriennes de premier plan","Première soirée intime, sans protocole formel"]}},
+ {p:"Krindjabo",
+  en:{d:"Day 2",k:"Krindjabo · Kingdom of Sanwi",t:"Back to the Roots.",
+    body:["The emotional centerpiece of the journey. Janet travels to Krindjabo, capital of the Kingdom of Sanwi, reconnecting with the place where Michael Jackson was ceremonially received and given the name Prince Amalaman Anoh in 1992.","The programme can include a royal welcome, traditional procession, meeting with the King and royal court, historical storytelling, traditional dance and the presentation of royal regalia."],
+    m:["Royal welcome &amp; traditional procession","Meeting with the King and royal court","Historical storytelling &amp; traditional dance"],
+    note:"A ceremonial recognition of Janet by the Kingdom may become the defining image of the trip, subject entirely to the sovereign and traditional authorities. The title and ritual should only be communicated publicly once formally approved."},
+  fr:{d:"Jour 2",k:"Krindjabo · Royaume du Sanwi",t:"Back to the Roots.",
+    body:["Le cœur émotionnel du voyage. Janet se rend à Krindjabo, capitale du Royaume du Sanwi, pour renouer avec le lieu où Michael Jackson fut reçu en cérémonie et nommé Prince Amalaman Anoh en 1992.","Le programme peut inclure un accueil royal, une procession traditionnelle, une rencontre avec le Roi et la cour royale, des récits historiques, des danses traditionnelles et la présentation des insignes royaux."],
+    m:["Accueil royal et procession traditionnelle","Rencontre avec le Roi et la cour royale","Récits historiques et danses traditionnelles"],
+    note:"Une reconnaissance cérémonielle de Janet par le Royaume pourrait devenir l'image marquante du voyage, sous l'entière autorité du souverain et des autorités traditionnelles. Le titre et le rituel ne seront communiqués publiquement qu'une fois formellement approuvés."},
+  img:{src:"https://raw.githubusercontent.com/atoureconsulting/website/claude/new-project-consultation-cpj5f1/Media/janet-jackson/mj-krindjabo-1992.jpg",alt:"Michael Jackson received at Krindjabo in 1992",ph:"Krindjabo 1992"}},
+ {p:"Assinie",
+  en:{d:"Day 3",k:"Assinie · Coast",t:"Ivory Coast, slowly.",
+    body:["A refined coastal day designed as the lifestyle chapter of the journey: lagoon arrival by boat, waterfront brunch, local cuisine, beach time, traditional fishing or lagoon discovery, editorial content and a sunset dinner.","The day also provides necessary breathing room after the ceremonial intensity of Krindjabo."],
+    m:["Lagoon arrival by boat","Waterfront brunch &amp; local cuisine","Editorial content &amp; sunset dinner"]},
+  fr:{d:"Jour 3",k:"Assinie · Littoral",t:"La Côte d'Ivoire, doucement.",
+    body:["Une journée côtière raffinée, pensée comme le chapitre lifestyle du voyage: arrivée en bateau par la lagune, brunch au bord de l'eau, cuisine locale, plage, pêche traditionnelle ou découverte de la lagune, contenus éditoriaux et dîner au coucher du soleil.","La journée offre aussi une respiration nécessaire après l'intensité cérémonielle de Krindjabo."],
+    m:["Arrivée en bateau par la lagune","Brunch au bord de l'eau et cuisine locale","Contenus éditoriaux et dîner au coucher du soleil"]}},
+ {p:"Yamoussoukro",
+  en:{d:"Day 4",k:"Yamoussoukro · Capital",t:"In Michael's footsteps.",
+    body:["A documentary style day retracing Michael Jackson's 1992 passage through Yamoussoukro. The experience can combine archival storytelling with visits to emblematic sites, including the Basilica of Our Lady of Peace, testimony from people connected to the period, and discovery of the political and architectural heritage of the capital.","The narrative is simple and powerful: Michael came to reconnect with Africa. Janet returns to understand, honour and carry that story forward."],
+    m:["Basilica of Our Lady of Peace","Archival storytelling &amp; testimony","Political &amp; architectural heritage"]},
+  fr:{d:"Jour 4",k:"Yamoussoukro · Capitale",t:"Sur les pas de Michael.",
+    body:["Une journée de style documentaire qui retrace le passage de Michael Jackson à Yamoussoukro en 1992. L'expérience peut combiner récits d'archives et visites de sites emblématiques, dont la Basilique Notre Dame de la Paix, des témoignages de personnes liées à cette période et la découverte du patrimoine politique et architectural de la capitale.","Le récit est simple et puissant: Michael est venu renouer avec l'Afrique. Janet revient pour comprendre, honorer et porter cette histoire vers l'avenir."],
+    m:["Basilique Notre Dame de la Paix","Récits d'archives et témoignages","Patrimoine politique et architectural"]}},
+ {p:"Abidjan",
+  en:{d:"Day 5",k:"Abidjan · Women, Power &amp; Investment",t:"Her voice. Her power.",
+    body:["Daytime: a closed door high level forum built around women's leadership, entrepreneurship, culture, creative industries and investment. The format should feel like an investment salon: established women leaders, young founders, artists, executives, philanthropists and investors in one room, with founder presentations, mentoring and possible announcement of a grant, fund or support programme for women led initiatives.","Evening: the major public cultural event of the week. An elegant spectacle celebrating Ivorian and African women, ideally in the presence of the First Lady and the Children of Africa Foundation, subject to official acceptance. Janet's role can be that of Guest of Honour, speaking on women, creativity, legacy and impact, with a possible appearance in the finale rather than a full concert."],
+    m:["Closed door women &amp; investment forum","The Night of Women public event","Recognition of ten remarkable Ivorian women","Philanthropy for girls &amp; children"]},
+  fr:{d:"Jour 5",k:"Abidjan · Femmes, Pouvoir &amp; Investissement",t:"Sa voix. Son pouvoir.",
+    body:["En journée: un forum de haut niveau à huis clos autour du leadership féminin, de l'entrepreneuriat, de la culture, des industries créatives et de l'investissement. Le format doit ressembler à un salon d'investissement: dirigeantes établies, jeunes fondatrices, artistes, cadres, philanthropes et investisseurs dans une même salle, avec présentations de fondatrices, mentorat et annonce possible d'une bourse, d'un fonds ou d'un programme de soutien aux initiatives portées par des femmes.","En soirée: le grand événement culturel public de la semaine. Un spectacle élégant célébrant les femmes ivoiriennes et africaines, idéalement en présence de la Première Dame et de la Fondation Children of Africa, sous réserve d'acceptation officielle. Janet peut y tenir le rôle d'invitée d'honneur, prenant la parole sur les femmes, la créativité, l'héritage et l'impact, avec une possible apparition dans le final plutôt qu'un concert complet."],
+    m:["Forum femmes et investissement à huis clos","La Nuit des Femmes, événement public","Reconnaissance de dix femmes ivoiriennes remarquables","Philanthropie pour les filles et les enfants"]}},
+ {p:"San Pédro",
+  en:{d:"Day 6",k:"San Pédro · South West",t:"The other Ivory Coast.",
+    body:["A private flight to San Pédro opens another chapter of Côte d'Ivoire: the western coastline, local culture, nature and an important economic region. The programme can combine cultural immersion, women led agricultural or cocoa initiatives, regional performances, a coastal experience and a sunset dinner.","This expands the story beyond Abidjan and gives the visit a national dimension: South East, Centre and South West."],
+    m:["Private flight to San Pédro","Women led cocoa &amp; agricultural initiatives","Regional performances &amp; coastal sunset"]},
+  fr:{d:"Jour 6",k:"San Pédro · Sud Ouest",t:"L'autre Côte d'Ivoire.",
+    body:["Un vol privé vers San Pédro ouvre un autre chapitre de la Côte d'Ivoire: le littoral ouest, la culture locale, la nature et une région économique majeure. Le programme peut combiner immersion culturelle, initiatives agricoles ou cacaoyères portées par des femmes, performances régionales, expérience côtière et dîner au coucher du soleil.","Le récit s'étend ainsi hors d'Abidjan et donne à la visite une dimension nationale: Sud Est, Centre et Sud Ouest."],
+    m:["Vol privé vers San Pédro","Initiatives cacaoyères et agricoles portées par des femmes","Performances régionales et coucher de soleil côtier"]}},
+ {p:"Abidjan",
+  en:{d:"Day 7",k:"Abidjan · Departure",t:"Legacy &amp; departure.",
+    body:["A softer final day in Abidjan: a social impact moment with Children of Africa and children, a curated fashion and culture encounter with Ivorian designers and creators, a controlled press and photo opportunity, farewell lunch and departure."],
+    m:["Children of Africa social impact moment","Ivorian designers &amp; creators encounter","Controlled press moment &amp; farewell lunch"]},
+  fr:{d:"Jour 7",k:"Abidjan · Départ",t:"Héritage et départ.",
+    body:["Une dernière journée plus douce à Abidjan: un moment d'impact social avec Children of Africa et les enfants, une rencontre mode et culture avec des créateurs ivoiriens, un moment presse et photo maîtrisé, un déjeuner d'adieu et le départ."],
+    m:["Moment d'impact social avec Children of Africa","Rencontre avec des créateurs ivoiriens","Moment presse maîtrisé et déjeuner d'adieu"]}}
 ];
 
+// ============ French dictionary for static copy ============
+const FR={
+ herotag:'<span class="dot"></span>Proposition Confidentielle · Préparée pour Rolling Stone Africa · Août 2026',
+ h1:'Janet Jackson<br><span class="accent">en Côte d\'Ivoire</span>',
+ herosub:'Back to the Roots. Héritage, femmes et Afrique. Un voyage culturel de sept jours, livré sur le terrain par le seul partenaire disposant d\'un accès institutionnel prouvé à travers la Côte d\'Ivoire.',
+ chip1:'<b>Krindjabo</b>Racines',chip2:'<b>Abidjan</b>Impact',chip3:'<b>Yamoussoukro</b>Héritage',chip4:'<b>Assinie</b>Aspiration',chip5:'<b>San Pédro</b>Découverte',
+ portraitcap:'Mme Janet Jackson',
+ storyeb:'L\'Histoire',
+ storyh2:'Une boucle qui se referme.<br><em>Un chapitre qui s\'ouvre.</em>',
+ storyp:'Ce n\'est pas une visite de célébrité de plus. C\'est le retour d\'une famille dont l\'histoire est déjà écrite dans la terre ivoirienne.',
+ y1h:'Michael arrive à Krindjabo',
+ y1p:'Michael Jackson est reçu par la Maison Royale du Sanwi à Krindjabo, intégré à la lignée royale et nommé Amalaman Anoh. En 1995, il reçoit le Roi Nana Amon Ndoufou IV à Los Angeles. Après sa disparition en 2009, le Royaume organise deux jours de cérémonie funéraire royale en son honneur.',
+ y2h:'Janet revient',
+ y2p:'Plus de trois décennies plus tard, Janet Jackson peut fouler la même terre. Un épisode du documentaire Culture on Culture et une couverture LEGEND de Rolling Stone Africa, réalisés en Côte d\'Ivoire, transforment une mémoire familiale en moment culturel mondial.',
+ quote:'Janet Jackson est revenue sur la terre africaine qui avait accueilli son frère, a célébré une nouvelle génération de femmes africaines et a porté l\'héritage Jackson vers l\'avenir.',
+ quotewho:'Le positionnement final · Back to the Roots',
+ whyeb:'Pourquoi AToure',
+ whyh2:'Tout le monde peut admirer ce projet.<br><em>Très peu peuvent le livrer.</em>',
+ whyp:'Un projet de ce poids se gagne ou se perd sur le terrain: protocole, sécurité, autorisations, institutions et relations. C\'est précisément là qu\'AToure opère, et là que nous avons déjà livré au plus haut niveau sur ce marché exact.',
+ p1h:'Accès institutionnel direct',
+ p1p:'Des lignes de coordination directes vers la Présidence, le Cabinet de la Première Dame, le Ministère du Tourisme et le Ministère de la Culture. Pas des introductions par intermédiaires. Des relations déjà activées sur des projets livrés.',
+ p2h:'La sécurité à l\'échelle nationale',
+ p2p:'Pour IShowSpeed en Côte d\'Ivoire, nous avons mobilisé plus de 600 agents de sécurité à l\'échelle de la ville, avec escorte policière, accès aux zones restreintes et privatisation d\'espaces publics. Nous coordonnons avec le Ministère de l\'Intérieur et la Police Nationale.',
+ p3h:'Des sponsors conclus sur ce marché',
+ p3p:'MTN, Solibra et Snedai conclus à partir de zéro relation préexistante pour une seule visite de créateur. Nous savons quelles marques ivoiriennes financent les moments culturels, et comment structurer des partenariats auxquels elles disent oui.',
+ p4h:'Des preuves, pas des promesses',
+ p4p:'1,57 milliard de vues sur l\'Ashton Hall Africa Tour. Un record CAN de 6,1 milliards d\'impressions numériques au Maroc. Une reconnaissance présidentielle en Côte d\'Ivoire. Chaque chiffre vérifié, chaque projet livré de bout en bout.',
+ cmpeb:'La preuve, côte à côte',
+ cmph3:'Nous avons déjà mis en scène <em>ce moment.</em>',
+ cmpp1:'À gauche, IShowSpeed reçu selon la tradition royale lors de la visite qu\'AToure a construite de zéro. À droite, Michael Jackson à Krindjabo en 1992. Les mêmes honneurs, le même pays, une génération d\'écart. L\'un de ces moments appartient à l\'histoire. L\'autre est notre travail.',
+ cmpp2:'Voilà le standard que nous apportons au retour de Janet: ne pas décrire les moments iconiques, les produire.',
+ neteb:'Réseau d\'Accès Stratégique',
+ neth2:'Institutions, protocole,<br><em>sécurité et municipalités.</em>',
+ netp:'Le réseau de travail qu\'AToure coordonne pour la facilitation officielle et les déplacements VIP à travers la Côte d\'Ivoire. Touchez une carte pour voir comment elle sert ce projet.',
+ tab1:'Tout',tab2:'Présidence &amp; Gouvernement',tab3:'Sécurité',tab4:'Municipalités',tab5:'Aviation',tab6:'Commercial',
+ hint:'Toucher pour développer',
+ nc1c:'Présidence &amp; Gouvernement',nc1h:'Présidence de la République',nc1r:'Cabinet, protocole et coordination institutionnelle',
+ nc1m:'Le plus haut niveau d\'appui institutionnel disponible dans le pays. Pour une visite de ce profil, l\'alignement du protocole présidentiel façonne tout le reste: posture de sécurité, accueil officiel et cadrage médiatique national.',
+ nc2c:'Présidence &amp; Gouvernement',nc2h:'Cabinet de la Première Dame',nc2r:'Cabinet de la Première Dame Dominique Ouattara',
+ nc2m:'Protocole, impact social et coordination des invités de haut niveau. Le partenaire institutionnel naturel des piliers femmes et enfants de ce voyage, y compris les moments avec la Fondation Children of Africa, sous réserve d\'acceptation officielle. C\'est aussi la porte du Gala Children of Africa, détaillé dans la section voyage.',
+ nc3c:'Présidence &amp; Gouvernement',nc3h:'Ministère du Tourisme et des Loisirs',nc3r:'Ministre Siandou Fofana',
+ nc3m:'Positionnement touristique, soutien à la destination, hospitalité et programmation touristique officielle. Le travail d\'AToure sur la visite d\'IShowSpeed a valu une reconnaissance personnelle du Ministre du Tourisme.',
+ nc4c:'Présidence &amp; Gouvernement',nc4h:'Ministère de la Culture et de la Francophonie',nc4r:'Ministre Françoise Remarck',
+ nc4m:'Programmation culturelle, patrimoine, artistes, visibilité institutionnelle et protocole culturel. Central pour les chapitres de Krindjabo et Yamoussoukro et pour toute mise en scène culturelle nationale.',
+ nc5c:'Présidence &amp; Gouvernement',nc5h:'Le Réseau Ministériel Élargi',nc5r:'Un accès direct à travers le gouvernement',
+ nc5m:'Outre les ministères nommés ici, AToure maintient un accès de travail direct aux autres ministères du gouvernement ivoirien. Quelle que soit la porte qu\'un moment exige, protocole, communication, transport ou autre, nous y accédons directement plutôt que par intermédiaires.',
+ nc6c:'Sécurité &amp; Appui Officiel',nc6h:'Ministère de l\'Intérieur et de la Sécurité',nc6r:'Ministre Gén. Vagondo Diomande',
+ nc6m:'Coordination sécuritaire et autorisations officielles lorsque nécessaire. Le canal par lequel la posture de sécurité nationale de la visite est convenue et approuvée.',
+ nc7c:'Sécurité &amp; Appui Officiel',nc7h:'Police Nationale · DGPN',nc7r:'Directeur Général Youssouf Kouyate',
+ nc7m:'Appui policier, escorte et coordination de la sécurité opérationnelle: escorte motorisée, sécurisation des itinéraires, renfort des sites et liaison avec les commandements de police concernés, sous réserve d\'approbation formelle.',
+ nc8c:'Grand Abidjan',nc8r:'Communes prioritaires pour l\'hospitalité et le protocole',
+ nc8m:'Cocody pour les résidences, les lieux premium et les réceptions officielles. Le Plateau pour le quartier des affaires, les sites institutionnels et les itinéraires cérémoniels.',
+ nc9c:'Grand Abidjan',nc9r:'Zone 4, événements et logistique aéroportuaire',
+ nc9m:'Coordination municipale pour l\'hospitalité, la vie nocturne, les lieux événementiels et culturels, ainsi que l\'accès aéroport, les arrivées, les départs et la logistique de la zone aéroportuaire via Port Bouet.',
+ nc10c:'Grand Abidjan',nc10r:'L\'engagement du public à grande échelle',
+ nc10m:'Engagement public à grande échelle, activations culturelles et programmation de proximité, avec Koumassi, Bingerville et le réseau municipal étendu pour les lieux, les déplacements et la logistique d\'appui.',
+ nc11c:'Aviation',nc11r:'Relations aériennes nationales et internationales',
+ nc11m:'Voyages VIP, liaisons intérieures vers San Pédro, connexions régionales, long courrier premium et appui possible en partenariat sur les deux compagnies.',
+ nc12c:'Aviation',nc12r:'Aviation privée et écosystème aéroportuaire',
+ nc12m:'FBO d\'aviation privée à l\'Aéroport International Félix Houphouët Boigny: terminal VIP, assistance au sol, conciergerie et support avions, avec courtage de jets à la demande et coordination avec l\'exploitant de l\'aéroport pour le protocole et les accès.',
+ nc13c:'Commercial',nc13h:'Marques &amp; Partenaires Médias',nc13r:'Canal+, Solibra, Nespresso, SOCIDA et plus',
+ nc13m:'Collaboration médias et diffusion via Canal+. Boissons et hospitalité premium via Solibra, Nespresso et Zino. Flotte et mobilité avec chauffeur via SOCIDA. Activation grand public et lifestyle via CEMOI, Uniwax, Foods Co et d\'autres: des partenaires capables de financer expériences, cadeaux, moments culturels et couverture médias.',
+ netdisc:'L\'accès au réseau et le potentiel de collaboration ne constituent pas des engagements confirmés. Chaque activation reste soumise à des démarches formelles, aux disponibilités, aux approbations, aux devis et aux exigences de protocole et de sécurité.',
+ receb:'Références',
+ rech2:'Nous l\'avons déjà fait.<br><em>Dans ce pays.</em>',
+ recp:'Trois mandats livrés. Chaque chiffre vérifié à partir des données officielles de diffusion et de plateforme.',
+ c1tag:'Côte d\'Ivoire · 2024',c1h:'IShowSpeed × Côte d\'Ivoire',
+ c1p:'L\'un des plus grands créateurs du monde atterrissant en Afrique de l\'Ouest sans aucune infrastructure existante. AToure a construit toute la machine opérationnelle et commerciale de zéro, et livré le moment culturel Zaouli qui a fait le tour du monde, valant une reconnaissance personnelle du Ministre du Tourisme de Côte d\'Ivoire.',
+ c1s1:'Vues Instagram',c1s2:'Visas d\'État obtenus',c1s3:'Agents de sécurité',
+ c2tag:'Maroc · Finale CAN 2025',
+ c2p:'AToure a conçu l\'intégration de la mascotte officielle, obtenu la validation de la CAF et de la Fédération Royale Marocaine de Football, et livré la facilitation d\'État de bout en bout: visas, autorisations de jet privé, permis, sécurité et la révélation en direct.',
+ c2s1:'Vues du direct',c2s2:'Impressions numériques',c2s3:'Audience TV de la finale',
+ c3tag:'Cinq Pays · 2026',
+ c3p:'Ghana, Cameroun, Nigéria, Bénin et Rwanda. AToure a mené toute la tournée pays par pays: partenariats, sponsors, médias, visas, sécurité, transport et itinéraire quotidien, avec une couverture de presse nationale sur chaque marché en trois langues.',
+ c3s1:'Vues totales de la tournée',c3s2:'Pays livrés',c3s3:'Plus gros post unique',
+ caselink:'Voir l\'étude de cas complète ↗',
+ jeb:'Le Voyage · Sept Jours',
+ jh2:'Back to the Roots.<br><em>Jour après jour.</em>',
+ jp:'Une histoire culturelle de sept jours reliant héritage, mémoire, autonomisation des femmes, philanthropie et Côte d\'Ivoire contemporaine. Sélectionnez un jour pour l\'explorer. Ceci est un itinéraire concept: le programme exact sera organisé et créé avec l\'équipe de Rolling Stone Africa et les producteurs de la tournée.',
+ geb:'L\'Opportunité de Calendrier',
+ gh3:'Le Gala Children of Africa.<br><em>9 octobre 2026.</em>',
+ gp1:'La Fondation Children of Africa, créée par la Première Dame Dominique Ouattara, tient son 10e Dîner de Gala le vendredi 9 octobre 2026 au Sofitel Abidjan Hôtel Ivoire, sous le thème Light to Africa: Together for Youth to Shine. C\'est l\'une des soirées caritatives les plus prestigieuses du continent.',
+ gp2:'Les éditions passées ont réuni plus de 900 personnalités dans une même salle: le Président Alassane Ouattara, l\'ancien Président français Nicolas Sarkozy, Isabelle Adjani, Patrick Bruel, Youssou N\'Dour et des leaders du cinéma, de la musique, du sport et des affaires, d\'Afrique et du monde. Chaque édition finance des projets concrets. La 9e a financé une nouvelle aile de chirurgie cardiaque à l\'Hôpital Mère Enfant de Bingerville. La 10e construit le Centre des Jeunes de Treichville.',
+ ginv:'Par le Cabinet de la Première Dame, AToure peut solliciter une invitation d\'honneur pour Janet, sous réserve d\'acceptation officielle. Aligner le voyage avec la semaine du gala la placerait à la table la plus exclusive d\'Afrique, aux côtés de la Première Dame, devant tous les décideurs du pays.',
+ gf1v:'9 octobre 2026',gf1l:'10e Dîner de Gala · Sofitel Abidjan Hôtel Ivoire',
+ gf2v:'Plus de 900',gf2l:'Personnalités réunies lors des éditions passées',
+ gf3v:'Chefs d\'État',gf3l:'Présidents, icônes mondiales &amp; grands dirigeants',
+ gf4v:'Invitée d\'honneur',gf4l:'Invitation sollicitée via le Cabinet de la Première Dame',
+ opseb:'Opérations &amp; Sécurité',
+ opsh2:'Chaque pièce de l\'opération.<br><em>Un seul partenaire responsable.</em>',
+ opsp:'Le même système opérationnel qui a livré la visite d\'IShowSpeed en Côte d\'Ivoire, élevé au niveau de protocole que cette invitée mérite.',
+ o1h:'Protocole &amp; accueil officiel',o1p:'Facilitation des arrivées et départs à l\'aéroport, accueil officiel, itinéraires cérémoniels et coordination institutionnelle à chaque niveau de gouvernement.',
+ o2h:'Visas &amp; autorisations',o2p:'Visas d\'État et autorisations de frontière pour la délégation complète de 15 personnes, traités par les canaux officiels comme sur les mandats précédents.',
+ o3h:'Protection rapprochée &amp; police',o3p:'Six gardes du corps dédiés, escorte motorisée de police, sécurisation des itinéraires, renfort des sites et une enveloppe de sécurité policière provisionnelle, sous réserve d\'approbation formelle.',
+ o4h:'Transport &amp; aviation',o4p:'Une flotte de six véhicules premium avec chauffeurs, des itinéraires sécurisés dans toutes les communes et des options d\'aviation privée, dont le vol intérieur vers San Pédro.',
+ o5h:'Hospitalité',o5p:'Suite Présidentielle plus quatorze chambres de luxe sur sept nuits, avec programme de repas complet et surclassements d\'hospitalité premium via les négociations partenaires.',
+ o6h:'Permis &amp; médias',o6p:'Permis d\'équipement, de tournage et de diffusion dans toutes les juridictions, plus une enveloppe médias dédiée couvrant relations presse, photographie, vidéo et distribution.',
+ beb:'Budget Opérationnel de Sept Jours · 15 Personnes',
+ bh2:'Des chiffres transparents.<br><em>Aucune surprise.</em>',
+ bp:'Budget estimatif d\'accueil et de logistique couvrant transport, hospitalité, sécurité, repas et médias pour l\'ensemble du programme de sept jours.',
+ th1:'Poste',th2:'Base de calcul',th3:'Coût estimé',
+ b1:'Location de voitures',b1c:'6 véhicules premium × 7 jours',
+ b2:'Suite Présidentielle',b2c:'7 nuits',
+ b3:'14 chambres de luxe',b3c:'14 chambres × 7 nuits',
+ b4:'6 gardes du corps',b4c:'6 × 7 jours',
+ b5:'Escorte motorisée de police',b5c:'7 jours',
+ b6:'Renfort de sécurité policière',b6c:'Enveloppe de sécurité provisionnelle',
+ b7:'Déjeuners &amp; dîners',b7c:'15 personnes × 7 jours',
+ b8:'Couverture médias',b8c:'Enveloppe presse, photo, vidéo &amp; activation',
+ btot:'Total de base estimé',
+ envt:'Enveloppe de travail recommandée',
+ envp:'Recommandée pour préserver une marge pour le protocole, la sécurité, l\'hôtel, le transport et les ajustements médias.',
+ assum:'Hypothèses &amp; notes',
+ a1:'Repas calculés pour 15 personnes sur l\'ensemble du programme de sept jours.',
+ a2:'Base hôtelière: une Suite Présidentielle plus 14 chambres de luxe, sous réserve du devis hôtelier négocié.',
+ a3:'Six véhicules premium prévus pour une délégation de 15 personnes. Carburant, chauffeurs premium, heures supplémentaires et véhicules de sécurité additionnels exclus.',
+ a4:'Le montant de sécurité policière est une enveloppe provisionnelle, pas un tarif officiel de police.',
+ a5:'L\'enveloppe médias couvre les médias de travail. Le périmètre final devra définir relations presse, photographes, vidéastes, production de contenus, diffusion, interviews et distribution.',
+ a6:'Non inclus: vols internationaux, vols intérieurs vers San Pédro, cachets et frais d\'apparition, location de salles, production et scénographie, assurance, visas, équipe glam et dépenses personnelles.',
+ a7:'Document de planification, sous réserve des devis fournisseurs, des exigences de protocole et des approbations officielles de sécurité. Les montants USD sont des conversions indicatives.',
+ eeb:'Engagement',
+ eh2:'Comment nous travaillons<br><em>ensemble.</em>',
+ e1n:'Volet 01',e1h:'Partenaire opérationnel sur le terrain',
+ e1p:'AToure agit comme partenaire organisateur sur le terrain pour l\'ensemble du programme de sept jours: facilitation institutionnelle, protocole, architecture de sécurité, logistique, hospitalité, permis et livraison locale de chaque chapitre du voyage. Structuré en honoraires d\'organisation de base, dimensionnés sur le budget final de la tournée.',
+ e2n:'Volet 02',e2h:'Sponsoring &amp; partenariats',
+ e2p:'AToure amène des sponsors ivoiriens et régionaux dans le projet, comme livré précédemment avec MTN, Solibra et Snedai. Les revenus de sponsoring qu\'AToure apporte portent une commission de succès, alignant nos intérêts sur la force commerciale du projet.',
+ ctah2:'Les fenêtres institutionnelles dépendent des calendriers officiels.<br><em>Verrouillons les dates.</em>',
+ ctap:'La Présidence, le Cabinet de la Première Dame et les ministères planifient selon des calendriers officiels. Plus tôt le périmètre est confirmé, plus tôt AToure peut sécuriser les dates officielles, le protocole et les autorisations de sécurité de la visite.',
+ ctabtn:'Planifier l\'appel',
+ fconf:'Confidentiel · Préparé pour Rolling Stone Africa',
+ fline:'Baba Touré · Directeur · AToure Management &amp; Consulting · Fondée en 2023, Londres',
+ nav1:'L\'Histoire',nav2:'Pourquoi AToure',nav3:'Accès',nav4:'Références',nav5:'Le Voyage',nav6:'Opérations',nav7:'Budget',nav8:'Engagement',
+ prevday:'← Jour précédent',nextday:'Jour suivant →',keymoments:'Moments clés',lbof:'sur'
+};
+
+// capture English originals so we can toggle back
+const EN={};
+document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(!(k in EN))EN[k]=el.innerHTML});
+const NAV_EN=[...document.querySelectorAll('#navlinks a')].map(a=>a.innerHTML);
+let LANG='en';
+
+// ============ days rendering (language aware) ============
+let currentDay=0;
 const daysEl=document.getElementById('days'),panelsEl=document.getElementById('daypanels');
-DAYS.forEach((day,i)=>{
-  const b=document.createElement('button');b.className='daybtn'+(i===0?' on':'');
-  b.innerHTML=`<div class="d">${day.d}</div><div class="p">${day.p}</div>`;
-  b.onclick=()=>showDay(i);daysEl.appendChild(b);
-  const p=document.createElement('div');p.className='daypanel'+(i===0?' on':'');
-  p.innerHTML=`<div class="body"><div class="k">${day.k}</div><h3>${day.t}</h3>
-    ${day.body.map(x=>`<p>${x}</p>`).join('')}
-    ${day.note?`<div class="note">${day.note}</div>`:''}
-    <div class="daynav">
-      <button onclick="showDay(${(i+DAYS.length-1)%DAYS.length})">← Previous day</button>
-      <button onclick="showDay(${(i+1)%DAYS.length})">Next day →</button>
-    </div></div>
-    <div><div class="moments">${day.img?`<img class="dayimg" src="${day.img.src}" alt="${day.img.alt}" loading="lazy" data-ph="${day.img.ph}">`:''}<div class="t">Key moments</div><ul>${day.m.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`;
-  panelsEl.appendChild(p);
-});
+function renderDays(){
+  daysEl.innerHTML='';panelsEl.innerHTML='';
+  DAYS.forEach((day,i)=>{
+    const L=day[LANG];
+    const b=document.createElement('button');b.className='daybtn'+(i===currentDay?' on':'');
+    b.innerHTML=`<div class="d">${L.d}</div><div class="p">${day.p}</div>`;
+    b.onclick=()=>showDay(i);daysEl.appendChild(b);
+    const p=document.createElement('div');p.className='daypanel'+(i===currentDay?' on':'');
+    const prev=LANG==='fr'?FR.prevday:'← Previous day';
+    const next=LANG==='fr'?FR.nextday:'Next day →';
+    const km=LANG==='fr'?FR.keymoments:'Key moments';
+    p.innerHTML=`<div class="body"><div class="k">${L.k}</div><h3>${L.t}</h3>
+      ${L.body.map(x=>`<p>${x}</p>`).join('')}
+      ${L.note?`<div class="note">${L.note}</div>`:''}
+      <div class="daynav">
+        <button onclick="showDay(${(i+DAYS.length-1)%DAYS.length})">${prev}</button>
+        <button onclick="showDay(${(i+1)%DAYS.length})">${next}</button>
+      </div></div>
+      <div><div class="moments">${day.img?`<img class="dayimg" src="${day.img.src}" alt="${day.img.alt}" loading="lazy" data-ph="${day.img.ph}">`:''}<div class="t">${km}</div><ul>${L.m.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`;
+    panelsEl.appendChild(p);
+  });
+}
 function showDay(i){
+  currentDay=i;
   document.querySelectorAll('.daybtn').forEach((b,j)=>b.classList.toggle('on',j===i));
   document.querySelectorAll('.daypanel').forEach((p,j)=>p.classList.toggle('on',j===i));
   document.getElementById('journey').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
+renderDays();
 
-// network filter + expand
+// ============ language toggle ============
+function setLang(lang){
+  LANG=lang;
+  document.documentElement.setAttribute('lang',lang);
+  document.querySelectorAll('[data-t]').forEach(el=>{
+    const k=el.dataset.t;
+    el.innerHTML=lang==='fr'?(FR[k]!==undefined?FR[k]:EN[k]):EN[k];
+  });
+  document.querySelectorAll('#navlinks a').forEach((a,i)=>{
+    a.innerHTML=lang==='fr'?FR['nav'+(i+1)]:NAV_EN[i];
+  });
+  document.querySelectorAll('.langtoggle button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+  renderDays();
+  renderBudget(currentCur);
+}
+document.querySelectorAll('.langtoggle button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+
+// ============ network filter + expand ============
 document.querySelectorAll('.nettab').forEach(t=>t.onclick=()=>{
   document.querySelectorAll('.nettab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
   const f=t.dataset.f;
@@ -763,17 +951,20 @@ document.querySelectorAll('.nettab').forEach(t=>t.onclick=()=>{
 });
 document.querySelectorAll('.netcard').forEach(c=>c.onclick=()=>c.classList.toggle('open'));
 
-// budget currency toggle (indicative rate from the source document: 567 FCFA to 1 USD)
+// ============ budget (indicative rate from the source document: 567 FCFA to 1 USD) ============
 const RATE=567;
+let currentCur='fcfa';
 function fmtF(n){return n.toLocaleString('en-US')+' FCFA'}
 function fmtU(n){return '≈ $'+(Math.round(n/RATE/100)*100).toLocaleString('en-US')}
 function renderBudget(cur){
+  currentCur=cur;
   document.querySelectorAll('#btable [data-f]').forEach(td=>{
     const v=+td.dataset.f;td.textContent=cur==='fcfa'?fmtF(v):fmtU(v);
   });
+  const joiner=LANG==='fr'?' à ':' to ';
   document.getElementById('envval').textContent=cur==='fcfa'
-    ?'65,000,000 to 70,000,000 FCFA'
-    :'≈ $114,600 to $123,500';
+    ?('65,000,000'+joiner+'70,000,000 FCFA')
+    :('≈ $114,600'+joiner+'$123,500');
 }
 document.querySelectorAll('.btoggle button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.btoggle button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
@@ -781,7 +972,7 @@ document.querySelectorAll('.btoggle button').forEach(b=>b.onclick=()=>{
 });
 renderBudget('fcfa');
 
-// lightbox
+// ============ lightbox ============
 const lb=document.createElement('div');lb.id='lb';
 lb.innerHTML='<button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><button class="x" aria-label="Close">×</button><div class="ct"></div>';
 document.body.appendChild(lb);
@@ -790,7 +981,8 @@ function lbShow(i){
   lbIdx=(i+lbGroup.length)%lbGroup.length;
   const s=lbGroup[lbIdx];
   lb.querySelector('img').src=s.src;lb.querySelector('img').alt=s.alt||'';
-  lb.querySelector('.ct').textContent=lbGroup.length>1?`${lbIdx+1} of ${lbGroup.length}`:'';
+  const of=LANG==='fr'?FR.lbof:'of';
+  lb.querySelector('.ct').textContent=lbGroup.length>1?`${lbIdx+1} ${of} ${lbGroup.length}`:'';
   const nav=lbGroup.length>1?'':'none';
   lb.querySelector('.pv').style.display=nav;lb.querySelector('.nx').style.display=nav;
 }
@@ -814,18 +1006,18 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight')lbShow(lbIdx+1);
 });
 
-// graceful placeholder while a photo is not yet uploaded
+// ============ graceful placeholder while a photo is not yet uploaded ============
 document.querySelectorAll('img[data-ph]').forEach(img=>img.addEventListener('error',()=>{
   const d=document.createElement('div');d.className='imgph';d.textContent=img.dataset.ph;
   if(img.className)d.classList.add(...img.className.split(' '));
   img.replaceWith(d);
 }));
 
-// reveal on scroll
+// ============ reveal on scroll ============
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-// animated counters
+// ============ animated counters ============
 const cio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;cio.unobserve(e.target);
   const el=e.target,target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',dec=(''+el.dataset.count).includes('.')?1:0;
@@ -836,7 +1028,7 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 
-// progress + scrollspy
+// ============ progress + scrollspy ============
 const links=[...document.querySelectorAll('#navlinks a')];
 const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
 addEventListener('scroll',()=>{
