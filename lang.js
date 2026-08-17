@@ -15,6 +15,43 @@
   "use strict";
 
   var FR = {
+    /* Race Weekend, creator roster and coverage */
+    "Creator Roster": "Panel de créateurs",
+    "Content creator": "Créateur de contenu",
+    "Authority filled the room. Reach filled the feed. AToure brought in seven Ivorian creators to carry Race Weekend across social, from national television faces to automotive and lifestyle voices. Between them they hold close to 3.9 million followers, an audience many times larger than any venue in Abidjan could seat.": "L'autorité remplissait la salle. L'audience remplissait les fils. AToure a fait venir sept créateurs ivoiriens pour porter Race Weekend sur les réseaux, des visages de la télévision nationale aux voix de l'automobile et du lifestyle. Ensemble, ils réunissent près de 3,9 millions d'abonnés, une audience bien supérieure à ce que n'importe quel lieu d'Abidjan pourrait accueillir.",
+    "1.9M followers": "1,9 M d'abonnés",
+    "683K followers": "683 K d'abonnés",
+    "394K followers": "394 K d'abonnés",
+    "392K followers": "392 K d'abonnés",
+    "227K followers": "227 K d'abonnés",
+    "182K followers": "182 K d'abonnés",
+    "126K followers": "126 K d'abonnés",
+    "Actress and influencer": "Actrice et influenceuse",
+    "@zeinabbey, projection host on Sunday": "@zeinabbey, hôtesse de la projection le dimanche",
+    "3.9M": "3,9 M",
+    "Combined following across the seven accounts. Followers are summed, not deduplicated.": "Audience cumulée des sept comptes. Les abonnés sont additionnés, sans dédoublonnage.",
+    "Host and animator, 1.9M followers": "Animateur et présentateur, 1,9 M d'abonnés",
+    "Projection host, Sunday": "Hôtesse de la projection, le dimanche",
+    "Two accounts were built for the event and run through the weekend: @race.weekend for the audience and @race.mediaciv for the media desk. Both started from nothing.": "Deux comptes ont été créés pour l'événement et animés tout le week-end : @race.weekend pour le public et @race.mediaciv pour le pôle média. Les deux sont partis de zéro.",
+    "169,500": "169 500",
+    "Views across eight reels on the event account, led by a single post at 64,500": "Vues sur huit reels du compte de l'événement, dont une seule publication à 64 500",
+    "12,700": "12 700",
+    "Likes on the Scoop Afrique report from the weekend, on TikTok alone": "J'aime sur le reportage Scoop Afrique du week-end, sur TikTok seulement",
+    "4,352": "4 352",
+    "Followers on the two event accounts, built from a standing start": "Abonnés sur les deux comptes de l'événement, partis de zéro",
+    "Posts published across the event and media accounts": "Publications sur les comptes événement et média",
+    "Figures read from the account and platform screens as at August 2026. Reel views cover the eight posts visible on the grid, not the full 26. The Scoop Afrique figure is likes, not views.": "Chiffres relevés sur les écrans des comptes et des plateformes en août 2026. Les vues des reels portent sur les huit publications visibles sur la grille, pas sur les 26. Le chiffre Scoop Afrique correspond aux j'aime, pas aux vues.",
+    "Press & Platforms": "Presse et plateformes",
+    "Race Weekend was covered by Ivorian and panafrican media, by the broadcast partner, and by the country's events and lifestyle pages. These are the outlets carrying the event publicly.": "Race Weekend a été couvert par des médias ivoiriens et panafricains, par le partenaire diffuseur et par les pages événementielles et lifestyle du pays. Voici les supports qui ont relayé l'événement publiquement.",
+    "Panafrican digital news. Reported the weekend as a success across TikTok, Instagram and Facebook, with the TikTok cut passing 12,700 likes and framing the venue as Abidjan living to the rhythm of the Monaco Grand Prix.": "Média numérique panafricain. A rendu compte du succès du week-end sur TikTok, Instagram et Facebook, le montage TikTok dépassant 12 700 j'aime et présentant le lieu comme Abidjan vivant au rythme du Grand Prix de Monaco.",
+    "Broadcast partner. Promoted Race Weekend to its own Facebook and Instagram audiences ahead of both days, carrying the venue, the dates and the booking line.": "Partenaire diffuseur. A promu Race Weekend auprès de ses propres audiences Facebook et Instagram avant les deux jours, en relayant le lieu, les dates et la ligne de réservation.",
+    "Ivorian culture and events guide. Listed Race Weekend at Gasóleo across the two days, crediting AToure Management as organiser.": "Guide culturel et événementiel ivoirien. A référencé Race Weekend au Gasóleo sur les deux jours, en créditant AToure Management comme organisateur.",
+    "Venue partner. Ran the event through its own Instagram and Facebook channels to a standing motorsport audience in Abidjan.": "Partenaire du lieu. A relayé l'événement sur ses propres canaux Instagram et Facebook auprès d'une audience motorsport déjà installée à Abidjan.",
+    "Ivorian listings and city guide. Carried the announcement to its TikTok following in the run up to the weekend.": "Guide de sorties et d'adresses ivoirien. A relayé l'annonce auprès de sa communauté TikTok à l'approche du week-end.",
+    "Creator and community pages": "Pages de créateurs et de communauté",
+    "Independent recaps from Abidjan creators and photographers, including World of Souley, Bictogo Abdel and Henri Toh Pixel, each posting their own cut of the weekend.": "Des comptes rendus indépendants de créateurs et de photographes d'Abidjan, dont World of Souley, Bictogo Abdel et Henri Toh Pixel, chacun publiant sa propre version du week-end.",
+    "Seven creators, 3.9M combined following": "Sept créateurs, 3,9 M d'abonnés cumulés",
+    "Covered by Scoop Afrique, Canal+ and Baab": "Couvert par Scoop Afrique, Canal+ et Baab",
     "#1 Trending": "N° 1 des tendances",
     "#1 most-watched live": "Direct le plus regardé",
     "#10 most popular broadcast": "10e diffusion la plus populaire",
@@ -861,6 +898,9 @@
   /* Headings whose English splits across <br> / <em> nodes translate badly word
      by word, so they are swapped whole. Keyed on the element's own markup. */
   var FR_HTML = {
+    /* Race Weekend, creator roster and coverage */
+    "Seven creators, <em>one weekend.</em>": "Sept créateurs, <em>un week-end.</em>",
+    "Who picked <em>it up.</em>": "Qui en a <em>parlé.</em>",
     "<span class=\"ctry-flag rf-bj\"></span>Benin": "<span class=\"ctry-flag rf-bj\"></span>Bénin",
     "<span class=\"ctry-flag rf-cm\"></span>Cameroon": "<span class=\"ctry-flag rf-cm\"></span>Cameroun",
     "<span class=\"ctry-flag rf-gh\"></span>Ghana": "<span class=\"ctry-flag rf-gh\"></span>Ghana",

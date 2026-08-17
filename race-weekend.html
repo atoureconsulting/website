@@ -200,6 +200,33 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
 .rw-guest.lead .rw-guest-n{font-size:1.7rem;color:var(--gold-lt);}
 .rw-guest.lead .rw-guest-r{font-size:.85rem;color:rgba(254,252,248,.62);}
 
+/* CREATOR ROSTER */
+.rw-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.8rem;}
+.rw-creator{background:rgba(254,252,248,.03);border:1px solid rgba(200,169,81,.14);border-radius:12px;padding:1.1rem 1.2rem;}
+.rw-creator-n{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--warm-white);margin-bottom:.3rem;line-height:1.25;}
+.rw-creator-h{font-size:.68rem;color:rgba(254,252,248,.42);margin-bottom:.5rem;}
+.rw-creator-f{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
+.rw-creator.total{background:rgba(200,169,81,.1);border-color:rgba(200,169,81,.35);display:flex;flex-direction:column;justify-content:center;}
+.rw-creator.total .rw-creator-n{font-size:1.65rem;color:var(--gold-lt);margin-bottom:.25rem;}
+.rw-creator.total .rw-creator-f{color:rgba(254,252,248,.55);font-weight:500;letter-spacing:.04em;text-transform:none;font-size:.72rem;line-height:1.5;}
+@media(max-width:900px){.rw-creators{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.rw-creators{grid-template-columns:1fr;}}
+
+/* DIGITAL RESULTS */
+.rw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;}
+.rw-stat{background:var(--warm-white);border:1px solid var(--cream-dk);border-radius:12px;padding:1.4rem 1.5rem;}
+.rw-stat-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold-dk);line-height:1;margin-bottom:.5rem;}
+.rw-stat-l{font-size:.72rem;color:rgba(13,12,10,.62);line-height:1.55;}
+@media(max-width:900px){.rw-stats{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.rw-stats{grid-template-columns:1fr;}}
+
+/* COVERAGE LIST */
+.rw-coverage{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.2rem;}
+.rw-cov{background:var(--warm-white);border:1px solid var(--cream-dk);border-left:3px solid var(--gold);border-radius:10px;padding:1.15rem 1.35rem;}
+.rw-cov-o{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--black);margin-bottom:.28rem;}
+.rw-cov-d{font-size:.74rem;color:rgba(13,12,10,.62);line-height:1.6;}
+@media(max-width:700px){.rw-coverage{grid-template-columns:1fr;}}
+
 /* PHOTO BAND (two-up) */
 .rw-band{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .rw-band figure{position:relative;overflow:hidden;border-radius:14px;box-shadow:var(--sh-sm);margin:0;}
@@ -221,6 +248,10 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
 .rw-partner:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:var(--sh-gold);}
 .rw-partner-n{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--black);line-height:1.15;}
 .rw-partner-r{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dk);margin-top:.5rem;}
+.rw-partner.mark{padding:0;overflow:hidden;}
+.rw-partner.mark .rw-logo{width:100%;flex:1 1 auto;min-height:112px;display:flex;align-items:center;justify-content:center;padding:1.4rem 1.6rem;}
+.rw-partner.mark .rw-logo img{max-width:86%;max-height:74px;object-fit:contain;display:block;}
+.rw-partner.mark .rw-partner-r{margin:0;padding:.55rem 0 .7rem;width:100%;background:var(--warm-white);}
 @media(max-width:900px){.rw-partner-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.rw-partner-grid{grid-template-columns:1fr;}}
 
@@ -396,7 +427,56 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
       </div>
       <div class="rw-guest">
         <div class="rw-guest-n">Willy Dumbo</div>
-        <div class="rw-guest-r">Host and animator</div>
+        <div class="rw-guest-r">Host and animator, 1.9M followers</div>
+      </div>
+      <div class="rw-guest">
+        <div class="rw-guest-n">Zeinab Beydoun</div>
+        <div class="rw-guest-r">Projection host, Sunday</div>
+      </div>
+    </div>
+
+    <div class="sec-label" style="margin-top:3.5rem;">Creator Roster</div>
+    <h2 class="sec-title">Seven creators, <em>one weekend.</em></h2>
+    <p class="body-txt">Authority filled the room. Reach filled the feed. AToure brought in seven Ivorian creators to carry Race Weekend across social, from national television faces to automotive and lifestyle voices. Between them they hold close to 3.9 million followers, an audience many times larger than any venue in Abidjan could seat.</p>
+    <div class="rw-creators">
+      <div class="rw-creator">
+        <div class="rw-creator-n">Willy Dumbo</div>
+        <div class="rw-creator-h">@willy_dumbo</div>
+        <div class="rw-creator-f">1.9M followers</div>
+      </div>
+      <div class="rw-creator">
+        <div class="rw-creator-n">Emmanuelle Keita</div>
+        <div class="rw-creator-h">Actress and influencer</div>
+        <div class="rw-creator-f">683K followers</div>
+      </div>
+      <div class="rw-creator">
+        <div class="rw-creator-n">Angelique AF</div>
+        <div class="rw-creator-h">@angeliqueaf_off</div>
+        <div class="rw-creator-f">394K followers</div>
+      </div>
+      <div class="rw-creator">
+        <div class="rw-creator-n">Officialnad</div>
+        <div class="rw-creator-h">@officialnad</div>
+        <div class="rw-creator-f">392K followers</div>
+      </div>
+      <div class="rw-creator">
+        <div class="rw-creator-n">Joel Williams</div>
+        <div class="rw-creator-h">Content creator</div>
+        <div class="rw-creator-f">227K followers</div>
+      </div>
+      <div class="rw-creator">
+        <div class="rw-creator-n">Zeinab Beydoun</div>
+        <div class="rw-creator-h">@zeinabbey, projection host on Sunday</div>
+        <div class="rw-creator-f">182K followers</div>
+      </div>
+      <div class="rw-creator">
+        <div class="rw-creator-n">Delali Damessi</div>
+        <div class="rw-creator-h">@delalidamessi</div>
+        <div class="rw-creator-f">126K followers</div>
+      </div>
+      <div class="rw-creator total">
+        <div class="rw-creator-n">3.9M</div>
+        <div class="rw-creator-f">Combined following across the seven accounts. Followers are summed, not deduplicated.</div>
       </div>
     </div>
   </div>
@@ -469,15 +549,15 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
     <h2 class="sec-title">Who backed <em>the weekend.</em></h2>
     <p class="body-txt">Race Weekend was delivered with a partner group spanning broadcast, hospitality, retail, energy and diplomatic representation. Brands that gave the event both its production backbone and its premium positioning.</p>
     <div class="rw-partner-grid">
-      <div class="rw-partner"><div class="rw-partner-n">Canal+</div><div class="rw-partner-r">Broadcast</div></div>
-      <div class="rw-partner"><div class="rw-partner-n">Nespresso</div></div>
-      <div class="rw-partner"><div class="rw-partner-n">Koton</div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#000;"><img src="Media/Race%20Weekend/logos/logo-canalplus.png" alt="Canal+" loading="lazy"></div><div class="rw-partner-r">Broadcast</div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#fff;"><img src="Media/Race%20Weekend/logos/logo-nespresso.png" alt="Nespresso" loading="lazy"></div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#F67F01;"><img src="Media/Race%20Weekend/logos/logo-koton.png" alt="Koton" loading="lazy"></div></div>
       <div class="rw-partner"><div class="rw-partner-n">Consulat de la Principaut&eacute; de Monaco</div><div class="rw-partner-r">En C&ocirc;te d&rsquo;Ivoire</div></div>
-      <div class="rw-partner"><div class="rw-partner-n">Zino Cigares</div></div>
-      <div class="rw-partner"><div class="rw-partner-n">Core Fitness</div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#fff;"><img src="Media/Race%20Weekend/logos/logo-zino.png" alt="Zino Cigares" loading="lazy"></div><div class="rw-partner-r">Cigares</div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#000;"><img src="Media/Race%20Weekend/logos/logo-core.png" alt="Core Fitness" loading="lazy"></div><div class="rw-partner-r">Fitness</div></div>
       <div class="rw-partner"><div class="rw-partner-n">Gas&oacute;leo</div></div>
-      <div class="rw-partner"><div class="rw-partner-n">LXOIL</div></div>
-      <div class="rw-partner"><div class="rw-partner-n">&eacute;binto</div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#2E3270;"><img src="Media/Race%20Weekend/logos/logo-lxoil.png" alt="LXOIL" loading="lazy"></div></div>
+      <div class="rw-partner mark"><div class="rw-logo" style="background:#000;"><img src="Media/Race%20Weekend/logos/logo-ebinto.png" alt="&eacute;binto" loading="lazy"></div></div>
     </div>
   </div>
 </section>
@@ -490,6 +570,7 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
         <h2 class="sec-title">Filmed, hosted, <em>covered.</em></h2>
         <p class="body-txt">Both days were produced as content from the outset: a dedicated photo and video team on site, hosted segments and interviews from the floor, and press and digital media accredited across the weekend.</p>
         <p class="body-txt" style="margin-top:1.1rem;">The output ran from editorial photography and creator reels through to official productions and backstage coverage, giving partners assets that lived well beyond the two days themselves.</p>
+        <p class="body-txt" style="margin-top:1.1rem;">Two accounts were built for the event and run through the weekend: @race.weekend for the audience and @race.mediaciv for the media desk. Both started from nothing.</p>
       </div>
       <div style="max-width:340px;margin:0 auto;">
         <video class="rw-video" controls playsinline preload="none" poster="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/race-weekend-reel-poster.webp">
@@ -499,6 +580,44 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
             <a href="https://raw.githubusercontent.com/atoureconsulting/website/main/Media/Race%20Weekend/web/race-weekend-reel.mp4" download class="btn btn-gold" style="font-size:.75rem;padding:10px 20px;">Download to view</a>
           </div>
         </video>
+      </div>
+    </div>
+
+    <div class="rw-stats">
+      <div class="rw-stat"><div class="rw-stat-n">169,500</div><div class="rw-stat-l">Views across eight reels on the event account, led by a single post at 64,500</div></div>
+      <div class="rw-stat"><div class="rw-stat-n">12,700</div><div class="rw-stat-l">Likes on the Scoop Afrique report from the weekend, on TikTok alone</div></div>
+      <div class="rw-stat"><div class="rw-stat-n">4,352</div><div class="rw-stat-l">Followers on the two event accounts, built from a standing start</div></div>
+      <div class="rw-stat"><div class="rw-stat-n">37</div><div class="rw-stat-l">Posts published across the event and media accounts</div></div>
+    </div>
+    <p class="body-txt" style="margin-top:1.2rem;font-size:.78rem;opacity:.7;">Figures read from the account and platform screens as at August 2026. Reel views cover the eight posts visible on the grid, not the full 26. The Scoop Afrique figure is likes, not views.</p>
+
+    <div class="sec-label" style="margin-top:3.5rem;">Press &amp; Platforms</div>
+    <h2 class="sec-title">Who picked <em>it up.</em></h2>
+    <p class="body-txt">Race Weekend was covered by Ivorian and panafrican media, by the broadcast partner, and by the country&rsquo;s events and lifestyle pages. These are the outlets carrying the event publicly.</p>
+    <div class="rw-coverage">
+      <div class="rw-cov">
+        <div class="rw-cov-o">Scoop Afrique</div>
+        <div class="rw-cov-d">Panafrican digital news. Reported the weekend as a success across TikTok, Instagram and Facebook, with the TikTok cut passing 12,700 likes and framing the venue as Abidjan living to the rhythm of the Monaco Grand Prix.</div>
+      </div>
+      <div class="rw-cov">
+        <div class="rw-cov-o">Canal+ C&ocirc;te d&rsquo;Ivoire</div>
+        <div class="rw-cov-d">Broadcast partner. Promoted Race Weekend to its own Facebook and Instagram audiences ahead of both days, carrying the venue, the dates and the booking line.</div>
+      </div>
+      <div class="rw-cov">
+        <div class="rw-cov-o">Baab</div>
+        <div class="rw-cov-d">Ivorian culture and events guide. Listed Race Weekend at Gas&oacute;leo across the two days, crediting AToure Management as organiser.</div>
+      </div>
+      <div class="rw-cov">
+        <div class="rw-cov-o">Superkart CI</div>
+        <div class="rw-cov-d">Venue partner. Ran the event through its own Instagram and Facebook channels to a standing motorsport audience in Abidjan.</div>
+      </div>
+      <div class="rw-cov">
+        <div class="rw-cov-o">Bons Plans C&ocirc;te d&rsquo;Ivoire</div>
+        <div class="rw-cov-d">Ivorian listings and city guide. Carried the announcement to its TikTok following in the run up to the weekend.</div>
+      </div>
+      <div class="rw-cov">
+        <div class="rw-cov-o">Creator and community pages</div>
+        <div class="rw-cov-d">Independent recaps from Abidjan creators and photographers, including World of Souley, Bictogo Abdel and Henri Toh Pixel, each posting their own cut of the weekend.</div>
       </div>
     </div>
   </div>
@@ -513,6 +632,8 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
       <div class="outcome-pill">First premium F1 activation in C&ocirc;te d&rsquo;Ivoire</div>
       <div class="outcome-pill">Format delivered end to end across both days</div>
       <div class="outcome-pill">Motorsport federation &amp; champions on site</div>
+      <div class="outcome-pill">Seven creators, 3.9M combined following</div>
+      <div class="outcome-pill">Covered by Scoop Afrique, Canal+ and Baab</div>
       <div class="outcome-pill">Nine partner brands on board</div>
       <div class="outcome-pill">Branded sponsor lounges &amp; photo wall</div>
       <div class="outcome-pill">Full photo and video production</div>
