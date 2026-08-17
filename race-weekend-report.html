@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Race Weekend Abidjan 2026 &middot; Post Event Report &middot; AToure</title>
+<style>
+@font-face{font-family:'Cormorant Garamond';src:url('brand-kit/02-fonts/CormorantGaramond-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'Cormorant Garamond';src:url('brand-kit/02-fonts/CormorantGaramond-600.ttf') format('truetype');font-weight:600;font-style:normal;font-display:block;}
+@font-face{font-family:'Cormorant Garamond';src:url('brand-kit/02-fonts/CormorantGaramond-600Italic.ttf') format('truetype');font-weight:600;font-style:italic;font-display:block;}
+@font-face{font-family:'Jost';src:url('brand-kit/02-fonts/Jost-300.ttf') format('truetype');font-weight:300;font-style:normal;font-display:block;}
+@font-face{font-family:'Jost';src:url('brand-kit/02-fonts/Jost-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'Jost';src:url('brand-kit/02-fonts/Jost-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:'Jost';src:url('brand-kit/02-fonts/Jost-600.ttf') format('truetype');font-weight:600;font-style:normal;font-display:block;}
+
+:root{
+  --gold:#C8A951;--gold-lt:#E0C47A;--gold-dk:#A08830;
+  --black:#0D0C0A;--black-mid:#151310;--black-soft:#1C1A16;
+  --cream:#FAF6EE;--warm-white:#FEFCF8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+body{background:#2a2825;font-family:'Jost',sans-serif;font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;color:var(--warm-white);}
+
+.slide{
+  width:1280px;height:720px;position:relative;overflow:hidden;
+  background:var(--black);margin:0 auto 24px;
+  padding:64px 76px;display:flex;flex-direction:column;
+  break-after:page;page-break-after:always;
+}
+.slide:last-child{break-after:auto;page-break-after:auto;}
+.slide::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52px;line-height:1.06;color:var(--warm-white);margin-bottom:18px;}
+.title em{font-style:italic;color:var(--gold-lt);}
+.lede{font-size:15.5px;font-weight:300;line-height:1.72;color:rgba(254,252,248,.66);max-width:820px;}
+.foot{position:absolute;left:76px;right:76px;bottom:34px;display:flex;justify-content:space-between;align-items:center;
+  font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(254,252,248,.3);
+  border-top:1px solid rgba(200,169,81,.16);padding-top:14px;}
+
+/* COVER */
+.cover{padding:0;}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.cover .veil{position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,12,10,.94) 0%,rgba(13,12,10,.82) 46%,rgba(13,12,10,.42) 100%);}
+.cover .inner{position:relative;height:100%;padding:76px;display:flex;flex-direction:column;justify-content:center;}
+.cover .wordmark{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:38px;}
+.cover h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:88px;line-height:.98;color:var(--warm-white);margin-bottom:10px;}
+.cover h1 em{display:block;font-style:italic;color:var(--gold-lt);font-size:56px;}
+.cover .meta{margin-top:34px;display:flex;gap:46px;}
+.cover .meta div{border-left:2px solid var(--gold);padding-left:16px;}
+.cover .meta b{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--warm-white);line-height:1.2;}
+.cover .meta span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(254,252,248,.45);}
+
+/* GRIDS */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px;}
+.stat{background:rgba(254,252,248,.045);border:1px solid rgba(200,169,81,.2);border-radius:12px;padding:24px 22px;}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:var(--gold-lt);line-height:1;margin-bottom:10px;}
+.stat span{font-size:11.5px;font-weight:300;line-height:1.6;color:rgba(254,252,248,.6);}
+
+.creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;}
+.creator{background:rgba(254,252,248,.04);border:1px solid rgba(200,169,81,.16);border-radius:12px;padding:20px 20px;}
+.creator .n{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--warm-white);line-height:1.15;margin-bottom:6px;}
+.creator .h{font-size:10.5px;font-weight:300;color:rgba(254,252,248,.42);line-height:1.5;margin-bottom:12px;min-height:31px;}
+.creator .f{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
+.creator.total{background:rgba(200,169,81,.12);border-color:rgba(200,169,81,.4);}
+.creator.total .n{font-size:40px;color:var(--gold-lt);margin-bottom:8px;}
+.creator.total .f{letter-spacing:.02em;text-transform:none;font-weight:300;font-size:11px;line-height:1.55;color:rgba(254,252,248,.6);}
+
+.cov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;}
+.cov{background:rgba(254,252,248,.04);border:1px solid rgba(200,169,81,.16);border-left:3px solid var(--gold);border-radius:10px;padding:20px 22px;}
+.cov b{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--warm-white);margin-bottom:8px;}
+.cov span{font-size:11px;font-weight:300;line-height:1.62;color:rgba(254,252,248,.55);}
+
+.note{margin-top:22px;font-size:10.5px;font-weight:300;line-height:1.65;color:rgba(254,252,248,.36);max-width:900px;}
+
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;margin-top:30px;align-items:start;}
+.col-h{font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.blist{list-style:none;}
+.blist li{position:relative;padding-left:20px;margin-bottom:11px;font-size:13.5px;font-weight:300;line-height:1.6;color:rgba(254,252,248,.7);}
+.blist li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:1px;background:var(--gold);}
+.shot{border-radius:12px;overflow:hidden;border:1px solid rgba(200,169,81,.2);}
+.shot img{width:100%;height:344px;object-fit:cover;display:block;}
+.shot figcaption{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(254,252,248,.4);padding:11px 14px;background:var(--black-soft);}
+
+.pills{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px;}
+.pill{background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.3);border-radius:999px;padding:10px 20px;font-size:12px;font-weight:400;color:rgba(254,252,248,.82);}
+
+.closing{justify-content:center;text-align:center;align-items:center;}
+.closing .title{font-size:62px;}
+.closing .contact{margin-top:30px;font-size:14px;font-weight:300;letter-spacing:.06em;color:rgba(254,252,248,.6);line-height:2;}
+.closing .contact b{color:var(--gold-lt);font-weight:500;}
+
+@page{size:1280px 720px;margin:0;}
+@media print{
+  body{background:none;}
+  .slide{margin:0;box-shadow:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="slide cover">
+  <img src="Media/Race%20Weekend/web/urus-front.webp" alt="">
+  <div class="veil"></div>
+  <div class="inner">
+    <div class="wordmark">AToure Management &amp; Consulting</div>
+    <h1>Race Weekend<em>Abidjan 2026</em></h1>
+    <div class="meta">
+      <div><b>6 &amp; 7 June 2026</b><span>Two days</span></div>
+      <div><b>Espace Superkart</b><span>Abidjan, C&ocirc;te d&rsquo;Ivoire</span></div>
+      <div><b>Post Event Report</b><span>Creators, reach and coverage</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. AT A GLANCE -->
+<section class="slide">
+  <div class="eyebrow">The Weekend</div>
+  <h2 class="title">Formula 1, <em>brought to Abidjan.</em></h2>
+  <p class="lede">Race Weekend took over Espace Superkart across two days and turned the Monaco Grand Prix into a destination: live projection on a giant screen, a karting circuit running alongside it, a supercar paddock, a VIP lounge above the track, and 300 guests a day drawn from the city&rsquo;s young professional and motorsport communities. It was the first premium Formula 1 activation staged in C&ocirc;te d&rsquo;Ivoire.</p>
+  <div class="stat-row">
+    <div class="stat"><b>600</b><span>Guests across the weekend, at 300 a day</span></div>
+    <div class="stat"><b>9</b><span>Partner brands, from broadcast to hospitality and energy</span></div>
+    <div class="stat"><b>7</b><span>Ivorian creators booked to carry the weekend on social</span></div>
+    <div class="stat"><b>3.9M</b><span>Combined following behind those seven accounts</span></div>
+  </div>
+  <div class="pills">
+    <div class="pill">Live Grand Prix on giant screen</div>
+    <div class="pill">Karting on the Superkart circuit</div>
+    <div class="pill">Supercar paddock</div>
+    <div class="pill">VIP lounge above the track</div>
+    <div class="pill">Motorsport federation and champions on site</div>
+    <div class="pill">Branded sponsor lounges and photo wall</div>
+  </div>
+  <div class="foot"><span>Race Weekend Abidjan 2026</span><span>AToure Management &amp; Consulting</span></div>
+</section>
+
+<!-- 3. CREATOR ROSTER -->
+<section class="slide">
+  <div class="eyebrow">Creator Roster</div>
+  <h2 class="title">Seven creators, <em>one weekend.</em></h2>
+  <p class="lede">Authority filled the room. Reach filled the feed. AToure brought in seven Ivorian creators, from national television faces to automotive and lifestyle voices. Between them they hold close to 3.9 million followers, an audience many times larger than any venue in Abidjan could seat.</p>
+  <div class="creator-grid">
+    <div class="creator"><div class="n">Willy Dumbo</div><div class="h">@willy_dumbo, host and animator across both days</div><div class="f">1.9M followers</div></div>
+    <div class="creator"><div class="n">Emmanuelle Keita</div><div class="h">Actress and influencer</div><div class="f">683K followers</div></div>
+    <div class="creator"><div class="n">Angelique AF</div><div class="h">@angeliqueaf_off</div><div class="f">394K followers</div></div>
+    <div class="creator"><div class="n">Officialnad</div><div class="h">@officialnad</div><div class="f">392K followers</div></div>
+    <div class="creator"><div class="n">Joel Williams</div><div class="h">Content creator</div><div class="f">227K followers</div></div>
+    <div class="creator"><div class="n">Zeinab Beydoun</div><div class="h">@zeinabbey, projection host on Sunday</div><div class="f">182K followers</div></div>
+    <div class="creator"><div class="n">Delali Damessi</div><div class="h">@delalidamessi</div><div class="f">126K followers</div></div>
+    <div class="creator total"><div class="n">3.9M</div><div class="f">Combined following across the seven accounts. Followers are summed, not deduplicated, so this is total audience rather than unique reach.</div></div>
+  </div>
+  <div class="foot"><span>Race Weekend Abidjan 2026</span><span>AToure Management &amp; Consulting</span></div>
+</section>
+
+<!-- 4. DIGITAL PERFORMANCE -->
+<section class="slide">
+  <div class="eyebrow">Digital Performance</div>
+  <h2 class="title">Built for the room. <em>Made for the feed.</em></h2>
+  <p class="lede">Two accounts were created for the event and run through the weekend: @race.weekend for the audience and @race.mediaciv for the media desk. Both started from nothing.</p>
+  <div class="stat-row">
+    <div class="stat"><b>169,500</b><span>Views across eight reels on the event account, led by a single post at 64,500</span></div>
+    <div class="stat"><b>12,700</b><span>Likes on the Scoop Afrique report from the weekend, on TikTok alone</span></div>
+    <div class="stat"><b>4,352</b><span>Followers on the two event accounts, built from a standing start</span></div>
+    <div class="stat"><b>37</b><span>Posts published across the event and media accounts</span></div>
+  </div>
+  <div class="two" style="grid-template-columns:1fr 1fr;margin-top:26px;">
+    <div>
+      <div class="col-h">Leading reels, of the eight visible</div>
+      <ul class="blist">
+        <li>64,500 views &middot; event identity film</li>
+        <li>44,400 views &middot; Race Weekend jersey reveal</li>
+        <li>22,400 views &middot; event flyer and line up</li>
+        <li>19,000 views &middot; branded cap and merchandise</li>
+      </ul>
+    </div>
+    <div>
+      <div class="col-h">Accounts</div>
+      <ul class="blist">
+        <li>@race.weekend &middot; 26 posts, 540 followers</li>
+        <li>@race.mediaciv &middot; 11 posts, 3,812 followers, verified</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note">Figures read from the account and platform screens as at August 2026. Reel views cover the eight posts visible on the grid, not the full 26, so the true total is higher. The Scoop Afrique figure is likes, not views. Creator side reach is not included here because it has not been reported back by the individual accounts.</div>
+  <div class="foot"><span>Race Weekend Abidjan 2026</span><span>AToure Management &amp; Consulting</span></div>
+</section>
+
+<!-- 5. COVERAGE -->
+<section class="slide">
+  <div class="eyebrow">Press &amp; Platforms</div>
+  <h2 class="title">Who picked <em>it up.</em></h2>
+  <p class="lede">Race Weekend was covered by Ivorian and panafrican media, by the broadcast partner, and by the country&rsquo;s events and lifestyle pages.</p>
+  <div class="cov-grid">
+    <div class="cov"><b>Scoop Afrique</b><span>Panafrican digital news. Reported the weekend as a success across TikTok, Instagram and Facebook, with the TikTok cut passing 12,700 likes and framing the venue as Abidjan living to the rhythm of the Monaco Grand Prix.</span></div>
+    <div class="cov"><b>Canal+ C&ocirc;te d&rsquo;Ivoire</b><span>Broadcast partner. Promoted Race Weekend to its own Facebook and Instagram audiences ahead of both days, carrying the venue, the dates and the booking line.</span></div>
+    <div class="cov"><b>Baab</b><span>Ivorian culture and events guide. Listed Race Weekend at Gas&oacute;leo across the two days, crediting AToure Management as organiser.</span></div>
+    <div class="cov"><b>Superkart CI</b><span>Venue partner. Ran the event through its own Instagram and Facebook channels to a standing motorsport audience in Abidjan.</span></div>
+    <div class="cov"><b>Bons Plans C&ocirc;te d&rsquo;Ivoire</b><span>Ivorian listings and city guide. Carried the announcement to its TikTok following in the run up to the weekend.</span></div>
+    <div class="cov"><b>Creator and community pages</b><span>Independent recaps from Abidjan creators and photographers, including World of Souley, Bictogo Abdel and Henri Toh Pixel, each posting their own cut of the weekend.</span></div>
+  </div>
+  <div class="note">Compiled from a public search in August 2026. Print and broadcast pickups that did not publish online are not captured here.</div>
+  <div class="foot"><span>Race Weekend Abidjan 2026</span><span>AToure Management &amp; Consulting</span></div>
+</section>
+
+<!-- 6. WHAT ATOURE DID -->
+<section class="slide">
+  <div class="eyebrow">What AToure Did</div>
+  <h2 class="title">Concept to <em>execution.</em></h2>
+  <div class="two">
+    <div>
+      <div class="col-h">Event &amp; Operations</div>
+      <ul class="blist">
+        <li>Concept, positioning and two day programme design</li>
+        <li>Venue partnership and site build at Espace Superkart</li>
+        <li>Live broadcast setup and giant screen projection</li>
+        <li>Karting, supercar paddock and on track programming</li>
+        <li>VIP lounge, hospitality and guest management</li>
+      </ul>
+      <div class="col-h" style="margin-top:26px;">Partnerships &amp; Content</div>
+      <ul class="blist">
+        <li>Sponsor packages, branded lounges and sponsor wall</li>
+        <li>Guest and talent booking, including motorsport figures</li>
+        <li>Creator programme, briefing and media accreditation</li>
+        <li>Photo and video production across both days</li>
+      </ul>
+    </div>
+    <figure class="shot">
+      <img src="Media/Race%20Weekend/web/vip-lounge.webp" alt="">
+      <figcaption>VIP lounge, above the track</figcaption>
+    </figure>
+  </div>
+  <div class="foot"><span>Race Weekend Abidjan 2026</span><span>AToure Management &amp; Consulting</span></div>
+</section>
+
+<!-- 7. CLOSING -->
+<section class="slide closing">
+  <div class="eyebrow">Next Edition</div>
+  <h2 class="title">A format <em>worth repeating.</em></h2>
+  <p class="lede" style="text-align:center;max-width:760px;">Race Weekend established a repeatable property: a premium motorsport experience across two days with a live Grand Prix at its centre, a venue partnership that supports both track and lounge programming, a creator roster that carries it well past the gate, and a guest list that gives brands direct access to Abidjan&rsquo;s young professional audience.</p>
+  <div class="contact">
+    <b>AToure Management &amp; Consulting</b><br>
+    atoureconsulting@gmail.com<br>
+    atoureconsulting.com
+  </div>
+  <div class="foot"><span>Race Weekend Abidjan 2026</span><span>AToure Management &amp; Consulting</span></div>
+</section>
+
+</body>
+</html>
