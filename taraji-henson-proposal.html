@@ -323,6 +323,25 @@
   .rolenote p{font-family:var(--serif);font-size:clamp(19px,2.2vw,25px);font-style:italic;color:var(--ink);line-height:1.35}
   @media(max-width:980px){.roles{grid-template-columns:repeat(2,1fr)}.beats{grid-template-columns:1fr;gap:14px}}
   @media(max-width:560px){.roles{grid-template-columns:1fr}.concline{padding:32px 24px}.rolenote{padding:24px 22px}}
+  /* people grid for the two industry sections */
+  .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .disclaim{margin-top:26px;font-size:13.5px;color:var(--taupe);font-style:italic}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .factlist{list-style:none;margin-top:8px}
+  .factlist li{padding:16px 0;border-bottom:1px solid var(--parch);display:flex;gap:16px;align-items:baseline}
+  .factlist li:last-child{border-bottom:0}
+  .factlist .fv{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--gold-deep);line-height:1;flex:0 0 auto;min-width:104px}
+  .factlist .fl{font-size:15.5px;color:var(--ink-soft)}
+  .collab{background:var(--panel);color:var(--ivory);border-radius:18px;padding:46px 44px;margin-top:44px}
+  .collab .eyebrow{color:var(--gold-soft)}
+  .collab h3{font-size:clamp(26px,3.2vw,38px);margin:14px 0 18px;color:var(--ivory);font-family:var(--serif);font-weight:600;line-height:1.1}
+  .collab h3 em{font-style:italic;font-weight:500;color:var(--gold-soft)}
+  .collab p{color:#E8E0D0;font-size:16.5px;margin-bottom:14px}
+  .collab ul{list-style:none;margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 26px}
+  .collab li{font-size:15px;color:#E8E0D0;padding-left:20px;position:relative}
+  .collab li::before{content:'\25C6';color:var(--gold);font-size:9px;position:absolute;left:0;top:6px}
+  @media(max-width:980px){.people{grid-template-columns:repeat(2,1fr)}.twocol{grid-template-columns:1fr;gap:34px}}
+  @media(max-width:600px){.people{grid-template-columns:1fr}.collab{padding:32px 24px}.collab ul{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -333,7 +352,8 @@
     <a class="navbrand" href="#top"><img src="/brand-kit/01-logos/atoure/atoure-nav-lockup-on-light.svg" alt="AToure Management and Consulting"></a>
     <div class="navlinks" id="navlinks">
       <a href="#concept">The Concept</a>
-      <a href="#actress">The Actress</a>
+      <a href="#cinema">Cinema</a>
+      <a href="#karite">Karité</a>
       <a href="#journey">The Journey</a>
       <a href="#why">Why AToure</a>
       <a href="#network">Access</a>
@@ -350,11 +370,11 @@
     <div>
       <div class="hero-tag" data-t="herotag"><span class="dot"></span>Confidential Proposal · Prepared for Rolling Stone Africa · August 2026</div>
       <h1 data-t="h1">Taraji P. Henson<br><span class="accent">in Côte d'Ivoire</span></h1>
-      <p class="hero-sub" data-t="herosub">For three decades she has played women whose work built something they did not own. In Côte d'Ivoire, she meets them.</p>
+      <p class="hero-sub" data-t="herosub">An actress nominated for an Academy Award. A founder in beauty. Côte d'Ivoire has a cinema reaching the world and a karité industry built by women. This is where those two stories meet.</p>
       <div class="hero-chips">
         <span class="chip" data-t="chip1"><b>Abidjan</b>Cinema</span>
         <span class="chip" data-t="chip2"><b>Grand Bassam</b>Heritage</span>
-        <span class="chip" data-t="chip3"><b>Korhogo</b>The Source</span>
+        <span class="chip" data-t="chip3"><b>Korhogo</b>Karité</span>
         <span class="chip" data-t="chip4"><b>The Cover</b>Legacy</span>
       </div>
     </div>
@@ -369,115 +389,160 @@
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="ceb">The Concept</div>
-      <h2 data-t="ch2">She plays them.<br><em>Now she meets them.</em></h2>
+      <h2 data-t="ch2">Cinema and karité.<br><em>Two industries that decide how a Black woman is seen.</em></h2>
+      <p data-t="cp">Taraji P. Henson works in both. So does Côte d'Ivoire. That is the whole idea, and it is why this visit is not interchangeable with any other celebrity trip to the continent.</p>
     </div>
     <div class="beats">
       <div class="beat rv">
         <div class="bn">01</div>
-        <h3 data-t="be1h">The role she is known for</h3>
-        <p data-t="be1p">Cookie Lyon put her own money into a record company, took the fall, lost seventeen years, and walked out of prison to find other people holding what she built.</p>
+        <h3 data-t="be1h">She arrives as a peer</h3>
+        <p data-t="be1p">An Academy Award nomination, a Golden Globe and three decades of work. Ivorian cinema has its own canon, its own stars and an Academy shortlist of its own. Two industries meeting, not one discovering the other.</p>
       </div>
       <div class="beat rv">
         <div class="bn">02</div>
-        <h3 data-t="be2h">The same story, in a savannah</h3>
-        <p data-t="be2p">Shea is one of Côte d'Ivoire's major agricultural exports. Roughly nine in ten producers are women. Very few of them own what they make.</p>
+        <h3 data-t="be2h">She built in beauty</h3>
+        <p data-t="be2p">Taraji founded a haircare company. That gives her a genuine reason to ask how a global ingredient is actually made, and the standing to ask it properly rather than politely.</p>
       </div>
       <div class="beat rv">
         <div class="bn">03</div>
-        <h3 data-t="be3h">The film</h3>
-        <p data-t="be3p">She goes north to meet them. Not as a visitor discovering Africa, but as a woman who has spent a career telling this exact story to camera.</p>
+        <h3 data-t="be3h">The country holds the answer</h3>
+        <p data-t="be3p">Karité is one of Côte d'Ivoire's major agricultural exports and roughly nine in ten producers are women. The film industry and the beauty industry both run on Black women. Neither is owned by them.</p>
       </div>
     </div>
     <div class="concline rv">
-      <p data-t="cline">She does not need a bloodline here. She has a body of work.</p>
-      <div class="who" data-t="clinewho">The positioning · Women's Gold</div>
+      <p data-t="cline">Her company is why the questions land. It is not what the film is about.</p>
+      <div class="who" data-t="clinewho">The editorial guarantee · Cinema and Karité</div>
     </div>
+    <p class="disclaim rv" data-t="cdisc">Rolling Stone Africa owns the documentary and its editorial direction. Taraji's own work in beauty is what makes her the right person to carry these questions, and the proposal is built so the film remains a Rolling Stone Africa production about Côte d'Ivoire, never a brand film.</p>
   </div>
 </section>
 
-<section id="actress" class="alt">
+<section id="cinema" class="alt">
   <div class="wrap">
     <div class="sechead rv">
-      <div class="eyebrow" data-t="aeb">The Actress</div>
-      <h2 data-t="ah2">Three decades of one argument,<br><em>made in public.</em></h2>
-      <p data-t="ap">Taraji P. Henson keeps being cast as the same woman: the one who did the work, and watched somebody else be handed the credit. That is not a coincidence of casting. It is the through line of her career, and it is why this country is the right place to point a camera at her.</p>
+      <div class="eyebrow" data-t="cineb">Theme One · Ivorian Cinema</div>
+      <h2 data-t="cinh2">She will not be the only<br><em>star in the room.</em></h2>
+      <p data-t="cinp">Côte d'Ivoire has a film culture with its own history, its own audiences and its own icons, and women have shaped it from behind the camera as much as in front of it. The cinema chapter is built as a meeting of equals. These are the kinds of figures the days should be built around.</p>
     </div>
-    <div class="roles">
+    <div class="people">
       <div class="rolecard rv">
-        <img class="shot" src="/Media/taraji/role-cookie.jpg" alt="Taraji P. Henson as Cookie Lyon in Empire" loading="lazy" data-ph="Cookie Lyon · Empire">
+        <img class="shot" src="/Media/taraji/cinema-akissi-delta.jpg" alt="Akissi Delta, Ivorian actress and filmmaker" loading="lazy" data-ph="Akissi Delta">
         <div class="rb">
-          <div class="film" data-t="r1f">Empire · 2015</div>
-          <h3 data-t="r1h">Cookie Lyon</h3>
-          <p data-t="r1p">She financed the company and served the sentence that let it survive. The show begins the day she comes back for her half.</p>
-          <div class="award" data-t="r1a">Golden Globe, Best Actress</div>
+          <div class="film" data-t="f1f">Creator &amp; Director</div>
+          <h3 data-t="f1h">Akissi Delta</h3>
+          <p data-t="f1p">An actress who became a filmmaker and created Ma Famille, the series that defined a generation of Ivorian television. A woman who built the country's biggest show and ran it herself.</p>
+          <div class="award" data-t="f1a">Ma Famille · 2002</div>
         </div>
       </div>
       <div class="rolecard rv">
-        <img class="shot" src="/Media/taraji/role-katherine.jpg" alt="Taraji P. Henson as Katherine Johnson in Hidden Figures" loading="lazy" data-ph="Katherine Johnson · Hidden Figures">
+        <img class="shot" src="/Media/taraji/cinema-naky-sy-savane.jpg" alt="Naky Sy Savané, Ivorian actress" loading="lazy" data-ph="Naky Sy Savané">
         <div class="rb">
-          <div class="film" data-t="r2f">Hidden Figures · 2016</div>
-          <h3 data-t="r2h">Katherine Johnson</h3>
-          <p data-t="r2p">She ran the mathematics that put an American into orbit, from a room the rest of the building did not think about.</p>
-          <div class="award" data-t="r2a">The title says it plainly</div>
+          <div class="film" data-t="f2f">Actress</div>
+          <h3 data-t="f2h">Naky Sy Savané</h3>
+          <p data-t="f2p">Best actress at Vues d'Afrique in Montreal and at Kouriba in 1994 for Au nom du Christ. Later in Sembène's Moolaadé. A campaigner for women's and children's rights across the continent.</p>
+          <div class="award" data-t="f2a">Two best actress awards, 1994</div>
         </div>
       </div>
       <div class="rolecard rv">
-        <img class="shot" src="/Media/taraji/role-queenie.jpg" alt="Taraji P. Henson as Queenie in The Curious Case of Benjamin Button" loading="lazy" data-ph="Queenie · Benjamin Button">
+        <img class="shot" src="/Media/taraji/cinema-philippe-lacote.jpg" alt="Philippe Lacôte, Ivorian director" loading="lazy" data-ph="Philippe Lacôte">
         <div class="rb">
-          <div class="film" data-t="r3f">Benjamin Button · 2008</div>
-          <h3 data-t="r3h">Queenie</h3>
-          <p data-t="r3p">She raised the child nobody else would take in. The kind of labour that holds a life together and never appears in the ledger.</p>
-          <div class="award" data-t="r3a">Academy Award nomination</div>
+          <div class="film" data-t="f3f">Director</div>
+          <h3 data-t="f3h">Philippe Lacôte</h3>
+          <p data-t="f3p">Night of the Kings, shot inside La Maca prison in Abidjan, carried Côte d'Ivoire to the Academy Award shortlist for International Feature. Only the third time the country had ever submitted.</p>
+          <div class="award" data-t="f3a">Academy shortlist, International Feature</div>
         </div>
       </div>
       <div class="rolecard rv">
-        <img class="shot" src="/Media/taraji/role-shug.jpg" alt="Taraji P. Henson as Shug Avery in The Color Purple" loading="lazy" data-ph="Shug Avery · The Color Purple">
+        <img class="shot" src="/Media/taraji/cinema-michel-gohou.jpg" alt="Michel Gohou, Ivorian actor" loading="lazy" data-ph="Michel Gohou">
         <div class="rb">
-          <div class="film" data-t="r4f">The Color Purple · 2023</div>
-          <h3 data-t="r4h">Shug Avery</h3>
-          <p data-t="r4p">She teaches another woman that wanting something for herself is allowed. The hinge the whole story turns on.</p>
-          <div class="award" data-t="r4a">Ensemble, Warner Bros.</div>
+          <div class="film" data-t="f4f">Actor</div>
+          <h3 data-t="f4h">Michel Gohou</h3>
+          <p data-t="f4p">From Les Guignols d'Abidjan to Bienvenue au Gondwana and Black Snake. One of the most recognised faces in francophone African comedy, and a producer and director in his own right.</p>
+          <div class="award" data-t="f4a">Les Guignols d'Abidjan</div>
+        </div>
+      </div>
+      <div class="rolecard rv">
+        <img class="shot" src="/Media/taraji/cinema-diem-camille.jpg" alt="Diêm Camille, Ivorian actress and director" loading="lazy" data-ph="Diêm Camille">
+        <div class="rb">
+          <div class="film" data-t="f5f">Actress &amp; Director</div>
+          <h3 data-t="f5h">Diêm Camille</h3>
+          <p data-t="f5p">Born in Abidjan. She wrote, directed and starred in the short film Doll, which took five awards including best actress and best first time director. Now working internationally.</p>
+          <div class="award" data-t="f5a">Doll · five awards</div>
+        </div>
+      </div>
+      <div class="rolecard rv">
+        <img class="shot" src="/Media/taraji/cinema-fat-toure.jpg" alt="Fat Touré, Ivorian actress" loading="lazy" data-ph="Fat Touré">
+        <div class="rb">
+          <div class="film" data-t="f6f">Actress</div>
+          <h3 data-t="f6h">Fat Touré</h3>
+          <p data-t="f6p">In 2025 she became the first francophone actress nominated for best actress at the Africa International Film Festival, one of the most significant awards on the continent.</p>
+          <div class="award" data-t="f6a">AFRIFF nomination, 2025</div>
         </div>
       </div>
     </div>
-    <div class="rolenote rv">
-      <p data-t="rnote">This is not a celebrity being introduced to a country. It is an actress being taken to the place where her subject actually lives, and asked to look at it without a script.</p>
+    <p class="disclaim rv" data-t="cindisc">Named here to show the depth and range of the Ivorian film community. None of these figures has been approached and none is a confirmed participant. The final cast of the cinema chapter will be agreed with the Rolling Stone Africa production team.</p>
+  </div>
+</section>
+
+<section id="karite">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow" data-t="keb">Theme Two · Karité &amp; Natural Cosmetics</div>
+      <h2 data-t="kh2">An industry built by women.<br><em>Owned by other people.</em></h2>
+    </div>
+    <div class="twocol">
+      <div class="rv">
+        <p data-t="kp1">Shea butter has been in Black homes for generations. On hair, on skin, on newborns, passed from mothers to daughters long before any company put it in a bottle. In West Africa it already has a name that says everything: women's gold.</p>
+        <p data-t="kp2" style="margin-top:16px">It begins in the northern savannah. Women walk out to collect the nuts, then sort, roast, grind, knead and extract, almost entirely by hand. The finished butter travels to Paris, London and Los Angeles and multiplies in value on the way. Very little of that increase comes back to Korhogo.</p>
+        <p data-t="kp3" style="margin-top:16px">The same story is now being rewritten closer to home. A generation of Ivorian women are building natural cosmetics brands in Abidjan, buying from the cooperatives and finishing the product in country. That is the part the world has not seen, and it is the part worth filming.</p>
+        <p data-t="kp4" style="margin-top:16px">This chapter is not about scarcity. It is about value, ownership and expertise, and about women at both ends of a supply chain recognising each other as people who do the same work.</p>
+      </div>
+      <div class="rv">
+        <ul class="factlist">
+          <li><span class="fv" data-t="k1v">9 in 10</span><span class="fl" data-t="k1l">Karité producers in Côte d'Ivoire are women</span></li>
+          <li><span class="fv" data-t="k2v">Top five</span><span class="fl" data-t="k2l">Karité sits among the country's major agricultural exports</span></li>
+          <li><span class="fv" data-t="k3v">By hand</span><span class="fl" data-t="k3l">Collection, sorting, roasting, grinding, kneading, extraction</span></li>
+          <li><span class="fv" data-t="k4v">Korhogo</span><span class="fl" data-t="k4l">Poro region, the centre of Ivorian karité production</span></li>
+          <li><span class="fv" data-t="k5v">Abidjan</span><span class="fl" data-t="k5l">A growing natural cosmetics sector led by Ivorian women</span></li>
+        </ul>
+        <p class="disclaim" data-t="kdisc">Sector figures are indicative and will be confirmed with the relevant Ivorian institutions before publication. No specific cooperative has yet been approached.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="journey">
+<section id="journey" class="alt">
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="jeb">The Journey · Seven Days</div>
-      <h2 data-t="jh2">A question asked in Abidjan.<br><em>Answered in the north.</em></h2>
-      <p data-t="jp">Three acts, not five topics. Cinema, food, heritage, craft and fashion sit inside the arc rather than beside it. This is a concept itinerary: the exact programme will be built with the Rolling Stone Africa team and the tour producers.</p>
+      <h2 data-t="jh2">What actually happens,<br><em>day by day.</em></h2>
+      <p data-t="jp">Written honestly. Day one is an arrival and a dinner, nothing more. The working days are two to five. Days six and seven deliver the cover and close the story.</p>
     </div>
     <div class="acts rv">
-      <div class="act"><div class="an" data-t="act1n">Act One · Days 1 to 3</div><div class="at" data-t="act1t">Abidjan. The question.</div></div>
-      <div class="act"><div class="an" data-t="act2n">Act Two · Days 4 to 5</div><div class="at" data-t="act2t">The north. The answer.</div></div>
-      <div class="act"><div class="an" data-t="act3n">Act Three · Days 6 to 7</div><div class="at" data-t="act3t">Abidjan. The consequence.</div></div>
+      <div class="act"><div class="an" data-t="act1n">Day 1</div><div class="at" data-t="act1t">Arrive. Rest. Eat.</div></div>
+      <div class="act"><div class="an" data-t="act2n">Days 2 to 5</div><div class="at" data-t="act2t">The content is made here.</div></div>
+      <div class="act"><div class="an" data-t="act3n">Days 6 to 7</div><div class="at" data-t="act3t">The cover, and the close.</div></div>
     </div>
     <div class="days rv" id="days"></div>
     <div id="daypanels"></div>
-    <div class="gala rv">
-      <div>
-        <div class="eyebrow" data-t="geb">The Timing Consideration</div>
-        <h3 data-t="gh3">This story has a season.<br><em>Most projects do not.</em></h3>
-        <p data-t="gp1">Shea cannot be filmed on demand. Collection and traditional processing follow an agricultural calendar. Arrive outside that window and the centrepiece of the film becomes a demonstration staged for a camera, which every viewer can feel and every sponsor can see.</p>
-        <p class="invite" data-t="ginv">AToure will confirm the season window directly with cooperative leadership and regional agricultural contacts in the Poro region before any date is proposed. This single constraint should drive the date, not the other way around.</p>
-      </div>
-      <div class="galafacts">
-        <div class="gfact"><div class="v" data-t="gf1v">The season first</div><div class="l" data-t="gf1l">Dates set around the crop, not the diary</div></div>
-        <div class="gfact"><div class="v" data-t="gf2v">Months ahead</div><div class="l" data-t="gf2l">Cooperative agreement and consent take time</div></div>
-        <div class="gfact"><div class="v" data-t="gf3v">Verified locally</div><div class="l" data-t="gf3l">Confirmed in Poro, not from a desk</div></div>
-        <div class="gfact"><div class="v" data-t="gf4v">One window</div><div class="l" data-t="gf4l">Miss it and the centrepiece is a reconstruction</div></div>
-      </div>
+    <div class="collab rv">
+      <div class="eyebrow" data-t="cbeb">How this gets finalised</div>
+      <h3 data-t="cbh3">A starting point,<br><em>not a schedule.</em></h3>
+      <p data-t="cbp1">AToure should not be the only party writing this itinerary. Rolling Stone Africa is making the documentary and shooting the cover, and the production team will have its own themes, its own shot list and its own requirements that must shape the days.</p>
+      <p data-t="cbp2">What follows is a considered opening position from an operator who knows the country. It is offered to be argued with, cut and rebuilt together. AToure proposes and delivers. The production team decides what the film needs.</p>
+      <ul>
+        <li data-t="cb1">Which themes the documentary wants to carry</li>
+        <li data-t="cb2">What the cover shoot needs in locations, light and time</li>
+        <li data-t="cb3">Interview subjects the production team already wants</li>
+        <li data-t="cb4">Crew size, equipment and shooting hours per day</li>
+        <li data-t="cb5">How much rest the schedule must protect</li>
+        <li data-t="cb6">Which days are fixed and which can move</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="why" class="alt">
+<section id="why">
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="whyeb">Why AToure</div>
@@ -507,12 +572,12 @@
       </div>
     </div>
     <div class="compare rv">
-      <img src="/Media/Ishowspeed/Ivory%20Coast/a3c2e804-7db9-4a1f-a945-d98a7fc49e55.webp" alt="The Zaouli cultural activation delivered by AToure in Ivory Coast" loading="lazy" data-ph="IShowSpeed in Ivory Coast">
+      <img src="/Media/Ishowspeed/Ivory%20Coast/51ee57c9-19b4-48ba-8a92-a169653ce904.webp" alt="IShowSpeed received in traditional honours during the Ivory Coast visit built by AToure" loading="lazy" data-ph="IShowSpeed in Ivory Coast">
       <div>
         <div class="eyebrow" data-t="cmpeb">Proof, in this country</div>
         <h3 data-t="cmph3">We have staged the cultural moment <em>before.</em></h3>
-        <p data-t="cmpp1">The Zaouli moment from IShowSpeed's Ivory Coast visit travelled around the world. AToure built that visit from nothing: no infrastructure, no prior sponsor relationships, no template. It ended with personal recognition from the Ivorian Minister of Tourism.</p>
-        <p data-t="cmpp2">A cooperative in Korhogo is a harder room to enter than a stadium, and it matters more to this story. Access, consent and dignity in that room are the whole film.</p>
+        <p data-t="cmpp1">IShowSpeed, received in traditional honours in Côte d'Ivoire, on a visit AToure built from nothing: no infrastructure, no prior sponsor relationships, no template. The images travelled around the world and the work ended with personal recognition from the Ivorian Minister of Tourism.</p>
+        <p data-t="cmpp2">A women's cooperative in Korhogo is a harder room to enter than a stadium, and it matters more to this story. Access, consent and dignity in that room are the whole film.</p>
       </div>
     </div>
   </div>
@@ -787,8 +852,8 @@
     </div>
     <div style="margin-top:60px">
       <div class="cta rv">
-        <h2 data-t="ctah2">The season sets the date.<br><em>The date sets everything else.</em></h2>
-        <p data-t="ctap">Cooperative agreement, filming consent, institutional approvals and domestic aviation all run on long lead times, and the shea calendar does not move to suit a production schedule.</p>
+        <h2 data-t="ctah2">Let us build the itinerary<br><em>together.</em></h2>
+        <p data-t="ctap">The next step is a working session with the Rolling Stone Africa production team on themes, shot list and dates. Cooperative agreement, filming consent, institutional approvals and domestic aviation all run on long lead times, so the sooner scope is agreed the more the schedule can actually deliver.</p>
         <a class="btn" href="mailto:atoureconsulting@gmail.com?subject=Taraji%20P%20Henson%20in%20Cote%20d%27Ivoire" data-t="ctabtn">Schedule the call</a>
       </div>
     </div>
@@ -860,119 +925,133 @@
 
 // ============ bilingual day data ============
 const DAYS=[
- {p:"Abidjan",
-  en:{p:"Abidjan",d:"Day 1",k:"Abidjan · Arrival",t:"Akwaba. The city first.",
-    body:[`Private arrival, then Abidjan by district. Plateau, Cocody, Treichville, Marcory and Zone 4 are five different cities wearing one name, and the distance between them is the fastest way to show a viewer that the clichés do not survive contact with the place.`,`The evening stays small. Dinner with Ivorian women from cinema, fashion, music, food and business, and the first food chapter at the table: attiéké, grilled fish, alloco, garba.`],
-    m:["Private arrival and secure transfer","Abidjan district by district","Welcome dinner with Ivorian women","The first food chapter, at the table"]},
-  fr:{p:"Abidjan",d:"Jour 1",k:"Abidjan · Arrivée",t:"Akwaba. La ville d'abord.",
-    body:[`Arrivée privée, puis Abidjan par quartier. Le Plateau, Cocody, Treichville, Marcory et la Zone 4 sont cinq villes différentes sous un seul nom, et l'écart entre elles reste le moyen le plus rapide de montrer au spectateur que les clichés ne résistent pas au contact du réel.`,`La soirée reste intime. Dîner avec des femmes ivoiriennes du cinéma, de la mode, de la musique, de la gastronomie et des affaires, et le premier chapitre culinaire à table: attiéké, poisson braisé, alloco, garba.`],
-    m:["Arrivée privée et transfert sécurisé","Abidjan quartier par quartier","Dîner d'accueil avec des femmes ivoiriennes","Le premier chapitre culinaire, à table"]}},
+ {en:{p:"Arrival",d:"Day 1",k:"Abidjan · Arrival",t:"Land. Rest. Eat.",
+    body:[`No filming, no programme, no protocol. A long flight ends and the day is protected so the rest of the week is usable.`,`Private arrival and secure transfer to the hotel. In the evening, a private dinner with a small group of Ivorian women from cinema, fashion, music, food and business. Fifteen people at most, no press, no stage. It doubles as the informal casting session for the rest of the week: the people she connects with here are the people worth returning to on camera.`],
+    m:["Private arrival and secure transfer","Rest, no filming scheduled","Private dinner, small table, no press","Ivorian food as the first introduction"]},
+  fr:{p:"Arrivée",d:"Jour 1",k:"Abidjan · Arrivée",t:"Arriver. Se reposer. Manger.",
+    body:[`Pas de tournage, pas de programme, pas de protocole. Un long vol se termine et la journée est préservée pour que le reste de la semaine soit exploitable.`,`Arrivée privée et transfert sécurisé vers l'hôtel. Le soir, un dîner privé avec un petit groupe de femmes ivoiriennes du cinéma, de la mode, de la musique, de la gastronomie et des affaires. Quinze personnes au maximum, sans presse et sans scène. Ce dîner sert aussi de repérage informel pour la suite: les personnes avec qui le courant passe ici sont celles vers qui revenir face caméra.`],
+    m:["Arrivée privée et transfert sécurisé","Repos, aucun tournage prévu","Dîner privé, petite table, sans presse","La cuisine ivoirienne comme première introduction"]}},
 
- {p:"Cinema",
-  en:{p:"Cinema",d:"Day 2",k:"Abidjan · Cinema",t:"Two industries, one table.",
-    body:[`A full day inside Ivorian film: actresses, directors, producers, screenwriters, cinematographers and film students, weighted toward women in front of and behind the camera.`,`The framing is what makes this work. Côte d'Ivoire reached the Academy Award shortlist for International Feature with Night of the Kings, shot in Abidjan. An actress nominated for an Academy Award meeting an industry that has just reached an Academy shortlist is a conversation between peers. Nobody is being discovered.`],
-    m:["Roundtable with Ivorian filmmakers","A working set, subject to production access","Scene workshop with Ivorian actors","Evening screening and conversation"],
-    note:`This chapter positions Côte d'Ivoire as a filming destination rather than a filming subject, which is the outcome the Ministry of Culture and the tourism sector care about most.`},
-  fr:{p:"Cinéma",d:"Jour 2",k:"Abidjan · Cinéma",t:"Deux industries, une même table.",
-    body:[`Une journée entière dans le cinéma ivoirien: actrices, réalisateurs, producteurs, scénaristes, chefs opérateurs et étudiants en cinéma, avec une attention portée aux femmes devant et derrière la caméra.`,`C'est le cadrage qui fait tout. La Côte d'Ivoire a atteint la présélection des Oscars du meilleur film international avec La Nuit des Rois, tourné à Abidjan. Une actrice nommée aux Oscars qui rencontre une industrie venant d'atteindre une présélection aux Oscars, c'est une conversation entre pairs. Personne n'est découvert ici.`],
-    m:["Table ronde avec des cinéastes ivoiriens","Un tournage en cours, selon les accès","Atelier de jeu avec des comédiens ivoiriens","Projection et échange en soirée"],
-    note:`Ce chapitre positionne la Côte d'Ivoire comme destination de tournage et non comme sujet de tournage, ce qui est précisément le résultat qui intéresse le Ministère de la Culture et le secteur touristique.`}},
+ {en:{p:"Cinema",d:"Day 2",k:"Abidjan · Ivorian Cinema",t:"Two industries, one table.",
+    body:[`The first working day, and the strongest one for the documentary. Morning roundtable with Ivorian actresses, directors, producers and film students, weighted deliberately toward women in front of and behind the camera.`,`Afternoon on a working set if production access allows, or inside a film school if it does not. Evening screening of Ivorian work followed by an open conversation.`,`The framing is what makes this land. Côte d'Ivoire reached the Academy Award shortlist with Night of the Kings, shot in Abidjan. Nobody in this room is being discovered.`],
+    m:["Roundtable with Ivorian filmmakers","A working set or a film school","Evening screening and open conversation","Positions the country as a filming destination"]},
+  fr:{p:"Cinéma",d:"Jour 2",k:"Abidjan · Cinéma Ivoirien",t:"Deux industries, une même table.",
+    body:[`La première journée de travail, et la plus forte pour le documentaire. Table ronde le matin avec des actrices, réalisateurs, producteurs et étudiants en cinéma ivoiriens, délibérément orientée vers les femmes devant et derrière la caméra.`,`Après midi sur un tournage en cours si les accès de production le permettent, ou dans une école de cinéma sinon. Projection d'œuvres ivoiriennes en soirée, suivie d'un échange ouvert.`,`C'est le cadrage qui fait tout. La Côte d'Ivoire a atteint la présélection des Oscars avec La Nuit des Rois, tourné à Abidjan. Personne dans cette salle n'est découvert.`],
+    m:["Table ronde avec des cinéastes ivoiriens","Un tournage en cours ou une école de cinéma","Projection et échange ouvert en soirée","Positionne le pays comme destination de tournage"]}},
 
- {p:"Grand Bassam",
-  en:{p:"Grand Bassam",d:"Day 3",k:"Abidjan &amp; Grand Bassam · Heritage",t:"Where the question gets asked.",
-    body:[`Morning at Grand Bassam, the former capital and a UNESCO World Heritage site an hour from Abidjan: architecture, the craft quarter, the beach.`,`Afternoon in the markets and ateliers of Abidjan. Somewhere in this day, on a market stall or a beauty counter, she finds shea. It is everywhere here, sold in blocks and jars, and it is the same thing sitting in bathrooms across America.`,`This is the hinge. The question gets asked out loud, and everything after it is the answer.`],
-    m:["Grand Bassam, UNESCO World Heritage","Craft quarter and coastal filming","Markets, textile and beauty ateliers","The question that opens the north"]},
-  fr:{p:"Grand Bassam",d:"Jour 3",k:"Abidjan &amp; Grand Bassam · Patrimoine",t:"Là où la question se pose.",
-    body:[`Matinée à Grand Bassam, ancienne capitale et site du patrimoine mondial de l'UNESCO à une heure d'Abidjan: architecture, quartier des artisans, plage.`,`Après midi dans les marchés et les ateliers d'Abidjan. Quelque part dans cette journée, sur un étal ou un comptoir de beauté, elle trouve le karité. Il est partout ici, vendu en pains et en pots, et c'est exactement ce qui se trouve dans les salles de bain à travers l'Amérique.`,`C'est la charnière. La question est posée à voix haute, et tout ce qui suit en est la réponse.`],
-    m:["Grand Bassam, patrimoine mondial de l'UNESCO","Quartier des artisans et tournage côtier","Marchés, ateliers textiles et cosmétiques","La question qui ouvre le Nord"]}},
+ {en:{p:"The City",d:"Day 3",k:"Abidjan &amp; Grand Bassam · Women in Business",t:"Where the question gets asked.",
+    body:[`Morning at Grand Bassam, the former capital and a UNESCO World Heritage site an hour from Abidjan: architecture, the craft quarter, the coast.`,`Afternoon with the women building Ivorian natural cosmetics brands, plus textile and jewellery ateliers. This is the female empowerment chapter with something concrete in its hands: founders, margins, staff, exports.`,`Somewhere in this day, on a market stall or a workbench, she meets karité in its raw form. The question gets asked out loud, and everything in the north is the answer.`],
+    m:["Grand Bassam, UNESCO World Heritage","Ivorian women building cosmetics brands","Textile and jewellery ateliers","The question that opens the north"]},
+  fr:{p:"La Ville",d:"Jour 3",k:"Abidjan &amp; Grand Bassam · Femmes et Entreprise",t:"Là où la question se pose.",
+    body:[`Matinée à Grand Bassam, ancienne capitale et site du patrimoine mondial de l'UNESCO à une heure d'Abidjan: architecture, quartier des artisans, littoral.`,`Après midi auprès des femmes qui bâtissent les marques ivoiriennes de cosmétique naturelle, ainsi que des ateliers de textile et de bijouterie. C'est le chapitre de l'autonomisation des femmes, avec du concret entre les mains: fondatrices, marges, salariées, exportations.`,`Quelque part dans cette journée, sur un étal ou un établi, elle rencontre le karité brut. La question est posée à voix haute, et tout le Nord en est la réponse.`],
+    m:["Grand Bassam, patrimoine mondial de l'UNESCO","Des Ivoiriennes qui bâtissent des marques de cosmétique","Ateliers de textile et de bijouterie","La question qui ouvre le Nord"]}},
 
- {p:"Korhogo",
-  en:{p:"Korhogo",d:"Day 4",k:"Korhogo · Senufo Country",t:"The north changes everything.",
-    body:[`Domestic flight north. The landscape, architecture, language and light all change, and the film gets the visual reset it needs after three days of city.`,`A cultural day in Senufo country before any fieldwork: the weavers of Waraniéné, Korhogo cloth painted by hand, carving, mask traditions and music. Received properly by traditional authority rather than arriving with a camera and an agenda.`],
-    m:["Domestic flight Abidjan to Korhogo","Reception by Senufo traditional authority","Waraniéné weavers and Korhogo cloth","Carving, mask traditions and music"],
+ {en:{p:"Korhogo",d:"Day 4",k:"Korhogo · Senufo Country",t:"The north changes everything.",
+    body:[`Domestic flight north. Landscape, architecture, language and light all change, and the film gets the visual reset it needs after three days of city.`,`A cultural day in Senufo country before any fieldwork: the weavers of Waraniéné, Korhogo cloth painted by hand, carving and music. Received properly by traditional authority rather than arriving with a camera and an agenda.`],
+    m:["Domestic flight Abidjan to Korhogo","Reception by Senufo traditional authority","Waraniéné weavers and Korhogo cloth","Carving traditions and music"],
     note:`Filming here is a privilege that has to be arranged, not a service that can be bought. Custom decides what may be shown, and that decision is respected on camera.`},
   fr:{p:"Korhogo",d:"Jour 4",k:"Korhogo · Pays Sénoufo",t:"Le Nord change tout.",
-    body:[`Vol intérieur vers le nord. Le paysage, l'architecture, la langue et la lumière changent tous, et le film obtient la rupture visuelle dont il a besoin après trois jours de ville.`,`Une journée culturelle en pays Sénoufo avant tout travail de terrain: les tisserands de Waraniéné, la toile de Korhogo peinte à la main, la sculpture, les traditions de masques et la musique. Reçue dans les règles par l'autorité traditionnelle, plutôt qu'arrivée avec une caméra et un programme.`],
-    m:["Vol intérieur Abidjan vers Korhogo","Réception par l'autorité traditionnelle Sénoufo","Tisserands de Waraniéné et toile de Korhogo","Sculpture, traditions de masques et musique"],
+    body:[`Vol intérieur vers le nord. Paysage, architecture, langue et lumière changent tous, et le film obtient la rupture visuelle dont il a besoin après trois jours de ville.`,`Une journée culturelle en pays Sénoufo avant tout travail de terrain: les tisserands de Waraniéné, la toile de Korhogo peinte à la main, la sculpture et la musique. Reçue dans les règles par l'autorité traditionnelle, plutôt qu'arrivée avec une caméra et un programme.`],
+    m:["Vol intérieur Abidjan vers Korhogo","Réception par l'autorité traditionnelle Sénoufo","Tisserands de Waraniéné et toile de Korhogo","Traditions de sculpture et musique"],
     note:`Filmer ici est un privilège qui se négocie, pas un service qui s'achète. La coutume décide de ce qui peut être montré, et cette décision est respectée à l'image.`}},
 
- {p:"The Cooperative",
-  en:{p:"The Cooperative",d:"Day 5",k:"Korhogo · The Cooperative",t:"Women's gold.",
-    body:[`The centre of the journey. A women's cooperative, and the full process end to end: collection, sorting, roasting, grinding, kneading and extraction. Slow, physical, skilled work that almost nobody outside West Africa has watched from start to finish.`,`Then the conversation that gives the film its spine. Income, equipment, ownership, export, and the distance between what a jar sells for abroad and what stays in Korhogo. Not a lament. A business conversation between women working at opposite ends of the same industry.`],
-    m:["The full shea process, collection to extraction","Income, ownership and export, discussed openly","Cooperative leadership on camera","Consent and compensation agreed in advance"],
-    note:`Prioritise expertise, dignity and economic reality. This is not poverty tourism. It is a visit to people who are very good at something. Subject to season: the date of the whole journey should be set around this day rather than the reverse.`},
+ {en:{p:"The Cooperative",d:"Day 5",k:"Korhogo · The Cooperative",t:"Women's gold.",
+    body:[`The centre of the journey. A women's cooperative, and the full process end to end: collection, sorting, roasting, grinding, kneading and extraction. Slow, physical, skilled work that almost nobody outside West Africa has watched from start to finish.`,`Then the conversation the whole film is built toward. Income, equipment, ownership, export, and the distance between what a jar sells for abroad and what stays in Korhogo. Not a lament. A business conversation between women working at opposite ends of the same industry.`],
+    m:["The full karité process, collection to extraction","Income, ownership and export, discussed openly","Cooperative leadership on camera","Consent and compensation agreed in advance"],
+    note:`Prioritise expertise, dignity and economic reality. This is not poverty tourism. It is a visit to people who are very good at something.`},
   fr:{p:"La Coopérative",d:"Jour 5",k:"Korhogo · La Coopérative",t:"L'or des femmes.",
-    body:[`Le cœur du voyage. Une coopérative de femmes, et le processus complet de bout en bout: collecte, tri, torréfaction, broyage, barattage et extraction. Un travail lent, physique et qualifié que presque personne hors d'Afrique de l'Ouest n'a suivi du début à la fin.`,`Puis la conversation qui donne au film sa colonne vertébrale. Revenus, équipement, propriété, exportation, et l'écart entre le prix d'un pot à l'étranger et ce qui reste à Korhogo. Non pas une plainte. Une conversation d'affaires entre des femmes qui travaillent aux deux extrémités d'une même industrie.`],
+    body:[`Le cœur du voyage. Une coopérative de femmes, et le processus complet de bout en bout: collecte, tri, torréfaction, broyage, barattage et extraction. Un travail lent, physique et qualifié que presque personne hors d'Afrique de l'Ouest n'a suivi du début à la fin.`,`Puis la conversation vers laquelle tout le film converge. Revenus, équipement, propriété, exportation, et l'écart entre le prix d'un pot à l'étranger et ce qui reste à Korhogo. Non pas une plainte. Une conversation d'affaires entre des femmes qui travaillent aux deux extrémités d'une même industrie.`],
     m:["Le processus complet du karité, collecte à extraction","Revenus, propriété et exportation, discutés ouvertement","Les dirigeantes de la coopérative à l'image","Consentement et compensation convenus à l'avance"],
-    note:`Privilégier l'expertise, la dignité et la réalité économique. Ce n'est pas du tourisme de misère. C'est une visite à des personnes qui excellent dans leur métier. Sous réserve de la saison: la date de l'ensemble du voyage doit être fixée autour de cette journée plutôt que l'inverse.`}},
+    note:`Privilégier l'expertise, la dignité et la réalité économique. Ce n'est pas du tourisme de misère. C'est une visite à des personnes qui excellent dans leur métier.`}},
 
- {p:"The Cover",
-  en:{p:"The Cover",d:"Day 6",k:"Abidjan · The Cover",t:"The country, on the cover.",
+ {en:{p:"The Cover",d:"Day 6",k:"Abidjan · The Cover",t:"The country, on the cover.",
     body:[`Return to Abidjan for the Rolling Stone Africa cover production. A full working day, not a moment squeezed between other things: locations, permits, lighting, crew and a styling direction built with Ivorian designers rather than flown in.`,`The cover is the deliverable that outlives the documentary. It should carry the country inside the frame: Ivorian textile, Ivorian design, an Ivorian location, and the visual language of the north somewhere in it.`],
     m:["A full day of cover production","Ivorian designers and textile in the styling","Locations secured and permitted in advance","Behind the scenes content for partners"]},
   fr:{p:"La Couverture",d:"Jour 6",k:"Abidjan · La Couverture",t:"Le pays, en couverture.",
     body:[`Retour à Abidjan pour la production de la couverture Rolling Stone Africa. Une journée de travail complète, et non un moment glissé entre deux autres: lieux, autorisations, lumière, équipe et une direction stylistique construite avec des créateurs ivoiriens plutôt qu'importée.`,`La couverture est le livrable qui survit au documentaire. Elle doit porter le pays dans le cadre: textile ivoirien, création ivoirienne, lieu ivoirien, et le langage visuel du Nord quelque part à l'intérieur.`],
     m:["Une journée complète de production","Créateurs et textiles ivoiriens dans le stylisme","Lieux sécurisés et autorisés à l'avance","Contenus des coulisses pour les partenaires"]}},
 
- {p:"Abidjan",
-  en:{p:"Abidjan",d:"Day 7",k:"Abidjan · Closing",t:"What she takes back.",
-    body:[`A closing gathering that puts the whole journey in one room: a filmmaker, an actress, a cooperative leader, a designer, a chef, a film student and an entrepreneur. The conversation is about value, ownership and what happens next.`,`The journey should end with something stated rather than something felt. A sourcing conversation, a named cooperative, a commitment to return, a scholarship, a partnership. A documentary needs an ending, and an ending is a thing that happened.`],
-    m:["Closing gathering: Women, Culture and Value","Institutional recognition where appropriate","Controlled press and photography window","A stated outcome, not only a farewell"]},
-  fr:{p:"Abidjan",d:"Jour 7",k:"Abidjan · Clôture",t:"Ce qu'elle rapporte.",
-    body:[`Une rencontre de clôture qui réunit tout le voyage dans une même salle: une cinéaste, une actrice, une dirigeante de coopérative, une créatrice, un chef, une étudiante en cinéma et une entrepreneure. La conversation porte sur la valeur, la propriété et la suite.`,`Le voyage doit se terminer sur quelque chose d'énoncé plutôt que sur quelque chose de ressenti. Une conversation d'approvisionnement, une coopérative nommée, un engagement à revenir, une bourse, un partenariat. Un documentaire a besoin d'une fin, et une fin est un événement qui a eu lieu.`],
-    m:["Rencontre de clôture: Femmes, Culture et Valeur","Reconnaissance institutionnelle si pertinent","Fenêtre presse et photo maîtrisée","Un résultat énoncé, pas seulement un adieu"]}}
+ {en:{p:"Closing",d:"Day 7",k:"Abidjan · Closing",t:"What she takes back.",
+    body:[`A closing gathering that puts the whole journey in one room: a filmmaker, an actress, a cooperative leader, a cosmetics founder, a designer and a film student. The conversation is about value, ownership and what happens next.`,`Institutional recognition where appropriate, a controlled press and photography window, farewell lunch and departure.`,`The journey should end with something stated rather than something felt. A partnership, a named cooperative, a commitment to return, a scholarship. A documentary needs an ending, and an ending is a thing that happened.`],
+    m:["Closing gathering: Cinema, Karité and Value","Institutional recognition where appropriate","Controlled press and photography window","A stated outcome, not only a farewell"]},
+  fr:{p:"Clôture",d:"Jour 7",k:"Abidjan · Clôture",t:"Ce qu'elle rapporte.",
+    body:[`Une rencontre de clôture qui réunit tout le voyage dans une même salle: une cinéaste, une actrice, une dirigeante de coopérative, une fondatrice de cosmétiques, une créatrice et une étudiante en cinéma. La conversation porte sur la valeur, la propriété et la suite.`,`Reconnaissance institutionnelle lorsque cela est pertinent, fenêtre presse et photo maîtrisée, déjeuner d'adieu et départ.`,`Le voyage doit se terminer sur quelque chose d'énoncé plutôt que sur quelque chose de ressenti. Un partenariat, une coopérative nommée, un engagement à revenir, une bourse. Un documentaire a besoin d'une fin, et une fin est un événement qui a eu lieu.`],
+    m:["Rencontre de clôture: Cinéma, Karité et Valeur","Reconnaissance institutionnelle si pertinent","Fenêtre presse et photo maîtrisée","Un résultat énoncé, pas seulement un adieu"]}}
 ];
 
 // ============ French dictionary for static copy ============
 const FR={
  herotag:`<span class="dot"></span>Proposition Confidentielle · Préparée pour Rolling Stone Africa · Août 2026`,
  h1:`Taraji P. Henson<br><span class="accent">en Côte d'Ivoire</span>`,
- herosub:`Depuis trente ans, elle incarne des femmes dont le travail a bâti ce qu'elles ne possédaient pas. En Côte d'Ivoire, elle les rencontre.`,
- chip1:`<b>Abidjan</b>Cinéma`,chip2:`<b>Grand Bassam</b>Patrimoine`,chip3:`<b>Korhogo</b>La Source`,chip4:`<b>La Couverture</b>Héritage`,
+ herosub:`Une actrice nommée aux Oscars. Une fondatrice dans la beauté. La Côte d'Ivoire a un cinéma qui rayonne et une filière karité bâtie par des femmes. C'est ici que ces deux histoires se rejoignent.`,
+ chip1:`<b>Abidjan</b>Cinéma`,chip2:`<b>Grand Bassam</b>Patrimoine`,chip3:`<b>Korhogo</b>Karité`,chip4:`<b>La Couverture</b>Héritage`,
  portraitcap:`Mme Taraji P. Henson`,
 
  ceb:`Le Concept`,
- ch2:`Elle les incarne.<br><em>Elle va les rencontrer.</em>`,
- be1h:`Le rôle qu'on lui connaît`,
- be1p:`Cookie Lyon a mis son propre argent dans une maison de disques, a porté le chapeau, a perdu dix sept ans, et est sortie de prison pour découvrir que d'autres tenaient ce qu'elle avait bâti.`,
- be2h:`La même histoire, dans la savane`,
- be2p:`Le karité compte parmi les grandes exportations agricoles de la Côte d'Ivoire. Près de neuf productrices sur dix sont des femmes. Très peu possèdent ce qu'elles fabriquent.`,
- be3h:`Le film`,
- be3p:`Elle monte vers le nord pour les rencontrer. Non pas en visiteuse qui découvre l'Afrique, mais en femme qui a passé une carrière à raconter exactement cette histoire face caméra.`,
- cline:`Elle n'a pas besoin d'une lignée ici. Elle a une œuvre.`,
- clinewho:`Le positionnement · L'or des femmes`,
+ ch2:`Cinéma et karité.<br><em>Deux industries qui décident du regard porté sur la femme noire.</em>`,
+ cp:`Taraji P. Henson travaille dans les deux. La Côte d'Ivoire aussi. C'est toute l'idée, et c'est pourquoi cette visite n'est interchangeable avec aucun autre voyage de célébrité sur le continent.`,
+ be1h:`Elle arrive en égale`,
+ be1p:`Une nomination aux Oscars, un Golden Globe et trente ans de métier. Le cinéma ivoirien a son propre patrimoine, ses propres vedettes et sa propre présélection aux Oscars. Deux industries qui se rencontrent, et non l'une qui découvre l'autre.`,
+ be2h:`Elle a bâti dans la beauté`,
+ be2p:`Taraji a fondé une marque de soin capillaire. Cela lui donne une raison authentique de demander comment un ingrédient mondial est réellement fabriqué, et la légitimité de poser la question sérieusement plutôt que poliment.`,
+ be3h:`Le pays détient la réponse`,
+ be3p:`Le karité compte parmi les grandes exportations agricoles de la Côte d'Ivoire et près de neuf productrices sur dix sont des femmes. L'industrie du cinéma comme celle de la beauté reposent sur les femmes noires. Aucune des deux ne leur appartient.`,
+ cline:`Son entreprise explique la justesse de ses questions. Elle n'est pas le sujet du film.`,
+ clinewho:`La garantie éditoriale · Cinéma et Karité`,
+ cdisc:`Rolling Stone Africa possède le documentaire et sa direction éditoriale. Le travail de Taraji dans la beauté est ce qui fait d'elle la personne juste pour porter ces questions, et la proposition est construite pour que le film reste une production Rolling Stone Africa consacrée à la Côte d'Ivoire, jamais un film de marque.`,
 
- aeb:`L'Actrice`,
- ah2:`Trente ans d'un même argument,<br><em>défendu en public.</em>`,
- ap:`On confie sans cesse à Taraji P. Henson la même femme: celle qui a fait le travail et regardé quelqu'un d'autre en recevoir le mérite. Ce n'est pas un hasard de distribution. C'est le fil de sa carrière, et c'est pourquoi ce pays est le bon endroit où braquer une caméra sur elle.`,
- r1f:`Empire · 2015`,r1h:`Cookie Lyon`,
- r1p:`Elle a financé la société et purgé la peine qui lui a permis de survivre. La série commence le jour où elle revient réclamer sa moitié.`,
- r1a:`Golden Globe, meilleure actrice`,
- r2f:`Les Figures de l'ombre · 2016`,r2h:`Katherine Johnson`,
- r2p:`Elle a mené les calculs qui ont mis un Américain en orbite, depuis une pièce à laquelle le reste du bâtiment ne pensait pas.`,
- r2a:`Le titre le dit clairement`,
- r3f:`L'Étrange Histoire de Benjamin Button · 2008`,r3h:`Queenie`,
- r3p:`Elle a élevé l'enfant dont personne d'autre ne voulait. Ce travail qui tient une vie debout et n'apparaît jamais dans les comptes.`,
- r3a:`Nomination aux Oscars`,
- r4f:`La Couleur pourpre · 2023`,r4h:`Shug Avery`,
- r4p:`Elle apprend à une autre femme qu'elle a le droit de vouloir quelque chose pour elle même. La charnière de toute l'histoire.`,
- r4a:`Distribution, Warner Bros.`,
- rnote:`Il ne s'agit pas de présenter une célébrité à un pays. Il s'agit d'emmener une actrice là où son sujet existe réellement, et de lui demander de regarder sans script.`,
+ cineb:`Thème Un · Le Cinéma Ivoirien`,
+ cinh2:`Elle ne sera pas la seule<br><em>vedette dans la salle.</em>`,
+ cinp:`La Côte d'Ivoire possède une culture cinématographique avec sa propre histoire, son public et ses icônes, et les femmes l'ont façonnée derrière la caméra autant que devant. Le chapitre cinéma est conçu comme une rencontre entre pairs. Voici le type de figures autour desquelles bâtir ces journées.`,
+ f1f:`Créatrice et réalisatrice`,f1h:`Akissi Delta`,
+ f1p:`Une actrice devenue cinéaste, créatrice de Ma Famille, la série qui a marqué toute une génération de la télévision ivoirienne. Une femme qui a bâti la plus grande série du pays et l'a dirigée elle même.`,
+ f1a:`Ma Famille · 2002`,
+ f2f:`Actrice`,f2h:`Naky Sy Savané`,
+ f2p:`Prix de la meilleure actrice à Vues d'Afrique à Montréal et à Kouriba en 1994 pour Au nom du Christ. Plus tard dans Moolaadé de Sembène. Militante des droits des femmes et des enfants sur le continent.`,
+ f2a:`Deux prix d'interprétation, 1994`,
+ f3f:`Réalisateur`,f3h:`Philippe Lacôte`,
+ f3p:`La Nuit des Rois, tourné dans la prison de la Maca à Abidjan, a porté la Côte d'Ivoire jusqu'à la présélection des Oscars du meilleur film international. Seulement la troisième fois que le pays présentait un film.`,
+ f3a:`Présélection Oscars, film international`,
+ f4f:`Acteur`,f4h:`Michel Gohou`,
+ f4p:`Des Guignols d'Abidjan à Bienvenue au Gondwana et Black Snake. L'un des visages les plus reconnus de la comédie africaine francophone, et producteur et réalisateur à part entière.`,
+ f4a:`Les Guignols d'Abidjan`,
+ f5f:`Actrice et réalisatrice`,f5h:`Diêm Camille`,
+ f5p:`Née à Abidjan. Elle a écrit, réalisé et interprété le court métrage Doll, qui a remporté cinq prix dont ceux de la meilleure actrice et de la meilleure première réalisation. Elle travaille aujourd'hui à l'international.`,
+ f5a:`Doll · cinq prix`,
+ f6f:`Actrice`,f6h:`Fat Touré`,
+ f6p:`En 2025, elle est devenue la première actrice francophone nommée dans la catégorie meilleure actrice au Africa International Film Festival, l'une des récompenses les plus importantes du continent.`,
+ f6a:`Nomination AFRIFF, 2025`,
+ cindisc:`Ces figures sont citées pour illustrer la profondeur et la diversité du milieu cinématographique ivoirien. Aucune n'a été approchée et aucune n'est une participante confirmée. La distribution finale du chapitre cinéma sera arrêtée avec l'équipe de production de Rolling Stone Africa.`,
+
+ keb:`Thème Deux · Karité et Cosmétique Naturelle`,
+ kh2:`Une industrie bâtie par des femmes.<br><em>Possédée par d'autres.</em>`,
+ kp1:`Le beurre de karité est présent dans les foyers noirs depuis des générations. Sur les cheveux, sur la peau, sur les nouveau nés, transmis de mère en fille bien avant qu'une entreprise ne le mette en flacon. L'Afrique de l'Ouest lui donne déjà un nom qui dit tout: l'or des femmes.`,
+ kp2:`Tout commence dans la savane du nord. Des femmes partent ramasser les noix, puis trient, torréfient, broient, barattent et extraient, presque entièrement à la main. Le beurre fini voyage vers Paris, Londres et Los Angeles et multiplie sa valeur en chemin. Très peu de cette hausse revient à Korhogo.`,
+ kp3:`La même histoire est en train d'être réécrite plus près d'ici. Une génération d'Ivoiriennes bâtit des marques de cosmétique naturelle à Abidjan, achète aux coopératives et transforme le produit sur place. C'est cette partie que le monde n'a pas vue, et c'est celle qui mérite d'être filmée.`,
+ kp4:`Ce chapitre ne parle pas de manque. Il parle de valeur, de propriété et de savoir faire, et de femmes situées aux deux bouts d'une chaîne qui se reconnaissent comme exerçant le même métier.`,
+ k1v:`9 sur 10`,k1l:`Des productrices de karité en Côte d'Ivoire sont des femmes`,
+ k2v:`Top cinq`,k2l:`Le karité figure parmi les grandes exportations agricoles du pays`,
+ k3v:`À la main`,k3l:`Collecte, tri, torréfaction, broyage, barattage, extraction`,
+ k4v:`Korhogo`,k4l:`Région du Poro, cœur de la production ivoirienne de karité`,
+ k5v:`Abidjan`,k5l:`Un secteur de cosmétique naturelle porté par des Ivoiriennes`,
+ kdisc:`Les chiffres du secteur sont indicatifs et seront confirmés auprès des institutions ivoiriennes compétentes avant publication. Aucune coopérative précise n'a encore été approchée.`,
 
  jeb:`Le Voyage · Sept Jours`,
- jh2:`Une question posée à Abidjan.<br><em>Une réponse dans le nord.</em>`,
- jp:`Trois actes, pas cinq sujets. Cinéma, gastronomie, patrimoine, artisanat et mode s'inscrivent à l'intérieur de l'arc plutôt qu'à côté. Ceci est un itinéraire conceptuel: le programme exact sera construit avec l'équipe de Rolling Stone Africa et les producteurs de la tournée.`,
- act1n:`Acte Un · Jours 1 à 3`,act1t:`Abidjan. La question.`,
- act2n:`Acte Deux · Jours 4 à 5`,act2t:`Le nord. La réponse.`,
- act3n:`Acte Trois · Jours 6 à 7`,act3t:`Abidjan. La conséquence.`,
- geb:`La Question du Calendrier`,
- gh3:`Ce récit a une saison.<br><em>La plupart des projets n'en ont pas.</em>`,
- gp1:`Le karité ne se filme pas sur demande. La collecte et la transformation traditionnelle suivent un calendrier agricole. Arriver hors de cette fenêtre et la pièce maîtresse du film devient une démonstration mise en scène pour une caméra, ce que chaque spectateur perçoit et chaque sponsor remarque.`,
- ginv:`AToure confirmera la fenêtre de saison directement auprès des dirigeantes de coopératives et des contacts agricoles régionaux de la région du Poro avant toute proposition de date. Cette seule contrainte doit déterminer la date, et non l'inverse.`,
- gf1v:`La saison d'abord`,gf1l:`Des dates fixées sur la récolte, pas sur l'agenda`,
- gf2v:`Des mois à l'avance`,gf2l:`L'accord de la coopérative et le consentement prennent du temps`,
- gf3v:`Vérifié localement`,gf3l:`Confirmé dans le Poro, pas depuis un bureau`,
- gf4v:`Une seule fenêtre`,gf4l:`La manquer et la pièce maîtresse est une reconstitution`,
+ jh2:`Ce qui se passe réellement,<br><em>jour après jour.</em>`,
+ jp:`Écrit honnêtement. Le jour un est une arrivée et un dîner, rien de plus. Les journées de travail sont les jours deux à cinq. Les jours six et sept livrent la couverture et referment le récit.`,
+ act1n:`Jour 1`,act1t:`Arriver. Se reposer. Manger.`,
+ act2n:`Jours 2 à 5`,act2t:`C'est ici que le contenu se fabrique.`,
+ act3n:`Jours 6 à 7`,act3t:`La couverture, et la clôture.`,
+ cbeb:`Comment cela se finalise`,
+ cbh3:`Un point de départ,<br><em>pas un programme arrêté.</em>`,
+ cbp1:`AToure ne doit pas être la seule partie à écrire cet itinéraire. Rolling Stone Africa réalise le documentaire et la couverture, et l'équipe de production aura ses propres thèmes, sa propre liste de plans et ses propres exigences, qui doivent façonner ces journées.`,
+ cbp2:`Ce qui suit est une position d'ouverture réfléchie, proposée par un opérateur qui connaît le pays. Elle est faite pour être discutée, coupée et reconstruite ensemble. AToure propose et exécute. L'équipe de production décide de ce dont le film a besoin.`,
+ cb1:`Les thèmes que le documentaire souhaite porter`,
+ cb2:`Ce que la couverture exige en lieux, en lumière et en temps`,
+ cb3:`Les intervenants que l'équipe de production souhaite déjà`,
+ cb4:`Taille d'équipe, matériel et heures de tournage par jour`,
+ cb5:`Le temps de repos que le planning doit préserver`,
+ cb6:`Quelles journées sont fixes et lesquelles peuvent bouger`,
 
  whyeb:`Pourquoi AToure`,
  whyh2:`Tout le monde peut admirer ce projet.<br><em>Très peu peuvent le livrer.</em>`,
@@ -987,8 +1066,8 @@ const FR={
  p4p:`1,57 milliard de vues sur l'Ashton Hall Africa Tour. Un record CAN de 6,1 milliards d'impressions numériques au Maroc. Chaque chiffre vérifié, chaque projet livré de bout en bout.`,
  cmpeb:`La preuve, dans ce pays`,
  cmph3:`Nous avons déjà mis en scène <em>le moment culturel.</em>`,
- cmpp1:`Le moment Zaouli de la visite d'IShowSpeed en Côte d'Ivoire a fait le tour du monde. AToure a construit cette visite à partir de rien: aucune infrastructure, aucune relation sponsor préalable, aucun modèle. Elle s'est terminée par une reconnaissance personnelle du Ministre ivoirien du Tourisme.`,
- cmpp2:`Une coopérative à Korhogo est une salle plus difficile à ouvrir qu'un stade, et elle compte davantage pour ce récit. L'accès, le consentement et la dignité dans cette salle sont tout le film.`,
+ cmpp1:`IShowSpeed, reçu selon les honneurs traditionnels en Côte d'Ivoire, lors d'une visite qu'AToure a construite à partir de rien: aucune infrastructure, aucune relation sponsor préalable, aucun modèle. Les images ont fait le tour du monde et le travail s'est terminé par une reconnaissance personnelle du Ministre ivoirien du Tourisme.`,
+ cmpp2:`Une coopérative de femmes à Korhogo est une salle plus difficile à ouvrir qu'un stade, et elle compte davantage pour ce récit. L'accès, le consentement et la dignité dans cette salle sont tout le film.`,
 
  neteb:`Réseau d'Accès Stratégique`,
  neth2:`Institutions, protocole, sécurité,<br><em>et la route du Nord.</em>`,
@@ -1044,7 +1123,6 @@ const FR={
  c3tag:`Cinq Pays · 2026`,
  c3p:`Ghana, Cameroun, Nigeria, Bénin et Rwanda. AToure a piloté toute la tournée pays par pays: partenariats, sponsors, médias, visas, sécurité, transport et itinéraire quotidien, avec une couverture de presse nationale sur chaque marché en trois langues.`,
  c3s1:`Vues totales de la tournée`,c3s2:`Pays livrés`,c3s3:`Plus grosse publication`,
-
  opseb:`Opérations &amp; Sécurité`,
  opsh2:`Chaque pièce de l'opération.<br><em>Un seul partenaire responsable.</em>`,
  opsp:`Le système opérationnel qui a livré la visite d'IShowSpeed en Côte d'Ivoire, adapté à une invitée qui voyage discrètement et à un programme qui quitte la capitale.`,
@@ -1070,13 +1148,13 @@ const FR={
  e2n:`Volet 02`,
  e2h:`Sponsoring et partenariats`,
  e2p:`AToure amène des sponsors ivoiriens et régionaux, comme livré avec MTN, Solibra et Snedai. Ce récit atteint des secteurs qu'une visite de célébrité classique ne touche pas: cosmétique et beauté, exportation agricole, développement économique des femmes et tourisme. Le sponsoring apporté par AToure donne lieu à une commission de succès.`,
- ctah2:`La saison fixe la date.<br><em>La date fixe tout le reste.</em>`,
- ctap:`L'accord de la coopérative, le consentement de tournage, les approbations institutionnelles et l'aviation intérieure fonctionnent avec de longs délais, et le calendrier du karité ne s'adapte pas à un planning de production.`,
- ctabtn:`Planifier l'appel`,
  fconf:`Confidentiel · Préparé pour Rolling Stone Africa`,
  fline:`Baba Touré · Directeur · AToure Management &amp; Consulting · Est. 2023, Londres`,
+ ctah2:`Construisons l'itinéraire<br><em>ensemble.</em>`,
+ ctap:`La prochaine étape est une séance de travail avec l'équipe de production de Rolling Stone Africa sur les thèmes, la liste de plans et les dates. L'accord de la coopérative, le consentement de tournage, les approbations institutionnelles et l'aviation intérieure fonctionnent avec de longs délais: plus tôt le périmètre est arrêté, plus le programme pourra livrer.`,
+ ctabtn:`Planifier l'appel`,
 
- nav1:`Le Concept`,nav2:`L'Actrice`,nav3:`Le Voyage`,nav4:`Pourquoi AToure`,nav5:`Accès`,nav6:`Références`,nav7:`Opérations`,nav8:`Engagement`,
+ nav1:`Le Concept`,nav2:`Cinéma`,nav3:`Karité`,nav4:`Le Voyage`,nav5:`Pourquoi AToure`,nav6:`Accès`,nav7:`Références`,nav8:`Opérations`,nav9:`Engagement`,
  prevday:`← Jour précédent`,nextday:`Jour suivant →`,keymoments:`Moments clés`,lbof:`sur`
 };
 // ============ capture the English source copy, then wire the toggle ============
