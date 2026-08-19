@@ -4,18 +4,26 @@ The page renders correctly without any of these. Every missing file shows a
 labelled placeholder block rather than a broken image, so the proposal can be
 sent as it stands. Dropping files in at these exact names is all that is needed.
 
-## Ivorian cinema section, six portraits
+## Ivorian cinema section
 
-Portrait orientation, 3:4, minimum 600px wide.
+Five of six are in place, pulled from the Drive folder and cropped to 3:4.
+Still missing: `cinema-michel-gohou.jpg`.
 
-| File | Subject |
-|---|---|
-| `cinema-akissi-delta.jpg` | Akissi Delta, actress and filmmaker, creator of Ma Famille |
-| `cinema-naky-sy-savane.jpg` | Naky Sy Savané, actress |
-| `cinema-philippe-lacote.jpg` | Philippe Lacôte, director of Night of the Kings |
-| `cinema-michel-gohou.jpg` | Michel Gohou, actor |
-| `cinema-diem-camille.jpg` | Diêm Camille, actress and director |
-| `cinema-fat-toure.jpg` | Fat Touré, actress |
+## The Drive transfer, and its one limit
+
+Worth recording, because it is not obvious. Files pulled through the Drive
+connector come back as base64. When a result is large the harness writes it to
+a file on disk, and it can then be decoded byte exact with no loss. When a
+result is small it is returned inline instead, and inline data cannot be moved
+to disk without corrupting, which was verified three times on the same file.
+
+The practical threshold sits somewhere between 22KB and 65KB of original file
+size. So the rule is simply: **anything above about 65KB transfers perfectly,
+anything under about 25KB cannot be transferred at all.**
+
+Both outstanding files are under it. `gohou michel.jpg` is 19KB and
+`Taraji TPH.jpg` is 22KB. Re-saving either as a PNG, or at higher resolution,
+pushes it over the line and it will then transfer cleanly.
 
 ## Taraji, two slots
 
