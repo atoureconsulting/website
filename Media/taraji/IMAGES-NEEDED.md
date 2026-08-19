@@ -26,6 +26,19 @@ Each theme's "why this is personal for her" panel now carries a photo:
 The Women panel does not yet have a photo slot; add one if a suitable image
 comes through the Drive folder.
 
+## Korhogo
+
+`korhogo-palace.jpg`, from `palace korhogo.webp` (217KB), appears twice: as
+the Day 5 panel image in the journey, and in the right column of the shea
+butter section under the caption "Korhogo, where the cover is shot".
+
+**This one needs verifying before the proposal goes out.** The building was
+supplied and named as the Korhogo palace, but it has not been confirmed
+against a source, and the Sudano Sahelian earth architecture in the frame is
+found across the wider region rather than in one town only. Confirm the
+building and its location, or swap it for a photograph of a site the
+production can actually reach, before anyone quotes it as a cover location.
+
 ## The Drive transfer, and its one limit
 
 Worth recording, because it is not obvious. Files pulled through the Drive
