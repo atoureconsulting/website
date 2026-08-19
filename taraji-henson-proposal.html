@@ -42,7 +42,7 @@
   .navin{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:12px}
   .navbrand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}
   .navbrand img{width:206px;height:auto;display:block}
-  @media(max-width:1040px){
+  @media(max-width:1160px){
     .navin{flex-wrap:wrap;padding:10px 16px;gap:8px}
     .navbrand img{width:200px}
     .langtoggle{margin-left:auto}
@@ -323,6 +323,19 @@
   .rolenote p{font-family:var(--serif);font-size:clamp(19px,2.2vw,25px);font-style:italic;color:var(--ink);line-height:1.35}
   @media(max-width:980px){.roles{grid-template-columns:repeat(2,1fr)}.beats{grid-template-columns:1fr;gap:14px}}
   @media(max-width:560px){.roles{grid-template-columns:1fr}.concline{padding:32px 24px}.rolenote{padding:24px 22px}}
+  /* concept: portrait beside the three themes */
+  .conceptgrid{display:grid;grid-template-columns:360px 1fr;gap:56px;align-items:start}
+  .conceptshot img{width:100%;border-radius:18px;border:1px solid var(--gold-soft);box-shadow:0 24px 50px rgba(160,136,48,.18);display:block;background:var(--sand);aspect-ratio:3/4;object-fit:cover}
+  .conceptshot .imgph{width:100%;aspect-ratio:3/4;border-radius:18px}
+  .conceptshot .cap{margin-top:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);text-align:center}
+  .themerow{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--parch)}
+  .themerow:first-child{padding-top:0}
+  .themerow:last-child{border-bottom:0;padding-bottom:0}
+  .themerow .tn{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.1em;flex:0 0 auto;padding-top:6px}
+  .themerow h3{font-size:25px;margin:0 0 10px}
+  .themerow p{font-size:15.5px;color:var(--ink-soft)}
+  @media(max-width:900px){.conceptgrid{grid-template-columns:1fr;gap:34px}.conceptshot{max-width:320px;margin:0 auto}}
+
   /* people grid for the two industry sections */
   .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .disclaim{margin-top:26px;font-size:13.5px;color:var(--taupe);font-style:italic}
@@ -354,10 +367,11 @@
       <a href="#concept">The Concept</a>
       <a href="#cinema">Cinema</a>
       <a href="#karite">Karité</a>
-      <a href="#journey">The Journey</a>
+      <a href="#women">Women</a>
+      <a href="#journey">Journey</a>
       <a href="#why">Why AToure</a>
       <a href="#network">Access</a>
-      <a href="#record">Track Record</a>
+      <a href="#record">Record</a>
       <a href="#ops">Operations</a>
       <a href="#engage">Engagement</a>
     </div>
@@ -389,29 +403,41 @@
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="ceb">The Concept</div>
-      <h2 data-t="ch2">Cinema and karité.<br><em>Two industries that decide how a Black woman is seen.</em></h2>
-      <p data-t="cp">Taraji P. Henson works in both. So does Côte d'Ivoire. That is the whole idea, and it is why this visit is not interchangeable with any other celebrity trip to the continent.</p>
+      <h2 data-t="ch2">Cinema. Karité.<br><em>And the women who carry both.</em></h2>
+      <p data-t="cp">Three themes, running through every day of the journey. Taraji P. Henson has built a life in film and a company in beauty. Côte d'Ivoire has a cinema reaching the world and a karité sector made almost entirely by women's hands. The third theme is what connects them.</p>
     </div>
-    <div class="beats">
-      <div class="beat rv">
-        <div class="bn">01</div>
-        <h3 data-t="be1h">She arrives as a peer</h3>
-        <p data-t="be1p">An Academy Award nomination, a Golden Globe and three decades of work. Ivorian cinema has its own canon, its own stars and an Academy shortlist of its own. Two industries meeting, not one discovering the other.</p>
+    <div class="conceptgrid">
+      <div class="conceptshot rv">
+        <img src="/Media/taraji/taraji-concept.jpg" alt="Taraji P. Henson" data-ph="Taraji P. Henson">
+        <div class="cap" data-t="conceptcap">Actress · Founder · Advocate</div>
       </div>
-      <div class="beat rv">
-        <div class="bn">02</div>
-        <h3 data-t="be2h">She built in beauty</h3>
-        <p data-t="be2p">Taraji founded a haircare company. That gives her a genuine reason to ask how a global ingredient is actually made, and the standing to ask it properly rather than politely.</p>
-      </div>
-      <div class="beat rv">
-        <div class="bn">03</div>
-        <h3 data-t="be3h">The country holds the answer</h3>
-        <p data-t="be3p">Karité is one of Côte d'Ivoire's major agricultural exports and roughly nine in ten producers are women. The film industry and the beauty industry both run on Black women. Neither is owned by them.</p>
+      <div class="rv">
+        <div class="themerow">
+          <div class="tn">01</div>
+          <div>
+            <h3 data-t="t1h">Cinema</h3>
+            <p data-t="t1p">Ivorian film has its own canon, its own stars and an Academy shortlist of its own, and every career in it begins on a stage rather than a set. She arrives as a peer to that industry, not as a visitor to it.</p>
+          </div>
+        </div>
+        <div class="themerow">
+          <div class="tn">02</div>
+          <div>
+            <h3 data-t="t2h">Karité</h3>
+            <p data-t="t2p">One of the country's major agricultural exports, collected and processed almost entirely by women in the north, and now finished into cosmetics by a new generation of Ivorian founders. Taraji built a company in beauty, which is why she can ask how it is really made.</p>
+          </div>
+        </div>
+        <div class="themerow">
+          <div class="tn">03</div>
+          <div>
+            <h3 data-t="t3h">The role of women</h3>
+            <p data-t="t3p">The thread through both. Who does the work, who gets credited for it, who owns it, and who decides what a woman's career is allowed to look like. This is the argument the whole journey makes.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="concline rv">
       <p data-t="cline">Her company is why the questions land. It is not what the film is about.</p>
-      <div class="who" data-t="clinewho">The editorial guarantee · Cinema and Karité</div>
+      <div class="who" data-t="clinewho">The editorial guarantee</div>
     </div>
     <p class="disclaim rv" data-t="cdisc">Rolling Stone Africa owns the documentary and its editorial direction. Taraji's own work in beauty is what makes her the right person to carry these questions, and the proposal is built so the film remains a Rolling Stone Africa production about Côte d'Ivoire, never a brand film.</p>
   </div>
@@ -480,6 +506,10 @@
         </div>
       </div>
     </div>
+    <div class="rolenote rv" style="margin-top:34px">
+      <div class="eyebrow" data-t="thb">Where it actually begins</div>
+      <p data-t="thp" style="margin-top:12px">Every Ivorian acting career starts on a stage, not on a set. The theatres of Abidjan are where actors are trained, discovered and tested, and they remain the working home of much of the profession. A night in a national theatre puts this documentary in front of the generation coming up rather than only the one that has arrived, and it costs a fraction of a studio day.</p>
+    </div>
     <p class="disclaim rv" data-t="cindisc">Named here to show the depth and range of the Ivorian film community. None of these figures has been approached and none is a confirmed participant. The final cast of the cinema chapter will be agreed with the Rolling Stone Africa production team.</p>
   </div>
 </section>
@@ -511,7 +541,39 @@
   </div>
 </section>
 
-<section id="journey" class="alt">
+<section id="women" class="alt">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow" data-t="web">Theme Three · The Role of Women</div>
+      <h2 data-t="wh2">The thread that runs<br><em>through both.</em></h2>
+      <p data-t="wp">Cinema and karité are the two industries. The women inside them are why the film matters. This is not a panel discussion bolted onto a trip. It is the argument the whole journey makes, and it is where the Ivorian state can turn a seven day visit into something that outlasts it.</p>
+    </div>
+    <div class="people" style="grid-template-columns:1fr 1fr">
+      <div class="pillar rv">
+        <div class="num">01</div>
+        <h3 data-t="m1h">Ministry of Women, Family &amp; Child Development</h3>
+        <p data-t="m1p">The ministry with direct policy responsibility for the women's cooperatives in the north and for women's economic empowerment nationally. The natural partner for anything this project does with young Ivorian women, and the body that gives weight to whatever is committed to once the cameras leave.</p>
+        <div class="award" data-t="m1a" style="margin-top:16px;padding-top:14px;border-top:1px solid var(--parch);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)">Proposed activations</div>
+        <ul class="moments" style="margin-top:12px"><li data-t="m1x1">A mentorship session with young women in film and enterprise</li><li data-t="m1x2">A public conversation on women's economic power</li><li data-t="m1x3">A visit to a girls' school or vocational training centre</li><li data-t="m1x4">A lasting commitment tied to a named cooperative</li></ul>
+      </div>
+      <div class="pillar rv">
+        <div class="num">02</div>
+        <h3 data-t="m2h">Ministry of Culture &amp; Francophonie</h3>
+        <p data-t="m2p">Owner of cultural programming, heritage, the national theatres and the state film office. It underwrites both the cinema and theatre chapters and can convene the Ivorian film community at a scale no private operator can reach alone.</p>
+        <div class="award" data-t="m2a" style="margin-top:16px;padding-top:14px;border-top:1px solid var(--parch);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)">Proposed activations</div>
+        <ul class="moments" style="margin-top:12px"><li data-t="m2x1">A masterclass with young Ivorian actors and film students</li><li data-t="m2x2">An evening at a national theatre with the acting community</li><li data-t="m2x3">A screening and open conversation with Ivorian filmmakers</li><li data-t="m2x4">Official recognition of Ivorian talent during the visit</li></ul>
+      </div>
+    </div>
+    <div class="collab rv" style="margin-top:36px">
+      <div class="eyebrow" data-t="mceb">Why this matters commercially</div>
+      <h3 data-t="mch3">Two ministries turn a visit<br><em>into a national programme.</em></h3>
+      <p data-t="mcp1">A celebrity trip is a media moment. A trip carrying two ministries is a government backed initiative, and that changes who will fund it. Ministerial partnership opens sponsors that a private visit cannot reach, gives the documentary institutional standing, and gives Rolling Stone Africa a story about the Republic rather than only about a guest.</p>
+      <p data-t="mcp2">AToure holds working relationships across both ministries and has activated them on delivered projects. These are proposals, not confirmations, and each requires formal approach and approval.</p>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="jeb">The Journey · Seven Days</div>
@@ -542,7 +604,7 @@
   </div>
 </section>
 
-<section id="why">
+<section id="why" class="alt">
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="whyeb">Why AToure</div>
@@ -813,7 +875,7 @@
   </div>
 </section>
 
-<section id="ops" class="alt">
+<section id="ops">
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="opseb">Operations &amp; Security</div>
@@ -831,7 +893,7 @@
   </div>
 </section>
 
-<section id="engage">
+<section id="engage" class="alt">
   <div class="wrap">
     <div class="sechead rv">
       <div class="eyebrow" data-t="eeb">Engagement</div>
@@ -988,14 +1050,15 @@ const FR={
  portraitcap:`Mme Taraji P. Henson`,
 
  ceb:`Le Concept`,
- ch2:`Cinéma et karité.<br><em>Deux industries qui décident du regard porté sur la femme noire.</em>`,
- cp:`Taraji P. Henson travaille dans les deux. La Côte d'Ivoire aussi. C'est toute l'idée, et c'est pourquoi cette visite n'est interchangeable avec aucun autre voyage de célébrité sur le continent.`,
- be1h:`Elle arrive en égale`,
- be1p:`Une nomination aux Oscars, un Golden Globe et trente ans de métier. Le cinéma ivoirien a son propre patrimoine, ses propres vedettes et sa propre présélection aux Oscars. Deux industries qui se rencontrent, et non l'une qui découvre l'autre.`,
- be2h:`Elle a bâti dans la beauté`,
- be2p:`Taraji a fondé une marque de soin capillaire. Cela lui donne une raison authentique de demander comment un ingrédient mondial est réellement fabriqué, et la légitimité de poser la question sérieusement plutôt que poliment.`,
- be3h:`Le pays détient la réponse`,
- be3p:`Le karité compte parmi les grandes exportations agricoles de la Côte d'Ivoire et près de neuf productrices sur dix sont des femmes. L'industrie du cinéma comme celle de la beauté reposent sur les femmes noires. Aucune des deux ne leur appartient.`,
+ ch2:`Cinéma. Karité.<br><em>Et les femmes qui portent les deux.</em>`,
+ cp:`Trois thèmes, présents dans chaque journée du voyage. Taraji P. Henson a bâti une vie dans le cinéma et une entreprise dans la beauté. La Côte d'Ivoire a un cinéma qui rayonne et une filière karité façonnée presque entièrement par les mains des femmes. Le troisième thème est ce qui relie les deux.`,
+ conceptcap:`Actrice · Fondatrice · Militante`,
+ t1h:`Cinéma`,
+ t1p:`Le cinéma ivoirien a son propre patrimoine, ses propres vedettes et sa propre présélection aux Oscars, et chaque carrière y commence sur une scène plutôt que sur un plateau. Elle arrive en égale de cette industrie, non en visiteuse.`,
+ t2h:`Karité`,
+ t2p:`L'une des grandes exportations agricoles du pays, collectée et transformée presque entièrement par des femmes dans le nord, et désormais finie en cosmétiques par une nouvelle génération de fondatrices ivoiriennes. Taraji a bâti une entreprise dans la beauté, ce qui lui donne la légitimité de demander comment il est réellement fabriqué.`,
+ t3h:`Le rôle des femmes`,
+ t3p:`Le fil qui traverse les deux. Qui fait le travail, qui en reçoit le mérite, qui le possède, et qui décide de ce à quoi la carrière d'une femme a le droit de ressembler. C'est l'argument que porte tout le voyage.`,
  cline:`Son entreprise explique la justesse de ses questions. Elle n'est pas le sujet du film.`,
  clinewho:`La garantie éditoriale · Cinéma et Karité`,
  cdisc:`Rolling Stone Africa possède le documentaire et sa direction éditoriale. Le travail de Taraji dans la beauté est ce qui fait d'elle la personne juste pour porter ces questions, et la proposition est construite pour que le film reste une production Rolling Stone Africa consacrée à la Côte d'Ivoire, jamais un film de marque.`,
@@ -1154,7 +1217,32 @@ const FR={
  ctap:`La prochaine étape est une séance de travail avec l'équipe de production de Rolling Stone Africa sur les thèmes, la liste de plans et les dates. L'accord de la coopérative, le consentement de tournage, les approbations institutionnelles et l'aviation intérieure fonctionnent avec de longs délais: plus tôt le périmètre est arrêté, plus le programme pourra livrer.`,
  ctabtn:`Planifier l'appel`,
 
- nav1:`Le Concept`,nav2:`Cinéma`,nav3:`Karité`,nav4:`Le Voyage`,nav5:`Pourquoi AToure`,nav6:`Accès`,nav7:`Références`,nav8:`Opérations`,nav9:`Engagement`,
+ thb:`Là où tout commence`,
+ thp:`Toute carrière de comédien ivoirien commence sur une scène, pas sur un plateau. Les théâtres d'Abidjan sont le lieu où les acteurs se forment, se révèlent et s'éprouvent, et ils restent le foyer de travail d'une grande partie de la profession. Une soirée dans un théâtre national place ce documentaire devant la génération qui monte, et non devant la seule génération déjà arrivée, pour une fraction du coût d'une journée en studio.`,
+
+ web:`Thème Trois · Le Rôle des Femmes`,
+ wh2:`Le fil qui traverse<br><em>les deux.</em>`,
+ wp:`Le cinéma et le karité sont les deux industries. Les femmes qui s'y trouvent sont la raison pour laquelle ce film compte. Ce n'est pas une table ronde ajoutée à un voyage. C'est l'argument que porte tout le parcours, et c'est là que l'État ivoirien peut transformer une visite de sept jours en quelque chose qui lui survit.`,
+ m1h:`Ministère de la Femme, de la Famille et de l'Enfant`,
+ m1p:`Le ministère directement responsable des coopératives de femmes du nord et de l'autonomisation économique des femmes à l'échelle nationale. Le partenaire naturel de tout ce que ce projet entreprendra avec de jeunes Ivoiriennes, et l'institution qui donne du poids à ce qui sera engagé une fois les caméras parties.`,
+ m1a:`Activations proposées`,
+ m1x1:`Une session de mentorat avec de jeunes femmes du cinéma et de l'entreprise`,
+ m1x2:`Une conversation publique sur le pouvoir économique des femmes`,
+ m1x3:`Une visite dans une école de filles ou un centre de formation`,
+ m1x4:`Un engagement durable lié à une coopérative nommée`,
+ m2h:`Ministère de la Culture et de la Francophonie`,
+ m2p:`Responsable de la programmation culturelle, du patrimoine, des théâtres nationaux et de l'office national du cinéma. Il soutient à la fois le chapitre cinéma et le chapitre théâtre, et peut réunir le milieu cinématographique ivoirien à une échelle qu'aucun opérateur privé n'atteint seul.`,
+ m2a:`Activations proposées`,
+ m2x1:`Une masterclass avec de jeunes comédiens et étudiants en cinéma`,
+ m2x2:`Une soirée dans un théâtre national avec le milieu du spectacle`,
+ m2x3:`Une projection et un échange ouvert avec les cinéastes ivoiriens`,
+ m2x4:`Une reconnaissance officielle des talents ivoiriens pendant la visite`,
+ mceb:`Pourquoi cela compte commercialement`,
+ mch3:`Deux ministères transforment une visite<br><em>en programme national.</em>`,
+ mcp1:`Un voyage de célébrité est un moment médiatique. Un voyage porté par deux ministères est une initiative soutenue par l'État, et cela change qui acceptera de le financer. Le partenariat ministériel ouvre des sponsors qu'une visite privée n'atteint pas, donne au documentaire une stature institutionnelle, et offre à Rolling Stone Africa un récit sur la République et non seulement sur une invitée.`,
+ mcp2:`AToure entretient des relations de travail avec les deux ministères et les a activées sur des projets livrés. Il s'agit de propositions et non de confirmations, et chacune exige une démarche formelle et une approbation.`,
+
+ nav1:`Le Concept`,nav2:`Cinéma`,nav3:`Karité`,nav4:`Femmes`,nav5:`Voyage`,nav6:`Pourquoi AToure`,nav7:`Accès`,nav8:`Références`,nav9:`Opérations`,nav10:`Engagement`,
  prevday:`← Jour précédent`,nextday:`Jour suivant →`,keymoments:`Moments clés`,lbof:`sur`
 };
 // ============ capture the English source copy, then wire the toggle ============
@@ -1260,12 +1348,18 @@ document.addEventListener('keydown',e=>{
 
 // ============ graceful placeholder while a photo is not yet uploaded ============
 try{
-  document.querySelectorAll('img[data-ph]').forEach(img=>img.addEventListener('error',()=>{
+  const swap=img=>{
+    if(!img.parentNode)return;
     const d=document.createElement('div');d.className='imgph';d.textContent=img.dataset.ph;
     const cls=(img.className||'').split(' ').filter(Boolean);
     if(cls.length)d.classList.add(...cls);
     img.replaceWith(d);
-  }));
+  };
+  document.querySelectorAll('img[data-ph]').forEach(img=>{
+    // an image that already failed before this script ran never fires error
+    if(img.complete&&img.naturalWidth===0){swap(img);return}
+    img.addEventListener('error',()=>swap(img));
+  });
 }catch(e){}
 
 // ============ progress + scrollspy ============

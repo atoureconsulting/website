@@ -17,10 +17,12 @@ Portrait orientation, 3:4, minimum 600px wide.
 | `cinema-diem-camille.jpg` | Diêm Camille, actress and director |
 | `cinema-fat-toure.jpg` | Fat Touré, actress |
 
-## Hero
+## Taraji, two slots
 
-`taraji-portrait.jpg` currently holds an Oscars red carpet photograph lifted
-from the Rolling Stone Africa deck. A cleaner portrait would improve the page.
+| File | Where | Notes |
+|---|---|---|
+| `taraji-portrait.jpg` | Hero, present | Oscars red carpet frame lifted from the Rolling Stone Africa deck. A cleaner portrait would improve it. |
+| `taraji-concept.jpg` | Concept section, missing | Sits beside the three themes. Portrait orientation, 3:4. Something that reads as actress and founder rather than red carpet. |
 
 ## Rights
 
