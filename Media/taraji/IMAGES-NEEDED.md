@@ -6,12 +6,25 @@ sent as it stands. Dropping files in at these exact names is all that is needed.
 
 ## Ivorian cinema section
 
-All six theme slots are filled except one. In place: Akissi Delta, Naky Sy
-Savané, Philippe Lacôte, Diêm Camille, Fat Touré. The concept portrait beside
-the three themes is also filled, from a second TPH photo that transferred
-cleanly at 186KB.
+All six theme slots are filled: Akissi Delta, Naky Sy Savané, Philippe Lacôte,
+Michel Gohou, Diêm Camille, Fat Touré. The concept portrait beside the three
+themes is also filled, from a second TPH photo that transferred cleanly at
+186KB.
 
-Still missing: `cinema-michel-gohou.jpg`.
+Gohou cleared the transfer threshold on a re-upload named `gohou 2.webp`
+(46KB), decoded byte exact and saved as `cinema-michel-gohou.jpg`.
+
+## Why this is personal panels
+
+Each theme's "why this is personal for her" panel now carries a photo:
+
+| File | Panel | Source |
+|---|---|---|
+| `taraji-interview-tears.jpg` | Cinema, beside the SiriusXM quote | `taraji intervie 1.webp` (101KB) |
+| `taraji-tph-product.jpg` | Karité, beside the TPH founding quote | `taraji tph 2.avif` (56KB) |
+
+The Women panel does not yet have a photo slot; add one if a suitable image
+comes through the Drive folder.
 
 ## The Drive transfer, and its one limit
 
