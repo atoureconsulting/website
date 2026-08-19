@@ -6,7 +6,11 @@ sent as it stands. Dropping files in at these exact names is all that is needed.
 
 ## Ivorian cinema section
 
-Five of six are in place, pulled from the Drive folder and cropped to 3:4.
+All six theme slots are filled except one. In place: Akissi Delta, Naky Sy
+Savané, Philippe Lacôte, Diêm Camille, Fat Touré. The concept portrait beside
+the three themes is also filled, from a second TPH photo that transferred
+cleanly at 186KB.
+
 Still missing: `cinema-michel-gohou.jpg`.
 
 ## The Drive transfer, and its one limit
@@ -21,9 +25,14 @@ The practical threshold sits somewhere between 22KB and 65KB of original file
 size. So the rule is simply: **anything above about 65KB transfers perfectly,
 anything under about 25KB cannot be transferred at all.**
 
-Both outstanding files are under it. `gohou michel.jpg` is 19KB and
-`Taraji TPH.jpg` is 22KB. Re-saving either as a PNG, or at higher resolution,
-pushes it over the line and it will then transfer cleanly.
+The TPH photo proved this out: a second upload of the same subject came in at
+186KB and transferred perfectly on the first try, decoded byte exact, no
+corruption. It is now the concept portrait.
+
+Gohou has not cleared it yet. A re-upload named `Gohou Michel 1.jpg` came in
+at 13KB, smaller than the original 19KB attempt, so it was not retried, it
+would only reproduce the same corruption. Re-save it as a PNG, or export at a
+noticeably higher resolution, so it lands comfortably above roughly 65KB.
 
 ## Taraji, two slots
 
