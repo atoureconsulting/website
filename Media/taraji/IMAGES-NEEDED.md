@@ -22,7 +22,14 @@ Portrait orientation, 3:4, minimum 600px wide.
 | File | Where | Notes |
 |---|---|---|
 | `taraji-portrait.jpg` | Hero, present | Oscars red carpet frame lifted from the Rolling Stone Africa deck. A cleaner portrait would improve it. |
-| `taraji-concept.jpg` | Concept section, missing | Sits beside the three themes. Portrait orientation, 3:4. Something that reads as actress and founder rather than red carpet. |
+| `taraji-concept.jpg` | Concept section, missing | The haircare campaign frame: Taraji applying product to cornrowed hair, gold hoops, smiling. Portrait 3:4. It carries all three themes in one image, which is exactly what the slot needs. |
+
+**One note on that frame.** The product bottle is prominent and its branding is
+legible. That is the single image on the page most likely to make Rolling Stone
+Africa read the project as a brand film, which is the risk we deliberately wrote
+the editorial guarantee to close. Recommend cropping so her face and the hair
+carry the frame and the bottle sits at the edge or out of it. The meaning
+survives the crop. The brand reading does not.
 
 ## Rights
 
