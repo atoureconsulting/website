@@ -16,6 +16,17 @@ Other house habits, taken from copy the client wrote themselves:
   "But the numbers never tell the full story," followed by the human result.
 - Every tour caption closes with "This is what AToure was built for."
 
+## How AToure describes itself
+
+AToure is not an agency. Never call it one, in any language, in any document.
+It is a management and consulting company: it builds the project and runs it
+on the ground as the operator, rather than selling a campaign and handing the
+delivery to someone else. "Agence" is out in French copy too. The one place
+the word survives is the contractual term "agency fee" in the Mauritius
+documents, which is a fee name and not a description of the company.
+
+Baba Toure is Director, not founder.
+
 ## Africa Tour caption format
 
 One post per country, in tour order: Ghana, Cameroon, Nigeria, Benin, Rwanda.
