@@ -10,7 +10,9 @@ Weekend merchandise: logos, typefaces, and colour specifications.
 ```
 brand-kit/
 ├── 01-logos/
-│   ├── logo-contact-sheet.png      ← visual index of every logo file
+│   ├── logo-contact-sheet.png              ← visual index of every logo file
+│   ├── logo-contact-sheet-transparent.png  ← the transparent set, on a checkerboard
+│   ├── png-transparent/            ← EVERY logo as a transparent PNG
 │   ├── atoure/                     ← AToure Management & Consulting
 │   └── race-weekend/               ← Race Weekend Abidjan 2026
 ├── 02-fonts/
@@ -78,6 +80,58 @@ be too wide to read.
 
 The Race Weekend mark carries an intentional distressed texture. Keep it — it is
 part of the design. See the production notes below if you're embroidering it.
+
+---
+
+## Transparent PNG set
+
+`01-logos/png-transparent/` holds every logo in this kit as a PNG with a
+transparent background. Fifteen files. Each one was checked rather than assumed:
+none carries a solid background, and none is blank.
+
+Where a vector source exists, the PNG was rendered fresh from that vector at
+4000 px on the long edge. Those renders are sharper than the rasters they stand
+in for, and they carry the canonical gold `#C8A951` rather than the three
+different golds in circulation across the older artwork. See limitation 3 below.
+
+| File | Pixels | Rendered from |
+|---|---|---|
+| `atoure-monogram-gold.png` | 2914 x 4000 | vector |
+| `atoure-monogram-black.png` | 2914 x 4000 | vector |
+| `atoure-monogram-white.png` | 2914 x 4000 | vector |
+| `atoure-nav-lockup-on-dark.png` | 4000 x 707 | vector |
+| `atoure-nav-lockup-on-light.png` | 4000 x 707 | vector |
+| `atoure-wordmark-on-dark.png` | 4000 x 207 | vector |
+| `atoure-wordmark-on-light.png` | 4000 x 207 | vector |
+| `atoure-icon-gold-square.png` | 2048 x 2048 | vector |
+| `atoure-lockup-horizontal-gold.png` | 500 x 500 | supplied raster |
+| `atoure-lockup-horizontal-black.png` | 379 x 200 | supplied raster |
+| `atoure-lockup-horizontal-white.png` | 379 x 200 | supplied raster |
+| `race-weekend-lockup-black.png` | 4000 x 2020 | vector |
+| `race-weekend-lockup-white.png` | 4000 x 2020 | vector |
+| `race-weekend-lockup-red.png` | 4000 x 2020 | vector |
+| `race-weekend-lockup-gold.png` | 4000 x 2020 | vector |
+
+Three things worth knowing before you send these to a printer:
+
+The three `atoure-lockup-horizontal` files are the supplied artwork, carried
+across untouched. They were already transparent. They stay small because the
+serif lockup has no usable vector, which is limitation 2 below. For anything
+large format, use the nav lockup instead.
+
+`atoure-icon-gold-square.png` is the transparent counterpart to
+`atoure-icon-on-black.png`. The tile version is deliberately opaque, because the
+black tile is the asset. This one sets the same gold monogram on a square
+transparent canvas with clear space around it, for avatars, badges and app
+icons.
+
+`race-weekend-lockup-red.png` and `race-weekend-lockup-gold.png` are single
+colour renders in the two Race Weekend colours from `colours.txt`. They were
+derived here from the black vector, not supplied as artwork. Confirm them
+against the original before a production run.
+
+The monogram files are a tight crop, so the letterform touches the canvas edge.
+That is the artwork, not a cropping error. Add your own clear space in layout.
 
 ---
 
