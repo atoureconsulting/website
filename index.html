@@ -13,7 +13,7 @@
 <meta name="twitter:image" content="https://atoureconsulting.com/Media/AToure%20Management%20%26%20Consuting%20Logo/1.png">
 <title>AToure | Access to African Markets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap"><style>
-:root{--paper:#F3F1EC;--paper-2:#E9E6DF;--ink:#121212;--ink-2:#3A3A38;--mute:#77746D;--rule:#CFCBC2;--gold:#A8842C;--acc:#E0482B;--night:#141413;}
+:root{--paper:#F3F1EC;--paper-2:#E9E6DF;--ink:#121212;--ink-2:#3A3A38;--mute:#77746D;--rule:#CFCBC2;--gold:#A8842C;--acc:#C9971F;--acc-ink:#8A6510;--night:#141413;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{font-family:'Archivo',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -37,7 +37,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
 .nav-links a.active{text-decoration:underline;text-underline-offset:4px}
 .nav-cta{background:var(--ink);color:var(--paper)!important;padding:.6rem 1.1rem;text-decoration:none!important}
-.nav-cta:hover{background:var(--acc)}
+.nav-cta{background:var(--acc)!important;color:var(--ink)!important;font-weight:700!important}.nav-cta:hover{background:var(--ink)!important;color:var(--paper)!important}
 .nav-burger{display:none;background:none;border:1px solid var(--ink);width:44px;height:44px;font-size:1.2rem;cursor:pointer}
 #lang-toggle{background:var(--ink)!important;border-color:var(--ink)!important;border-radius:0!important}
 
@@ -48,8 +48,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .hero-sub{font-size:1.2rem;color:var(--ink-2);max-width:34ch;margin-top:28px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
 .btn{display:inline-block;padding:1rem 1.4rem;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--ink);transition:background .2s,color .2s}
-.btn-dark{background:var(--ink);color:var(--paper)}
-.btn-dark:hover{background:var(--acc);border-color:var(--acc)}
+.btn-dark{background:var(--ink);color:var(--paper)}.btn-gold{background:var(--acc);border-color:var(--acc);color:var(--ink);font-weight:700}.btn-gold:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:var(--acc);border-color:var(--acc);color:var(--ink)}
 .btn-line:hover{background:var(--ink);color:var(--paper)}
 .hero-facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
 .hero-facts div{padding:18px 16px 0 0}
@@ -176,28 +176,29 @@ footer a:hover{color:var(--ink)}
  form{grid-template-columns:1fr}
 }
 
-.mark{background:linear-gradient(var(--acc),var(--acc)) 0 88%/0 .14em no-repeat;animation:mark 1s .5s cubic-bezier(.2,.7,.2,1) forwards}
+.hl{font-weight:700;color:var(--ink)}.dark .hl,.work .hl{color:#fff}.case .kpi{display:block;color:var(--acc);font-weight:700;font-size:.9rem;letter-spacing:.02em;margin-bottom:8px}
+.mark{background:linear-gradient(var(--acc),var(--acc)) 0 90%/0 .16em no-repeat;animation:mark 1s .5s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes mark{to{background-size:100% .14em}}
-.hero-facts b{color:var(--acc)}
+.hero-facts b{color:var(--acc-ink);font-size:3.4rem}
 #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:60}
 .aud article{cursor:pointer;position:relative;transition:background .25s}
 .aud article:hover{background:var(--paper-2)}
-.aud .go{display:inline-block;margin-top:18px;font-size:.85rem;font-weight:600;color:var(--acc)}
+.aud .go{display:inline-block;margin-top:18px;font-size:.85rem;font-weight:700;color:var(--acc-ink)}
 .aud .go::after{content:" \2192";display:inline-block;transition:transform .25s}
 .aud article:hover .go::after{transform:translateX(4px)}
 .svc-row{cursor:pointer;transition:padding .3s}
-.svc-row h3::before{content:"+";display:inline-block;width:1.1em;color:var(--acc);font-weight:500;transition:transform .3s}
+.svc-row h3::before{content:"+";display:inline-block;width:1.1em;color:var(--acc-ink);font-weight:500;transition:transform .3s}
 .svc-row.open h3::before{transform:rotate(45deg)}
 .svc-row p,.svc-row ul{display:none}
 .svc-row.open p,.svc-row.open ul{display:block;animation:fade .35s ease}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .ctry tbody tr{cursor:pointer;transition:background .2s}
 .ctry tbody tr:hover{background:var(--paper-2)}
-.ctry tbody tr:hover td:first-child{color:var(--acc)}
+.ctry tbody tr:hover td:first-child{color:var(--acc-ink)}
 .ctry td:last-child a{text-decoration:none}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
 .chip{font:inherit;font-size:.85rem;font-weight:500;padding:.5rem .9rem;border:1px solid var(--ink);background:none;cursor:pointer}
-.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:var(--ink)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.mark{animation:none;background-size:100% .14em}}
@@ -243,8 +244,8 @@ footer a:hover{color:var(--ink)}
   <div>
    <p class="lbl">AToure Management &amp; Consulting · London</p>
    <h1 style="margin-top:20px">Access to African markets, handled <span class="mark">on the ground.</span></h1>
-   <p class="hero-sub">We open markets across Africa for brands, companies, investors and private clients. We bring the contacts, run the operation and stay in country until the work is done.</p>
-   <div class="hero-actions"><a href="#contact" class="btn btn-dark">Start a conversation</a><a href="#work" class="btn btn-line">See the work</a></div>
+   <p class="hero-sub">We open markets across Africa for <span class="hl">brands, companies, investors and private clients</span>. We bring the contacts, run the operation and stay in country until the work is done.</p>
+   <div class="hero-actions"><a href="#contact" class="btn btn-gold">Start a conversation</a><a href="#work" class="btn btn-line">See the work</a></div>
   </div>
   <div class="hero-facts num">
    <div><b data-count="7">7</b><span>African countries worked on the ground</span></div>
@@ -256,17 +257,17 @@ footer a:hover{color:var(--ink)}
 </header>
 
 <section class="sec"><div class="wrap">
- <div class="reveal sec-head"><p class="lbl">Who we work with</p><div><h2>One firm on the ground, for whoever needs to get in.</h2></div></div>
+ <div class="reveal sec-head"><p class="lbl">Who we work with</p><div><h2>One firm on the ground, for whoever needs to <span class="mark">get in.</span></h2></div></div>
  <div class="reveal aud">
-  <article data-need="Enter a new market" tabindex="0"><h3>Brands and companies</h3><p>Entering a new market or launching in one. Local partners, communications, permits and operations, set up by people already in the country.</p><span class="go">Talk to us</span></article>
-  <article data-need="Invest in a sector or country" tabindex="0"><h3>Investors</h3><p>Looking at a sector in a specific country. Market intelligence, introductions to the right institutions and people, and support on the ground once you commit.</p><span class="go">Talk to us</span></article>
-  <article data-need="Private client services" tabindex="0"><h3>Private clients</h3><p>Travel, security, access and hospitality in each market. Arranged quietly, handled end to end by one team.</p><span class="go">Talk to us</span></article>
-  <article data-need="Creator or media partnership" tabindex="0"><h3>Creators and media</h3><p>Tours, campaigns and productions across the continent. Visas, security, sponsors and national media coverage.</p><span class="go">Talk to us</span></article>
+  <article data-need="Enter a new market" tabindex="0"><h3>Brands and companies</h3><p><span class="hl">Entering a new market or launching in one.</span> Local partners, communications, permits and operations, set up by people already in the country.</p><span class="go">Talk to us</span></article>
+  <article data-need="Invest in a sector or country" tabindex="0"><h3>Investors</h3><p><span class="hl">Looking at a sector in a specific country.</span> Market intelligence, introductions to the right institutions and people, and support on the ground once you commit.</p><span class="go">Talk to us</span></article>
+  <article data-need="Private client services" tabindex="0"><h3>Private clients</h3><p><span class="hl">Travel, security, access and hospitality in each market.</span> Arranged quietly, handled end to end by one team.</p><span class="go">Talk to us</span></article>
+  <article data-need="Creator or media partnership" tabindex="0"><h3>Creators and media</h3><p><span class="hl">Tours, campaigns and productions across the continent.</span> Visas, security, sponsors and national media coverage.</p><span class="go">Talk to us</span></article>
  </div>
 </div></section>
 
 <section class="sec"><div class="wrap">
- <div class="reveal sec-head"><p class="lbl">What we do</p><div><h2>We don't advise from a distance. We run it.</h2><p style="margin-top:20px">Every engagement is built and operated by our own team in market, from the first meeting to the last day on the ground.</p></div></div>
+ <div class="reveal sec-head"><p class="lbl">What we do</p><div><h2>We don't advise from a distance. <span class="mark">We run it.</span></h2><p style="margin-top:20px">Every engagement is built and operated by our own team in market, from the first meeting to the last day on the ground.</p></div></div>
  <div class="reveal svc">
   <div class="svc-row open" tabindex="0"><h3>Market entry</h3><p>Where to start, who to meet and how to land properly. We shape the plan with people who know how the market actually works.</p><ul><li>Market assessment</li><li>Local partner search</li><li>Entry planning</li></ul></div>
   <div class="svc-row" tabindex="0"><h3>Government and institutions</h3><p>Relationships with ministries, federations and public bodies. Facilitation at state level when a project needs it.</p><ul><li>Ministerial access</li><li>Permits and visas</li><li>Official endorsements</li></ul></div>
@@ -277,20 +278,20 @@ footer a:hover{color:var(--ink)}
 </div></section>
 
 <section class="sec work" id="work"><div class="wrap">
- <div class="reveal sec-head"><p class="lbl">Selected work</p><div><h2>Proof that we open doors.</h2><p style="margin-top:20px">High profile projects, delivered on the ground. Each one required institutional access, security and local operations to work.</p></div></div>
+ <div class="reveal sec-head"><p class="lbl">Selected work</p><div><h2>Proof that we <span class="mark">open doors.</span></h2><p style="margin-top:20px">High profile projects, delivered on the ground. Each one required institutional access, security and local operations to work.</p></div></div>
  <div class="reveal cases">
   <a class="case wide" href="ishowspeed-afcon.html"><figure><img src="/Media/Ishowspeed/Morocco/IMG_8383.webp" alt="IShowSpeed at the AFCON 2025 Final in Morocco" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Morocco · CAF and FRMF</span><span class="case-go">Read the case</span></div>
-   <h3>AFCON 2025 Final</h3><p>Institutional access through CAF and the Royal Moroccan Football Federation. State visas, permits and security from Casablanca to the Final in Rabat.</p></a>
+   <span class="kpi">State level access · 16M+ YouTube views</span><h3>AFCON 2025 Final</h3><p>Institutional access through CAF and the Royal Moroccan Football Federation. State visas, permits and security from Casablanca to the Final in Rabat.</p></a>
   <a class="case narrow" href="ivory-coast.html"><figure><img src="/Media/Ishowspeed/Ivory%20Coast/feac0d21-9f5a-47b7-a37a-2cbcc76df2a5%20(1).webp" alt="IShowSpeed in Ivory Coast" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Ivory Coast · MTN and Solibra</span><span class="case-go">Read the case</span></div>
-   <h3>A full operation from zero</h3><p>Two national sponsors, 15 state visas and security across Abidjan, built with no existing local network.</p></a>
+   <span class="kpi">2 national sponsors · 15 state visas</span><h3>A full operation from zero</h3><p>Two national sponsors, 15 state visas and security across Abidjan, built with no existing local network.</p></a>
   <a class="case narrow" href="ashton-hall-africa-tour.html"><figure><img src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall Africa Tour in Lagos, Nigeria" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Five countries · 2026</span><span class="case-go">Read the case</span></div>
-   <h3>Five countries, one operation</h3><p>Ghana, Cameroon, Nigeria, Benin and Rwanda. Partnerships, media, visas, security and transport in every country.</p></a>
+   <span class="kpi">5 countries · 1 team on the ground</span><h3>Five countries, one operation</h3><p>Ghana, Cameroon, Nigeria, Benin and Rwanda. Partnerships, media, visas, security and transport in every country.</p></a>
   <a class="case wide" href="race-weekend.html"><figure><img src="/Media/Race%20Weekend/web/supercars-venue.webp" alt="Race Weekend at Espace Superkart, Abidjan" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Abidjan · Our own event</span><span class="case-go">Read the case</span></div>
-   <h3>Race Weekend</h3><p>A Formula 1 experience we created and ran in Abidjan. Two days, nine partner brands, 300 guests a day.</p></a>
+   <span class="kpi">9 partner brands · 300 guests a day</span><h3>Race Weekend</h3><p>A Formula 1 experience we created and ran in Abidjan. Two days, nine partner brands, 300 guests a day.</p></a>
  </div>
  <div class="more"><span class="lbl">Also</span><a href="dazn-qatar.html">DAZN, Qatar</a><a href="chicken-shop.html">Chicken Shop, London</a><a href="ashton-hall.html">Ashton Hall, London</a><a href="rotimi.html">Rotimi, London</a><a href="our-work.html">All work</a></div>
 </div></section>
@@ -320,7 +321,7 @@ footer a:hover{color:var(--ink)}
 <section class="sec" id="contact"><div class="wrap contact">
  <div>
   <p class="lbl">Contact</p>
-  <h2 style="margin-top:20px">Tell us where you want to go.</h2>
+  <h2 style="margin-top:20px">Tell us <span class="mark">where you want to go.</span></h2>
   <p class="lede">The country, the sector, what you need there. We'll tell you plainly what we can open and how we would run it.</p>
   <div class="cd"><p class="lbl">Email</p><a href="mailto:general@atoureconsulting.com">general@atoureconsulting.com</a></div>
   <div class="cd"><p class="lbl">WhatsApp</p><a href="https://wa.me/447456728616" target="_blank" rel="noopener">+44 7456 728616</a></div>
@@ -336,7 +337,7 @@ footer a:hover{color:var(--ink)}
    <div class="ff"><label class="fl" for="ccountry">Country or market</label><input class="fi" type="text" name="country" id="ccountry" data-fs-field></div>
    <div class="ff full"><label class="fl" for="cmsg">Tell us more</label><textarea class="fta" name="message" id="cmsg" data-fs-field></textarea></div>
    <div class="ff full"><label class="fl" for="cemail">Email</label><input class="fi" type="email" name="email" id="cemail" data-fs-field required><span data-fs-error="email"></span></div>
-   <button class="btn btn-dark" type="submit" data-fs-submit-btn>Send enquiry</button>
+   <button class="btn btn-gold" type="submit" data-fs-submit-btn>Send enquiry</button>
   </form>
  </div>
 </div></section>
