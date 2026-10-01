@@ -67,3 +67,8 @@ replays and reach counts unique accounts.
 Five countries, five cities. Ghana (Accra), Cameroon (Douala), Nigeria (Lagos),
 Benin (Cotonou), Rwanda (Kigali). Douala was the only Cameroonian market, so
 Yaounde does not belong in any market list.
+
+## Company name
+
+The name is always "AToure Management & Consulting", in every language. Never
+translate it: not "Conseil" in French, not "Consultoría" in Spanish, and so on.
