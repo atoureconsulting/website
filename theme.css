@@ -82,3 +82,66 @@ footer nav{padding:0!important;margin:0!important;height:auto!important}
 .back-link::before{content:none!important}
 .back-link{font-size:.85rem!important;letter-spacing:0!important;text-transform:none!important;font-weight:600!important;color:var(--ink)!important;margin-bottom:28px!important}
 .sec video{max-height:440px!important;height:auto!important;background:var(--night)}
+
+/* Africa Tour page */
+.cs-hero:has(#toc){display:block!important;position:relative;height:auto!important;min-height:560px;background:var(--night)!important;color:#fff!important}
+.cs-hero:has(#toc) .cs-hero-right{position:absolute!important;inset:0;height:100%!important;min-height:0!important}
+.cs-hero:has(#toc) .cs-hero-right img{object-position:center 30%!important}
+.cs-hero:has(#toc) .cs-hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.9) 0%,rgba(18,18,18,.65) 42%,rgba(18,18,18,.1) 100%)}
+.cs-hero:has(#toc) .cs-hero-left{position:relative;z-index:2;max-width:680px;padding:64px clamp(24px,4vw,64px)!important}
+.cs-hero:has(#toc) .cs-hero-left,.cs-hero:has(#toc) .cs-h1,.cs-hero:has(#toc) .cs-tagline,.cs-hero:has(#toc) .cs-kicker{color:#fff!important}
+.cs-hero:has(#toc) .cs-tagline{color:#E4E1DA!important}
+.cs-hero:has(#toc) .cs-role{border-color:#fff!important;color:#fff!important}
+.cs-hero:has(#toc) .cr-brand{border-color:var(--acc)!important;color:var(--ink)!important}
+#toc{display:block!important;background:var(--paper)!important;border:1px solid var(--ink)!important;padding:16px 18px!important;margin-top:28px!important;width:230px;color:var(--ink)!important}
+#toc .toc-lab{font-size:.72rem!important;letter-spacing:.08em!important;color:var(--mute)!important;margin-bottom:8px!important}
+#toc .toc-i{color:var(--ink)!important;font-size:.88rem!important;letter-spacing:0!important;padding:5px 0!important}
+#toc .toc-d{background:var(--rule)!important}
+#toc .toc-i.on{color:var(--acc-ink)!important;font-weight:700!important}
+#toc .toc-i.on .toc-d{background:var(--acc)!important}
+#toc.pinned{display:block!important;position:fixed!important;top:96px!important;left:clamp(12px,1.6vw,28px)!important;margin:0!important;z-index:40;width:210px}
+@media(min-width:1200px){body:has(#toc) .sec>.sec-inner{padding-left:max(5rem,260px)!important}}
+@media(max-width:1199px){#toc.pinned{top:72px!important;left:0!important;right:0;width:auto;display:flex!important;gap:18px;overflow-x:auto;white-space:nowrap;border-width:0 0 1px!important;padding:10px 20px!important}#toc.pinned .toc-lab{display:none}#toc.pinned .toc-d{display:none}}
+@media(max-width:900px){#toc{display:none!important}#toc.pinned{display:flex!important}}
+/* tour analytics */
+.tour-an{background:var(--paper)!important;color:var(--ink)!important}
+.tour-an .sec-label{color:var(--mute)!important}
+.tour-hero{text-align:left!important;margin-bottom:32px!important}
+.th-n{background:none!important;-webkit-text-fill-color:var(--ink)!important;color:var(--ink)!important;font-size:clamp(4.5rem,11vw,9rem)!important;font-weight:800!important;letter-spacing:-.04em!important;line-height:.95!important}
+.th-l{letter-spacing:0!important;text-transform:none!important;font-size:1.15rem!important;color:var(--ink-2)!important;margin-top:10px}
+.tour-kpis{gap:0!important;border-top:1px solid var(--ink)!important;border-bottom:1px solid var(--ink)!important;margin-bottom:48px!important}
+.tk{background:none!important;border:0!important;border-left:1px solid var(--rule)!important;text-align:left!important;padding:24px!important}
+.tk:first-child{border-left:0!important;padding-left:0!important}
+.tk-n{color:var(--acc-ink)!important;font-size:clamp(1.8rem,2.6vw,2.4rem)!important;font-weight:800!important}
+.tk-l,.acct-nl,.hs-l,.ps-l,.collab-lab,.feat-label,.vid-cap{letter-spacing:0!important;text-transform:none!important;font-size:.9rem!important;font-weight:500!important}
+.tk-l{color:var(--ink-2)!important}
+.acct-grid{gap:32px!important}
+.acct{background:none!important;border:0!important;border-top:3px solid var(--ink)!important;padding:20px 0 0!important}
+.acct-h{font-size:1rem!important;letter-spacing:0!important;color:var(--acc-ink)!important;font-weight:700!important}
+.acct-n{color:var(--ink)!important;font-weight:800!important}
+.acct-nl{color:var(--mute)!important}
+.acct-row{border-color:var(--rule)!important;color:var(--ink-2)!important;font-size:.95rem!important}
+.acct-row>*:last-child{color:var(--ink)!important;font-weight:700!important}
+/* country legs and featured posts */
+.ctry-num{display:none!important}
+.feat-label{color:var(--mute)!important}
+.feat-label::after{display:none!important}
+.hs-n{font-weight:800!important;color:var(--acc-ink)!important}
+.sec-dark .hs-n{color:var(--acc)!important}
+.hs-tag{background:none!important;border:1px solid currentColor!important;letter-spacing:0!important;text-transform:none!important;font-size:.8rem!important;color:inherit!important}
+.post-stats{gap:0!important;border-top:1px solid currentColor;border-bottom:1px solid currentColor}
+.ps-item{background:none!important;border:0!important;border-left:1px solid var(--rule)!important;text-align:left!important;padding:18px 20px!important}
+.sec-dark .ps-item{border-left-color:#3a3935!important}
+.ps-item:first-child{border-left:0!important;padding-left:0!important}
+.ps-n{font-size:clamp(1.6rem,2.2vw,2.1rem)!important;font-weight:800!important;color:inherit!important}
+.ps-l{opacity:.75}
+.collab{border-left:0!important;border-top:1px solid var(--rule)!important;padding:14px 0 0!important;background:none!important}
+.sec-dark .collab{border-top-color:#3a3935!important}
+.collab-lab{font-weight:700!important;opacity:.8}
+.collab-row>*:last-child{font-weight:700}
+.sec-dark{background:var(--night)!important}
+.ctry-head{grid-template-columns:1fr!important;display:block!important}
+.sec-dark .ps-n,.sec-dark .feat-title,.sec-dark .ctry-title{color:#fff!important}
+.sec-dark .ps-l,.sec-dark .hs-l,.sec-dark .hs-tag,.sec-dark .feat-label,.sec-dark .vid-cap{color:#C9C5BC!important}
+.sec-dark .post-stats{border-color:#55534E}
+#toc.pinned{transform:none!important}
