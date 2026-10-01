@@ -295,3 +295,4 @@ nav .wrap,#nav .wrap{max-width:none!important;padding:0 clamp(20px,2.5vw,40px)!i
 .legend i{width:14px;height:14px;display:inline-block}
 .k-on{background:var(--acc)}.k-acc{background:#3F8F5A}
 @media(max-width:600px){.slides{grid-template-columns:1fr}.slide-col+.slide-col{display:none}}
+html,body{overflow-x:clip}
