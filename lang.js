@@ -15,6 +15,10 @@
   "use strict";
 
   var FR = {
+    "Digital impressions for the tournament, an AFCON record": "Impressions numériques pour le tournoi, un record pour la CAN",
+    "Video views across the tournament": "Vues vidéo sur l'ensemble du tournoi",
+    "Speed as Assad, AFCON Final 2025": "Speed en Assad, finale de la CAN 2025",
+    "IShowSpeed’s mascot reveal at the AFCON Final": "La révélation de la mascotte par IShowSpeed lors de la finale de la CAN",
     "IShowSpeed Africa Tour: Morocco": "Tournée africaine d'IShowSpeed : Maroc",
     "IShowSpeed Africa Tour: Ivory Coast": "Tournée africaine d'IShowSpeed : Côte d'Ivoire",
     "Ashton Hall Africa Tour 2026": "Tournée africaine d'Ashton Hall 2026",
