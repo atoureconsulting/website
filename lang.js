@@ -15,6 +15,14 @@
   "use strict";
 
   var FR = {
+    "Gold marks a country where our team has run work on the ground. Select one to see what we did there.": "En or, les pays où notre équipe a opéré sur le terrain. Sélectionnez-en un pour voir ce que nous y avons fait.",
+    "Select a country": "Sélectionnez un pays",
+    "Abidjan, Ivory Coast": "Abidjan, Côte d'Ivoire",
+    "Accra, Ghana": "Accra, Ghana",
+    "Lagos, Nigeria": "Lagos, Nigeria",
+    "Douala, Cameroon": "Douala, Cameroun",
+    "Cotonou, Benin": "Cotonou, Bénin",
+    "Kigali, Rwanda": "Kigali, Rwanda",
     "Management & Consulting": "Management & Conseil",
     "Work": "Réalisations",
     "AToure Management & Consulting · London": "AToure Management & Conseil · Londres",
