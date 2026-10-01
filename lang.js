@@ -15,6 +15,14 @@
   "use strict";
 
   var FR = {
+    "IShowSpeed Africa Tour: Morocco": "Tournée africaine d'IShowSpeed : Maroc",
+    "IShowSpeed Africa Tour: Ivory Coast": "Tournée africaine d'IShowSpeed : Côte d'Ivoire",
+    "Ashton Hall Africa Tour 2026": "Tournée africaine d'Ashton Hall 2026",
+    "A full operation built from zero. Two national sponsors, 15 state visas and security across Abidjan, built with no existing local network.": "Une opération complète, partie de zéro. Deux sponsors nationaux, 15 visas d'État et la sécurité dans tout Abidjan, sans aucun réseau local au départ.",
+    "Worked on the ground": "Opéré sur le terrain",
+    "Access through our network": "Accès via notre réseau",
+    "Gold marks the countries where our team has run work on the ground. Green marks the countries where we have established access through our network.": "En or, les pays où notre équipe a opéré sur le terrain. En vert, les pays où nous disposons d'un accès établi grâce à notre réseau.",
+    "Rabat, Morocco": "Rabat, Maroc",
     "Gold marks a country where our team has run work on the ground. Select one to see what we did there.": "En or, les pays où notre équipe a opéré sur le terrain. Sélectionnez-en un pour voir ce que nous y avons fait.",
     "Select a country": "Sélectionnez un pays",
     "Abidjan, Ivory Coast": "Abidjan, Côte d'Ivoire",
