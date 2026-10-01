@@ -1,0 +1,62 @@
+/* Restyles the long form case study pages into the site design. Loaded after each page's own styles. */
+:root{--cream:#F3F1EC;--cream-mid:#E9E6DF;--cream-dk:#CFCBC2;--warm-white:#F3F1EC;--black:#121212;--black-soft:#141413;--gold:#C9971F;--gold-dk:#8A6510;--gold-lt:#D9AE45;--gold-pale:#EFE7D2;--mid-txt:#3A3A38;--lt-txt:#77746D;--sh:none;--sh-sm:none;--sh-gold:none}
+body{font-family:'Archivo',system-ui,sans-serif!important;background:var(--paper)!important;color:var(--ink)}
+[class*="-h1"],[class*="title"],[class*="-name"],[class*="-n"],h1,h2,h3,h4,blockquote,.cs-h1 em,h1 em,h2 em{font-family:'Archivo',system-ui,sans-serif!important;letter-spacing:-.025em}
+h1,h2,.cs-h1,.ph-h1,.sec-title{font-weight:800!important;line-height:1.02!important}
+h1 em,h2 em,.cs-h1 em,.ph-h1 em,.sec-title em{font-style:normal!important;color:inherit!important;background:linear-gradient(var(--acc),var(--acc)) 0 90%/100% .14em no-repeat}
+.cs-h1 em,.ph-h1 em{display:inline!important}
+*{border-radius:0!important;box-shadow:none!important;text-shadow:none!important}
+.hero-glow,.ph-glow,.hero-line-top,.cta-glow{display:none!important}
+.hero::after,.page-hero::after,.cs-hero::after,.hero-v2::after{display:none!important}
+.cs-hero,.page-hero{background:var(--paper)!important;color:var(--ink)!important;border-bottom:1px solid var(--ink);padding-top:72px}
+.cs-hero *,.page-hero *{color:inherit}
+.cs-tagline,.ph-sub{color:var(--ink-2)!important}
+.cs-kicker,.ph-kicker,.sec-label{font-family:'Archivo',sans-serif!important;font-size:.75rem!important;font-weight:600!important;letter-spacing:.08em!important;color:var(--mute)!important}
+.cs-kicker::before,.ph-kicker::before,.sec-label::before{display:none!important}
+.cs-role,.case-role,.outcome-pill,.media-tag{background:transparent!important;border:1px solid var(--ink)!important;color:var(--ink)!important}
+.cr-brand{background:var(--acc)!important;border-color:var(--acc)!important}
+.sec{border-bottom:1px solid var(--ink)}
+[style*="linear-gradient"],[style*="radial-gradient"]{background-image:none!important}
+.btn,.btn-gold,.btn-lg{background:var(--acc)!important;color:var(--ink)!important;border:1px solid var(--acc)!important;font-weight:700!important}
+.btn:hover,.btn-gold:hover{background:var(--ink)!important;color:var(--paper)!important;border-color:var(--ink)!important}
+.btn-ghost-light,.btn-outline-gold,.btn-outline{background:transparent!important;border:1px solid currentColor!important;color:inherit!important}
+.metric-n,.ic-stat-n,.ps-n,.c-n,.rw-guest-n,.t-reach{color:var(--acc-ink)!important;font-weight:700!important}
+[style*="background:var(--black)"] .metric-n,[style*="background:var(--black)"] .ic-stat-n{color:var(--acc)!important}
+.cta-band,.cta-sec{display:none!important}
+#nav,nav#nav{position:sticky!important;top:0;background:var(--paper)!important;height:auto!important;padding:0!important;border-bottom:1px solid var(--ink)!important;backdrop-filter:none!important}
+#nav .nav-links a{color:var(--ink)!important;font-size:.9rem;letter-spacing:0;text-transform:none;font-weight:500}
+#nav .nav-cta{background:var(--acc)!important;color:var(--ink)!important;font-weight:700!important}
+#nav .nav-cta:hover{background:var(--ink)!important;color:var(--paper)!important}
+@media(max-width:820px){#nav .nav-links{background:var(--paper)!important;border-top:0!important}#nav .nav-links li a{color:var(--ink)!important;text-align:left}}
+footer{background:var(--paper)!important;border-top:1px solid var(--ink)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.next-case{display:block;text-decoration:none;color:var(--paper);background:var(--night);border-bottom:1px solid var(--ink)}
+.next-case .wrap{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;padding-top:64px;padding-bottom:64px;width:100%}
+.next-case h2{font-size:clamp(2rem,4.4vw,4rem)!important;color:var(--paper)}
+.next-case .lbl{color:#9A968D!important}
+.next-case .go{font-weight:700;color:var(--acc);font-size:1rem}
+.next-case .go::after{content:" \2192";display:inline-block;transition:transform .25s}
+.next-case:hover .go::after{transform:translateX(6px)}
+.next-case:hover h2{color:var(--acc)}
+html,body{overflow-x:clip}
+@media(max-width:820px){.metric-n,.ic-stat-n{font-size:clamp(1.6rem,8vw,2.4rem)!important}.metric-block{min-width:0!important;flex:1 1 40%!important}[class*="metrics"],[class*="metric-row"]{flex-wrap:wrap!important}}
+#nav{display:block!important;justify-content:initial!important}
+#nav .wrap{display:flex!important;align-items:center;justify-content:space-between;height:72px;max-width:1360px;margin:0 auto;padding:0 40px;width:100%}
+#nav .nav-brand{display:flex;align-items:center;gap:.8rem;margin-right:2rem}
+#nav .nav-mark{height:40px!important;width:auto}
+#nav .nav-word{font-family:'Archivo',sans-serif!important;font-size:.95rem!important;font-weight:700!important;letter-spacing:.02em!important;text-transform:none!important;color:var(--ink)!important}
+#nav .nav-word span{font-weight:500;color:var(--mute)}
+#nav .nav-links{gap:2rem}
+footer{display:block!important;padding:32px 0 48px!important;grid-template-columns:none!important}
+footer .wrap{display:flex!important;justify-content:space-between;gap:24px;flex-wrap:wrap;max-width:1360px;margin:0 auto;padding:0 40px;font-size:.85rem;color:var(--mute)}
+footer nav{display:flex!important;gap:20px;position:static!important;border:0!important;background:none!important}
+.btn,.nav-cta,button{font-family:'Archivo',sans-serif!important;letter-spacing:0!important;text-transform:none!important}
+.band .btn-line{background:transparent!important;color:var(--paper)!important;border-color:var(--paper)!important}
+.band .btn-line:hover{background:var(--paper)!important;color:var(--ink)!important}
+.cs-h1 em,.ph-h1 em{display:block!important;width:fit-content}
+.metric-n,.ic-stat-n,.ps-n,.rw-guest-n{color:var(--acc)!important}
+.metric-strip,.metrics,[class*="metric-row"],.cs-metrics{background:var(--night)!important}
+@media(max-width:820px){#nav .wrap,footer .wrap{padding:0 20px}#nav .nav-word span{display:none}}
+footer nav{padding:0!important;margin:0!important;height:auto!important}
