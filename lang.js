@@ -15,6 +15,9 @@
   "use strict";
 
   var FR = {
+    "In the mascot suit, Rabat": "Dans le costume de la mascotte, Rabat",
+    "Where": "Où", "When": "Quand", "Live stream": "Direct",
+    "Rabat, Morocco": "Rabat, Maroc", "AFCON Final 2025": "Finale de la CAN 2025", "16M views": "16 M de vues",
     "Digital impressions for the tournament, an AFCON record": "Impressions numériques pour le tournoi, un record pour la CAN",
     "Video views across the tournament": "Vues vidéo sur l'ensemble du tournoi",
     "Speed as Assad, AFCON Final 2025": "Speed en Assad, finale de la CAN 2025",
