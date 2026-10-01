@@ -154,3 +154,21 @@ footer nav{padding:0!important;margin:0!important;height:auto!important}
  #lang-toggle{margin:0 10px 0 auto!important}
 }
 nav .wrap,#nav .wrap{justify-content:flex-start!important}nav .nav-links,#nav .nav-links{margin-left:auto}
+/* Ivory Coast stats banner and result tiles */
+.ic-stat{background:var(--paper)!important;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:0 clamp(20px,2.5vw,40px)}
+.res-tiles{display:flex;flex-direction:column;gap:0;min-width:180px;border-top:2px solid var(--ink)}
+.res-tile{padding:18px 0;border-bottom:1px solid var(--rule)}
+.res-tile svg{width:22px;height:22px;margin:0 0 10px!important}
+.res-n{font-size:clamp(2rem,3vw,2.8rem);font-weight:800;color:var(--acc-ink);letter-spacing:-.03em;line-height:1}
+.res-l{font-size:.95rem;color:var(--ink-2);margin-top:6px}
+/* case study heroes: show the whole photo instead of cropping it */
+.cs-hero:not(:has(#toc)){grid-template-columns:1fr auto!important}
+.cs-hero:not(:has(#toc)) .cs-hero-right{height:100%;display:flex;justify-content:flex-end}
+.cs-hero:not(:has(#toc)) .cs-hero-right img{position:static!important;height:100%!important;width:auto!important;max-width:58vw;object-fit:cover;border-radius:0!important}
+@media(max-width:900px){.cs-hero:not(:has(#toc)){grid-template-columns:1fr!important}.cs-hero:not(:has(#toc)) .cs-hero-right{height:auto}.cs-hero:not(:has(#toc)) .cs-hero-right img{width:100%!important;height:auto!important;max-width:none}}
+/* videos: never crop, portrait clips taller */
+.sec video{object-fit:contain!important;width:auto!important;max-width:100%!important;height:auto!important;max-height:540px!important;margin:0 auto;display:block}
+/* fill the width */
+.sec-inner{max-width:1600px!important;padding-left:clamp(20px,3vw,48px)!important;padding-right:clamp(20px,3vw,48px)!important}
+@media(min-width:1200px){body:has(#toc) .sec>.sec-inner{max-width:none!important;padding-left:270px!important;padding-right:clamp(24px,3vw,56px)!important}}
+body:has(#toc) .tour-hero{text-align:center!important}
