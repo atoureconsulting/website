@@ -1254,13 +1254,14 @@
       "cursor:pointer;line-height:1;transition:background .2s,color .2s;opacity:.72;}" +
       "#lang-toggle button.is-on{background:var(--gold,#C8A951);color:#0D0C0A;opacity:1;}" +
       "#lang-toggle button:hover{opacity:1;}" +
-      "@media(max-width:820px){#lang-toggle{margin:.6rem auto;}}";
+      "@media(max-width:820px){#lang-toggle{margin:0 10px 0 auto;}}";
     document.head.appendChild(css);
   }
 
   function injectToggle() {
     var list = document.querySelector(".nav-links");
     if (!list || document.getElementById("lang-toggle")) return;
+    var burger = document.getElementById("burger");
     var li = document.createElement("li");
     li.setAttribute("data-no-translate", "");
     var box = document.createElement("span");
@@ -1276,6 +1277,8 @@
       b.addEventListener("click", function () { apply(code); });
       box.appendChild(b);
     });
+    /* Sits beside the menu button, outside the collapsible list, so it stays visible on phones. */
+    if (burger && burger.parentNode) { box.setAttribute("data-no-translate", ""); burger.parentNode.insertBefore(box, burger); return; }
     li.appendChild(box);
     var cta = list.querySelector(".nav-cta");
     if (cta && cta.parentNode) list.insertBefore(li, cta.parentNode); else list.appendChild(li);
