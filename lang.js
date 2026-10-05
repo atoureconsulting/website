@@ -15,6 +15,9 @@
   "use strict";
 
   var FR = {
+    "Digital impressions at the AFCON Final, a tournament record": "Impressions numériques à la finale de la CAN, un record du tournoi",
+    "Live viewers for the mascot reveal in Rabat": "Spectateurs en direct pour la révélation de la mascotte à Rabat",
+    "Trusted by": "Nos partenaires",
     "In the mascot suit, Rabat": "Dans le costume de la mascotte, Rabat",
     "Where": "Où", "When": "Quand", "Live stream": "Direct",
     "Rabat, Morocco": "Rabat, Maroc", "AFCON Final 2025": "Finale de la CAN 2025", "16M views": "16 M de vues",

@@ -305,3 +305,4 @@ html,body{overflow-x:clip}
  #lang-toggle{margin:0 10px 0 auto!important}
 }
 nav .wrap,#nav .wrap{justify-content:flex-start!important}nav .nav-links,#nav .nav-links{margin-left:auto}
+.clients-rev .track{animation-direction:reverse}
