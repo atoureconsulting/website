@@ -205,3 +205,5 @@ body:has(#toc) .tour-hero{text-align:center!important}
 @media(max-width:900px){.brief-grid,.film-grid{grid-template-columns:1fr}.pv{height:auto;width:100%;max-width:440px}.big-nums{grid-template-columns:1fr}.big-nums div+div{border-left:0;border-top:1px solid rgba(255,255,255,.15)}.result-row{grid-template-columns:1fr 1fr}.result-row .rv{grid-column:1/-1}.film-facts{grid-template-columns:1fr 1fr}}
 .cs-hero:not(:has(#toc)) .cs-hero-right.hero-pair img{max-width:28vw!important;width:auto!important;height:100%!important;object-fit:contain!important}
 @media(max-width:900px){.cs-hero:not(:has(#toc)) .cs-hero-right.hero-pair img{max-width:48vw!important;height:auto!important}}
+/* keep the full wordmark on phones: case pages carry an old inline rule that hid it below 520px */
+@media(max-width:520px){#nav .nav-word{display:block!important}}
