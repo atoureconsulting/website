@@ -1,0 +1,18 @@
+{
+  "name": "AToure",
+  "description": "The AToure Management & Consulting house look: warm black, gold and cream. The default for every deck.",
+  "headFontFace": "Cormorant Garamond SemiBold",
+  "bodyFontFace": "Jost",
+  "roles": {
+    "ink":       { "hex": "0D0C0A", "label": "AToure Black", "use": "Dark backgrounds, headings and main text" },
+    "paper":     { "hex": "FEFCF8", "label": "Warm White", "use": "Cards, text on dark slides" },
+    "muted":     { "hex": "5C5040", "label": "Mid Brown", "use": "Supporting text" },
+    "canvas":    { "hex": "FAF6EE", "label": "AToure Cream", "use": "Light slide background" },
+    "gold":      { "hex": "C8A951", "label": "AToure Gold", "use": "AToure elements, figures and kickers on dark" },
+    "client":    { "hex": "A08830", "label": "Client colour", "use": "The client's own elements in diagrams. Replace with the client's primary colour" },
+    "label":     { "hex": "A08830", "label": "Gold Dark", "use": "Kickers and figures on light slides" },
+    "highlight": { "hex": "E0C47A", "label": "Gold Light", "use": "Figures and footer on dark slides" },
+    "tint":      { "hex": "F5EDD6", "label": "Gold Pale", "use": "Tints, muted text on dark slides" },
+    "panel":     { "hex": "1A1814", "label": "Black Soft", "use": "Cards on dark slides" }
+  }
+}
