@@ -15,6 +15,21 @@
   "use strict";
 
   var FR = {
+    "Qatar · DAZN": "Qatar · DAZN",
+    "Exclusive live broadcaster · Ringside access": "Diffuseur exclusif en direct · Accès au bord du ring",
+    "We placed a creator as DAZN's exclusive live broadcaster for fight night in Qatar, then ran everything on the ground: credentials, ringside and dressing room access, transport and accommodation.": "Nous avons placé un créateur comme diffuseur exclusif en direct de DAZN pour la soirée de combat au Qatar, puis géré tout sur place : accréditations, accès au bord du ring et aux vestiaires, transport et hébergement.",
+    "London · Chicken Shop": "Londres · Chicken Shop",
+    "2.4M campaign views · 2× industry engagement": "2,4 M de vues · engagement 2× supérieur à la moyenne",
+    "Manlikeisaac placed with Chicken Shop for the Honey Soy Wings launch, plus a collaboration with Abdu Rozik that carried the campaign into the Middle East.": "Manlikeisaac associé à Chicken Shop pour le lancement des Honey Soy Wings, et une collaboration avec Abdu Rozik qui a étendu la campagne aux pays du Golfe.",
+    "London · Ashton Hall": "Londres · Ashton Hall",
+    "Hospitality brand deal closed during the visit": "Partenariat hôtelier conclu pendant la visite",
+    "Logistics and scheduling for his London visit, and a deal with a premium hospitality group, sourced and closed while he was in the city.": "Logistique et planning pendant sa visite à Londres, et un partenariat avec un groupe hôtelier haut de gamme, trouvé et conclu pendant son séjour.",
+    "London · UK tour": "Londres · Tournée britannique",
+    "Premium shoot locations · VIP access": "Lieux de tournage premium · Accès VIP",
+    "Rotimi, UK Tour": "Rotimi, tournée britannique",
+    "Shoot locations, VIP access to London's top hospitality venues and full operational support for him and his team throughout the tour.": "Lieux de tournage, accès VIP aux meilleures adresses de Londres et soutien opérationnel complet pour lui et son équipe tout au long de la tournée.",
+    "1.57B views · 5 countries": "1,57 milliard de vues · 5 pays",
+    "Views across the Ashton Hall Africa Tour": "Vues sur l'ensemble de la tournée africaine d'Ashton Hall",
     "© 2026 AToure Ltd. AToure Management & Consulting is a trading name of AToure Ltd.": "© 2026 AToure Ltd. AToure Management & Consulting est un nom commercial d'AToure Ltd.",
     "Registered in England and Wales, company number 15129711. Registered office: 30B Chichele Road, London NW2 3DA.": "Immatriculée en Angleterre et au pays de Galles sous le numéro 15129711. Siège social : 30B Chichele Road, Londres NW2 3DA.",
     "Privacy": "Confidentialité",
