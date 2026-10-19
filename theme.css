@@ -207,3 +207,5 @@ body:has(#toc) .tour-hero{text-align:center!important}
 @media(max-width:900px){.cs-hero:not(:has(#toc)) .cs-hero-right.hero-pair img{max-width:48vw!important;height:auto!important}}
 /* keep the full wordmark on phones: case pages carry an old inline rule that hid it below 520px */
 @media(max-width:520px){#nav .nav-word{display:block!important}}
+/* tour analytics tiles: clean two column grid on phones */
+@media(max-width:820px){.tour-kpis{grid-template-columns:1fr 1fr!important}.tk,.tk:first-child{border-left:0!important;padding:18px 12px 18px 0!important}.tk:nth-child(even){border-left:1px solid var(--rule)!important;padding-left:16px!important}.tk:nth-child(n+3){border-top:1px solid var(--rule)!important}}
