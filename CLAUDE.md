@@ -25,7 +25,7 @@ delivery to someone else. "Agence" is out in French copy too. The one place
 the word survives is the contractual term "agency fee" in the Mauritius
 documents, which is a fee name and not a description of the company.
 
-Baba Toure is Director, not founder.
+Baba Toure is Director and Founder.
 
 ## Africa Tour caption format
 
