@@ -469,7 +469,7 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
         </div>
         <div>
           <div class="vid-wrap">
-            <video class="tour-vid" muted autoplay loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback>
+            <video class="tour-vid" muted loop playsinline preload="none" poster="/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Video/GHANA%20ASHTON%20HALL-poster.webp" disablepictureinpicture disableremoteplayback>
               <source src="/Media/Ashton%20Hall%20Africa%20Tour/Ghana/Video/GHANA%20ASHTON%20HALL.mp4" type="video/mp4">
             </video>
           </div>
@@ -509,7 +509,7 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
         </div>
         <div>
           <div class="vid-wrap">
-            <video class="tour-vid" muted autoplay loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback>
+            <video class="tour-vid" muted loop playsinline preload="none" poster="/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Videos/CAMEROON%20ASHTON%20HALL-poster.webp" disablepictureinpicture disableremoteplayback>
               <source src="/Media/Ashton%20Hall%20Africa%20Tour/Cameroon/Videos/CAMEROON%20ASHTON%20HALL.mp4" type="video/mp4">
             </video>
           </div>
@@ -549,7 +549,7 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
         </div>
         <div>
           <div class="vid-wrap">
-            <video class="tour-vid" muted autoplay loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback>
+            <video class="tour-vid" muted loop playsinline preload="none" poster="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Videos/NIGERIA%20ASHTON%20HALL-poster.webp" disablepictureinpicture disableremoteplayback>
               <source src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Videos/NIGERIA%20ASHTON%20HALL.mp4" type="video/mp4">
             </video>
           </div>
@@ -589,7 +589,7 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
         </div>
         <div>
           <div class="vid-wrap">
-            <video class="tour-vid" muted autoplay loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback>
+            <video class="tour-vid" muted loop playsinline preload="none" poster="/Media/Ashton%20Hall%20Africa%20Tour/Benin/Videos/BENIN%20ASHTON%20HALL-poster.webp" disablepictureinpicture disableremoteplayback>
               <source src="/Media/Ashton%20Hall%20Africa%20Tour/Benin/Videos/BENIN%20ASHTON%20HALL.mp4" type="video/mp4">
             </video>
           </div>
@@ -629,7 +629,7 @@ body{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;}
         </div>
         <div>
           <div class="vid-wrap">
-            <video class="tour-vid" muted autoplay loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback>
+            <video class="tour-vid" muted loop playsinline preload="none" poster="/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Videos/RWANDA%20ASHTON%20HALL%201-poster.webp" disablepictureinpicture disableremoteplayback>
               <source src="/Media/Ashton%20Hall%20Africa%20Tour/Rwanda/Videos/RWANDA%20ASHTON%20HALL%201.mp4" type="video/mp4">
             </video>
           </div>
@@ -826,6 +826,8 @@ if(burger&&links){burger.addEventListener("click",function(){links.classList.tog
       });
     },{threshold:0.25});
     vids.forEach(function(v){io.observe(v);});
+  } else {
+    vids.forEach(function(v){v.play().catch(function(){});});
   }
 })();
 </script>

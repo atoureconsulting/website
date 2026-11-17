@@ -15,6 +15,11 @@
   "use strict";
 
   var FR = {
+    "One firm for whoever needs to get in.": "Une seule société pour quiconque veut y entrer.",
+    "We don't advise from a distance. We run it.": "Nous ne conseillons pas à distance. Nous pilotons.",
+    "Markets we know firsthand.": "Des marchés que nous connaissons de l'intérieur.",
+    "African countries where our team has worked": "pays africains où notre équipe a travaillé",
+    "High profile projects, run by our own people. Each one required institutional access, security and local operations to work.": "Des projets de premier plan, menés par nos propres équipes. Chacun exigeait un accès institutionnel, de la sécurité et des opérations locales.",
     "Posts Across Five Platforms": "Posts sur cinq plateformes",
     "Tour Views, 86 Posts on 5 Platforms": "Vues de la tournée, 86 posts sur 5 plateformes",
     "503.6M views": "503,6 M de vues",
@@ -1380,8 +1385,8 @@
       "#lang-toggle{display:inline-flex;align-items:center;gap:2px;border:1px solid rgba(200,169,81,.45);" +
       "border-radius:3px;overflow:hidden;margin-left:.4rem;flex:0 0 auto;" +
       "background:rgba(13,12,10,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}" +
-      "#lang-toggle button{font-family:inherit;font-size:.62rem;font-weight:600;letter-spacing:.1em;" +
-      "text-transform:uppercase;padding:.34rem .6rem;background:transparent;color:#FEFCF8;border:0;" +
+      "#lang-toggle button{font-family:inherit;font-size:.75rem;font-weight:600;letter-spacing:.1em;" +
+      "text-transform:uppercase;padding:.5rem .7rem;background:transparent;color:#FEFCF8;border:0;" +
       "cursor:pointer;line-height:1;transition:background .2s,color .2s;opacity:.72;}" +
       "#lang-toggle button.is-on{background:var(--gold,#C8A951);color:#0D0C0A;opacity:1;}" +
       "#lang-toggle button:hover{opacity:1;}" +
