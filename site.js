@@ -180,3 +180,48 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
 })();
+
+/* Case cards: a three second silent clip plays over the photo, on hover with a
+   mouse, or while the card is mostly on screen on a phone. Clips load only when
+   first needed, and never for visitors who ask for reduced motion or less data. */
+(function () {
+  var cards = document.querySelectorAll(".case[data-clip]");
+  if (!cards.length) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (navigator.connection && navigator.connection.saveData) return;
+
+  function vid(card) {
+    if (card._v) return card._v;
+    var fig = card.querySelector("figure");
+    if (!fig) return null;
+    var v = document.createElement("video");
+    v.muted = true; v.loop = true; v.playsInline = true; v.preload = "none";
+    v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
+    v.className = "case-clip";
+    v.src = card.getAttribute("data-clip");
+    fig.appendChild(v);
+    v.addEventListener("playing", function () { fig.classList.add("is-playing"); });
+    return (card._v = v);
+  }
+  function on(card) { var v = vid(card); if (v) v.play().catch(function () {}); }
+  function off(card) { var v = card._v; if (!v) return; v.pause(); card.querySelector("figure").classList.remove("is-playing"); }
+
+  if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    cards.forEach(function (c) {
+      c.addEventListener("mouseenter", function () { on(c); });
+      c.addEventListener("mouseleave", function () { off(c); });
+      c.addEventListener("focus", function () { on(c); });
+      c.addEventListener("blur", function () { off(c); });
+    });
+  } else if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var c = e.target;
+        clearTimeout(c._t);
+        if (e.intersectionRatio >= 0.6) c._t = setTimeout(function () { on(c); }, 450);
+        else off(c);
+      });
+    }, { threshold: [0, 0.6] });
+    cards.forEach(function (c) { io.observe(c); });
+  }
+})();

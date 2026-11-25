@@ -233,3 +233,6 @@ body:has(#toc) .tour-hero{text-align:center!important}
 .cs-dot.on::after{background:var(--gold-dk);transform:scale(1.45)}
 .sec-dark .cs-dot::after{background:rgba(254,252,248,.25)}
 .sec-dark .cs-dot.on::after{background:var(--gold-lt)}
+
+/* old typefaces retired: anything still asking for Cormorant Garamond or Jost renders in Archivo */
+[style*="Cormorant"],[style*="Jost"],.rw-day-t,.rw-cov-o,.t-av,.t-reach,option{font-family:'Archivo',system-ui,sans-serif!important}

@@ -15,6 +15,7 @@
   "use strict";
 
   var FR = {
+    "Case studies": "Études de cas",
     "One firm for whoever needs to get in.": "Une seule société pour quiconque veut y entrer.",
     "We don't advise from a distance. We run it.": "Nous ne conseillons pas à distance. Nous pilotons.",
     "Markets we know firsthand.": "Des marchés que nous connaissons de l'intérieur.",

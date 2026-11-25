@@ -1,0 +1,169 @@
+{
+ "schemaVersion": 2,
+ "generatedAt": "2026-11-25T11:17:30Z",
+ "title": "Design System: AToure Management & Consulting",
+ "extensions": {
+  "colorMeta": {
+   "paper": {
+    "role": "neutral",
+    "displayName": "Paper"
+   },
+   "paper-deep": {
+    "role": "neutral",
+    "displayName": "Paper Deep"
+   },
+   "ink": {
+    "role": "neutral",
+    "displayName": "Ink"
+   },
+   "ink-soft": {
+    "role": "neutral",
+    "displayName": "Ink Soft"
+   },
+   "mute": {
+    "role": "neutral",
+    "displayName": "Mute"
+   },
+   "mute-on-dark": {
+    "role": "neutral",
+    "displayName": "Mute on Dark"
+   },
+   "rule": {
+    "role": "neutral",
+    "displayName": "Rule"
+   },
+   "night": {
+    "role": "neutral",
+    "displayName": "Night"
+   },
+   "gold": {
+    "role": "primary",
+    "displayName": "Field Gold"
+   },
+   "gold-ink": {
+    "role": "primary",
+    "displayName": "Gold Ink"
+   },
+   "network-green": {
+    "role": "secondary",
+    "displayName": "Network Green"
+   },
+   "network-green-deep": {
+    "role": "secondary",
+    "displayName": "Network Green Deep"
+   }
+  },
+  "motion": [
+   {
+    "name": "ease-out-reveal",
+    "value": "cubic-bezier(.2,.7,.2,1)",
+    "purpose": "Route drawing on the map and image hover scale."
+   },
+   {
+    "name": "logo-corridor",
+    "value": "38s linear infinite",
+    "purpose": "The scrolling logo bars; paused on hover and for reduced motion."
+   }
+  ],
+  "breakpoints": [
+   {
+    "name": "mobile",
+    "value": "820px"
+   },
+   {
+    "name": "stack-cases",
+    "value": "900px"
+   },
+   {
+    "name": "stack-map",
+    "value": "1000px"
+   }
+  ]
+ },
+ "components": [
+  {
+   "name": "Primary Button",
+   "kind": "button",
+   "refersTo": "button-primary",
+   "description": "Main call to action, such as Start a conversation.",
+   "html": "<a class=\"ds-btn-primary\" href=\"#\">Start a conversation</a>",
+   "css": ".ds-btn-primary{display:inline-block;background:#C9971F;border:1px solid #C9971F;color:#121212;font-family:Archivo,system-ui,sans-serif;font-weight:700;font-size:.95rem;padding:1rem 1.4rem;text-decoration:none;border-radius:0;transition:background .2s,color .2s}.ds-btn-primary:hover{background:#121212;border-color:#121212;color:#F3F1EC}.ds-btn-primary:focus-visible{outline:2px solid #121212;outline-offset:3px}"
+  },
+  {
+   "name": "Line Button",
+   "kind": "button",
+   "refersTo": "button-line",
+   "description": "Secondary action next to a primary button.",
+   "html": "<a class=\"ds-btn-line\" href=\"#\">See the work</a>",
+   "css": ".ds-btn-line{display:inline-block;background:transparent;border:1px solid #121212;color:#121212;font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:.95rem;padding:1rem 1.4rem;text-decoration:none;border-radius:0;transition:background .2s,color .2s}.ds-btn-line:hover{background:#121212;color:#F3F1EC}.ds-btn-line:focus-visible{outline:2px solid #121212;outline-offset:3px}"
+  },
+  {
+   "name": "Chip",
+   "kind": "chip",
+   "refersTo": "chip",
+   "description": "Single choice, such as What do you need?",
+   "html": "<button class=\"ds-chip\" aria-pressed=\"false\">Enter a new market</button> <button class=\"ds-chip\" aria-pressed=\"true\">Private client services</button>",
+   "css": ".ds-chip{font-family:Archivo,system-ui,sans-serif;font-size:.85rem;font-weight:500;padding:.5rem .9rem;border:1px solid #121212;background:none;color:#121212;border-radius:0;cursor:pointer}.ds-chip[aria-pressed=true]{background:#C9971F;border-color:#C9971F}.ds-chip:focus-visible{outline:2px solid #121212;outline-offset:3px}"
+  },
+  {
+   "name": "Field",
+   "kind": "input",
+   "refersTo": null,
+   "description": "Form field: a bottom rule with an uppercase label.",
+   "html": "<label class=\"ds-field\"><span>Name</span><input type=\"text\"></label>",
+   "css": ".ds-field{display:flex;flex-direction:column;gap:6px;font-family:Archivo,system-ui,sans-serif}.ds-field span{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#68655E}.ds-field input{font:inherit;font-size:1rem;background:transparent;border:0;border-bottom:1px solid #121212;padding:10px 0;color:#121212;border-radius:0}.ds-field input:focus-visible{outline:2px solid #121212;outline-offset:4px}"
+  },
+  {
+   "name": "Proof Figure",
+   "kind": "custom",
+   "refersTo": null,
+   "description": "A published figure with its context.",
+   "html": "<p class=\"ds-fig\"><b>1.87B</b><span>Views across the Ashton Hall Africa Tour</span></p>",
+   "css": ".ds-fig{font-family:Archivo,system-ui,sans-serif;border-top:1px solid #121212;padding-top:16px;max-width:240px}.ds-fig b{display:block;font-size:3.4rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:#8A6510;font-variant-numeric:tabular-nums}.ds-fig span{font-size:.85rem;color:#3A3A38}"
+  }
+ ],
+ "narrative": {
+  "northStar": "The Field Ledger",
+  "overview": "A working record kept by an operator: warm paper, black ink, hard 1px rules and one gold accent. Type does the work, real photography carries the emotion and real figures carry the proof.",
+  "keyCharacteristics": [
+   "Archivo only, heavy headlines",
+   "Paper background, ink text, 1px rules",
+   "One gold accent",
+   "Square corners",
+   "Own project photography only"
+  ],
+  "rules": [
+   {
+    "name": "The One Gold Rule",
+    "body": "Gold underlines at most three headline phrases per page.",
+    "section": "colors"
+   },
+   {
+    "name": "The Readable Gold Rule",
+    "body": "Small gold text on light surfaces uses Gold Ink #8A6510.",
+    "section": "colors"
+   },
+   {
+    "name": "The Twelve Pixel Floor",
+    "body": "No text a visitor needs to read or tap sits below 12px.",
+    "section": "typography"
+   },
+   {
+    "name": "The Rule Line Rule",
+    "body": "Separate with a 1px line, not a card or a shadow.",
+    "section": "elevation"
+   }
+  ],
+  "dos": [
+   "Do use only photography and video from AToure's own projects.",
+   "Do keep every corner square and every divider a 1px rule.",
+   "Do keep video light: 720p, a poster, load on arrival."
+  ],
+  "donts": [
+   "Don't add shadows, glows, gradient text or rounded corners.",
+   "Don't bring back Cormorant Garamond or Jost on the website.",
+   "Don't use Field Gold for small text on light backgrounds.",
+   "Don't use AI generated images to stand in for real events."
+  ]
+ }
+}

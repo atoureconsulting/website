@@ -75,16 +75,16 @@
 <section class="sec work" id="work"><div class="wrap">
  <div class="reveal sec-head"><p class="lbl">Selected work</p><div><h2>Proof that we <span class="mark">open doors.</span></h2><p style="margin-top:20px">High profile projects, run by our own people. Each one required institutional access, security and local operations to work.</p></div></div>
  <div class="reveal cases">
-  <a class="case wide" href="ishowspeed-afcon.html"><figure><img src="/Media/Ishowspeed/Morocco/IMG_8383.webp" alt="IShowSpeed at the AFCON 2025 Final in Morocco" loading="lazy"></figure>
+  <a class="case wide" href="ishowspeed-afcon.html" data-clip="/Media/clips/afcon.mp4"><figure><img src="/Media/Ishowspeed/Morocco/IMG_8383.webp" alt="IShowSpeed at the AFCON 2025 Final in Morocco" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Morocco · CAF and FRMF</span><span class="case-go">Read the case</span></div>
    <span class="kpi">State level access · 16M+ YouTube views</span><h3>IShowSpeed Africa Tour: Morocco</h3><p>Institutional access through CAF and the Royal Moroccan Football Federation. State visas, permits and security from Casablanca to the Final in Rabat.</p></a>
-  <a class="case narrow" href="ivory-coast.html"><figure><img src="/Media/Ishowspeed/Ivory%20Coast/feac0d21-9f5a-47b7-a37a-2cbcc76df2a5%20(1).webp" alt="IShowSpeed in Ivory Coast" loading="lazy"></figure>
+  <a class="case narrow" href="ivory-coast.html" data-clip="/Media/clips/ivory-coast.mp4"><figure><img src="/Media/Ishowspeed/Ivory%20Coast/feac0d21-9f5a-47b7-a37a-2cbcc76df2a5%20(1).webp" alt="IShowSpeed in Ivory Coast" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Ivory Coast · MTN and Solibra</span><span class="case-go">Read the case</span></div>
    <span class="kpi">2 national sponsors · 15 state visas</span><h3>IShowSpeed Africa Tour: Ivory Coast</h3><p>A full operation built from zero. Two national sponsors, 15 state visas and security across Abidjan, built with no existing local network.</p></a>
-  <a class="case narrow" href="ashton-hall-africa-tour.html"><figure><img src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall Africa Tour in Lagos, Nigeria" loading="lazy"></figure>
+  <a class="case narrow" href="ashton-hall-africa-tour.html" data-clip="/Media/clips/africa-tour.mp4"><figure><img src="/Media/Ashton%20Hall%20Africa%20Tour/Nigeria/Photos/DSC05768.webp" alt="Ashton Hall Africa Tour in Lagos, Nigeria" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Five countries · 2026</span><span class="case-go">Read the case</span></div>
    <span class="kpi">1.87B views · 5 countries</span><h3>Ashton Hall Africa Tour 2026</h3><p>Ghana, Cameroon, Nigeria, Benin and Rwanda. Partnerships, media, visas, security and transport in every country.</p></a>
-  <a class="case wide" href="race-weekend.html"><figure><img src="/Media/Race%20Weekend/web/supercars-venue.webp" alt="Race Weekend at Espace Superkart, Abidjan" loading="lazy"></figure>
+  <a class="case wide" href="race-weekend.html" data-clip="/Media/clips/race-weekend.mp4"><figure><img src="/Media/Race%20Weekend/web/supercars-venue.webp" alt="Race Weekend at Espace Superkart, Abidjan" loading="lazy"></figure>
    <div class="case-meta"><span class="lbl">Abidjan · Our own event</span><span class="case-go">Read the case</span></div>
    <span class="kpi">9 partner brands · 300 guests a day</span><h3>Race Weekend</h3><p>A Formula 1 experience we created and ran in Abidjan. Two days, nine partner brands, 300 guests a day.</p></a>
  </div>
@@ -198,9 +198,50 @@ AFRICA_PATHS.forEach(function(c){var p=document.createElementNS(NS,"path");p.set
  p.addEventListener("mousemove",function(e){var b=svg.parentNode.getBoundingClientRect();tip.hidden=false;tip.textContent=w?label(c.name)+(w.acc?(fr()?" · accès via notre réseau":" · access through our network"):""):c.name;tip.style.left=(e.clientX-b.left+14)+"px";tip.style.top=(e.clientY-b.top+14)+"px";});
  p.addEventListener("mouseleave",function(){tip.hidden=true;});svg.appendChild(p);});
 Object.keys(W).concat(Object.keys(ACC)).forEach(function(k){var b=document.createElement("button");b.type="button";if(ACC[k])b.className="acc";b.setAttribute("data-no-translate","");b.addEventListener("click",function(){sel(k);});list.appendChild(b);btns[k]=b;});
+var MAP={"Côte d'Ivoire":{img:"ivory-coast",f:"55.8M",ff:"55,8 M",l:"Instagram views for the Zaouli moment",lf:"vues Instagram pour le moment Zaouli",a:"A supporter holding a portrait of IShowSpeed in Abidjan"},
+"Morocco":{img:"morocco",f:"6.1B",ff:"6,1 Md",l:"Digital impressions for the tournament, an AFCON record",lf:"impressions numériques pour le tournoi, un record pour la CAN",a:"IShowSpeed at the AFCON 2025 Final in Rabat"},
+"Ghana":{img:"ghana",f:"26.1M",ff:"26,1 M",l:"Views on the Accra collab with Ashton Small",lf:"vues sur la collaboration avec Ashton Small à Accra",a:"Ashton Hall running with a crowd in Accra",t:0},
+"Cameroon":{img:"cameroon",f:"44.3M",ff:"44,3 M",l:"Views across two feed posts in Douala",lf:"vues sur deux publications à Douala",a:"A street training session in Douala",t:1},
+"Nigeria":{img:"nigeria",f:"13M",ff:"13 M",l:"Views on the stadium run in Lagos",lf:"vues sur la course au stade de Lagos",a:"Ashton Hall with a crowd at the stadium in Lagos",t:2},
+"Benin":{img:"benin",f:"31.9M",ff:"31,9 M",l:"Views on the sack lift in Cotonou",lf:"vues sur le soulevé de sacs à Cotonou",a:"Ashton Hall arriving under the tour arch in Cotonou",t:3},
+"Rwanda":{img:"rwanda",f:"171M",ff:"171 M",l:"Views on Day 14, the biggest post of the tour",lf:"vues sur Day 14, la plus grosse publication de la tournée",a:"Ankole cattle in Rwanda",t:4}};
+/* Africa Tour route. City positions use the map's own projection:
+   x = 6.83 * longitude + 188.7, y = 274.6 - 391.3 * ln(tan(45° + latitude / 2)). */
+var STOPS=[["Accra",5.6037,-0.187,"l"],["Douala",4.0511,9.7679,"r"],["Lagos",6.5244,3.3792,"tr"],["Cotonou",6.3703,2.3912,"b"],["Kigali",-1.9441,30.0619,"r"]];
+function xy(lat,lon){return [6.83*lon+188.7,274.6-391.3*Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))];}
+var FULL=[0,0,600,640],TOUR=[142,108,285,304],view=FULL.slice(),still=matchMedia("(prefers-reduced-motion: reduce)").matches,route=null,anim=0;
+function setView(v){view=v;svg.setAttribute("viewBox",v.join(" "));}
+function zoom(to,done){cancelAnimationFrame(anim);if(still){setView(to);done&&done();return;}
+ var from=view.slice(),t0=performance.now(),d=650;
+ (function step(t){var k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3);setView(from.map(function(f,i){return f+(to[i]-f)*e;}));if(k<1)anim=requestAnimationFrame(step);else done&&done();})(t0);}
+function drawRoute(){if(route)return;
+ route=document.createElementNS(NS,"g");route.setAttribute("id","route");route.setAttribute("aria-hidden","true");
+ var pts=STOPS.map(function(s){return xy(s[1],s[2]);}),d="M"+pts[0].join(",");
+ for(var i=1;i<pts.length;i++){var a=pts[i-1],b=pts[i],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.sqrt(dx*dx+dy*dy);
+  d+=" Q"+((a[0]+b[0])/2+dy*.18)+","+((a[1]+b[1])/2-dx*.18-len*.08)+" "+b.join(",");}
+ var p=document.createElementNS(NS,"path");p.setAttribute("d",d);p.setAttribute("class","rt-line");route.appendChild(p);
+ STOPS.forEach(function(s,i){var c=pts[i],g=document.createElementNS(NS,"g");g.setAttribute("class","rt-stop");g.setAttribute("data-i",i);
+  var dot=document.createElementNS(NS,"circle");dot.setAttribute("cx",c[0]);dot.setAttribute("cy",c[1]);dot.setAttribute("r",innerWidth<820?"3.2":"2.3");
+  var tx=document.createElementNS(NS,"text"),sm=innerWidth<820,u=sm?1.6:1,o={b:[0,9*u,"middle"],r:[5*u,2*u,"start"],tr:[4*u,-4.5*u,"start"],l:[-5*u,2*u,"end"]}[sm&&s[0]==="Kigali"?"l":s[3]];
+  tx.setAttribute("x",c[0]+o[0]);tx.setAttribute("y",c[1]+o[1]);tx.setAttribute("text-anchor",o[2]);tx.textContent=(i+1)+" "+s[0];
+  g.append(dot,tx);g.style.animationDelay=(still?0:.25+i*.28)+"s";route.appendChild(g);});
+ svg.appendChild(route);
+ if(!still){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.getBoundingClientRect();p.style.transition="stroke-dashoffset 1.6s cubic-bezier(.2,.7,.2,1)";p.style.strokeDashoffset="0";}}
+function clearRoute(){if(route){route.remove();route=null;}}
+function tourOn(k){var m=MAP[k];return m&&m.t!==undefined;}
+function place(k){var tour=tourOn(k);
+ if(tour){var z=view.join()===TOUR.join();if(z){drawRoute();}else{clearRoute();zoom(TOUR,drawRoute);}}
+ else{clearRoute();if(view.join()!==FULL.join())zoom(FULL);}
+ if(route)[].forEach.call(route.querySelectorAll(".rt-stop"),function(g){g.classList.toggle("cur",+g.getAttribute("data-i")===MAP[k].t);});}
+function talk(k){var b=document.createElement("button");b.type="button";b.className="map-go";b.textContent=fr()?"Parlez-nous de ce marché":"Talk to us about this market";
+ b.addEventListener("click",function(){var f=document.getElementById("ccountry");if(f)f.value=label(k);var c=document.getElementById("contact");if(c){c.scrollIntoView({behavior:still?"auto":"smooth"});setTimeout(function(){var n=document.getElementById("cname");n&&n.focus({preventScroll:true});},still?0:600);}});return b;}
 function sel(k){cur=k;Object.keys(W).concat(Object.keys(ACC)).forEach(function(o){byName[o]&&byName[o].classList.toggle("sel",o===k);btns[o].textContent=label(o);btns[o].classList.toggle("sel",o===k);btns[o].setAttribute("aria-pressed",o===k);});
-if(ACC[k]){det.innerHTML="";var c0=document.createElement("p");c0.className="lbl acc-l";c0.textContent=fr()?"Accès via notre réseau":"Access through our network";var h0=document.createElement("h3");h0.textContent=label(k);var p0=document.createElement("p");p0.textContent=fr()?"Nous avons des contacts établis dans ce pays et pouvons y ouvrir un projet.":"We have established contacts in this country and can open a project there.";det.append(c0,h0,p0);return;}
- var w=W[k];det.innerHTML="";det.setAttribute("data-no-translate","");var h=document.createElement("h3");h.textContent=label(k);var c=document.createElement("p");c.className="lbl";c.textContent=w.c;var p=document.createElement("p");p.textContent=fr()?FRW[w.n][1]:w.w;var a=document.createElement("a");a.href=w.h;a.className="case-go";a.textContent=fr()?"Voir le projet":"Read the case";det.append(c,h,p,a);}
+if(ACC[k]){det.innerHTML="";det.setAttribute("data-no-translate","");var c0=document.createElement("p");c0.className="lbl acc-l";c0.textContent=fr()?"Accès via notre réseau":"Access through our network";var h0=document.createElement("h3");h0.textContent=label(k);var p0=document.createElement("p");p0.textContent=fr()?"Nous avons des contacts établis dans ce pays et pouvons y ouvrir un projet.":"We have established contacts in this country and can open a project there.";det.append(c0,h0,p0,talk(k));place(k);return;}
+ var w=W[k],m=MAP[k];det.innerHTML="";det.setAttribute("data-no-translate","");var h=document.createElement("h3");h.textContent=label(k);var c=document.createElement("p");c.className="lbl";c.textContent=w.c;
+ var fig=document.createElement("figure");fig.className="md-photo";var im=document.createElement("img");im.src="/Media/map/"+m.img+".webp";im.alt=m.a;im.width=720;im.height=450;fig.appendChild(im);
+ var n=document.createElement("p");n.className="md-fig";var nb=document.createElement("b");nb.textContent=fr()?m.ff:m.f;var nl=document.createElement("span");nl.textContent=fr()?m.lf:m.l;n.append(nb,nl);
+ var p=document.createElement("p");p.textContent=fr()?FRW[w.n][1]:w.w;var a=document.createElement("a");a.href=w.h;a.className="case-go";a.textContent=fr()?"Voir le projet":"Read the case";
+ var row=document.createElement("div");row.className="md-actions";row.append(a,talk(k));det.append(c,h,fig,n,p,row);place(k);}
 sel(cur);
 new MutationObserver(function(){sel(cur);}).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
 })();
