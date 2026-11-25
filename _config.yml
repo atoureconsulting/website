@@ -1,0 +1,5 @@
+# GitHub Pages build settings. Working notes for Claude and the design
+# file stay in the repository but are not published on the website.
+exclude:
+  - CLAUDE.md
+  - DESIGN.md
